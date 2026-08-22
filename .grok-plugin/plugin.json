@@ -1,0 +1,9 @@
+{
+  "name": "twinglass",
+  "version": "1.0.0",
+  "description": "Non-overlapping Grok Build skill pack: meaning, lock, LRR, lattice, twin, steelman, compute, atlas. One job each.",
+  "author": { "name": "Jadon Fox", "url": "https://github.com/Jadon-Fox" },
+  "homepage": "https://github.com/Fractal-Deployment/twinglass-pack",
+  "license": "MIT",
+  "keywords": ["twinglass", "lattice", "lrr", "llmve", "skills"]
+}
