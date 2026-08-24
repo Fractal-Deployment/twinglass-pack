@@ -12,7 +12,7 @@ Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and
 - Do not copy `mojo-cuda` into `~/.grok/skills`. It stays a plugin.
 - Do not uninstall `hookify-plugin` or `security-control-plugin`.
 - Do not rewrite LLMVE meters.
-- Do not keep `morph-shared` next to `honest-prompt-rewrite`.
+- Do not keep `morph-shared` next to `logic-ration-reason` or `honest-prompt-rewrite`.
 - Do not load lattice and twin on the same charge.
 
 ## 1. Inventory (print before you delete)
@@ -42,7 +42,7 @@ breakthrough-multi-path-thinking
 evidence-hourglass-research
 ```
 
-If a folder is only a stub that reads one of the nine pack skills, delete the stub.
+If a folder is only a stub that `reads` one of the nine pack skills, delete the stub.
 
 ## 3. Uninstall skill-wrapper plugins
 
@@ -51,7 +51,7 @@ Uninstall / disable:
 - `precise-activate`
 - `precise-activate-plugin`
 
-These only pasted LRR. The pack command `/activate` loads `honest-prompt-rewrite`.
+These only pasted LRR. The pack command `/activate` loads `logic-ration-reason`, then `honest-prompt-rewrite`. `/lrr` loads the lock only.
 
 Keep:
 
@@ -66,7 +66,8 @@ If `mojo-cuda` also exists under `~/.grok/skills/mojo-cuda`, **delete that skill
 ```bash
 git clone https://github.com/Fractal-Deployment/twinglass-pack.git /tmp/twinglass-pack
 mkdir -p ~/.grok/skills
-rm -rf ~/.grok/skills/llmve-meaning \
+rm -rf ~/.grok/skills/logic-ration-reason \
+  ~/.grok/skills/llmve-meaning \
   ~/.grok/skills/lcd-glossary-integrity \
   ~/.grok/skills/reason-telos-lookup \
   ~/.grok/skills/honest-prompt-rewrite \
@@ -76,7 +77,13 @@ rm -rf ~/.grok/skills/llmve-meaning \
   ~/.grok/skills/llmve-factor-compute \
   ~/.grok/skills/transformer-stage-atlas
 cp -R /tmp/twinglass-pack/skills/* ~/.grok/skills/
+mkdir -p ~/.grok/skills/_twinglass ~/.grok/commands
+cp /tmp/twinglass-pack/DISCOVERED.md ~/.grok/skills/_twinglass/DISCOVERED.md
+cp /tmp/twinglass-pack/DISCOVERED.md ~/.grok/skills/twinglass-lattice/DISCOVERED.md
+cp /tmp/twinglass-pack/commands/*.md ~/.grok/commands/ 2>/dev/null || true
 ```
+
+Old plugin dirs named `twinglass-pack-<oldsha>` (e.g. `2fecf99d`) **lack** `DISCOVERED.md` and `commands/clone-paces.md`. Uninstall those. Reinstall from current `main`. Do not load paces from memory if the file is missing — clone GitHub.
 
 Preferred if plugin install works:
 
@@ -100,13 +107,13 @@ Edit `~/.grok/config.toml`:
 
 In the current repo, if `.grok/skills/` still has alias folders, delete them. If `.grok/plugins/` vendors an old activate plugin, remove it.
 
-`AGENTS.md` / `CLAUDE.md`: if they say load morph-shared + deep-think + deep-research, replace with:
+`AGENTS.md` / `CLAUDE.md`: if they say “load morph-shared + deep-think + deep-research”, replace with:
 
 ```
 Cognition pack is Twinglass.
 Load honest-prompt-rewrite on every think/research round.
-Unearned split -> twinglass-lattice.
-Known Reason vs Disconfirm -> twinglass-twin.
+Unearned split → twinglass-lattice.
+Known Reason vs Disconfirm → twinglass-twin.
 Do not load both gaits. Do not load morph-shared, deep-think, or deep-research.
 ```
 
