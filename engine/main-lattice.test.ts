@@ -5,6 +5,7 @@ import {
   awaiting,
   completeCritiqueDiamond,
   converge,
+  diverge,
   enterCritiqueDiamond,
   noteOnLeg,
   openMain,
@@ -22,6 +23,20 @@ function fourSeal(run: DiamondRun): DiamondRun {
   }
   return r;
 }
+
+test("diverge = note + spawn; parent keeps walking", () => {
+  let m = openMain(CHARGE);
+  const root = m.legs[0].id;
+  m = diverge(m, root, {
+    cannotFollow: "friction is not Mythos",
+    functionSet: "substrate-friction",
+    necessaryBecause: "different tax",
+  });
+  assert.equal(m.legs.length, 2);
+  assert.equal(m.legs[0].state, "walking");
+  assert.equal(m.legs[1].parentId, root);
+  assert.equal(m.diamondId, null);
+});
 
 test("hard notes spawn MAIN lattice legs, not diamonds", () => {
   let m = openMain(CHARGE);
