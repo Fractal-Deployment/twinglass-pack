@@ -1,37 +1,44 @@
-# Twinglass apparatus (finished gait)
+# Twinglass apparatus (lattice-first)
 
 `train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
 
-Not a dump meter. Not Price’s Law as master. Path: **Find → Maintain (pathing structure) → Let-fail.**
+Path: **Find → Maintain (pathing structure) → Let-fail.** Not hold a token. Not Price’s Law as master.
+
+**Battle is not the research gait.** Twin’s Reason vs Disconfirm / antithesis is not how discovery works. Ignore antithesis — being the opposite of a track does not resolve it.
+
+## What lattice is for
+
+**Parallel research tracks that *could* diverge.** Under LRR (logic, patterns, rationality). Not “find a fight.” Not “spawn an enemy.”
+
+1. Scout until two (or more) **parallel** tracks exist that might not share an endpoint.
+2. Clone: spawn + parent notes. Each track walks **to its logical endpoint** (forward crawl, not inverse CoT).
+3. **Discover divergence** on the way — or discover they never diverged.
+4. **Meet:**
+   - **Debate** if they actually diverged (exclusive empty meet under the lock).
+   - **Synthesis** if they remained complementary / parallel.
+5. One contraction (`collate-hourglass`). Restate what is true.
+
+Continue down the lattice: a clone that finds a **new** parallel-could-diverge track clones again (SENS cap, depth wall). That is the advanced style.
 
 ## Occupants
 
 | Who | Job |
 |---|---|
-| Research / thinking | `logic-ration-reason`. Forward crawl. Not inverse CoT. |
-| Monitor | SI (`lcd-glossary-integrity`) + LCD (`lcd-lens`) only. Look elsewhere / let fail. Blind to quality. Does not convert. |
-| Translate | `llmve-translate` after LCD names a meet. Not the monitor. |
-| Lattice | Scout → clone → meet. Unearned splits. |
-| Twin | Known gutter only: Reason vs Disconfirm. **Never** same charge as lattice. |
-| Collate | `collate-hourglass` after pads sealed. Parent seeing both pads at meet is collate, not a research transcript. |
+| Research | `logic-ration-reason`. Parallel reasoning. Endpoint = first fail of Logic or Reason, or the charge is resolved. |
+| Monitor | SI + LCD look-elsewhere. Not a fighter. |
+| Lattice | This gait. |
+| Twin | **Do not use for discovery.** Known antagonistic gutter only; it is what was fucking the research up. |
+| Collate | Debate **or** synthesis. Not battle. Not antithesis. |
 
 ## Clone
 
-Spawn + **parent notes**, new pad. Not a transcript-fork of the scout list.
+Spawn + parent notes. New pad. No sibling list in the prompt. Session-log leak known, bypassed. CLI parallel awake legal (H0). `SENS` +1; stop > 10 (practical ~8).
 
-Desktop CLI: **H0** — hibernate is scheduler. Isolation in the prompt = no sibling pad/URL list. Session-log leak is known (`ISOLATION_MECH.md`); **bypassed** this apparatus — do not attack `~/.grok/sessions`. Practical simultaneous cap **8** (CLI), hard stop **10**.
+Four gates for a **new** track: marker · `necessary_because` · empty-or-open meet with current lanes · not a synonym. Exclusive fight is **optional discovery**, not the goal.
 
-## When to clone (lattice)
+## Do not
 
-1. **Exclusive fight:** A ∧ B = ⊥ under the lock. Both coherent.
-2. **Interesting resolving pathway:** all four: marker · `necessary_because` · empty meet with current lanes · **not** a synonym/specialization.
-
-SENS starts 0. +1 per clone. Print `SENS=`. If SENS > 10, STOP.
-
-## Meet
-
-One contraction. Restate what is true. Fluency is not a warrant. Do not mint path capacity from shape or knobs.
-
-## Meaning
-
-Live: `Fractal-Deployment/llmve-meaning` `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`. Maintain = pathing structure for layer-to-layer matmul. Not hold a token.
+- Load twin on a discovery charge.
+- Meet as battle / antithesis / “kill the other lane.”
+- Transcript-fork the scout list.
+- Mint path capacity. Close Ω.
