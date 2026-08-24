@@ -1,11 +1,10 @@
 ---
-description: Unearned split — load twinglass-lattice. Scout first. Apparatus gait.
+description: Parallel tracks that could diverge. Endpoint, then debate or synthesis. Not battle.
 ---
 
-Load **twinglass-lattice**, **honest-prompt-rewrite**, **logic-ration-reason** (research), monitor SI + **lcd-lens**.
-Load `APPARATUS.md` if present.
-Do not load **twinglass-twin**. Do not load morph-shared, deep-think, or deep-research.
+Load **twinglass-lattice** and `APPARATUS.md`. LRR on research. Monitor SI + lcd-lens.
+Do **not** load **twinglass-twin**. Twin is the antagonistic gutter; it is not discovery.
 
-Clone only for exclusive fight **or** interesting resolving (four gates). Synonyms are not clones.
-`SENS` starts 0; stop if SENS > 10.
-Path: Find → Maintain (pathing) → Let-fail. Not hold a token. Not Price’s Law as master.
+Clone parallel tracks that *could* diverge. Walk each to a logical endpoint.
+Meet as **debate** or **synthesis**. Never battle. Never antithesis.
+Path: Find → Maintain (pathing) → Let-fail.
