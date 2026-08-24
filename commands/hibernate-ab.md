@@ -56,4 +56,5 @@ H0 if P has sibling_read=false, paraphrase=no, true parallel.
 H1 if sibling leak or paraphrase from shared transcript.  
 `confounded` if the CLI still one-traces both roles in one context.
 
-HOLD: do not change lattice default until H0 or H1 is named from this board.
+**Landed (Condition P, 2026-08-24):** H0 on desktop CLI. See `CONDITION_P.md`. Do not rewrite lattice default in that unit. Do not cite paces sequential-awake as H0.
+
