@@ -1,14 +1,13 @@
 ---
 name: twinglass-lattice
 description: >
-  Conditional diamond lattice. Scout first. Fork only when two internally
-  coherent accounts cannot both be true under the lock. Clone isolated
-  agents with parent context. Meet: battle or synthesis. One contraction.
-  Use for contested research. Not MCTS. Not always-two.
-when-to-use: lattice, earned fork, isolated clones, reconverge, contested research, not MCTS, scout then split
+  Conditional diamond lattice. Scout first. Clone on exclusive fight or
+  interesting resolving pathway (four gates). Spawn + parent notes. Meet
+  then one contraction. Not MCTS. Not always-two.
+when-to-use: lattice, earned fork, interesting-resolving, isolated clones, reconverge
 user-invocable: true
 metadata:
-  short-description: "Fork only for a reason, then meet"
+  short-description: "Fork for a reason, then meet"
 ---
 
 # twinglass-lattice
@@ -17,23 +16,27 @@ metadata:
 
 `train_ok=false · measured_omega=false · G1=OPEN · fork only for a reason`
 
-Load `honest-prompt-rewrite` and consume a glossary from `lcd-glossary-integrity`. Do not copy those jobs.
+Load `../DISCOVERED.md` and `../APPARATUS.md`. Load `logic-ration-reason` on the **research** agent. Monitor = SI + `lcd-lens` only. Rewrite with `honest-prompt-rewrite`. After isolation, `collate-hourglass`. Meaning: Find → Maintain (pathing) → Let-fail. Do not copy those jobs.
 
 ## Gait
 
 1. **Lock** — terms, not research.
-2. **Scout** — one agent, sources. Propose a fork only on exclusive accounts (meet empty under the lock).
-3. **Fork** — clone. Parent notes, new path, no sibling visibility. Depth wall 3. Lane wall 4.
-4. **Expand** — each leaf, isolated.
-5. **Contract** — Tier 1 and Tier 2 isolated in parallel, then meet (battle if still exclusive, synthesis if homomorphic), then one hourglass contraction.
+2. **Scout** — one agent, sources.
+3. **Fork** — clone when:
+   - **Exclusive fight:** A ∧ B = ⊥, both coherent, or
+   - **Interesting resolving:** marker + `necessary_because` + empty meet with current lanes + not a synonym.
+   Spawn + parent notes. New pad. No sibling list in the prompt. Depth wall 3. Lane wall 4. `SENS` +1 per clone; print it; **STOP if SENS > 10** (CLI practical ~8).
+4. **Expand** — each leaf on its pathway.
+5. **Contract** — `collate-hourglass`. SI+LCD already projected at each seal.
 
-Legal fork: two internally coherent accounts that cannot both be true under the lock. Specialization and synonyms are not forks.
+Desktop CLI: parallel awake is legal (H0). Interrupt remains legal. Do not attack `~/.grok/sessions`.
 
 ## Do not
 
-- Run always-two (`twinglass-twin`) on an unearned split.
-- Use Diamond-MCTS without a meet (`breakthrough-multi-path-thinking` is dropped as a gait).
-- Steer weights. Manifold / dW is deferred LLMVE modification.
-- Let siblings read each other before meet.
+- Load `twinglass-twin` on the same charge.
+- Clone a synonym or specialization.
+- Transcript-fork the scout URL list into every child.
+- Steer weights. Mint path capacity. Close Ω.
+- Inverse CoT.
 
-Grok.com: /lattice (Run simulation). CLI: this folder.
+Grok.com: /lattice. CLI: this folder. Commands: `clone-experiment`, `fork-sens`, `llmve-open-set`.
