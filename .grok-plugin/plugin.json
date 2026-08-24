@@ -1,9 +1,9 @@
 {
   "name": "twinglass",
-  "version": "1.0.0",
-  "description": "Non-overlapping Grok Build skill pack: meaning, lock, LRR, lattice, twin, steelman, compute, atlas. One job each.",
+  "version": "1.3.0",
+  "description": "Twinglass pack + engine. Two lattices (main legs ≠ 3D diamond). SHA b2039c007168665f1cd45050b0fb3befcceffc6d. SI+LCD monitor. LRR on research. Not twin-as-discovery.",
   "author": { "name": "Jadon Fox", "url": "https://github.com/Jadon-Fox" },
   "homepage": "https://github.com/Fractal-Deployment/twinglass-pack",
   "license": "MIT",
-  "keywords": ["twinglass", "lattice", "lrr", "llmve", "skills"]
+  "keywords": ["twinglass", "lattice", "lrr", "llmve", "skills", "engine"]
 }
