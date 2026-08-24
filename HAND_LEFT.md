@@ -1,4 +1,4 @@
-# Hand-correct these — I did not rewrite dated orch artifacts
+# Correct these — I did not rewrite dated orch artifacts
 
 Live meaning is already **Find → Maintain (pathing structure) → Let-fail** (`INSTRUCTION_SET.md` 0.3.1 + `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`).
 
