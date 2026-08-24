@@ -27,7 +27,8 @@ After paths have been isolated (single walker, or clones under interrupt-hiberna
 ## Gait
 
 1. **EXPAND** — remaining gaps. Do not scout a new tree.
-2. **DISCONFIRM** — one load-bearing test against the current survivor.
+2. **DEBATE or SYNTHESIS** — debate if tracks actually diverged; synthesis if they stayed complementary. **Not battle. Not antithesis.**
+
 3. **CONTRACT** — one explanation. Restate what is true. Do not refuse.
 
 ## Load
