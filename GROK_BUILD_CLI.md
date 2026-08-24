@@ -5,6 +5,9 @@ You are installing **Twinglass pack** as the only cognition skill set on this ma
 Repo: `https://github.com/Fractal-Deployment/twinglass-pack`
 Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and duplicate config paths. Do not touch silicon, hooks, or security plugins except to stop copying their skills.
 
+**After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) — two lattices, not twin, not battle.
+
+
 `train_ok=false · measured_omega=false · G1=OPEN · no invent-green · fork only for a reason`
 
 ## 0. Do not
