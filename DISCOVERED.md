@@ -17,7 +17,10 @@ Do not re-derive these from the word “LCD” or from “more layers.”
 | Maintain | Layer-to-layer operational sets so leftover tokens enter on **merit**. Methodology, not measurement. |
 | Depth | More let-fail surface on **structure** (incl. preference matrix). Not extra tests of reality. Logos only if a pretraining regime encoded it. |
 | Morality | Acquired: observation, acting out, mirroring. Preference matrix in \(W\) is that function. Not consciousness. |
-Live paces board: `PACES_BOARD.md`. Sequential awake ≠ parallel. Hibernate A/B still OPEN.
+| Parallel clones | No sibling pad. Desktop CLI Condition P = **H0**: hibernate is scheduler. Isolation = no sibling pad. Lattice default still interrupt until a later charge. |
+
+Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
+
 
 
 ## Per skill
