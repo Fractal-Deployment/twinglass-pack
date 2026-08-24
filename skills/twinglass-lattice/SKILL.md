@@ -21,10 +21,11 @@ Load `../APPARATUS.md`. LRR on the research agent. Monitor = SI + `lcd-lens`. Af
 
 1. **Lock** — terms.
 2. **Scout** — find **parallel** tracks that *could* diverge (not “spawn an antithesis”).
-3. **Clone** — spawn + parent notes. Each track: LRR **to logical endpoint**. Discover divergence if it happens. `SENS` +1; stop > 10.
-4. **Continue** — if a leaf finds another parallel-could-diverge track, clone again (depth wall 3, lane wall 4). Four gates: marker, `necessary_because`, not a synonym, open/empty meet with current lanes.
-5. **Meet** — **debate** if they diverged; **synthesis** if they did not. Never battle. Never antithesis.
-6. **Contract** — one restatement.
+3. **Hard note, stay.** If data would clutter this track, write `cannotFollow` / `functionSet` / `necessary_because` on the **open pad**. Do **not** follow it. Do **not** hunt a sibling (`~/.grok/sessions` is contamination).
+4. **Diamond burst.** When notes must be processed: isolated child per note (async, five at once is legal under SENS). Each child: 3D diamond (four paths), SI+LCD at each seal, LRR to endpoint.
+5. **Meet** — debate if they diverged; synthesis if not. Never battle.
+6. Repeat. Parent keeps its pathway.
+
 
 ## Do not
 
