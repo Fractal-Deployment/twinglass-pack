@@ -14,4 +14,5 @@ Condition P `sibling_read=false` was **no-attempt**. This board is the attack. H
 
 H0 is **not** overturned: hibernate is still scheduler. What died is “parallel + don’t hand the sibling list ⇒ isolated.”
 
-HOLD. Lattice default not rewritten. No factor-compute this unit. Session-dir ACL is a **later ops charge**, not this board.
+Mechanism write-up: `ISOLATION_MECH.md`. chmod/same-UID ACL is empty meet. Per-clone GROK_HOME or hide-sessions sandbox is the named meet. Not implemented this unit.
+
