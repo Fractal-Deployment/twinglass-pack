@@ -21,10 +21,14 @@ Load `../APPARATUS.md`. LRR on the research agent. Monitor = SI + `lcd-lens`. Af
 
 1. **Lock** — terms.
 2. **Scout** — find **parallel** tracks that *could* diverge (not “spawn an antithesis”).
-3. **Hard note, stay.** If data would clutter this track, write `cannotFollow` / `functionSet` / `necessary_because` on the **open pad**. Do **not** follow it. Do **not** hunt a sibling (`~/.grok/sessions` is contamination).
-4. **Diamond burst.** When notes must be processed: isolated child per note (async, five at once is legal under SENS). Each child: 3D diamond (four paths), SI+LCD at each seal, LRR to endpoint.
-5. **Meet** — debate if they diverged; synthesis if not. Never battle.
-6. Repeat. Parent keeps its pathway.
+## Two lattices
+
+**Main lattice:** clone **legs**. Hard note → spawn new leg. Parent keeps its leg. Burst of five is five **research** clones, not five diamonds.
+
+**3D diamond:** one agent’s **internal critique** (four paths, SI+LCD). Other legs **hibernate**. Finish → continue the same leg, or **wait** for a partner.
+
+**Converge:** debate or synthesis (not battle). Survivor may diamond again. Exclusive leftover → `steelman-truth-tournament`.
+
 
 
 ## Do not
