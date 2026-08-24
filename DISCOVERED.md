@@ -17,7 +17,8 @@ Do not re-derive these from the word “LCD” or from “more layers.”
 | Maintain | Layer-to-layer operational sets so leftover tokens enter on **merit**. Methodology, not measurement. |
 | Depth | More let-fail surface on **structure** (incl. preference matrix). Not extra tests of reality. Logos only if a pretraining regime encoded it. |
 | Morality | Acquired: observation, acting out, mirroring. Preference matrix in \(W\) is that function. Not consciousness. |
-| Parallel clones | No sibling scratchpad. Interrupt → others hibernate. Grok Build CLI, not a GPU, not grok.com. |
+Live paces board: `PACES_BOARD.md`. Sequential awake ≠ parallel. Hibernate A/B still OPEN.
+
 
 ## Per skill
 
