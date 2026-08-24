@@ -21,10 +21,12 @@ metadata:
 - Steelman each surviving account before you cut.
 - Use for ACH / MCDA writeups.
 - Factor-identity contests (which *name* a meter has) — not the multiply.
+- After `lcd-lens` names exclusive accounts of **what function the data performs** (claimed ∩ demand, not held in collection). Steelman both function-set accounts. Do not import the claimed function.
 
 ## Do not
 
-- Be the lattice meet. One contraction on /lattice is not a tournament.
+- Be the default lattice meet. Main-lattice converge is debate or synthesis. Use this tournament only when accounts remain exclusive after that.
+
 - Compute F, T_tail, P_L from dumps (`llmve-factor-compute`).
 - Live inside reason-telos. Values stay there; this is the debate machine.
 
