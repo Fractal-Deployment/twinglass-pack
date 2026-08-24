@@ -94,6 +94,18 @@ export function spawnLegsBurst(m: MainLattice, parentId: string): MainLattice {
   return { ...m, legs: [...legs, ...spawned], sens: m.sens + take.length };
 }
 
+/**
+ * Dedicated track: cannotFollow secondary research → spawn a NEW walking leg.
+ * Parent keeps walking. This is the gait, not optional later burst.
+ */
+export function diverge(
+  m: MainLattice,
+  parentId: string,
+  note: Omit<HardNote, "id">,
+): MainLattice {
+  return spawnLegsBurst(noteOnLeg(m, parentId, note), parentId);
+}
+
 /** One agent enters 3D diamond (internal critique). All other legs hibernate. */
 export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice {
   if (m.diamondId) throw new Error("another leg is already in diamond");
