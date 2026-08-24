@@ -2,7 +2,9 @@
 
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
 
-Repo: https://github.com/Fractal-Deployment/twinglass-pack
+Load `DISCOVERED.md` and `APPARATUS.md` before any skill. Apparatus gait: lattice or twin, never both.
+
+
 
 `train_ok=false · measured_omega=false · G1=OPEN · no invent-green · fork only for a reason`
 
@@ -10,15 +12,18 @@ Repo: https://github.com/Fractal-Deployment/twinglass-pack
 
 | Skill | Job |
 |---|---|
+| `logic-ration-reason` | Standing Logic · Ration · Reason lock |
 | `llmve-meaning` | What meters may answer |
-| `lcd-glossary-integrity` | Lock a term, then judge |
+| `lcd-glossary-integrity` | Lock a term, then judge (SI) |
+| `lcd-lens` | Look: their functions vs our demand (LCD). SSOT also Fractal-Deployment/lcd-lens |
+| `llmve-translate` | Collected math onto Mythos/friction. Not LCD. |
 | `reason-telos-lookup` | What may be sacrificed for what |
-| `honest-prompt-rewrite` | LRR rewrite. Telos stays |
+| `honest-prompt-rewrite` | Apply LRR to the working prompt |
 | `twinglass-lattice` | Earned forks, then meet |
 | `twinglass-twin` | Known two-track, isolated until battle |
 | `steelman-truth-tournament` | Tournament after exclusive accounts |
 | `llmve-factor-compute` | Meters from dumps |
-| `transformer-stage-atlas` | Stage map, not Omega |
+| `transformer-stage-atlas` | Stage map, not Ω |
 
 ## Dead (do not attach)
 
@@ -43,7 +48,8 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 
 ## Commands
 
-- `/activate` → honest-prompt-rewrite
+- `/lattice` → twinglass-lattice (see `APPARATUS.md`)
+- `/activate` → logic-ration-reason, then honest-prompt-rewrite
 - `/lattice` → twinglass-lattice
 - `/twin` → twinglass-twin
 
