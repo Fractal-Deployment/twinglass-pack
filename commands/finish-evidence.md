@@ -5,29 +5,30 @@ description: Gather on-disk evidence of how to finish the Twinglass skill pack. 
 
 # Finish-evidence — paste this
 
-You are Grok Build CLI. Pack: `Fractal-Deployment/twinglass-pack` **main**. Meaning: `llmve-meaning` **0.3.4**.
+You are Grok Build CLI. Pack: `Fractal-Deployment/twinglass-pack` **main ≥ 81201b0**. Meaning: `llmve-meaning` **0.3.4**.
 
 CHARGE LIVENESS  
 State: LIVE  
 intention: Run `FINISH_EVIDENCE.md` start to finish.  
 telos: `FINISH_BOARD.md` on disk — evidence to finish the pack.  
-non_goals: Twin, Ω, factor-compute, Conley/MDL implementations, isolation cathedral, Grok Bot, `/loop`.
+non_goals: Twin, Ω, factor-compute, Conley/MDL implementations, isolation cathedral, Grok Bot, `/loop`, recrawling Mythos/MDL.
 
 `measured_omega=false` · no invent-green  
 Do not list `G1`, `train_ok`, or `feeds_omega`.
 
-Load: `logic-ration-reason` on **you** (research). Monitor = SI + lcd-lens only. Meet = `collate-hourglass`. `steelman-truth-tournament` **only** if two accounts remain exclusive after collate. `morph-shared-research` is dead; use collate-hourglass.
+Load: `logic-ration-reason` on **you**. Monitor = SI + lcd-lens. Meet = `collate-hourglass`. Steelman **only** after exclusive leftover. `morph-shared-research` is dead.
 
 **Act**
 
-1. Fetch pack `main`. If `FINISH_EVIDENCE.md` or `diverge()` missing, stop and fetch; don’t invent.
-2. Inventory every folder under `skills/` vs README table. Note `collate-hourglass` if README omitted it.
-3. For **each** skill, fill the per-skill row (collection / claimed / demand / meet / overlap / stale_seals / tests / next_act). Quote file paths. On-disk only.
-4. `diverge()` when you hit a second function-set (overlap, stale seal vs 0.3.4, README≠SKILL). Parent stays on inventory.
-5. Diamond **one** overlapped skill at a time if a restatement is earned. Mutex. SI+LCD per seal.
-6. Collate. Steelman only on exclusive leftover (e.g. “lattice already finished” vs “README still lists twin as discovery”).
-7. Write `FINISH_BOARD.md`. Keep / Morph / Delete / HOLD lists. One restatement. No meter.
+1. Fetch pack **main ≥ 81201b0**. `ff62674` lacks this file — stop and fetch. Meaning **0.3.4**, not 0.3.1.
+2. Do **not** recrawl Mythos/MDL/Conley. That 5-leg board is prior collection in `FINISH_EVIDENCE.md`. This unit inventories **skills/**.
+3. Inventory every folder under `skills/` vs README. `collate-hourglass` must be listed.
+4. One row per skill: collection / claimed / demand / meet / overlap / stale_seals / tests / next_act. Quote paths. Stale = still printing G1 / train_ok / feeds_omega.
+5. `diverge()` on overlap, stale seal vs 0.3.4, or README≠SKILL. Parent stays on inventory.
+6. Diamond **one overlapped skill** at a time if earned. Not a Mythos diamond.
+7. Collate. Steelman only on exclusive leftover.
+8. Write `FINISH_BOARD.md` **in the repo tree** (if the session-log hook blocks other writes, still land this file). Keep / Morph / Delete / HOLD. One restatement. No meter.
 
-If `llmve-factor-compute` looks runnable: **HOLD**. No measured leaves.
+If `llmve-factor-compute` looks runnable: **HOLD**.
 
-Board template is in `FINISH_EVIDENCE.md`. Print it. Stop.
+Print the board. Stop.
