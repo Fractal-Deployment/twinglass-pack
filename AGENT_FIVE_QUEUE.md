@@ -24,7 +24,7 @@ Pack only. `measured_omega=false` · no invent-green.
 | ID | Track | Deliverable |
 |---|---|---|
 | S02 | CLI spawn-lock | **landed** — `commands/cli-spawn-lock.md` + `SPAWN_REFUSED` |
-| S03 | Telos-hold across forks | `commands/telos-hold-probe.md` — rewrite → 2 diverges → telos still named |
+| S03 | Telos-hold across forks | **landed** — `commands/telos-hold-probe.md` |
 | S04 | Collate vs steelman | gate script + skill one-liners: steelman only after exclusive leftover |
 | S05 | LCD look-elsewhere | `lcd-lens` refuse convert-to-help; redirect only |
 | S06 | SI+LCD dual cap | monitor overload refuse when >2 watch objects |
