@@ -7,6 +7,7 @@ import {
   converge,
   diverge,
   enterCritiqueDiamond,
+  MEET_MODES,
   noteOnLeg,
   openMain,
   spawnLegsBurst,
@@ -105,5 +106,30 @@ test("converge waits for two diamond-complete legs; emit walks", () => {
   assert.equal(m.legs.find((l) => l.id === a)?.state, "emitted");
   const out = m.legs.find((l) => l.emit?.kind === "synthesis");
   assert.ok(out);
+  assert.equal(out?.state, "walking");
+});
+
+test("converge debate vs synthesis selection under lock", () => {
+  assert.deepEqual([...MEET_MODES], ["debate", "synthesis"]);
+  assert.equal((MEET_MODES as readonly string[]).includes("battle"), false);
+  let m = openMain(CHARGE);
+  const root = m.legs[0].id;
+  m = noteOnLeg(m, root, trackNote("fa", "A", "p"));
+  m = noteOnLeg(m, root, trackNote("fb", "B", "p"));
+  m = spawnLegsBurst(m, root);
+  const a = m.legs[1].id;
+  const b = m.legs[2].id;
+  function diamond(id: string, text: string) {
+    m = enterCritiqueDiamond(m, id);
+    const sealed = fourSeal(m.legs.find((l) => l.id === id)!.run);
+    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: sealed } : l)) };
+    m = completeCritiqueDiamond(m, id, text);
+  }
+  diamond(a, "A exclusive leftover.");
+  diamond(b, "B exclusive leftover.");
+  m = converge(m, a, b, "debate", "Exclusive leftover under lock. Not battle.");
+  const out = m.legs.find((l) => l.emit?.kind === "debate");
+  assert.ok(out);
+  assert.equal(out?.emit?.kind, "debate");
   assert.equal(out?.state, "walking");
 });

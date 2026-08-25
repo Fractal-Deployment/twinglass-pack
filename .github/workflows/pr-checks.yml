@@ -118,6 +118,14 @@ jobs:
       - name: lattice twin README occupant
         run: bash scripts/s13-s15-pointers-readme-check.sh
 
+  s16-s19-board:
+    name: S16–S19 engine + board
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: meet-mode HardNote CAP seals
+        run: bash scripts/s16-s19-engine-board-check.sh
+
   ci-push:
     name: push to main runs engine
     runs-on: ubuntu-latest

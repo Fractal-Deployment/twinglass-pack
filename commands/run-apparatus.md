@@ -58,7 +58,9 @@ TypeScript `ScratchPad` is **RAM**. After ingest, delete leftovers.
 
 ```
 LEGS: n=
-SENS:
+SENS: n=
+CAP: 10
+STOP_OVER_CAP: yes/no
 DIAMOND_MUTEX: (which leg or none)
 AWAITING_MEET: [ids]
 MEET: debate | synthesis | (waiting)
@@ -69,3 +71,5 @@ MINTED_DUMP_METER: false
 RESTATE:
 SEALS: measured_omega=false · no invent-green
 ```
+
+If `SENS > 10`: STOP. Hibernate. Do not spawn 11.
