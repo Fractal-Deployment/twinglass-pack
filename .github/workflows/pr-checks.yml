@@ -83,3 +83,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: CLI diamond matches engine mutex
         run: bash scripts/diamond-mutex-check.sh
+
+  async-equator:
+    name: async equator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: per-path pendingProjection
+        run: bash scripts/async-equator-check.sh

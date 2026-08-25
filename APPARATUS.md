@@ -22,7 +22,7 @@ Logic-fail means the three laws broke on this track’s argument. Reaching a cor
 
 Not a spawn. Not a child research track.
 
-When **one** leg needs to process what it has: it enters the octahedron — four equatorial paths (define / redefine-watch / explore / adapt), SI + LCD at each seal, asynchronous among those four. **Other main-lattice legs hibernate** until that diamond completes.
+When **one** leg needs to process what it has: it enters the octahedron — four equatorial paths (define / redefine-watch / explore / adapt), SI + LCD at each seal, asynchronous among those four. Integrity `pendingProjection` is **per-path**, not a global pending that blocks sibling equators. South mark joins only sealed + projected paths. **Other main-lattice legs hibernate** until that diamond completes.
 
 Then that agent **continues its own main-lattice leg**, or **pauses (`awaiting-meet`)** until another diamond-complete leg is ready.
 
