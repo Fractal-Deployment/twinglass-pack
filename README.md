@@ -2,27 +2,26 @@
 
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
 
-Load `DISCOVERED.md` and `APPARATUS.md` before any skill. Apparatus gait: lattice or twin, never both.
+Load `DISCOVERED.md`, `APPARATUS.md`, and `FINISH_EVIDENCE.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 
-
-
-`train_ok=false · measured_omega=false · G1=OPEN · no invent-green · fork only for a reason`
+`measured_omega=false` · no invent-green · fork only for a reason
 
 ## Skills (attach these)
 
 | Skill | Job |
 |---|---|
 | `logic-ration-reason` | Standing Logic · Ration · Reason lock |
-| `llmve-meaning` | What meters may answer |
+| `llmve-meaning` | What meters may answer (pointer to 0.3.4) |
 | `lcd-glossary-integrity` | Lock a term, then judge (SI) |
-| `lcd-lens` | Look: their functions vs our demand (LCD). SSOT also Fractal-Deployment/lcd-lens |
+| `lcd-lens` | Look: their functions vs our demand (LCD) |
 | `llmve-translate` | Collected math onto Mythos/friction. Not LCD. |
 | `reason-telos-lookup` | What may be sacrificed for what |
 | `honest-prompt-rewrite` | Apply LRR to the working prompt |
-| `twinglass-lattice` | Earned forks, then meet |
-| `twinglass-twin` | Known two-track, isolated until battle |
-| `steelman-truth-tournament` | Tournament after exclusive accounts |
-| `llmve-factor-compute` | Meters from dumps |
+| `collate-hourglass` | After isolated pads: expand, debate or synthesis, contract. Dead name: morph-shared-research |
+| `twinglass-lattice` | `diverge()` legs, diamond mutex, meet |
+| `twinglass-twin` | Known two-track. Never with lattice. |
+| `steelman-truth-tournament` | Tournament **after** exclusive leftover |
+| `llmve-factor-compute` | HOLD. No measured leaves. |
 | `transformer-stage-atlas` | Stage map, not Ω |
 
 ## Dead (do not attach)
@@ -50,7 +49,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 
 - `/lattice` → twinglass-lattice (see `APPARATUS.md`)
 - `/activate` → logic-ration-reason, then honest-prompt-rewrite
-- `/lattice` → twinglass-lattice
+- `/finish-evidence` → `FINISH_EVIDENCE.md`
 - `/twin` → twinglass-twin
 
 Do not load lattice and twin on the same charge.
