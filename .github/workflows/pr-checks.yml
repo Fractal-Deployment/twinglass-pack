@@ -102,6 +102,14 @@ jobs:
       - name: Morph landed; next S10
         run: bash scripts/finish-board-refresh-check.sh
 
+  s10-s12-align:
+    name: S10–S12 command align
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fork-sens clone-experiment clone-paces spawn lock
+        run: bash scripts/s10-s12-command-align-check.sh
+
   ci-push:
     name: push to main runs engine
     runs-on: ubuntu-latest
