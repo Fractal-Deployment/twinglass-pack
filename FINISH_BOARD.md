@@ -2,7 +2,7 @@
 
 `measured_omega=false` · no invent-green  
 Meaning: Fractal-Deployment/llmve-meaning **0.3.4**. Do not list `G1`, `train_ok`, `feeds_omega`.  
-Pack tip this board: spawn-lock engine on `agent5-advanced` over `main` ≥ `a123a05`. Prior Mythos 5-leg walk is collection in `FINISH_EVIDENCE.md` — not recrawled.
+Pack tip this board: `origin/main` after S01–S08. Prior Mythos 5-leg walk is collection in `FINISH_EVIDENCE.md` — not recrawled. Queue: `AGENT_FIVE_QUEUE.md`. Next legal: **S10** (command align).
 
 This file is **evidence of what would finish the pack**. It is not Ω.
 
@@ -13,7 +13,7 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | intention | FINISH_EVIDENCE inventory + engine spawn lock |
 | telos | This board on disk; spawn refuses without improper+other-track evidence |
 | non_goals | Twin, Ω, factor-compute run, Conley/MDL code, isolation cathedral, recrawl Mythos |
-| last observe | `node --experimental-strip-types --test engine/*.test.ts` → **34 pass, 0 fail**; `pr-seal-check` OK |
+| last observe | engine **34/34**; S01 Morph landed; S02–S08 CLI/docs landed; HOLD factor-compute |
 
 ## Collection
 
@@ -36,7 +36,7 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 
 | Class | What |
 |---|---|
-| Keep | Engine spawn lock (tests 32–34). README 13-skill table. |
+| Keep | Engine spawn lock (tests 32–34). README 13-skill table. CLI spawn-lock + diamond mutex + async equator. |
 | Morph | Occupant bleed **landed** — rewrite consumes LRR (no `## Three laws`); lattice/twin hand meet/contraction to `collate-hourglass`; steelman is exclusive leftover only. |
 | HOLD | `llmve-factor-compute` — do not run to finish. |
 | Delete | Dead aliases already gone. |
