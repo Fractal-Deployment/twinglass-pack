@@ -2,7 +2,7 @@
 
 `measured_omega=false` · no invent-green  
 Meaning: Fractal-Deployment/llmve-meaning **0.3.4**. Do not list `G1`, `train_ok`, `feeds_omega`.  
-Pack tip this board: `origin/main` after S01–S08. Prior Mythos 5-leg walk is collection in `FINISH_EVIDENCE.md` — not recrawled. Queue: `AGENT_FIVE_QUEUE.md`. Next legal: **S10** (command align).
+Pack tip this board: `origin/main` after S01–S24 close-loop. Prior Mythos 5-leg walk is collection in `FINISH_EVIDENCE.md` — not recrawled. Queue: `AGENT_FIVE_QUEUE.md` **drained** (S10–S24 landed or HOLD). Residual: `llmve-factor-compute` HOLD; no Ω.
 
 This file is **evidence of what would finish the pack**. It is not Ω.
 
@@ -13,7 +13,7 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | intention | FINISH_EVIDENCE inventory + engine spawn lock |
 | telos | This board on disk; spawn refuses without improper+other-track evidence |
 | non_goals | Twin, Ω, factor-compute run, Conley/MDL code, isolation cathedral, recrawl Mythos |
-| last observe | engine **34/34**; S01 Morph landed; S02–S08 CLI/docs landed; HOLD factor-compute |
+| last observe | engine tests green; S01–S24 queue drained or HOLD; factor-compute HOLD |
 
 ## Collection
 

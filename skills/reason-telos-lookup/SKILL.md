@@ -12,7 +12,7 @@ metadata:
 
 # reason-telos-lookup
 
-**One job:** rank values. Friend-enemy lattice. CFP gait.
+**One job:** rank values. Friend-enemy lattice. CFP gait. Hierarchy only.
 
 `measured_omega=false` · no invent-green
 
@@ -25,7 +25,8 @@ metadata:
 
 - Redefine F, P_L, Omega (`llmve-meaning`).
 - Run ArgueForge (`steelman-truth-tournament`).
-- Run lattice or twin.
-- Host a second copy of the three laws — they live in `honest-prompt-rewrite`.
+- Run lattice or twin. **Not meet** (`collate-hourglass` owns debate/synthesis).
+- Host LRR laws — they live in `logic-ration-reason`. **Not LRR laws.**
+- Restate `## Logic` here.
 
 Grok.com: not a runner. CLI: this folder. Delete LLMVE intake from this package if it still exists; pointer only.

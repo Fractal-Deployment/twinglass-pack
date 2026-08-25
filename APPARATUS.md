@@ -10,7 +10,7 @@ There are **two** lattices. Mixing them was the bug.
 
 Many agents. Many **legs**. Async. Under LRR. Not “find a fight.” Not “ask for divergence.” Not “spawn an enemy.”
 
-A walker on a leg finds **differential** data it cannot follow without cluttering its own argument — **evidence this track is not the proper track** and **evidence for a different track**. It writes a **hard note** and **keeps walking**. The note **spawns a clone onto a new leg**. Parent does not backtrack. Do not assign an opposite account to force a split. Same conclusion is allowed. Five notes can flush **five new legs at once** (SENS cap).
+A walker on a leg finds **differential** data it cannot follow without cluttering its own argument — **evidence this track is not the proper track** and **evidence for a different track**. It writes a **hard note** and **keeps walking**. The note **spawns a clone onto a new leg** only via `assertLegalSpawnNote` (`improperEvidence` AND `otherTrackEvidence`). `cannotFollow` alone is not a spawn. Parent does not backtrack. Do not assign an opposite account to force a split. Same conclusion is allowed. Five notes can flush **five new legs at once** (SENS cap 10; STOP over cap).
 
 Walking legs may run in parallel (H0).
 
