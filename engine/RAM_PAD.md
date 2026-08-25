@@ -1,6 +1,6 @@
 # RAM scratch pad vs Mojo/MLIR
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 LCD. Collection vs demand.
 

@@ -1,15 +1,15 @@
 ---
 name: hibernate-ab
 description: >
-  Grok Build CLI A/B. Is interrupt-hibernate necessary on desktop, or only
-  a grok.com scheduler constraint? Isolation (no sibling pad) stays either way.
+ Grok Build CLI A/B. Is interrupt-hibernate necessary on desktop, or only
+ a grok.com scheduler constraint? Isolation (no sibling pad) stays either way.
 ---
 
 # Hibernate A/B (Grok Build CLI)
 
 Desktop CLI. Not grok.com. Not a GPU.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 **Do not drop hibernation as the default** until this board lands.
 
@@ -42,18 +42,18 @@ Prefer two subagents / two contexts if the CLI has them. Parent notes only at sp
 CONDITION: P
 TRUE_PARALLEL: yes/no/confounded
 AWAKE: [ids]
-CLONE_A: sibling_read=  unique_urls=
-CLONE_B: sibling_read=  unique_urls=
+CLONE_A: sibling_read= unique_urls=
+CLONE_B: sibling_read= unique_urls=
 SHARED_TRANSCRIPT: yes/no
 PARAPHRASE: B restates A before its own sources? yes/no
 MINTED_DUMP_METER: false
 RESTATE:
 H0/H1: 
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
-H0 if P has sibling_read=false, paraphrase=no, true parallel.  
-H1 if sibling leak or paraphrase from shared transcript.  
+H0 if P has sibling_read=false, paraphrase=no, true parallel. 
+H1 if sibling leak or paraphrase from shared transcript. 
 `confounded` if the CLI still one-traces both roles in one context.
 
 **Landed (Condition P, 2026-08-24):** H0 on desktop CLI. See `CONDITION_P.md`. Do not rewrite lattice default in that unit. Do not cite paces sequential-awake as H0.

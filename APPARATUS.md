@@ -1,6 +1,6 @@
 # Twinglass apparatus — two lattices
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Path: **Find → Maintain (pathing) → Let-fail.** Not hold a token. Not battle. Not Price’s Law as master.
 

@@ -7,7 +7,7 @@ description: Paste into Grok Build CLI. Find remaining select / hold-a-token / P
 
 You are on the operator machine. **Meaning is already locked.** Do not invent a new chain.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 **Correct chain:** Find → **Maintain (pathing structure)** → Let-fail.
 
@@ -70,5 +70,5 @@ SUPERSEDED: [paths]
 NOT_FOUND: [paths]
 LEFT_FOR_OPERATOR: [if a file is binary/docx or you would be inventing]
 RESTATE: Find → Maintain (pathing) → Let-fail. Not hold a token. Not select. Not Price’s Law as master.
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```

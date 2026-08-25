@@ -1,6 +1,6 @@
 # Mojo memref / named pipes / RAM pad
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Demand: a **leg’s scratch pad** other legs cannot open, not on `~/.grok/sessions`.
 

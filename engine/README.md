@@ -4,7 +4,7 @@ Pack SHA at last engine land: `b2039c007168665f1cd45050b0fb3befcceffc6d`
 
 Main lattice (clone **legs**) ≠ 3D diamond (one agent’s **internal critique**).
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Node **22+** type stripping (`--experimental-strip-types`) runs these `.ts` files without `tsc` emit. Inference is structural (`LegState`, `pendingProjection` per equator). Not a pad.
 

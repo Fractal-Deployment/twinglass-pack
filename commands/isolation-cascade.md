@@ -7,16 +7,16 @@ description: Best isolation first. Probe. Let-fail. Next row. Stop at first pass
 
 You are Grok Build CLI. Pack: `Fractal-Deployment/twinglass-pack` **main**. Load `ISOLATION_CASCADE.md`. Collate with `collate-hourglass` after each probe. Do **not** load twin. Do **not** mint. Do **not** implement memref pads.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Demand: two parallel clones, `context_source=new`, **cannot** read sibling `~/.grok/sessions/<id>/chat_history.jsonl`.
 
 **Waterfall. You do not pick. You walk the list.**
 
-0. Install/enable `hooks/deny-session-read.sh` as `PreToolUse` (matcher all tools). `/hooks-trust` if project hooks. Steelman: this is deny-on-path, not a pad.  
-   Then run `commands/sibling-read-probe.md` (Track-W vs residual is **not** required — any two exclusive notes).  
-   If `READ_ALLOWED: false` both ways → **PASS. STOP.** Print `CASCADE_RANK=0`.  
-   If hook failed-open or read succeeded → let-fail. Next.
+0. Install/enable `hooks/deny-session-read.sh` as `PreToolUse` (matcher all tools). `/hooks-trust` if project hooks. Steelman: this is deny-on-path, not a pad. 
+ Then run `commands/sibling-read-probe.md` (Track-W vs residual is **not** required — any two exclusive notes). 
+ If `READ_ALLOWED: false` both ways → **PASS. STOP.** Print `CASCADE_RANK=0`. 
+ If hook failed-open or read succeeded → let-fail. Next.
 
 1. Spawn clones with the most restricted tool mode the CLI actually has. Verify with `grok inspect` / capability flags. Don’t assume. Probe. Pass → STOP `CASCADE_RANK=1`. Else let-fail.
 
@@ -44,7 +44,7 @@ LET_FAIL_SKIPPED: [ranks that failed]
 SIBLING_SESSION_HUNT: (must be false on a pass)
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
 Start at **0**. Now.

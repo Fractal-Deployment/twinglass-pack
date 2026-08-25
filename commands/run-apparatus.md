@@ -7,11 +7,11 @@ description: What Grok Build CLI is supposed to do. Two lattices. Load from GitH
 
 Paste this as the **session charge** after the pack is installed (or load files from GitHub `Fractal-Deployment/twinglass-pack` **main** if the plugin SHA is old).
 
-Repo: https://github.com/Fractal-Deployment/twinglass-pack  
-Engine: `engine/main-lattice.ts` + `engine/diamond-engine.ts`  
+Repo: https://github.com/Fractal-Deployment/twinglass-pack 
+Engine: `engine/main-lattice.ts` + `engine/diamond-engine.ts` 
 Spec: `APPARATUS.md` · `ASYNC_TIMING.md` · `engine/RAM_PAD.md`
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 ## Load
 
@@ -65,5 +65,5 @@ SPAWNED_FROM_HARD_NOTES: n=
 SIBLING_SESSION_HUNT: false
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```

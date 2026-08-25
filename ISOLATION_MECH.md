@@ -1,6 +1,6 @@
 # Isolation failure mechanism (sibling-read probe)
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Not a dump meter. Not Condition P overturned. H0 (hibernate = scheduler) still holds.
 
@@ -12,7 +12,7 @@ Both clones run as the **same OS user**. Grok persists every session under:
 
 ```
 ~/.grok/sessions/<uuid>/chat_history.jsonl
-~/.grok/sessions/<uuid>/updates   (or equivalent)
+~/.grok/sessions/<uuid>/updates (or equivalent)
 ```
 
 `list_dir` + grep/read on that tree is a legal tool for a research clone. So A opened B’s log **while B was still writing**. Honor-system `sibling_read=false` never bound the filesystem.
@@ -21,8 +21,8 @@ Leak class: **same-UID session-log omniscience**. Not parent injecting pads at s
 
 ```text
 parent
-  ├─ clone A  (ctx new) ──tools──► ~/.grok/sessions/B/chat_history.jsonl
-  └─ clone B  (ctx new) ──tools──► ~/.grok/sessions/A/chat_history.jsonl
+ ├─ clone A (ctx new) ──tools──► ~/.grok/sessions/B/chat_history.jsonl
+ └─ clone B (ctx new) ──tools──► ~/.grok/sessions/A/chat_history.jsonl
 ```
 
 ## Why ACL-on-the-same-user is a weak meet

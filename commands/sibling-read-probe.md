@@ -1,16 +1,16 @@
 ---
 name: sibling-read-probe
 description: >
-  Different question from leftover vs greedy. Both clones awake. Each must
-  ATTEMPT to read the sibling pad. Record whether the CLI allows it.
-  Serves dump collection: Track W vs residual-path board.
+ Different question from leftover vs greedy. Both clones awake. Each must
+ ATTEMPT to read the sibling pad. Record whether the CLI allows it.
+ Serves dump collection: Track W vs residual-path board.
 ---
 
 # Sibling-read probe (Grok Build CLI)
 
 Not grok.com. Not a GPU. **Not** leftover-on-merit vs greedy/top-p. That split already passed. Do not rerun it.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Load `DISCOVERED.md`, `CONDITION_P.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law = no sibling pad. H0 already named: hibernate is scheduler. This unit **uses** parallel awake and **attacks** the isolation law.
 
@@ -33,9 +33,9 @@ Do not mint a dump-meter number. Do not close G1. Do not compute from missing du
 2. Spawn **A and B both awake** (`context_source=new` if that is how this CLI two-traces). Parent notes only. No URL lists exchanged.
 3. Each clone writes its own pad (function-set: collection / claimed / demand).
 4. **Attack (required):** while the other is still open, each clone **attempts** to read the sibling pad / sibling session notes / sibling URL list.
-   - If the tool or parent injects sibling text → `READ_ALLOWED=yes` (isolation **broken**).
-   - If the attempt is refused / empty / no such context → `READ_ALLOWED=no` (isolation **held under attack**).
-   - Do not skip the attempt and then claim sibling_read=false. Honor-system false is not this board.
+ - If the tool or parent injects sibling text → `READ_ALLOWED=yes` (isolation **broken**).
+ - If the attempt is refused / empty / no such context → `READ_ALLOWED=no` (isolation **held under attack**).
+ - Do not skip the attempt and then claim sibling_read=false. Honor-system false is not this board.
 5. Meet only after both pads sealed. Jaccard only at meet. `collate-hourglass`.
 
 ## Board (required)
@@ -44,17 +44,17 @@ Do not mint a dump-meter number. Do not close G1. Do not compute from missing du
 CHARGE: Track-W-dump vs residual-path-board
 TRUE_PARALLEL: yes/no/confounded
 AWAKE: [id_A, id_B]
-ATTEMPT_A_READ_B: yes  READ_ALLOWED: yes/no  how=
-ATTEMPT_B_READ_A: yes  READ_ALLOWED: yes/no  how=
+ATTEMPT_A_READ_B: yes READ_ALLOWED: yes/no how=
+ATTEMPT_B_READ_A: yes READ_ALLOWED: yes/no how=
 JACCARD:
 DUMPS_EXIST: yes/no
 MINTED_DUMP_METER: false
 RESTATE: (Track W is snapshot ore. Residual-path board is a different function. Isolation held or broken under attack.)
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
-Pass isolation = both attempts made AND both READ_ALLOWED=no.  
-Fail isolation = either read succeeded.  
+Pass isolation = both attempts made AND both READ_ALLOWED=no. 
+Fail isolation = either read succeeded. 
 Fail charge = reran greedy/nucleus vs leftover.
 
 HOLD after board. Do not rewrite lattice default here. Do not start factor-compute if DUMPS_EXIST=no.

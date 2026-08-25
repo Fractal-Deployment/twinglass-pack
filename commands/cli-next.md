@@ -7,7 +7,7 @@ description: Paste this whole file into Grok Build CLI. Load paces lock. Run hib
 
 You are on **Grok Build CLI**, not grok.com, not a GPU.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 ## 0. Load (do not invent)
 
@@ -54,17 +54,17 @@ Charge (short, same exclusive accounts as paces, **no volume 27**): leftover-in-
 CONDITION: P
 TRUE_PARALLEL: yes / no / confounded
 AWAKE: [ids]
-CLONE_A: sibling_read=  paraphrase_of_B=
-CLONE_B: sibling_read=  paraphrase_of_A=
+CLONE_A: sibling_read= paraphrase_of_B=
+CLONE_B: sibling_read= paraphrase_of_A=
 SHARED_TRANSCRIPT: yes/no
 MINTED_DUMP_METER: false
 H0_or_H1_or_CONFOUNDED:
 RESTATE: one paragraph
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
-H0 only if true parallel AND sibling_read=false AND paraphrase=no.  
-H1 if leak or paraphrase from shared transcript.  
+H0 only if true parallel AND sibling_read=false AND paraphrase=no. 
+H1 if leak or paraphrase from shared transcript. 
 `confounded` if one context played both roles.
 
 ## 4. HOLD after the board

@@ -1,6 +1,6 @@
 # Parallel reasoning patterns vs this lattice
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 LCD: collection vs demand. Demand = **parallel tracks that could diverge**, LRR to a **logical endpoint**, meet as **debate or synthesis**. Not battle. Not antithesis. Not a dump meter.
 
@@ -30,10 +30,10 @@ LRR on each: forward crawl to Logic/Reason fail or charge resolved. That is the 
 ## Meet (after endpoints)
 
 ```text
-if empty meet under the lock     → debate
-if complementary / open join     → synthesis
-if synonym / specialization      → no clone (never ran)
-antithesis / battle / majority   → refuse (that is twin gutter)
+if empty meet under the lock → debate
+if complementary / open join → synthesis
+if synonym / specialization → no clone (never ran)
+antithesis / battle / majority → refuse (that is twin gutter)
 ```
 
 Seeing sibling pads **before** endpoint is not a parallel-reasoning pattern. It is MAD/interactive PR. We already measured that FS logs can leak; bypass, don’t call it the gait.

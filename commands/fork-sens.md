@@ -1,15 +1,15 @@
 ---
 name: fork-sens
 description: >
-  Fork when LRR names an interesting resolving pathway, not only exclusive
-  fight. Sensitivity starts at 0. Cap 10 clones. Bypass session-ACL.
+ Fork when LRR names an interesting resolving pathway, not only exclusive
+ fight. Sensitivity starts at 0. Cap 10 clones. Bypass session-ACL.
 ---
 
 # Fork sensitivity (Grok Build CLI)
 
 Bypass isolation-ACL. Do not chmod sessions. Do not sandbox. Do not rerun leftover-vs-greedy or sibling-read.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Load `DISCOVERED.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law still **no sibling pad in the prompt**. Do not *attack* `~/.grok/sessions` this unit.
 
@@ -29,7 +29,7 @@ Do not mint a dump meter. Do not close G1. Do not factor-compute unless dumps fo
 
 ```
 SENS = 0
-CAP  = 10
+CAP = 10
 ```
 
 - `SENS` is clone count (scout is not a clone). Print `SENS=` after every spawn.
@@ -50,16 +50,16 @@ Monitor (parent): after each clone, if SENS>10 abort. Do not let a clone ignore 
 ## Board
 
 ```
-SENS:  (final, ≤10 or STOP)
+SENS: (final, ≤10 or STOP)
 CAP: 10
 STOP_OVER_CAP: yes/no
 FORKS:
-  - id=  reason= exclusive | interesting-resolving
-    marker=  necessary_because=  empty_meet=
+ - id= reason= exclusive | interesting-resolving
+ marker= necessary_because= empty_meet=
 ATTEMPTED_SYNONYM_FORKS: (must be 0)
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
 Fail: SENS>10 and kept going. Fail: synonym/specialization cloned. Fail: leftover-vs-greedy rerun. Fail: minted meter.

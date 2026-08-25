@@ -1,6 +1,6 @@
 # Asynchronous timing (two lattices)
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Not a wall-clock. Not “wait for all five.” Event-driven joins.
 
@@ -27,8 +27,8 @@ One diamond at a time on the main lattice (hibernate others). Inside the diamond
 ## Structure
 
 ```text
-main DAG:  leg →* legs (clone)  …  diamond?  …  join(2+) → emit → …
-diamond:   north → {define ∥ redefine ∥ explore ∥ adapt} → south
+main DAG: leg →* legs (clone) … diamond? … join(2+) → emit → …
+diamond: north → {define ∥ redefine ∥ explore ∥ adapt} → south
 ```
 
 HOLD. No dump meter.

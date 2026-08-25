@@ -1,15 +1,15 @@
 ---
 name: clone-paces
 description: >
-  Grok Build CLI stress run. Force many real web pages, earned clones,
-  isolation, LCD traps. Methodology not measurement. Not grok.com. Not GPU.
+ Grok Build CLI stress run. Force many real web pages, earned clones,
+ isolation, LCD traps. Methodology not measurement. Not grok.com. Not GPU.
 ---
 
 # Clone paces (Grok Build CLI)
 
 Paste this whole file as the user charge. Not grok.com. Not a GPU. This CLI.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Load `pack/DISCOVERED.md` if present. If absent, do not invent it — use `llmve-meaning` plus this paste. Locks below still bind.
 
@@ -76,15 +76,15 @@ Forward crawl from claim 0 to first fail. No inverse CoT. Markers are residue, n
 
 ```
 AWAKE:
-SCOUT_URLS: N=  [url …]
-CLONE_A: id=  sibling_read=false  minted_P_L=false  urls=N=  unique_vs_scout=
-CLONE_B: id=  sibling_read=false  minted_P_L=false  urls=N=  unique_vs_scout=
+SCOUT_URLS: N= [url …]
+CLONE_A: id= sibling_read=false minted_P_L=false urls=N= unique_vs_scout=
+CLONE_B: id= sibling_read=false minted_P_L=false urls=N= unique_vs_scout=
 LCD_EVENTS: [url → ask|let-fail|stay]
 SI_EVENTS: [term → redirect|hold]
-FORK: earned? yes/no  why=
-MEET: Jaccard(A,B urls)=   (compute only at meet)
+FORK: earned? yes/no why=
+MEET: Jaccard(A,B urls)= (compute only at meet)
 RESTATE: one paragraph
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
 Jaccard at meet is **not** sibling read. If Jaccard > 0.5, B probably paraphrased the web — fail unless you can name why the exclusive accounts still diverged.

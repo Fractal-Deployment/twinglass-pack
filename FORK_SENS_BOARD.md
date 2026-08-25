@@ -1,6 +1,6 @@
 # Fork-sens board — SENS=2
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 **SENS=2 / CAP=10 / STOP_OVER_CAP=no.** ATTEMPTED_SYNONYM_FORKS=0. No dump meter. Ω unmeasured.
 

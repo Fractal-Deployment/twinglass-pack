@@ -1,6 +1,6 @@
 # Condition P board — H0 named
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 **H0.** On Grok Build CLI desktop, interrupt-hibernate is a **scheduler**. Isolation that held was **no sibling pad / URLs / quotes**, not one-awake.
 

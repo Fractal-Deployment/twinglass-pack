@@ -1,16 +1,16 @@
 ---
 name: llmve-open-set
 description: >
-  Next experiment after twin/lattice isolation work. LCD look at what the
-  equation still needs vs what dumps/papers actually collect. Do not mint
-  a dump meter. Not a paces rerun. Not Condition P.
+ Next experiment after twin/lattice isolation work. LCD look at what the
+ equation still needs vs what dumps/papers actually collect. Do not mint
+ a dump meter. Not a paces rerun. Not Condition P.
 ---
 
 # LLMVE open-set (Grok Build CLI)
 
 Paste after the Twin Glass run finishes, **or** in a **new** CLI session with a different charge. Do **not** load lattice and twin on the same charge.
 
-`train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false`
+`train_ok=false · measured_omega=false · G1=OPEN
 
 Load `DISCOVERED.md`, `PACES_BOARD.md`, `CONDITION_P.md`, `llmve-meaning`. Research = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Isolation = no sibling pad (H0: hibernate not required on this CLI).
 
@@ -49,16 +49,16 @@ Work this list. Do not add a tenth meter.
 
 ```
 ROW: [1–9]
-  collection=
-  claimed=
-  demand=
-  meet= empty|named-function
-  action= look-elsewhere | stay | ask
-  pattern= (one residue marker, not a seal)
+ collection=
+ claimed=
+ demand=
+ meet= empty|named-function
+ action= look-elsewhere | stay | ask
+ pattern= (one residue marker, not a seal)
 OPEN_SET: [rows still empty-meet]
-DO_NOT_HAVE: dumps? yes/no  (if no, factor-compute is illegal)
+DO_NOT_HAVE: dumps? yes/no (if no, factor-compute is illegal)
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN · feeds_omega=false
+SEALS: train_ok=false · measured_omega=false · G1=OPEN
 ```
 
 ## Fail
