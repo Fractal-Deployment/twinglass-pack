@@ -43,3 +43,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: CLI lock matches engine
         run: bash scripts/cli-spawn-lock-check.sh
+
+  telos-hold:
+    name: telos-hold
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: telos identity after two diverges
+        run: bash scripts/telos-hold-check.sh
