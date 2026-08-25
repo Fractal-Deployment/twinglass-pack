@@ -1,0 +1,49 @@
+name: PR checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  engine:
+    name: engine tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: diamond + lattice + diverge
+        run: node --experimental-strip-types --test engine/*.test.ts
+
+  seals:
+    name: no deleted live seals
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: forbid G1 / train_ok / feeds_omega as live seals
+        run: bash scripts/pr-seal-check.sh
+
+  request-agent-4:
+    name: request Agent-4
+    runs-on: ubuntu-latest
+    if: github.event.action == 'opened' || github.event.action == 'ready_for_review'
+    steps:
+      - name: request review
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                reviewers: ["Agent-4"],
+              });
+            } catch (e) {
+              core.warning("Could not request Agent-4: " + e.message);
+            }
