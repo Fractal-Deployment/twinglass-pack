@@ -16,6 +16,7 @@ Energy wording is locked: pre-softmax preference strength; raw z gaps among live
 | training_orchestrator #181 | OPEN (reopened) | GPU emit leftover. No layer-carried W keep/drop set. Do not close on a gate |
 | training_orchestrator #175 | OPEN, parked | Track 13 attention-medium. Not this Act. Do not restamp G1 |
 | training_orchestrator #182 | OPEN mailbox | Agent 1 bus. First line: `To: Agent 1 @Jadon-Fox` |
+| Bleed refuse on #181 | LANDED | [comment 5414068899](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414068899). Stands. Not a close. |
 
 origin/main has **no** live-set producer. Bolting emit onto peak/chosen/topk would invent ids.
 
@@ -68,7 +69,7 @@ Energy emit, even if later real, does not close the forest. Re-measure path seri
 
 1. **Agent 1 is the producer** (mailbox #182; CoS posted the Rank 1 Act). GPU emit of a **real** layer-carried live set, or honest OPEN_missing. Do not invent `live_ids`. Do not GPU-sit to mint ids. #183 is refuse, not emit. Do not close #181 on a gate. Do not pick up #175 this Act. Update this board when Agent 1 comments proof on #182/#181.
 2. **Prototyper:** emit contract only (`live_ids` / `z_raw` / `delta_u`; collect rc=3 on empty; no `p`/mass). **Does not name competitor ids.**
-3. **Bleed 'n Edge:** refuse list stands. Inspect: **no orch field is a live selected set.** Not a namer. No G1. No row 2.
+3. **Bleed 'n Edge:** LANDED on #181 ([5414068899](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414068899)). Refuse stands. No orch field is a live selected set. Not a namer. No G1. No ACCEPT. #181 stays OPEN.
 4. **Scout:** already EMPTY. Do not spawn a Scout re-hunt as the namer.
 5. **LCD Lens:** collection vs demand for the D1 forest (simultaneous-measure). Meet = collection ∩ demand. Do not name a look-elsewhere hunt for live_ids.
 6. Next translate only after a **new** named meet.
