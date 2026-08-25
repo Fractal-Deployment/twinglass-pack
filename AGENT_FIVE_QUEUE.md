@@ -39,10 +39,10 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S13 | lattice.md pointer | **landed** — thin → skill + run-apparatus; does not own meet |
 | S14 | twin.md pointer | **landed** — twin only; never with lattice |
 | S15 | README occupant column | **landed** — one occupant per skill row |
-| S16 | meet-mode engine test | debate vs synthesis selection under lock |
-| S17 | hard-note schema docs | improperEvidence + otherTrackEvidence required fields |
-| S18 | SENS board format | CLI board template CAP=10 stop |
-| S19 | RESTATE seal line | only `measured_omega=false` · no invent-green |
+| S16 | meet-mode engine test | **landed** — debate vs synthesis; battle not a MeetMode |
+| S17 | hard-note schema docs | **landed** — `engine/HARD_NOTE.md` |
+| S18 | SENS board format | **landed** — CAP: 10 STOP_OVER_CAP |
+| S19 | RESTATE seal line | **landed** — SEALS only measured_omega=false · no invent-green |
 | S20 | translate ≠ LCD check | script forbids lcd-lens claiming convert |
 | S21 | reason-telos occupant | hierarchy only; not meet; not LRR laws |
 | S22 | factor-compute HOLD banner | skill refuses run without dumps + operator |
