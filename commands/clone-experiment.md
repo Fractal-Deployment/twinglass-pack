@@ -7,7 +7,8 @@ description: Grok Build CLI experiment. Isolated parallel clones. Methodology, n
 
 Not grok.com. Not a GPU. This CLI.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Load `pack/DISCOVERED.md`, then `logic-ration-reason` on each **research** clone. Monitor = SI + `lcd-lens` only. Do not put LRR on the monitor.
 

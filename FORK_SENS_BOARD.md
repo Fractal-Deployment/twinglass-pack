@@ -1,6 +1,7 @@
 # Fork-sens board — SENS=2
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 **SENS=2 / CAP=10 / STOP_OVER_CAP=no.** ATTEMPTED_SYNONYM_FORKS=0. No dump meter. Ω unmeasured.
 
@@ -12,7 +13,7 @@ Clones were **interesting-resolving**, not exclusive fights. Four gates each: ma
 | C_d | Occupancy tax. Interference / Han–Kobayashi class. No accepted product. | Do not merge with MDL |
 | Friction | Two-part MDL length L(H). Separate from C_d. | Do not stamp \(e^{\sigma_{\mathrm{sub}}}\) |
 | Energy / shape | — | Locked forms. **Synonym. Not a clone.** |
-| N(τ), G1 | Still open | Did not pass four gates this turn. Not forked. |
+| N(τ) | Still open | Did not pass four gates this turn. Not forked. G1 is deleted as a meaning seal. |
 
 Algebra for Ω is a **hypothesis product**, not a measurement. Internet math can **candidate functions**. Measuring still needs dumps on those named functions, not more synonym clones.
 

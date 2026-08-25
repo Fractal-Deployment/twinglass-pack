@@ -2,7 +2,8 @@
 
 Meaning is being corrected in `Fractal-Deployment/llmve-meaning` **right now**. This file does **not** rewrite meaning. It names copies that still treat Price’s Law as the **top / defining** variable.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 ## The taint
 

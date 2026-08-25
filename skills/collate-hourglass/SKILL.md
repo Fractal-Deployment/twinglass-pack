@@ -14,7 +14,7 @@ metadata:
 
 **One job:** turn isolated pathway residue into one research explanation the operator can use.
 
-`train_ok=false · measured_omega=false · G1=OPEN`
+`measured_omega=false` · no invent-green
 
 Load `../DISCOVERED.md`. After isolated pads. Not a clone. Not LCD convert.
 

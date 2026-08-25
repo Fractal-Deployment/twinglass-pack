@@ -1,6 +1,7 @@
 # Isolation cascade (let-fail, next option)
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Not a dump meter. Not Mojo memref. Collate after **each** probe (`collate-hourglass`). Steelman the option **before** you try it (`steelman-truth-tournament` only if two options still exclusive after debate — default is this ordered list).
 

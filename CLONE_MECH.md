@@ -1,6 +1,7 @@
 # Agent cloning mechanisms
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Not a dump meter. Not ACL this unit.
 

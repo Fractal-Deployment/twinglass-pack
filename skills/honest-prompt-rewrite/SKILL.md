@@ -3,7 +3,7 @@ name: honest-prompt-rewrite
 description: >
   Shared Logic / Ration / Reason rewrite. Telos stays. Mint markers from
   residue. Use every think/research round. Replaces morph-shared and the
-  LRR paste inside precise-activate. Does not close train_ok or Omega.
+  LRR paste inside precise-activate. Does not close Omega.
 when-to-use: LRR, morph-shared, honest rewrite, contract-lrr, keep telos, mint markers, activate
 user-invocable: true
 metadata:
@@ -14,7 +14,7 @@ metadata:
 
 **One job:** rewrite the working prompt under LRR. This is the shared gate. Lattice and twin consume it. They do not fork it.
 
-`train_ok=false · measured_omega=false · G1=OPEN · no invent-green`
+`measured_omega=false` · no invent-green
 
 ## Three laws
 

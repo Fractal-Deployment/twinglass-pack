@@ -11,7 +11,8 @@ Repo: https://github.com/Fractal-Deployment/twinglass-pack
 Engine: `engine/main-lattice.ts` + `engine/diamond-engine.ts` 
 Spec: `APPARATUS.md` · `ASYNC_TIMING.md` · `engine/RAM_PAD.md`
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 ## Load
 
@@ -65,5 +66,5 @@ SPAWNED_FROM_HARD_NOTES: n=
 SIBLING_SESSION_HUNT: false
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```

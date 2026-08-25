@@ -10,7 +10,8 @@ description: >
 
 Paste after the Twin Glass run finishes, **or** in a **new** CLI session with a different charge. Do **not** load lattice and twin on the same charge.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Load `DISCOVERED.md`, `PACES_BOARD.md`, `CONDITION_P.md`, `llmve-meaning`. Research = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Isolation = no sibling pad (H0: hibernate not required on this CLI).
 
@@ -18,13 +19,13 @@ Load `DISCOVERED.md`, `PACES_BOARD.md`, `CONDITION_P.md`, `llmve-meaning`. Resea
 
 Discovery of **patterns and evidence classes** still required to *measure* the LLMVE — not to invent a number.
 
-You will not compute F / T_tail / dump-meter / Φ_E / Ω. You will not close G1.
+You will not compute F / T_tail / dump-meter / Φ_E / Ω. You will not invent Ω.
 
 ## Charge
 
 For each sealed variable, name: **demand function** vs **what published or orch artifacts actually collect**. Look elsewhere when collection ≠ demand. Blind to prestige.
 
-Work this list. Do not add a tenth meter.
+Work this list. Do not add a ninth meter. G1 is deleted as a meaning seal — not a row.
 
 | # | Name | Demand (locked) | Typical false collection |
 |---|---|---|---|
@@ -36,7 +37,6 @@ Work this list. Do not add a tenth meter.
 | 6 | τ | Dual health: Mythos + cooperation toward vital few | A vibe score |
 | 7 | C_d | Resistance tax on attention transfer | “Attention is all you need” |
 | 8 | Parameter inflation | Extra parameters without useful work | Param count as quality |
-| 9 | G1 | Still OPEN — do not fill | Any SVD story |
 
 ## Protocol
 
@@ -48,7 +48,7 @@ Work this list. Do not add a tenth meter.
 ## Board (required)
 
 ```
-ROW: [1–9]
+ROW: [1–8]
  collection=
  claimed=
  demand=
@@ -58,11 +58,11 @@ ROW: [1–9]
 OPEN_SET: [rows still empty-meet]
 DO_NOT_HAVE: dumps? yes/no (if no, factor-compute is illegal)
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 ## Fail
 
-Mint a dump meter. Close G1. Load twin+lattice together. Cite paces/H0 as if they measured viability. Inverse CoT. Fluency as warrant.
+Mint a dump meter. Restore G1 / train_ok / feeds_omega as live seals. Load twin+lattice together. Cite paces/H0 as if they measured viability. Inverse CoT. Fluency as warrant.
 
 HOLD after the board: this is an **open-set map**, not Ω.

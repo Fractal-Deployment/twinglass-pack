@@ -13,7 +13,7 @@ metadata:
 
 **One job:** the map. Not the measurement.
 
-`train_ok=false · measured_omega=false · G1=OPEN`
+`measured_omega=false` · no invent-green
 
 ## Do
 

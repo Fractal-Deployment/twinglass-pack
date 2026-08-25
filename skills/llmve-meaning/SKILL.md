@@ -1,7 +1,7 @@
 ---
 name: llmve-meaning
 description: >
- Symbol jurisdiction for LLMVE. Use when F, T_tail, P_L, Φ_E, Ω, G1, or
+ Symbol jurisdiction for LLMVE. Use when F, T_tail, P_L, Φ_E, Ω, or
  residual are about to be redefined in prose. Pointer to llmve-meaning.
  Not a compute skill. Not a research gait.
 when-to-use: meaning lock, operator definition, what P_L is allowed to answer, do not invent-green
@@ -14,7 +14,7 @@ metadata:
 
 **One job:** lock what symbols may answer. Read `llmve-meaning`. Do not restate the variables here.
 
-`train_ok=false · measured_omega=false · G1=OPEN · no invent-green`
+`measured_omega=false` · no invent-green
 
 ## Do
 

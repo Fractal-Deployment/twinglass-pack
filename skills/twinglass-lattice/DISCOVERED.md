@@ -1,6 +1,7 @@
 # Discovered — load before any pack skill
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Do not re-derive these from the word “LCD” or from “more layers.”
 
@@ -34,7 +35,7 @@ Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 | `llmve-meaning` | \(P_L\) hold/let-fail. Maintain ≠ \(P_L\). Methodology ≠ measurement. |
 | `llmve-factor-compute` | Dumps are data. Active calc is information. Don’t unlike-units an open map. |
 | `honest-prompt-rewrite` | Apply LRR. Don’t own laws. Fluency ≠ warrant. |
-| `twinglass-lattice` | Isolated clones. No pad leak. Fork only exclusive. Experiment path: `commands/clone-experiment.md`. |
+| `twinglass-lattice` | Isolated clones. No pad leak. Spawn on improper-track evidence + other-track evidence. Exclusive fight is optional, not the goal. Same conclusion / synthesis allowed. Experiment path: `commands/clone-experiment.md`. |
 | `twinglass-twin` | Same isolation. Known gutter only. |
 | `collate-hourglass` | After isolation + monitor. Not a walker. |
 | `steelman-truth-tournament` | Exclusive accounts only. Not conversion. |

@@ -10,7 +10,8 @@ description: >
 
 Not grok.com. Not a GPU. **Not** leftover-on-merit vs greedy/top-p. That split already passed. Do not rerun it.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Load `DISCOVERED.md`, `CONDITION_P.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law = no sibling pad. H0 already named: hibernate is scheduler. This unit **uses** parallel awake and **attacks** the isolation law.
 
@@ -25,7 +26,7 @@ You are collecting boards/dumps. Two accounts cannot both be true:
 
 Empty meet: snapshot-collection ≠ hold/find/let-fail on a residual path. Fork earned on that identity split — not on decoding.
 
-Do not mint a dump-meter number. Do not close G1. Do not compute from missing dumps — name whether dumps exist.
+Do not mint a dump-meter number. Do not close Ω. Do not compute from missing dumps — name whether dumps exist.
 
 ## Protocol
 
@@ -50,7 +51,7 @@ JACCARD:
 DUMPS_EXIST: yes/no
 MINTED_DUMP_METER: false
 RESTATE: (Track W is snapshot ore. Residual-path board is a different function. Isolation held or broken under attack.)
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 Pass isolation = both attempts made AND both READ_ALLOWED=no. 

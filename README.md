@@ -18,7 +18,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, and `FINISH_EVIDENCE.md` before any skill.
 | `reason-telos-lookup` | What may be sacrificed for what |
 | `honest-prompt-rewrite` | Apply LRR to the working prompt |
 | `collate-hourglass` | After isolated pads: expand, debate or synthesis, contract. Dead name: morph-shared-research |
-| `twinglass-lattice` | `diverge()` legs, diamond mutex, meet |
+| `twinglass-lattice` | `diverge()` on improper-track + other-track evidence; diamond mutex; meet |
 | `twinglass-twin` | Known two-track. Never with lattice. |
 | `steelman-truth-tournament` | Tournament **after** exclusive leftover |
 | `llmve-factor-compute` | HOLD. No measured leaves. |
