@@ -86,7 +86,7 @@ Do **not** run all five at once. Each is a spawn only if the current track is im
 
 | Step | Track | Improper if… | Other-track evidence | Converge as |
 |---|---|---|---|---|
-| 1 | Morph occupant bleed | FINISH_BOARD: rewrite restates laws; lattice/twin/steelman all claim meet | Quote SKILL.md collisions | Morph one occupant per skill |
+| 1 | Morph occupant bleed | FINISH_BOARD: rewrite restates laws; lattice/twin/steelman all claim meet | Quote SKILL.md collisions | **landed** — one occupant per named skill |
 | 2 | CLI spawn-lock probe | Engine gate can pass while CLI still clones on any cannotFollow | Quote `run-apparatus.md` vs `assertLegalSpawnNote` | Same lock on CLI gait, or empty meet named |
 | 3 | Telos-hold across forks | Spawn can keep LRR local and drop the working telos | Rewrite → diverge twice → restatement still names original telos | Identity held or SI redirect |
 | 4 | Collate vs steelman | Meet defaults to tournament | Exclusive leftover after collate only | Steelman gated |

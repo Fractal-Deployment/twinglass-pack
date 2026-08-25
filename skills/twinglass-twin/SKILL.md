@@ -2,7 +2,7 @@
 name: twinglass-twin
 description: >
   Always-two special case. Reason vs Disconfirm in true parallel isolation
-  through diamond and hourglass, then one battle, then one contraction.
+  through diamond and hourglass, then one battle. Collate contracts.
   Use when the split is already the known gutter. Not earned forks.
 when-to-use: twin, dual track, Reason vs Disconfirm, parallel hourglass, known gutter, isolation until battle
 user-invocable: true
@@ -24,8 +24,8 @@ Load `honest-prompt-rewrite`. Do not also load `evidence-hourglass-research` or 
 2. **Split** — Track A Reason and Track B Disconfirm start together, then cannot see each other.
 3. Parallel diamonds.
 4. Parallel hourglasses.
-5. Battle diamond (three laws).
-6. One contraction hourglass.
+5. Battle diamond (three laws on this gutter — not LRR restated here).
+6. Hand contraction to `collate-hourglass`. Twin does not own collation.
 
 Isolation gutter holds until battle. Sequential A-then-B on shared state is contamination.
 

@@ -37,7 +37,7 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | Class | What |
 |---|---|
 | Keep | Engine spawn lock (tests 32–34). README 13-skill table. |
-| Morph | Occupant bleed: rewrite still restates laws; lattice/twin/steelman still claim meet. Not this commit. |
+| Morph | Occupant bleed **landed** — rewrite consumes LRR (no `## Three laws`); lattice/twin hand meet/contraction to `collate-hourglass`; steelman is exclusive leftover only. |
 | HOLD | `llmve-factor-compute` — do not run to finish. |
 | Delete | Dead aliases already gone. |
 

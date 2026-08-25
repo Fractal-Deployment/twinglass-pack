@@ -25,9 +25,9 @@ metadata:
 
 ## Do not
 
-- Be the default lattice meet. Main-lattice converge is debate or synthesis. Use this tournament only when accounts remain exclusive after that.
+- Be the default meet. `collate-hourglass` owns debate or synthesis. Use this tournament only when accounts remain exclusive after collate.
 
 - Compute F, T_tail, P_L from dumps (`llmve-factor-compute`).
 - Live inside reason-telos. Values stay there; this is the debate machine.
 
-Grok.com: Lattice meet is the short form. This skill is the long form for CLI whitepapers.
+Grok.com: exclusive leftover after collate. CLI: this folder. Not the lattice walk. Not collation.
