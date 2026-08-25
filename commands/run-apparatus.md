@@ -17,7 +17,7 @@ Spec: `APPARATUS.md` · `ASYNC_TIMING.md` · `engine/RAM_PAD.md`
 ## Load
 
 - `logic-ration-reason` on the **research** agent
-- Monitor: `lcd-glossary-integrity` + `lcd-lens` only
+- Monitor: `lcd-glossary-integrity` + `lcd-lens` only. A third watch object (including `logic-ration-reason` on the sentinel) is **overload refuse**.
 - `honest-prompt-rewrite` for the working prompt
 - `twinglass-lattice` (this gait)
 - After isolated endpoints: `collate-hourglass` as **debate or synthesis**
