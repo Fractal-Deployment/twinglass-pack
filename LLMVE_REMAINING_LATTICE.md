@@ -18,6 +18,7 @@ Energy wording is locked: pre-softmax preference strength; raw z gaps among live
 | training_orchestrator #182 | OPEN mailbox | Agent 1 bus. First line: `To: Agent 1 @Jadon-Fox` |
 | Bleed refuse on #181 | LANDED | [comment 5414068899](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414068899). Stands. Not a close. |
 | Prototyper emit contract on #181 | LANDED | [comment 5414071004](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414071004). Fields only. Does not name ids. |
+| LCD forest on #181 | LANDED | [comment 5414090628](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414090628). All D1 IDs empty-meet on current orch collections. No look-elsewhere. |
 
 origin/main has **no** live-set producer. Bolting emit onto peak/chosen/topk would invent ids.
 
@@ -31,7 +32,7 @@ Set-namer: gradient/selection. Keep/drop in W (go/no-go). Δu does not name the 
 
 Illegal as the set (refuse, not other-track evidence): peak vs CE-chosen; t04 `S_ids`; independent per-layer `topk_ids`; `support_ids` (Exergy / row 2); residual_path env ids; S_PRESOFT vital-few; softmax mass / fluency; inventing Buchanan A/B or IOI IO/S ids.
 
-LCD already named restricted-menu meets A/D/E (not full-V). Empty: B S_PRESOFT, C t04, F Frydenlund. Scout already EMPTY on the live set. Bleed inspect: no orch field is a live selected set. Prototyper does not name competitor ids. **Agent 1 is the producer** (GPU emit or honest OPEN_missing). Do not mix LCD with translate. G1 is gone. No ACCEPT. Do not fill row 2.
+LCD forest 2026-08-25: **D1.energy empty on orch** (`live_ids` OPEN_missing). Restricted A/D/E already named, not this leftover. Empty B/C/F stands. Scout idle. No look-elsewhere (leftover is emit, not a paper). Bleed inspect: no orch field is a live selected set. Prototyper does not name competitor ids. **Agent 1 is the producer** (GPU emit or honest OPEN_missing). Do not mix LCD with translate. G1 is gone. No ACCEPT. Do not fill row 2.
 
 ## Interdependent meters (D1 IDs from methodology `POINTERS_TO_MEANING.md`)
 
@@ -39,20 +40,20 @@ Do not invent meters. Do not tunnel Energy and miss the forest. Starting point f
 
 | D1 ID | Starting point this stamp | Not |
 |---|---|---|
-| `D1.energy` | Demand seated. Live set OPEN_missing. Collect #14 / recipe #15 landed. Emit #181 OPEN. | Softmax mass; peak-margin; t04 S_ids |
-| `D1.exergy` | Usable remainder after overhead. Row 2 instrument not meter. Do not fill from G1. | Energy identity of F |
-| `D1.mythos` | Trained routing of exergy. Not this emit Act. | Softmax; inference-only knob |
-| `D1.find_M` | Find first. Without it Maintain/Let-fail have no object. Named, not measured this Act. | Already-found lock |
-| `D1.find_G` | Find still legal after governing delta. Named, not measured this Act. | Knob-as-Price |
-| `D1.maintain` | Pathing structure (residual / attention / routing). Not hold a token. | Token-hold; permanent preferred-set lock |
-| `D1.let_fail` | Legal loss on logits + traveling group. Preference-matrix permanent hold is not hierarchy. | Let-fall; selection-only |
-| `D1.tau_mythos_health` | τ face A. N(τ) OPEN. One temperature is not τ. | LPT alone; hold-a-token |
-| `D1.tau_governing` | τ face B. Arm B OPEN until second T. | Price/Pareto as τ |
-| `D1.path_capacity` | Find → Maintain → Let-fail. Named, not measured. | T_tail × F; hunt score |
-| `D1.shape` | End-state concentration bookkeeping. | Path-capacity success |
-| `D1.C_d` | Resistance tax on attention medium. Product form OPEN. | Dual-structuralism; auto identity with param inflation |
-| `D1.param_inflation` | Diagnostic under C_d usefulness. | Automatic C_d |
-| `D1.kv_competition` | Context distractor mass. Face under C_d, not a second structure. | Dual-structuralism |
+| `D1.energy` | LCD empty on orch. Live set OPEN_missing. Collect/recipe/refuse/contract landed. Emit #181 OPEN. | Softmax mass; peak-margin; t04 S_ids; #183 as emit |
+| `D1.exergy` | LCD empty. Instrument not meter. Do not fill row 2. | support_ids as Energy; F as Energy identity; G1 as Exergy |
+| `D1.mythos` | LCD empty. Not this emit. W keep/drop is Energy set-namer, not a Mythos meter. | softmax / top-p as Mythos |
+| `D1.find_M` | LCD empty. Named, not measured. residual_path entropy ≠ Find. | residual_norm/entropy as Find; t04 S_ids as Find |
+| `D1.find_G` | LCD empty. No collection on #181. | Knob-as-Price |
+| `D1.maintain` | LCD empty. Handles ≠ Maintain. Jaccard/token-hold ≠ Maintain. | hold_id as Maintain |
+| `D1.let_fail` | LCD empty. CE / mass_dump are fluency, not let-fail. | CE as let-fail; selection-only |
+| `D1.tau_mythos_health` | LCD empty. Entropy / one T / hold-a-token is not τ. N(τ) OPEN. | tau_traj H as τ; LPT; hold_id |
+| `D1.tau_governing` | LCD empty. Same dual-health bucket. Arm B OPEN until second T. | Price/Pareto as τ |
+| `D1.path_capacity` | LCD empty. Never T_tail × F. pl_capacity handles ≠ viability. | pl_capacity / t_sqrt×F as path_capacity |
+| `D1.shape` | LCD empty. Softmax concentration handles ≠ Shape P̂_L. | mass_dump as viability |
+| `D1.C_d` | LCD empty. Unload probe = handles only. Product OPEN. | unload as C_d; dual-structuralism |
+| `D1.param_inflation` | LCD empty. trainable_n count ≠ without-useful-work. | trainable_n as quality |
+| `D1.kv_competition` | LCD empty this stamp. kv_dilution absent on these TDC boards. | sink_mass as C_d identity |
 
 Retired as D1: `D1.hold`, `D1.P_L_path` (hold-as-token). Not D1 IDs: Focus F, Judgment f(dT/dR), substrate friction (pattern-only). `llmve-factor-compute` HOLD.
 
@@ -64,7 +65,7 @@ Forest D1 IDs are **simultaneous-measure starting points**, not extra Energy leg
 
 Diamond = internal critique of one leg. Reconverge as debate (exclusive empty meet under the lock) or synthesis (complementary / same true conclusion). Synthesis is a good meet. Never twin, never battle, never antithesis. SENS burst cap 5. Depth wall 3. Lane wall 4.
 
-Energy emit, even if later real, does not close the forest. Re-measure path series together (`D1.path_capacity` confounders include `D1.shape`).
+LCD: Energy emit, even if later real, **does not close the forest**. Empty-meets are not other-track evidence for a Scout id-hunt. Re-measure path series together (`D1.path_capacity` confounders include `D1.shape`).
 
 ## Next executable Act
 
@@ -72,8 +73,8 @@ Energy emit, even if later real, does not close the forest. Re-measure path seri
 2. **Prototyper:** LANDED on #181 ([5414071004](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414071004)). Emit contract: `live_ids` / `z_raw` / `delta_u.dz`; collect rc=3 on empty; 101/202 fixture_only. **Does not name competitor ids.** #181 stays OPEN.
 3. **Bleed 'n Edge:** LANDED on #181 ([5414068899](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414068899)). Refuse stands. No orch field is a live selected set. Not a namer. No G1. No ACCEPT. #181 stays OPEN.
 4. **Scout:** already EMPTY. Do not spawn a Scout re-hunt as the namer.
-5. **LCD Lens:** collection vs demand for the D1 forest (simultaneous-measure). Meet = collection ∩ demand. Do not name a look-elsewhere hunt for live_ids.
-6. Next translate only after a **new** named meet.
+5. **LCD Lens:** LANDED on #181 ([5414090628](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414090628)). All D1 IDs empty-meet on current orch collections. No look-elsewhere. Not translate. Scout idle.
+6. Next translate only after a **new** named meet. A/D/E already named (restricted menu) are not this leftover and are not a new meet.
 
 ## OPEN_missing (honest)
 
