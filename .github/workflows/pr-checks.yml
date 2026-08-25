@@ -3,6 +3,8 @@ name: PR checks
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
 
 permissions:
   contents: read
@@ -41,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: CLI lock matches engine
+      - name: PROXY docs to engine lock strings
         run: bash scripts/cli-spawn-lock-check.sh
 
   telos-hold:
@@ -99,3 +101,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Morph landed; next S10
         run: bash scripts/finish-board-refresh-check.sh
+
+  ci-push:
+    name: push to main runs engine
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: workflow on.push includes main
+        run: bash scripts/ci-push-engine-check.sh
+
+  hardnote-type:
+    name: HardNote no as-never
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: required evidence without type lie
+        run: bash scripts/hardnote-type-check.sh

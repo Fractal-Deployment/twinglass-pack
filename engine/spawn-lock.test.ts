@@ -11,7 +11,8 @@ test("spawn refuses: no other-track evidence", () => {
         functionSet: "friction",
         necessaryBecause: "different tax",
         improperEvidence: "quoted: this track packed tiling as if it were the pad",
-      } as never),
+        otherTrackEvidence: "",
+      }),
     /other-track/i,
   );
   assert.equal(m.legs.length, 1);
@@ -27,7 +28,7 @@ test("spawn refuses: assigned antithesis is not other-track evidence", () => {
         necessaryBecause: "assigned opposite",
         improperEvidence: "quoted: this track is not the proper object",
         otherTrackEvidence: "quoted: assigned opposite / antithesis of the live lane",
-      } as never),
+      }),
     /antithesis/i,
   );
   assert.equal(m.legs.length, 1);
@@ -41,7 +42,9 @@ test("spawn refuses: no improper-track evidence", () => {
         cannotFollow: "other math",
         functionSet: "friction",
         necessaryBecause: "different tax",
-      } as never),
+        improperEvidence: "",
+        otherTrackEvidence: "",
+      }),
     /improper/i,
   );
   assert.equal(m.legs.length, 1);
@@ -57,7 +60,7 @@ test("spawn refuses: other-track is a synonym of the live lane", () => {
         necessaryBecause: "looks parallel",
         improperEvidence: "quoted: this pad never named the live object",
         otherTrackEvidence: "quoted: spawn-lock again",
-      } as never),
+      }),
     /synonym/i,
   );
   assert.equal(m.legs.length, 1);
@@ -72,7 +75,7 @@ test("spawn allows: improper + other-track, parent keeps walking", () => {
     necessaryBecause: "different tax",
     improperEvidence: "quoted: this track packed tiling as if it were the pad",
     otherTrackEvidence: "quoted: occupancy/interference is a different function-set",
-  } as never);
+  });
   assert.equal(m.legs.length, 2);
   assert.equal(m.legs[0].id, root);
   assert.equal(m.legs[0].state, "walking");
