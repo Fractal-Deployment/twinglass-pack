@@ -1,6 +1,6 @@
-# CHARGE — AGENT-5 (Twinglass advanced)
+# CHARGE — Agent Five (Twinglass)
 
-GitHub reviewer: **AGENT-5**. Not Agent-4. Do not merge from a self-review as Jadon-Fox pretending to be AGENT-5.
+Agent Five is a **session role**. Login is Jadon-Fox. Do **not** invite or CODEOWNERS github.com/AGENT-5.
 
 `measured_omega=false` · no invent-green  
 Meaning **0.3.4**. Do not list `G1`, `train_ok`, `feeds_omega`.
