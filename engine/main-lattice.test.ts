@@ -14,6 +14,20 @@ import {
 
 const CHARGE = "parallel-could-diverge research";
 
+function trackNote(
+  functionSet: string,
+  cannotFollow: string,
+  necessaryBecause = "cannot clutter this leg",
+) {
+  return {
+    cannotFollow,
+    functionSet,
+    necessaryBecause,
+    improperEvidence: `quoted: this track is not the ${functionSet} object`,
+    otherTrackEvidence: `quoted: ${functionSet} is a different function-set`,
+  };
+}
+
 function fourSeal(run: DiamondRun): DiamondRun {
   let r = run;
   for (const id of ["define", "redefine", "explore", "adapt"] as const) {
@@ -27,11 +41,7 @@ function fourSeal(run: DiamondRun): DiamondRun {
 test("diverge = note + spawn; parent keeps walking", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
-  m = diverge(m, root, {
-    cannotFollow: "friction is not Mythos",
-    functionSet: "substrate-friction",
-    necessaryBecause: "different tax",
-  });
+  m = diverge(m, root, trackNote("substrate-friction", "friction is not Mythos", "different tax"));
   assert.equal(m.legs.length, 2);
   assert.equal(m.legs[0].state, "walking");
   assert.equal(m.legs[1].parentId, root);
@@ -42,11 +52,7 @@ test("hard notes spawn MAIN lattice legs, not diamonds", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
   for (let i = 0; i < 5; i++) {
-    m = noteOnLeg(m, root, {
-      cannotFollow: `diff ${i}`,
-      functionSet: `fn-${i}`,
-      necessaryBecause: "cannot clutter this leg",
-    });
+    m = noteOnLeg(m, root, trackNote(`fn-${i}`, `diff ${i}`));
   }
   m = spawnLegsBurst(m, root);
   assert.equal(m.legs.length, 6);
@@ -59,11 +65,7 @@ test("hard notes spawn MAIN lattice legs, not diamonds", () => {
 test("one diamond: others hibernate; complete awaits meet", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
-  m = noteOnLeg(m, root, {
-    cannotFollow: "other fn",
-    functionSet: "B",
-    necessaryBecause: "parallel",
-  });
+  m = noteOnLeg(m, root, trackNote("B", "other fn", "parallel"));
   m = spawnLegsBurst(m, root);
   const child = m.legs[1].id;
   m = enterCritiqueDiamond(m, child);
@@ -81,8 +83,8 @@ test("one diamond: others hibernate; complete awaits meet", () => {
 test("converge waits for two diamond-complete legs; emit walks", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
-  m = noteOnLeg(m, root, { cannotFollow: "A", functionSet: "fa", necessaryBecause: "p" });
-  m = noteOnLeg(m, root, { cannotFollow: "B", functionSet: "fb", necessaryBecause: "p" });
+  m = noteOnLeg(m, root, trackNote("fa", "A", "p"));
+  m = noteOnLeg(m, root, trackNote("fb", "B", "p"));
   m = spawnLegsBurst(m, root);
   const a = m.legs[1].id;
   const b = m.legs[2].id;
