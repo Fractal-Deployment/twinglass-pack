@@ -16,15 +16,11 @@ metadata:
 
 `measured_omega=false` · no invent-green
 
-## Three laws
-
-1. Identity — a locked term keeps one referent. New sense, new name.
-2. Non-contradiction — do not hold A and not-A under the same lock.
-3. Excluded middle — do not hide the split in a vague third.
+Load `logic-ration-reason`. Do not restate the laws. This folder applies the lock; it does not own it.
 
 ## Each round
 
-1. **Logic** — same term, same referent. If a new sense is needed, mint a new name.
+1. **Logic** — consume LRR identity / NC / EM. Same term, same referent.
 2. **Ration** — mint short pattern markers from residue. Do not narrate them away.
 3. **Reason** — keep a claim only with `necessary_because` (telos link) AND a marker.
 

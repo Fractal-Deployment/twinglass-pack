@@ -27,3 +27,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: forbid G1 / train_ok / feeds_omega as live seals
         run: bash scripts/pr-seal-check.sh
+
+  occupant:
+    name: occupant bleed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: one occupant per named skill
+        run: bash scripts/occupant-bleed-check.sh
