@@ -38,6 +38,39 @@ function nid(n: number) {
   return `leg-${n}`;
 }
 
+function normLane(s: string): string {
+  return s.trim().toLowerCase().replace(/[\s_]+/g, "-");
+}
+
+function liveFunctionSets(m: MainLattice): string[] {
+  const out = new Set<string>();
+  out.add(normLane(m.charge.split("\n")[0] ?? m.charge));
+  for (const leg of m.legs) {
+    const mFn = /function-set:\s*(.+)/i.exec(leg.run.charge);
+    if (mFn) out.add(normLane(mFn[1]));
+  }
+  return [...out];
+}
+
+function assertLegalSpawnNote(
+  note: Omit<HardNote, "id">,
+  live: string[],
+): void {
+  if (!note.improperEvidence?.trim()) {
+    throw new Error("spawn refuses: improper-track evidence required");
+  }
+  if (!note.otherTrackEvidence?.trim()) {
+    throw new Error("spawn refuses: other-track evidence required");
+  }
+  if (/antithesis|assigned opposite|opposite account/i.test(note.otherTrackEvidence)) {
+    throw new Error("spawn refuses: assigned antithesis is not other-track evidence");
+  }
+  const fs = normLane(note.functionSet);
+  if (live.includes(fs)) {
+    throw new Error("spawn refuses: other-track is a synonym of a live lane");
+  }
+}
+
 export function openMain(charge: string): MainLattice {
   const run = openRun({ charge, walker: "single", schedule: "parallel" });
   return {
@@ -72,6 +105,8 @@ export function spawnLegsBurst(m: MainLattice, parentId: string): MainLattice {
   if (parent.state !== "walking") throw new Error("spawn from a walking parent");
   const notes = parent.run.hardNotes;
   if (notes.length === 0) throw new Error("no hard notes — nothing to clone");
+  const live = liveFunctionSets(m);
+  for (const n of notes) assertLegalSpawnNote(n, live);
   const room = Math.max(0, SENS_CAP - m.sens);
   if (room === 0) throw new Error("SENS cap: do not spawn");
   const take = notes.slice(0, room);
