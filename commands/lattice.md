@@ -1,9 +1,13 @@
 ---
-description: Load run-apparatus. Two lattices. Spawn on improper-track + other-track evidence. Debate or synthesis. Not battle.
+description: Thin pointer. Load twinglass-lattice + run-apparatus. Does not own meet.
 ---
 
-Load **commands/run-apparatus.md** (or GitHub `Fractal-Deployment/twinglass-pack` `commands/run-apparatus.md`).
+# /lattice
 
-That file is what this CLI is supposed to do.
+Load **`skills/twinglass-lattice`** and **`commands/run-apparatus.md`**.
 
-Spawn when a walker finds evidence it is **not on the proper track** and evidence for a **different track**. Do not ask it to find divergence. Same conclusion is allowed. Synthesis is a good meet. Never battle. Never antithesis.
+This command **does not own meet**. Meet is `collate-hourglass` (debate or synthesis). Never battle. Never load **twinglass-twin** on the same charge.
+
+Spawn lock: `assertLegalSpawnNote` (improperEvidence AND otherTrackEvidence).
+
+`measured_omega=false` · no invent-green

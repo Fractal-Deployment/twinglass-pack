@@ -8,21 +8,21 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.m
 
 ## Skills (attach these)
 
-| Skill | Job |
-|---|---|
-| `logic-ration-reason` | Standing Logic · Ration · Reason lock |
-| `llmve-meaning` | What meters may answer (pointer to 0.3.4) |
-| `lcd-glossary-integrity` | Lock a term, then judge (SI) |
-| `lcd-lens` | Look: their functions vs our demand (LCD) |
-| `llmve-translate` | Collected math onto Mythos/friction. Not LCD. |
-| `reason-telos-lookup` | What may be sacrificed for what |
-| `honest-prompt-rewrite` | Apply LRR to the working prompt |
-| `collate-hourglass` | After isolated pads: expand, debate or synthesis, contract. Dead name: morph-shared-research |
-| `twinglass-lattice` | `diverge()` on improper-track + other-track evidence; diamond mutex; meet |
-| `twinglass-twin` | Known two-track. Never with lattice. |
-| `steelman-truth-tournament` | Tournament **after** exclusive leftover |
-| `llmve-factor-compute` | HOLD. No measured leaves. |
-| `transformer-stage-atlas` | Stage map, not Ω |
+| Skill | Occupant | Job |
+|---|---|---|
+| `logic-ration-reason` | laws | Standing Logic · Ration · Reason lock |
+| `llmve-meaning` | meaning | What meters may answer (pointer to 0.3.4) |
+| `lcd-glossary-integrity` | SI | Lock a term, then judge |
+| `lcd-lens` | LCD look | Look: their functions vs our demand |
+| `llmve-translate` | translate | Collected math onto Mythos/friction. Not LCD. |
+| `reason-telos-lookup` | hierarchy | What may be sacrificed for what |
+| `honest-prompt-rewrite` | rewrite | Apply LRR to the working prompt |
+| `collate-hourglass` | meet | After isolated pads: expand, debate or synthesis, contract |
+| `twinglass-lattice` | walk / diverge | `diverge()` on improper-track + other-track evidence; diamond mutex |
+| `twinglass-twin` | twin | Known two-track. Never with lattice. |
+| `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
+| `llmve-factor-compute` | HOLD | No measured leaves. No invent-green path. |
+| `transformer-stage-atlas` | atlas | Stage map, not Ω |
 
 ## Dead (do not attach)
 

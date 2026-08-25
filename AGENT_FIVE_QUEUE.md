@@ -36,9 +36,9 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S10 | fork-sens align | **landed** — spawn lock tokens + refuse synonym/antithesis |
 | S11 | clone-experiment align | **landed** — same spawn lock language |
 | S12 | clone-paces align | **landed** — same lock; volume gates stay |
-| S13 | lattice.md pointer | thin command → skill + run-apparatus |
-| S14 | twin.md pointer | twin only; never load with lattice |
-| S15 | README occupant column | one occupant per skill row |
+| S13 | lattice.md pointer | **landed** — thin → skill + run-apparatus; does not own meet |
+| S14 | twin.md pointer | **landed** — twin only; never with lattice |
+| S15 | README occupant column | **landed** — one occupant per skill row |
 | S16 | meet-mode engine test | debate vs synthesis selection under lock |
 | S17 | hard-note schema docs | improperEvidence + otherTrackEvidence required fields |
 | S18 | SENS board format | CLI board template CAP=10 stop |

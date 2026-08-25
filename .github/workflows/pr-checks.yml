@@ -110,6 +110,14 @@ jobs:
       - name: fork-sens clone-experiment clone-paces spawn lock
         run: bash scripts/s10-s12-command-align-check.sh
 
+  s13-s15-pointers:
+    name: S13–S15 pointers + README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lattice twin README occupant
+        run: bash scripts/s13-s15-pointers-readme-check.sh
+
   ci-push:
     name: push to main runs engine
     runs-on: ubuntu-latest
