@@ -2,80 +2,88 @@
 
 `measured_omega=false` · no invent-green
 
-Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: Fractal-Deployment/twinglass-pack (`APPARATUS.md`). Not a chat memo. Not Ω.
+Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: this pack (`APPARATUS.md`, `skills/twinglass-lattice`). Not a chat memo. Not Ω. Meaning 0.3.4.
 
-Meaning SSOT: Fractal-Deployment/llmve-meaning `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md` (pack pointer 0.3.4). **OPEN_missing from this GitHub account** (repo 404). Do not restate meaning equations here. Methods report up; they do not own meaning.
+Energy wording is locked: pre-softmax preference strength; raw z gaps among live IDs before softmax; z_raw is pre-softmax logits; Δu probes; W keep/drop names the set.
 
-Path capacity (named, not measured): Find → Maintain (pathing) → Let-fail. Maintain is not hold a token. Not greedy/top-p.
+## Landed vs leftover (quoted)
+
+| Artifact | State | What it is |
+|---|---|---|
+| llmve-sensors #14 | MERGED 2026-08-25 | `energy_delta_u_v1` collect (fail-closed OPEN_missing) |
+| llmve-sensors #15 | MERGED 2026-08-25 | `energy_live_set_sensor` recipe (PIN/REFUSE/EMIT) |
+| training_orchestrator #183 | MERGED | Refuse gate only. No fake `live_ids`. Does **not** close #181 |
+| training_orchestrator #181 | OPEN (reopened) | GPU emit leftover. No layer-carried W keep/drop set. Do not close on a gate |
+| training_orchestrator #175 | OPEN, parked | Track 13 attention-medium. Not this Act. Do not restamp G1 |
+| training_orchestrator #182 | OPEN mailbox | Agent 1 bus. First line: `To: Agent 1 @Jadon-Fox` |
+
+origin/main has **no** live-set producer. Bolting emit onto peak/chosen/topk would invent ids.
 
 ## Energy (confirmed)
 
-Demand (already seated): Energy = preference strength before probabilities (pre-softmax).
-False collection: softmax mass / fluency.
+Demand seated: Energy = preference strength before probabilities (pre-softmax).
+Probe: Δu = raw z gaps among the live selected set before softmax (`lm_head` already computed).
+Set-namer: gradient/selection. Keep/drop in W (go/no-go). Δu does not name the set.
 
-Probe: raw z gaps among a **live selected set** of competing vocab IDs **before softmax**. `lm_head` already computed. z_raw is pre-softmax logits, not softmax p.
+**OPEN_missing:** layer-carried live selected token ids. Emit still OPEN_missing. Collect is ready; recipe is ready; refuse gate is ready. Energy is not closed.
 
-Who names the set: gradient / selection. Keep/drop = confirmation/disconfirmation in W (preference matrix go/no-go, not a value hierarchy).
-Who does **not** name the set: Δu. Δu is the probe.
+Illegal as the set (refuse, not other-track evidence): peak vs CE-chosen; t04 `S_ids`; independent per-layer `topk_ids`; `support_ids` (Exergy / row 2); residual_path env ids; S_PRESOFT vital-few; softmax mass / fluency; inventing Buchanan A/B or IOI IO/S ids.
 
-**OPEN_missing:** live selected set of real token ids carried layer to layer. Orch hunt (scripts + docs/designs + docs/evidence, 5049 files): `selected_ids` / `live_ids` / `live_set` / `competing_ids` → zero hits. Fail closed: do not invent competitor ids. Do not emit Δu. Do not GPU-sit to mint ids.
+LCD already named restricted-menu meets A/D/E (not full-V). Empty: B S_PRESOFT, C t04, F Frydenlund. Do not redo that look. Do not mix LCD with translate. G1 is gone. No ACCEPT. Do not fill row 2.
 
-Recipe (methodology, not a close): `energy-live-set-sensor/` PIN/REFUSE/EMIT. Fail-closed collector: `energy_delta_u_v1` (`claim_class` science, `live_emit_claim_class` open_missing).
+## Interdependent meters (D1 IDs from methodology `POINTERS_TO_MEANING.md` · meaning 0.3.4)
 
-Illegal as the set (do not spawn synonym Energy lanes): peak vs CE-chosen; t04 `S_ids` / `z_margin_m`; `topk_ids`; `support_ids` (Exergy / row 2); softmax mass; fluency; vital-few / Price k; inventing Buchanan A/B or IOI IO/S ids; Jaccard `hold_id`; product-surface mass_dump selection; H-STASI enforcement-load "preference matrix".
+Do not invent meters. Do not tunnel Energy and miss the forest. Starting point for each, measured together. Methods report up; they do not own meaning. Path chain: Find_M → Maintain (pathing structure) → Let-fail. Maintain is not hold a token. Never path capacity := T_tail × F.
 
-LCD look already named (do not redo look): meet A Reddy FIRST (restricted IR window RankNet on raw first-token ID logits); D Buchanan Foster (Δu on forced-choice A/B label logits); E Wang IOI (logit(IO)−logit(S)). Empty: B S_PRESOFT, C t04 unembed, F Frydenlund. Translate already seated A/D/E on Energy row 1 as **restricted-menu** pairwise Δs, not full-V. Do not mix LCD with translate. Do not fill row 2 from those meets.
-
-Charge: raw z gaps among **live** IDs before softmax. orch #183 is a **refuse gate**, not the emit. Do not close a charge on a gate.
-
-G1 is gone (CoS 2026-08-24/25). Not a leftover. No ACCEPT. Do not fill Exergy/row 2 from G1.
-
-## Interdependent starting points (measure together; do not tunnel Energy)
-
-Pull from meaning skill names + methodology leftovers. Do not invent meters. Meaning lock file itself is OPEN_missing here, so no equation restatement.
-
-| Name | Starting point (quoted) | Not |
+| D1 ID | Starting point this stamp | Not |
 |---|---|---|
-| Energy | Demand seated. Live set OPEN_missing. No Δu emit. | Softmax mass, peak-margin, t04 S_ids |
-| Charge / Δu | Probe only, among live IDs. Blocked on live set. #183 = refuse, not emit. | Set-namer |
-| F, T_tail | Named by meaning skill. Post-softmax / shape. | Energy |
-| P_L | OPEN. Hold / find / let-fail. Not select. `T_tail × F` is shape product, never system capacity / Ω. `pl_capacity_path_v2.jsonl` OPEN. | Greedy/top-p, erank, invent Ω |
-| Φ_E / Exergy | Row 2 **instrument not meter**. S_EXERGY_W camp is `peak_mass_path_proxy`, claim_class partial. Do not fill from G1. | Energy identity of F; C_d in the join |
-| residual | PACES: stream is a communication channel (directions / deltas). residual_path.status OPEN until hold_id / hold_m non-null product fields. | Dump-meter; Energy |
-| τ / N(τ) | OPEN. One temperature is not τ. Arm B OPEN until second T. Dual-health pack instrument, not leaf. | Category on the τ meter |
-| C_d | Product form OPEN. Unload handles only (`cd_unload_probe_v2.jsonl`). | Auto-identity with parameter inflation |
-| Lock_G | OPEN. Mojo `Lock_G: null`. Drive `parse_mojo_join.jsonl` OPEN_missing. Do not fill from hydra_look false or Jaccard. | Product close |
-| Ω | Not closed. Not invented. | feeds_omega |
+| `D1.energy` | Demand seated. Live set OPEN_missing. Collect #14 / recipe #15 landed. Emit #181 OPEN. | Softmax mass; peak-margin; t04 S_ids |
+| `D1.exergy` | Usable remainder after overhead. Row 2 instrument not meter. Do not fill from G1. | Energy identity of F |
+| `D1.mythos` | Trained routing of exergy. Not this emit Act. | Softmax; inference-only knob |
+| `D1.find_M` | Find first. Without it Maintain/Let-fail have no object. Named, not measured this Act. | Already-found lock |
+| `D1.find_G` | Find still legal after governing delta. Named, not measured this Act. | Knob-as-Price |
+| `D1.maintain` | Pathing structure (residual / attention / routing). Not hold a token. | Token-hold; permanent preferred-set lock |
+| `D1.let_fail` | Legal loss on logits + traveling group. Preference-matrix permanent hold is not hierarchy. | Let-fall; selection-only |
+| `D1.tau_mythos_health` | τ face A. N(τ) OPEN. One temperature is not τ. | LPT alone; hold-a-token |
+| `D1.tau_governing` | τ face B. Arm B OPEN until second T. | Price/Pareto as τ |
+| `D1.path_capacity` | Find → Maintain → Let-fail. Named, not measured. | T_tail × F; hunt score |
+| `D1.shape` | End-state concentration bookkeeping. | Path-capacity success |
+| `D1.C_d` | Resistance tax on attention medium. Product form OPEN. | Dual-structuralism; auto identity with param inflation |
+| `D1.param_inflation` | Diagnostic under C_d usefulness. | Automatic C_d |
+| `D1.kv_competition` | Context distractor mass. Face under C_d, not a second structure. | Dual-structuralism |
 
-`llmve-factor-compute` HOLD. No measured leaves. Do not run to finish.
+Retired as D1: `D1.hold`, `D1.P_L_path` (hold-as-token). Not D1 IDs: Focus F, Judgment f(dT/dR), substrate friction (pattern-only). `llmve-factor-compute` HOLD.
 
-## Legs (gait)
+## Legs
 
-One proper track: **Energy live-set leftover**. Do not spawn synonym Energy lanes (illegal collections above are refuse, not other-track evidence).
+One proper track: **Energy live-set leftover (#181)**. Illegal collections are refuse, not other-track evidence. Do not spawn synonym Energy lanes.
 
-Forest meters are **starting points to measure together**, not extra Energy legs. Spawn a new leg only on evidence this track is improper **and** evidence for a different track (`necessary_because`, not a synonym lane). Do not ask for divergence. Diamond = internal critique of one leg. Meet = debate or synthesis. Never twin, never battle, never antithesis.
+Forest D1 IDs are **simultaneous-measure starting points**, not extra Energy legs. Spawn a new leg only on evidence this track is improper **and** evidence for a different track (`necessary_because`, not a synonym lane). Do not ask for divergence.
 
-SENS burst cap 5. Depth wall 3. Lane wall 4.
+Diamond = internal critique of one leg. Reconverge as debate (exclusive empty meet under the lock) or synthesis (complementary / same true conclusion). Synthesis is a good meet. Never twin, never battle, never antithesis. SENS burst cap 5. Depth wall 3. Lane wall 4.
+
+Energy emit, even if later real, does not close the forest. Re-measure path series together (`D1.path_capacity` confounders include `D1.shape`).
 
 ## Next executable Act
 
-1. **Live-set namer** (Scout / Prototyper): a real selected set carried layer to layer, named by gradient/selection, W keep/drop. Must already exist on disk as token ids before any Δu. Fail closed if missing.
-2. **Then** Δu indexes the already-computed `lm_head` raw-z row among those ids. Collector already matches that emit (`energy_delta_u_v1`).
-3. GPU / Rank 1 emit of that live set: Agent 1 via `training_orchestrator#182`, first line `To: Agent 1 @Jadon-Fox`. Agent 1 posts as @Jadon-Fox. Do not invite github.com/agent-1. **Blocked from this GitHub account:** `Fractal-Deployment/training_orchestrator` 404s (private). Do not GPU-sit to invent ids.
-4. LCD already named A/D/E meets. Translate already seated restricted-menu Energy. Next translate only after a **new** named meet. Collection vs demand first.
-5. Do not tunnel Energy and skip the forest. Starting points above stay OPEN until measured together.
+1. **Agent 1 / #182 (fail closed):** do **not** emit `energy_delta_u_v1.jsonl` with invented `live_ids`. Do **not** GPU-sit to mint ids. #183 is the refuse gate, not the emit. If origin/main still has no W keep/drop producer, comment #181 OPEN_missing and stop. Do not close #181 on the gate. Do not pick up #175 this Act.
+2. **Prototyper:** field the emit contract on #181 (jsonl fields: `live_ids`, `z_raw`, `delta_u`; no `p` / no `mass`; collect rc=3 on empty). GitHub-shaped comment, not a chat memo.
+3. **Bleed 'n Edge:** field the refuse list on #181 (illegal substitutes). Do not revive G1. Do not fill row 2.
+4. **LCD Lens:** collection vs demand for `D1.energy` **and** the other D1 IDs in the table (forest, not Energy-only). Meet = collection ∩ demand. No new look unless a named look-elsewhere is required. Scout stays idle until LCD names one.
+5. Next translate only after a **new** named meet.
 
 ## OPEN_missing (honest)
 
-- live selected set (`live_ids`) on orch
-- Fractal-Deployment/llmve-meaning (404 this account) including `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`
-- Fractal-Deployment/training_orchestrator, llmve-sensors, llmve-methodology (404 this account)
+- layer-carried W keep/drop live selected set (`live_ids`)
+- orch emit of `energy_delta_u_v1.jsonl` (#181)
+- N(τ) / measured τ leaf
+- product-form C_d
 - Drive `parse_mojo_join.jsonl` / `residual_profiles.jsonl`
 - empty-meet table file under orch docs/
-- this GitHub connector: write 403 on twinglass-pack (read works); Cloud Agents not on current plan
+- planner GitHub connector: orch/meaning/sensors 404 (user gh as Jadon-Fox can read/write)
 
 ## Illegal from this board
 
-Invent live_ids · emit Δu on invented ids · GPU-sit to mint ids · close a charge on orch #183 · revive G1 / ACCEPT / fill row 2 · mint a dump meter · close Ω · mix LCD look with translate · define LLMVE as Meaning · twin/battle/antithesis gait · fake PR if write fails
+Invent `live_ids` · GPU-sit to mint ids · close #181 on #183 · fake emit PR · restamp G1 / `train_ok` · fill row 2 · mint dump meter · close Ω · T_tail × F as path capacity · mix LCD with translate · twin/battle/antithesis · dual-structuralism on C_d
 
 No invent-green. Not a close of Ω.
