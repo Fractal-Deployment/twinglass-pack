@@ -29,7 +29,7 @@ After paths have been isolated (single walker, or clones under interrupt-hiberna
 1. **EXPAND** — remaining gaps. Do not scout a new tree.
 2. **DEBATE or SYNTHESIS** — debate if tracks actually diverged; synthesis if they stayed complementary. **Not battle. Not antithesis.**
 
-3. **CONTRACT** — one explanation. Restate what is true. Do not refuse.
+3. **CONTRACT** — one explanation. Restate what is true. Do not refuse. If accounts remain exclusive leftover after this step, load `steelman-truth-tournament`. Do not start the tournament as the default meet.
 
 ## Load
 

@@ -51,3 +51,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: telos identity after two diverges
         run: bash scripts/telos-hold-check.sh
+
+  collate-steelman:
+    name: collate vs steelman
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: steelman only after exclusive leftover
+        run: bash scripts/collate-steelman-gate.sh

@@ -25,7 +25,7 @@ Pack only. `measured_omega=false` · no invent-green.
 |---|---|---|
 | S02 | CLI spawn-lock | **landed** — `commands/cli-spawn-lock.md` + `SPAWN_REFUSED` |
 | S03 | Telos-hold across forks | **landed** — `commands/telos-hold-probe.md` |
-| S04 | Collate vs steelman | gate script + skill one-liners: steelman only after exclusive leftover |
+| S04 | Collate vs steelman | **landed** — `scripts/collate-steelman-gate.sh` |
 | S05 | LCD look-elsewhere | `lcd-lens` refuse convert-to-help; redirect only |
 | S06 | SI+LCD dual cap | monitor overload refuse when >2 watch objects |
 | S07 | Diamond mutex CLI | `commands/diamond-mutex.md` — one agent critique; others hibernate |
