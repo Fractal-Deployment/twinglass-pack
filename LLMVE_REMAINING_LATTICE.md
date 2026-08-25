@@ -2,7 +2,7 @@
 
 `measured_omega=false` · no invent-green
 
-Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: this pack (`APPARATUS.md`, `skills/twinglass-lattice`). Not a chat memo. Not Ω. Meaning 0.3.4.
+Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: this pack (`APPARATUS.md`, `skills/twinglass-lattice`). Not a chat memo. Not Ω. Meaning SSOT 404 from planner GitHub: leave OPEN_missing. Do not restate equations. Forest starting points stay.
 
 Energy wording is locked: pre-softmax preference strength; raw z gaps among live IDs before softmax; z_raw is pre-softmax logits; Δu probes; W keep/drop names the set.
 
@@ -29,9 +29,9 @@ Set-namer: gradient/selection. Keep/drop in W (go/no-go). Δu does not name the 
 
 Illegal as the set (refuse, not other-track evidence): peak vs CE-chosen; t04 `S_ids`; independent per-layer `topk_ids`; `support_ids` (Exergy / row 2); residual_path env ids; S_PRESOFT vital-few; softmax mass / fluency; inventing Buchanan A/B or IOI IO/S ids.
 
-LCD already named restricted-menu meets A/D/E (not full-V). Empty: B S_PRESOFT, C t04, F Frydenlund. Do not redo that look. Do not mix LCD with translate. G1 is gone. No ACCEPT. Do not fill row 2.
+LCD already named restricted-menu meets A/D/E (not full-V). Empty: B S_PRESOFT, C t04, F Frydenlund. Scout already EMPTY on the live set. Bleed inspect: no orch field is a live selected set. Prototyper does not name competitor ids. **Agent 1 is the producer** (GPU emit or honest OPEN_missing). Do not mix LCD with translate. G1 is gone. No ACCEPT. Do not fill row 2.
 
-## Interdependent meters (D1 IDs from methodology `POINTERS_TO_MEANING.md` · meaning 0.3.4)
+## Interdependent meters (D1 IDs from methodology `POINTERS_TO_MEANING.md`)
 
 Do not invent meters. Do not tunnel Energy and miss the forest. Starting point for each, measured together. Methods report up; they do not own meaning. Path chain: Find_M → Maintain (pathing structure) → Let-fail. Maintain is not hold a token. Never path capacity := T_tail × F.
 
@@ -56,7 +56,7 @@ Retired as D1: `D1.hold`, `D1.P_L_path` (hold-as-token). Not D1 IDs: Focus F, Ju
 
 ## Legs
 
-One proper track: **Energy live-set leftover (#181)**. Illegal collections are refuse, not other-track evidence. Do not spawn synonym Energy lanes.
+One proper track: **Energy live-set leftover (#181)**. Illegal collections are refuse, not other-track evidence. Do not spawn synonym Energy lanes. A Scout re-hunt for ids is a synonym of “please find ids” — not a new track.
 
 Forest D1 IDs are **simultaneous-measure starting points**, not extra Energy legs. Spawn a new leg only on evidence this track is improper **and** evidence for a different track (`necessary_because`, not a synonym lane). Do not ask for divergence.
 
@@ -66,11 +66,12 @@ Energy emit, even if later real, does not close the forest. Re-measure path seri
 
 ## Next executable Act
 
-1. **Agent 1 / #182 (fail closed):** do **not** emit `energy_delta_u_v1.jsonl` with invented `live_ids`. Do **not** GPU-sit to mint ids. #183 is the refuse gate, not the emit. If origin/main still has no W keep/drop producer, comment #181 OPEN_missing and stop. Do not close #181 on the gate. Do not pick up #175 this Act.
-2. **Prototyper:** field the emit contract on #181 (jsonl fields: `live_ids`, `z_raw`, `delta_u`; no `p` / no `mass`; collect rc=3 on empty). GitHub-shaped comment, not a chat memo.
-3. **Bleed 'n Edge:** field the refuse list on #181 (illegal substitutes). Do not revive G1. Do not fill row 2.
-4. **LCD Lens:** collection vs demand for `D1.energy` **and** the other D1 IDs in the table (forest, not Energy-only). Meet = collection ∩ demand. No new look unless a named look-elsewhere is required. Scout stays idle until LCD names one.
-5. Next translate only after a **new** named meet.
+1. **Agent 1 is the producer** (mailbox #182; CoS posted the Rank 1 Act). GPU emit of a **real** layer-carried live set, or honest OPEN_missing. Do not invent `live_ids`. Do not GPU-sit to mint ids. #183 is refuse, not emit. Do not close #181 on a gate. Do not pick up #175 this Act. Update this board when Agent 1 comments proof on #182/#181.
+2. **Prototyper:** emit contract only (`live_ids` / `z_raw` / `delta_u`; collect rc=3 on empty; no `p`/mass). **Does not name competitor ids.**
+3. **Bleed 'n Edge:** refuse list stands. Inspect: **no orch field is a live selected set.** Not a namer. No G1. No row 2.
+4. **Scout:** already EMPTY. Do not spawn a Scout re-hunt as the namer.
+5. **LCD Lens:** collection vs demand for the D1 forest (simultaneous-measure). Meet = collection ∩ demand. Do not name a look-elsewhere hunt for live_ids.
+6. Next translate only after a **new** named meet.
 
 ## OPEN_missing (honest)
 
@@ -80,10 +81,11 @@ Energy emit, even if later real, does not close the forest. Re-measure path seri
 - product-form C_d
 - Drive `parse_mojo_join.jsonl` / `residual_profiles.jsonl`
 - empty-meet table file under orch docs/
-- planner GitHub connector: orch/meaning/sensors 404 (user gh as Jadon-Fox can read/write)
+- meaning SSOT (`PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`) 404 from planner GitHub: leave OPEN_missing
+- planner GitHub connector: orch/meaning/sensors 404
 
 ## Illegal from this board
 
-Invent `live_ids` · GPU-sit to mint ids · close #181 on #183 · fake emit PR · restamp G1 / `train_ok` · fill row 2 · mint dump meter · close Ω · T_tail × F as path capacity · mix LCD with translate · twin/battle/antithesis · dual-structuralism on C_d
+Invent `live_ids` · GPU-sit to mint ids · Scout re-hunt as set-namer · Prototyper naming competitor ids · close #181 on a gate · fake emit PR · restamp G1 / `train_ok` · fill row 2 · mint dump meter · close Ω · T_tail × F as path capacity · mix LCD with translate · twin/battle/antithesis · dual-structuralism on C_d
 
 No invent-green. Not a close of Ω.
