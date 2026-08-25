@@ -9,7 +9,8 @@ description: >
 
 Paste this whole file as the user charge. Not grok.com. Not a GPU. This CLI.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Load `pack/DISCOVERED.md` if present. If absent, do not invent it — use `llmve-meaning` plus this paste. Locks below still bind.
 
@@ -84,7 +85,7 @@ SI_EVENTS: [term → redirect|hold]
 FORK: earned? yes/no why=
 MEET: Jaccard(A,B urls)= (compute only at meet)
 RESTATE: one paragraph
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 Jaccard at meet is **not** sibling read. If Jaccard > 0.5, B probably paraphrased the web — fail unless you can name why the exclusive accounts still diverged.

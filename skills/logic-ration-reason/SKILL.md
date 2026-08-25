@@ -15,7 +15,7 @@ metadata:
 
 **One job:** hold Logic, Ration, and Reason as the standing cognition lock. Every other pack skill consumes this. None of them restate it as original.
 
-`train_ok=false · measured_omega=false · G1=OPEN · no invent-green`
+`measured_omega=false` · no invent-green
 
 Load this on the **research / thinking agent**. That agent checks whether the argumentation path is self-consistent. Monitor is SI + LCD only. Do not put this skill on the sentinel.
 
@@ -54,7 +54,7 @@ Do **not** inverse CoT. Debugging by walking backwards from the bad conclusion i
 
 **Forward crawl:** from the first claim to the first step that fails Logic or Reason (NC on the string, missing `necessary_because`, missing marker). That index is the diverge. Rebuild CoT from the consistent prefix. Then hand to the gait (fork only if exclusive accounts).
 
-Do not paste Pearl’s three rules. If seeing a sentence is doing the meter, identity already failed. Markers are residue patterns, never seals (`train_ok=false` is not a marker). “Keep” means keep the lock, not the paper. Paper vs lock exclusive → crawl from the start, do not say “no diverge.”
+Do not paste Pearl’s three rules. If seeing a sentence is doing the meter, identity already failed. Markers are residue patterns, never seals (`measured_omega=false` is not a marker). “Keep” means keep the lock, not the paper. Paper vs lock exclusive → crawl from the start, do not say “no diverge.”
 
 
 
@@ -83,7 +83,7 @@ Do not paste Pearl’s three rules. If seeing a sentence is doing the meter, ide
 
 ## Do not
 
-- Close `train_ok`, `measured_omega`, or `G1` from a fluent paragraph.
+- Close `measured_omega` from a fluent paragraph.
 - Copy this folder as `morph-shared`. Collation is `collate-hourglass` and does not own these laws.
 - Load this onto the integrity monitor as extra objects. The monitor judges two objects (terms, quantities) **by** the three laws. Ration and Reason stay here. Laws-as-a-third-watch-object overloads and refuses.
 - Become meaning, LCD, telos-ranking, lattice, or twin.

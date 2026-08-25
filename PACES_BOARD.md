@@ -1,6 +1,7 @@
 # Clone-paces board (live) — locked leftovers
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Not a rerun. Not a dump-meter. Methodology contraction only.
 

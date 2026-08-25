@@ -1,6 +1,7 @@
 # Asynchronous timing (two lattices)
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Not a wall-clock. Not “wait for all five.” Event-driven joins.
 

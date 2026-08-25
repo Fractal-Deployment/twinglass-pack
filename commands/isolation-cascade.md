@@ -7,7 +7,8 @@ description: Best isolation first. Probe. Let-fail. Next row. Stop at first pass
 
 You are Grok Build CLI. Pack: `Fractal-Deployment/twinglass-pack` **main**. Load `ISOLATION_CASCADE.md`. Collate with `collate-hourglass` after each probe. Do **not** load twin. Do **not** mint. Do **not** implement memref pads.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Demand: two parallel clones, `context_source=new`, **cannot** read sibling `~/.grok/sessions/<id>/chat_history.jsonl`.
 
@@ -44,7 +45,7 @@ LET_FAIL_SKIPPED: [ranks that failed]
 SIBLING_SESSION_HUNT: (must be false on a pass)
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 Start at **0**. Now.

@@ -7,7 +7,8 @@ description: Paste into Grok Build CLI. Find remaining select / hold-a-token / P
 
 You are on the operator machine. **Meaning is already locked.** Do not invent a new chain.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 **Correct chain:** Find → **Maintain (pathing structure)** → Let-fail.
 
@@ -56,7 +57,7 @@ If a file is a **dated artifact**, stamp SUPERSEDED at the top and point at live
 
 ## Do not
 
-- Mint a dump meter or close G1 / Ω.
+- Mint a dump meter or close Ω.
 - Restore Price’s Law as master.
 - Rewrite `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md` backwards to Hold.
 - Attack `~/.grok/sessions`.
@@ -70,5 +71,5 @@ SUPERSEDED: [paths]
 NOT_FOUND: [paths]
 LEFT_FOR_OPERATOR: [if a file is binary/docx or you would be inventing]
 RESTATE: Find → Maintain (pathing) → Let-fail. Not hold a token. Not select. Not Price’s Law as master.
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```

@@ -1,6 +1,7 @@
 # Parallel reasoning patterns vs this lattice
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 LCD: collection vs demand. Demand = **parallel tracks**, each LRR to a **logical endpoint**, meet as **debate or synthesis**. Spawn when a walker finds **evidence the current track is not the proper track** and **evidence for a different track**. Same conclusion is allowed. Synthesis is a good meet. Not “ask for divergence.” Not battle. Not antithesis. Not a dump meter.
 

@@ -10,7 +10,8 @@ description: >
 
 Bypass isolation-ACL. Do not chmod sessions. Do not sandbox. Do not rerun leftover-vs-greedy or sibling-read.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Load `DISCOVERED.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law still **no sibling pad in the prompt**. Do not *attack* `~/.grok/sessions` this unit.
 
@@ -31,7 +32,7 @@ An “interesting other file” without (1) is not enough. Occupying the opposit
 
 That is a **nudge**, not a fight.
 
-Do not mint a dump meter. Do not close G1. Do not factor-compute unless dumps for **that row** exist and LCD stay.
+Do not mint a dump meter. Do not close Ω. Do not factor-compute unless dumps for **that row** exist and LCD stay.
 
 ## Sensitivity (start as low as possible)
 
@@ -67,7 +68,7 @@ FORKS:
 ATTEMPTED_SYNONYM_FORKS: (must be 0)
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 Fail: SENS>10 and kept going. Fail: synonym/specialization cloned. Fail: leftover-vs-greedy rerun. Fail: minted meter.

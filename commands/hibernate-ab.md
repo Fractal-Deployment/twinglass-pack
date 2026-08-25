@@ -9,7 +9,8 @@ description: >
 
 Desktop CLI. Not grok.com. Not a GPU.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 **Do not drop hibernation as the default** until this board lands.
 
@@ -49,7 +50,7 @@ PARAPHRASE: B restates A before its own sources? yes/no
 MINTED_DUMP_METER: false
 RESTATE:
 H0/H1: 
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 H0 if P has sibling_read=false, paraphrase=no, true parallel. 

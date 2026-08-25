@@ -1,6 +1,7 @@
 # Discovered — load before any pack skill
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 Do not re-derive these from the word “LCD” or from “more layers.”
 

@@ -7,7 +7,8 @@ description: Paste this whole file into Grok Build CLI. Load paces lock. Run hib
 
 You are on **Grok Build CLI**, not grok.com, not a GPU.
 
-`train_ok=false · measured_omega=false · G1=OPEN
+`measured_omega=false` · no invent-green
+
 
 ## 0. Load (do not invent)
 
@@ -60,7 +61,7 @@ SHARED_TRANSCRIPT: yes/no
 MINTED_DUMP_METER: false
 H0_or_H1_or_CONFOUNDED:
 RESTATE: one paragraph
-SEALS: train_ok=false · measured_omega=false · G1=OPEN
+SEALS: measured_omega=false · no invent-green
 ```
 
 H0 only if true parallel AND sibling_read=false AND paraphrase=no. 

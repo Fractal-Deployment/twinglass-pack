@@ -8,7 +8,7 @@ Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and
 **After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) — two lattices, not twin, not battle.
 
 
-`train_ok=false · measured_omega=false · G1=OPEN · no invent-green · fork only for a reason`
+`measured_omega=false` · no invent-green · fork only for a reason
 
 ## 0. Do not
 
