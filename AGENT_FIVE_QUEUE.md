@@ -5,6 +5,8 @@ Pack only. `measured_omega=false` · no invent-green.
 
 **How to run**
 
+Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com/Agent-4).
+
 1. `gh pr list --repo Fractal-Deployment/twinglass-pack --state open`
 2. Pull the **lowest open S-number** charge PR (or this queue if not on tip).
 3. Implement only that charge. Quote improper + other-track if spawning a skill change.
