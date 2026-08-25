@@ -33,7 +33,7 @@ Path: **Find → Maintain (pathing structure) → Let-fail.** Not hold a token. 
 
 1. Walk your leg. LRR. Self-coherent. Open pad = hard notes.
 2. Data you **cannot follow** without cluttering: write `cannotFollow` · `functionSet` · `necessary_because`. **Keep walking.**
-3. Those notes **spawn clones onto new legs** (`spawnLegsBurst`). Parent does not backtrack. Five notes → five **research** agents, not five diamonds. `SENS` +N; stop > 10 (CLI ~8).
+3. Those notes **spawn clones onto new legs** only with **improper-track evidence** AND **other-track evidence** (quoted; not a live-lane synonym; not an assigned antithesis). `spawnLegsBurst` / `diverge()` refuse otherwise. Parent does not backtrack. Five legal notes → five **research** agents, not five diamonds. `SENS` +N; stop > 10 (CLI ~8). Same conclusion / synthesis stays legal.
 4. Walking legs are parallel (H0). Isolation in the prompt = no sibling pad/URL list.
 
 **3D diamond** — **one** agent’s **internal critique**, not a spawn.

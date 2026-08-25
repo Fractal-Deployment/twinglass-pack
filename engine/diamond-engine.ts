@@ -35,6 +35,10 @@ export type HardNote = {
   cannotFollow: string;
   functionSet: string;
   necessaryBecause: string;
+  /** Quoted: this track is not the proper track. Required to spawn. */
+  improperEvidence: string;
+  /** Quoted: a different function-set, not antithesis, not a live-lane synonym. */
+  otherTrackEvidence: string;
 };
 
 export type DiamondRun = {
