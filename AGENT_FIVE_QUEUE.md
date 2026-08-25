@@ -30,7 +30,7 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S04 | Collate vs steelman | **landed** — `scripts/collate-steelman-gate.sh` |
 | S05 | LCD look-elsewhere | **landed** — empty meet → look elsewhere / let-fail |
 | S06 | SI+LCD dual cap | **landed** — overload refuse on third watch object |
-| S07 | Diamond mutex CLI | `commands/diamond-mutex.md` — one agent critique; others hibernate |
+| S07 | Diamond mutex CLI | **landed** — `commands/diamond-mutex.md` |
 | S08 | Async equator | document/enforce four equator paths independent pending |
 | S09 | FINISH_BOARD refresh | mark S01 Morph done; point next to S02 |
 | S10 | fork-sens align | spawn gates match engine; no synonym forks |
