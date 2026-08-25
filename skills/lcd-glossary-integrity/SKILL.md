@@ -29,5 +29,6 @@ metadata:
 - Redefine LLMVE meters (`llmve-meaning`).
 - Scout, fork, or battle (`twinglass-lattice` / `twinglass-twin`).
 - Invent cosine scores. You do not have embeddings.
+- Watch more than two objects. Dual cap = this skill (terms) + `lcd-lens` (functions). A third watch object is **overload refuse**.
 
 Grok.com: Order (FCA table) and Lattice glossary lock. CLI: this folder. lcd-glossary owns the console; gaits consume M.

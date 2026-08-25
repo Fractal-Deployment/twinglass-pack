@@ -67,3 +67,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: empty meet redirects, does not convert
         run: bash scripts/lcd-look-elsewhere-check.sh
+
+  monitor-dual:
+    name: monitor dual cap
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SI+LCD only; overload refuse
+        run: bash scripts/monitor-dual-cap-check.sh
