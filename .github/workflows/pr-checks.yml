@@ -126,6 +126,14 @@ jobs:
       - name: meet-mode HardNote CAP seals
         run: bash scripts/s16-s19-engine-board-check.sh
 
+  s20-s24-close:
+    name: S20–S24 close loop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: translate LCD HOLD APPARATUS ahead
+        run: bash scripts/s20-s24-close-loop-check.sh
+
   ci-push:
     name: push to main runs engine
     runs-on: ubuntu-latest

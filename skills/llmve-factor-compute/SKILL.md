@@ -11,6 +11,8 @@ metadata:
 
 # llmve-factor-compute
 
+**HOLD.** Do not run this skill to finish the pack. Refuse compute unless **dumps for that row exist** and an **operator** named the row. No invent-green path. No Ω.
+
 **One job:** multiply only what the dumps contain.
 
 `measured_omega=false` · no invent-green

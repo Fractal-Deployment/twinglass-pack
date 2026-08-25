@@ -43,11 +43,11 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S17 | hard-note schema docs | **landed** — `engine/HARD_NOTE.md` |
 | S18 | SENS board format | **landed** — CAP: 10 STOP_OVER_CAP |
 | S19 | RESTATE seal line | **landed** — SEALS only measured_omega=false · no invent-green |
-| S20 | translate ≠ LCD check | script forbids lcd-lens claiming convert |
-| S21 | reason-telos occupant | hierarchy only; not meet; not LRR laws |
-| S22 | factor-compute HOLD banner | skill refuses run without dumps + operator |
-| S23 | APPARATUS.md sync | two lattices match engine after S01–S07 |
-| S24 | LATTICE_AHEAD roll | steps 2–5 marked landed/HOLD from this queue |
+| S20 | translate ≠ LCD check | **landed** — lcd-lens does not convert; translate stays separate |
+| S21 | reason-telos occupant | **landed** — hierarchy only; not meet; not LRR laws |
+| S22 | factor-compute HOLD banner | **landed** — dumps + operator; no invent-green path |
+| S23 | APPARATUS.md sync | **landed** — assertLegalSpawnNote; cannotFollow alone not spawn |
+| S24 | LATTICE_AHEAD roll | **landed** — steps 2–5 marked landed; FINISH_BOARD drained |
 
 **Parallel only when** improper+other both quoted and empty-meet with the live S-track. Default is serial.
 
