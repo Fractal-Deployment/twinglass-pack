@@ -2,7 +2,7 @@
 
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
 
-Load `DISCOVERED.md`, `APPARATUS.md`, and `FINISH_EVIDENCE.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
+Load `DISCOVERED.md`, `APPARATUS.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 
 `measured_omega=false` · no invent-green · fork only for a reason
 
