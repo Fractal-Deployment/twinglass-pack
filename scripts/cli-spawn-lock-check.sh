@@ -22,6 +22,7 @@ if [[ -f "$CLI" ]]; then
   grep -q 'improperEvidence' "$CLI" || red "cli-spawn-lock missing improperEvidence"
   grep -q 'otherTrackEvidence' "$CLI" || red "cli-spawn-lock missing otherTrackEvidence"
   grep -q 'SPAWN_REFUSED' "$CLI" || red "cli-spawn-lock missing SPAWN_REFUSED"
+  grep -Eq 'cannotFollow.{0,3} alone is' "$CLI" || red "cli-spawn-lock missing cannotFollow-alone is not a spawn"
   if grep -q 'assertLegalSpawnNote' "$CLI"; then
     pass "cli-spawn-lock names assertLegalSpawnNote"
   else
