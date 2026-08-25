@@ -12,6 +12,15 @@ Bypass isolation-ACL. Do not chmod sessions. Do not sandbox. Do not rerun leftov
 
 `measured_omega=false` · no invent-green
 
+## Spawn lock (engine)
+
+Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
+
+A fork requires quoted **improperEvidence** AND **otherTrackEvidence**.
+
+Refuse (`SPAWN_REFUSED`, do not clone): missing either; other-track is a **synonym** of a live lane; assigned **antithesis** (`antithesis` / `assigned opposite` / `opposite account`).
+
+`cannotFollow` alone is not a spawn. Exclusive fight still needs the same two quotes if it forks.
 
 Load `DISCOVERED.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law still **no sibling pad in the prompt**. Do not *attack* `~/.grok/sessions` this unit.
 

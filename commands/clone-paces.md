@@ -11,6 +11,15 @@ Paste this whole file as the user charge. Not grok.com. Not a GPU. This CLI.
 
 `measured_omega=false` · no invent-green
 
+## Spawn lock (engine)
+
+Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
+
+A clone/fork requires quoted **improperEvidence** AND **otherTrackEvidence**.
+
+Refuse (`SPAWN_REFUSED`, do not clone): missing either; other-track is a **synonym** of a live lane; assigned **antithesis** (`antithesis` / `assigned opposite` / `opposite account`).
+
+`cannotFollow` alone is not a spawn. Exclusive accounts still need the same two quotes if they fork. Volume gates below are unchanged.
 
 Load `pack/DISCOVERED.md` if present. If absent, do not invent it — use `llmve-meaning` plus this paste. Locks below still bind.
 

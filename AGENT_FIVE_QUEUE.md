@@ -33,9 +33,9 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S07 | Diamond mutex CLI | **landed** — `commands/diamond-mutex.md` |
 | S08 | Async equator | **landed** — per-path `pendingProjection`; south mark sealed only |
 | S09 | FINISH_BOARD refresh | **landed** — Morph done; next legal S10 |
-| S10 | fork-sens align | spawn gates match engine; no synonym forks |
-| S11 | clone-experiment align | same spawn lock language |
-| S12 | clone-paces align | same; volume gates stay |
+| S10 | fork-sens align | **landed** — spawn lock tokens + refuse synonym/antithesis |
+| S11 | clone-experiment align | **landed** — same spawn lock language |
+| S12 | clone-paces align | **landed** — same lock; volume gates stay |
 | S13 | lattice.md pointer | thin command → skill + run-apparatus |
 | S14 | twin.md pointer | twin only; never load with lattice |
 | S15 | README occupant column | one occupant per skill row |
