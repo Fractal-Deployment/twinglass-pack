@@ -28,8 +28,8 @@ jobs:
       - name: forbid G1 / train_ok / feeds_omega as live seals
         run: bash scripts/pr-seal-check.sh
 
-  request-agent-4:
-    name: request Agent-4
+  request-agent-5:
+    name: request AGENT-5
     runs-on: ubuntu-latest
     if: github.event.action == 'opened' || github.event.action == 'ready_for_review'
     steps:
@@ -42,8 +42,8 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: context.payload.pull_request.number,
-                reviewers: ["Agent-4"],
+                reviewers: ["AGENT-5"],
               });
             } catch (e) {
-              core.warning("Could not request Agent-4: " + e.message);
+              core.warning("Could not request AGENT-5: " + e.message);
             }
