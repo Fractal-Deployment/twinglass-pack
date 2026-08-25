@@ -23,13 +23,13 @@ You will not compute F / T_tail / dump-meter / Φ_E / Ω. You will not invent Ω
 
 ## Charge
 
-For each sealed variable, name: **demand function** vs **what published or orch artifacts actually collect**. Look elsewhere when collection ≠ demand. Blind to prestige.
+For each named variable, name: **demand function** vs **what published or orch artifacts actually collect**. Look elsewhere when collection ≠ demand. Blind to prestige. Energy has **no role-line identity** (meaning 0.4.0) — do not treat a gloss as locked demand.
 
 Work this list. Do not add a ninth meter. G1 is deleted as a meaning seal — not a row.
 
-| # | Name | Demand (locked) | Typical false collection |
+| # | Name | Demand | Typical false collection |
 |---|---|---|---|
-| 1 | Energy | Preference strength before probabilities | Softmax mass, fluency |
+| 1 | Energy | OPEN — no role-line identity | Softmax mass, fluency; also Helmholtz or live-set Δu as *identity* |
 | 2 | Exergy | Usable energy after overhead | “The model is efficient” |
 | 3 | Mythos | Trained routing in W | Inference steer / top-p |
 | 4 | Dump meter (viability path) | Hold, find, let-fail on residual path | Erank, greedy, nucleus, CD |
