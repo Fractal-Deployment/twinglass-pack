@@ -63,6 +63,7 @@ DIAMOND_MUTEX: (which leg or none)
 AWAITING_MEET: [ids]
 MEET: debate | synthesis | (waiting)
 SPAWNED_FROM_HARD_NOTES: n=
+SPAWN_REFUSED: n=
 SIBLING_SESSION_HUNT: false
 MINTED_DUMP_METER: false
 RESTATE:
