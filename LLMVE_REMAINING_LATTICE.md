@@ -1,8 +1,12 @@
-# LLMVE remaining-work lattice (living)
+# LLMVE remaining-work lattice (living) — for Agent 1
+
+**This plan is for Agent 1** (Rank 1 GPU / orch). Mailbox: [training_orchestrator#182](https://github.com/Fractal-Deployment/training_orchestrator/issues/182). First line: `To: Agent 1 @Jadon-Fox`. Agent 1 posts as @Jadon-Fox. Do not invite github.com/agent-1.
+
+GitHub home: Fractal-Deployment org, [Project 4 (LLMVE)](https://github.com/orgs/Fractal-Deployment/projects/4). Rank 1 orch: `Fractal-Deployment/training_orchestrator` (private org). Rank 1s: `Fractal-Deployment/llmve-sensors`. A connector 404 means the connector is not seeing the org, not that the repo is missing. Do not hunt a Jadon-Fox fork.
 
 `measured_omega=false` · no invent-green
 
-Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: this pack (`APPARATUS.md`, `skills/twinglass-lattice`). Not a chat memo. Not Ω. Meaning SSOT 404 from planner GitHub: leave OPEN_missing. Do not restate equations. Forest starting points stay.
+Stamp: 2026-08-25 (America/Detroit). Planner: Lattice Planner. Apparatus: this pack (`APPARATUS.md`, `skills/twinglass-lattice`). Not a chat memo. Not Ω. Meaning SSOT: leave OPEN_missing from planner connector (org-private). Do not restate equations. Forest starting points stay. Energy OPEN_missing. Scout idle.
 
 Energy wording is locked: pre-softmax preference strength; raw z gaps among live IDs before softmax; z_raw is pre-softmax logits; Δu probes; W keep/drop names the set.
 
@@ -69,7 +73,7 @@ LCD: Energy emit, even if later real, **does not close the forest**. Empty-meets
 
 ## Next executable Act
 
-1. **Agent 1 is the producer** (mailbox #182; CoS posted the Rank 1 Act). GPU emit of a **real** layer-carried live set, or honest OPEN_missing. Do not invent `live_ids`. Do not GPU-sit to mint ids. #183 is refuse, not emit. Do not close #181 on a gate. Do not pick up #175 this Act. Update this board when Agent 1 comments proof on #182/#181.
+1. **Agent 1 next Act** (this whole board is yours). Mailbox #182. GPU emit of a **real** layer-carried live set, or honest OPEN_missing. Do not invent `live_ids`. Do not GPU-sit to mint ids. #183 is refuse, not emit. Do not close #181 on a gate. Do not pick up #175 this Act. Update this board when you comment proof on #182/#181. Energy stays OPEN_missing. Scout stays idle.
 2. **Prototyper:** LANDED on #181 ([5414071004](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414071004)). Emit contract: `live_ids` / `z_raw` / `delta_u.dz`; collect rc=3 on empty; 101/202 fixture_only. **Does not name competitor ids.** #181 stays OPEN.
 3. **Bleed 'n Edge:** LANDED on #181 ([5414068899](https://github.com/Fractal-Deployment/training_orchestrator/issues/181#issuecomment-5414068899)). Refuse stands. No orch field is a live selected set. Not a namer. No G1. No ACCEPT. #181 stays OPEN.
 4. **Scout:** already EMPTY. Do not spawn a Scout re-hunt as the namer.
@@ -85,7 +89,7 @@ LCD: Energy emit, even if later real, **does not close the forest**. Empty-meets
 - Drive `parse_mojo_join.jsonl` / `residual_profiles.jsonl`
 - empty-meet table file under orch docs/
 - meaning SSOT (`PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`) 404 from planner GitHub: leave OPEN_missing
-- planner GitHub connector: orch/meaning/sensors 404
+- planner GitHub connector 404 on orch/meaning/sensors = connector not seeing Fractal-Deployment org (repos exist). Use org Project 4 / user gh as Jadon-Fox. Do not hunt a personal fork
 
 ## Illegal from this board
 
