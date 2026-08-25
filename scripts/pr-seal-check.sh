@@ -26,4 +26,7 @@ fi
 if grep -RIqE --include='*.md' 'measured_omega[[:space:]]*=[[:space:]]*true' "$ROOT"; then
   fail "measured_omega=true"
 fi
+if [[ -d "$ROOT/.github" ]] && grep -RIqE '@AGENT-5|reviewers: \["AGENT-5"\]' "$ROOT/.github"; then
+  fail "do not route PRs to github.com/AGENT-5 (session role, not a collaborator)"
+fi
 echo "OK: pr-seal-check"
