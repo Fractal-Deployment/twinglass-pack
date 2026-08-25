@@ -2,6 +2,37 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { diverge, openMain } from "./main-lattice.ts";
 
+test("spawn refuses: no other-track evidence", () => {
+  const m = openMain("spawn-lock");
+  assert.throws(
+    () =>
+      diverge(m, m.legs[0].id, {
+        cannotFollow: "other math",
+        functionSet: "friction",
+        necessaryBecause: "different tax",
+        improperEvidence: "quoted: this track packed tiling as if it were the pad",
+      } as never),
+    /other-track/i,
+  );
+  assert.equal(m.legs.length, 1);
+});
+
+test("spawn refuses: assigned antithesis is not other-track evidence", () => {
+  const m = openMain("spawn-lock");
+  assert.throws(
+    () =>
+      diverge(m, m.legs[0].id, {
+        cannotFollow: "the opposite account",
+        functionSet: "antithesis-lane",
+        necessaryBecause: "assigned opposite",
+        improperEvidence: "quoted: this track is not the proper object",
+        otherTrackEvidence: "quoted: assigned opposite / antithesis of the live lane",
+      } as never),
+    /antithesis/i,
+  );
+  assert.equal(m.legs.length, 1);
+});
+
 test("spawn refuses: no improper-track evidence", () => {
   const m = openMain("spawn-lock");
   assert.throws(
