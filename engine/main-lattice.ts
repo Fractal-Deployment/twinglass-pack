@@ -56,10 +56,10 @@ function assertLegalSpawnNote(
   note: Omit<HardNote, "id">,
   live: string[],
 ): void {
-  if (!note.improperEvidence?.trim()) {
+  if (!note.improperEvidence.trim()) {
     throw new Error("spawn refuses: improper-track evidence required");
   }
-  if (!note.otherTrackEvidence?.trim()) {
+  if (!note.otherTrackEvidence.trim()) {
     throw new Error("spawn refuses: other-track evidence required");
   }
   if (/antithesis|assigned opposite|opposite account/i.test(note.otherTrackEvidence)) {

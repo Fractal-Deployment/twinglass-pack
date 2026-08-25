@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# S02 — CLI spawn-lock matches engine assertLegalSpawnNote.
+# S02 PROXY — docs/strings vs engine throw text. Not a CLI process suite.
 # improper: engine can pass while CLI clones on any cannotFollow.
 # other-track: run-apparatus.md vs engine refuse paths.
 set -euo pipefail
@@ -45,5 +45,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "CLI_SPAWN_LOCK_RED fail=$fail"
   exit 1
 fi
-echo "CLI_SPAWN_LOCK_GREEN measured_omega=false"
+echo "CLI_SPAWN_LOCK_PROXY_GREEN measured_omega=false"
 exit 0
