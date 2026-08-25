@@ -24,8 +24,9 @@ Do **not** put collected math onto an LLMVE pathway. That is `llmve-translate`.
 2. Claimed functions — what the explanation says it does.
 3. Our demand — what the charge needs done.
 4. Meet = collection ∩ demand. **Never** claimed ∩ demand. Claimed matching demand is the misframe, not identity.
-5. Claimed-not-held ∩ demand → exclusive → `steelman-truth-tournament`.
-6. Hand the meet to `llmve-translate`. Do not import a claimed function here.
+5. **Empty meet** → look elsewhere / let-fail. Do not invent comparison values. Do not convert the empty meet into help or into `llmve-translate`.
+6. Claimed-not-held ∩ demand → exclusive → `steelman-truth-tournament`.
+7. Non-empty meet only: hand the collected functions to `llmve-translate`. Do not import a claimed function here.
 
 ## Not this
 
