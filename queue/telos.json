@@ -1,0 +1,31 @@
+{
+  "telos": "Outer auto-agent loop on twinglass-pack: select next open S → implement → local gates → PR → CI watch → classify/fix → leave merge-ready PR. Failures regain the next unmet marker. Do not merge. T3 ≠ Zed.",
+  "measured_omega": false,
+  "repo": "Fractal-Deployment/twinglass-pack",
+  "markers": [
+    {
+      "id": "M0",
+      "name": "framework on disk",
+      "acceptance": "AUTO_AGENT docs + scripts + commands/auto-agent.md exist",
+      "prove": "test -f docs/AUTO_AGENT_FRAMEWORK.md && test -x scripts/ci_poll.sh && test -x bin/auto-agent && test -f commands/auto-agent.md"
+    },
+    {
+      "id": "M1",
+      "name": "fixture poll taxonomy",
+      "acceptance": "ci_poll maps green/fail/pending without network",
+      "prove": "bash scripts/tests/ci_poll.test.sh"
+    },
+    {
+      "id": "M2",
+      "name": "pack local gates",
+      "acceptance": "engine tests + pr-seal + occupant-bleed green",
+      "prove": "node --experimental-strip-types --test engine/*.test.ts && bash scripts/pr-seal-check.sh && bash scripts/occupant-bleed-check.sh"
+    },
+    {
+      "id": "M3",
+      "name": "S25 PR open unmerged",
+      "acceptance": "charge/s25-auto-agent is a GitHub PR; agent did not merge it",
+      "prove": "test -f queue/S25_PR_OPEN.md"
+    }
+  ]
+}

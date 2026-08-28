@@ -49,6 +49,12 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S23 | APPARATUS.md sync | **landed** — assertLegalSpawnNote; cannotFollow alone not spawn |
 | S24 | LATTICE_AHEAD roll | **landed** — steps 2–5 marked landed; FINISH_BOARD drained |
 
+**After drain — outer loop (do not restart S00–S24)**
+
+| ID | Track | Deliverable |
+|---|---|---|
+| S25 | auto-agent | **OPEN** — telos markers + CI watch; PR only, do not merge; T3 ≠ Zed |
+
 **Parallel only when** improper+other both quoted and empty-meet with the live S-track. Default is serial.
 
 **Never**

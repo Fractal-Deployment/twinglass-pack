@@ -57,7 +57,8 @@ No invent-green. No Ω.
 - Title: `S0N: <deliverable>`
 - Body: charge path + acceptance checklist + `measured_omega=false`
 - Reviewers: not github.com/Agent-4, not github.com/AGENT-5
-- Merge when acceptance is met. Pull main. Next S.
+- Open PR when acceptance is met. **Do not merge** (S25). Human merges.
+- Pull main only after a human merge. Next S.
 
 ## 5. Board after every unit
 

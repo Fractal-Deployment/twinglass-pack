@@ -149,3 +149,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: required evidence without type lie
         run: bash scripts/hardnote-type-check.sh
+
+  auto-agent:
+    name: auto-agent poll fixtures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: ci_poll fixtures
+        run: bash scripts/tests/ci_poll.test.sh

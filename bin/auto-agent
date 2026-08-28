@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Mechanical outer loop. Not a second coding agent. Does not merge PRs.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+MODE="${1:-dry-run}"
+shift || true
+
+case "$MODE" in
+  help|-h|--help)
+    cat <<'EOF'
+auto-agent — telos-marker outer loop for twinglass-pack
+  dry-run     telos + next S + fixture poll. No push. No merge.
+  next        telos_next + auto_advance
+  acp-prompt  print commands/auto-agent.md
+  gates       scripts/local_gates.sh
+  poll        scripts/ci_poll.sh "$@"
+T3: grok -w -p "$(bin/auto-agent acp-prompt)"
+Zed ACP is a different parent. Do not fuse. Do not merge PRs.
+EOF
+    ;;
+  acp-prompt) cat "$ROOT/commands/auto-agent.md" ;;
+  telos) cat "$ROOT/queue/telos.json" ;;
+  next)
+    bash "$ROOT/scripts/auto_advance.sh" || true
+    set +e; bash "$ROOT/scripts/telos_next.sh"; set -e
+    ;;
+  gates) exec bash "$ROOT/scripts/local_gates.sh" ;;
+  poll) exec bash "$ROOT/scripts/ci_poll.sh" "$@" ;;
+  dry-run|*)
+    echo "TELOS=$(node -e 'console.log(JSON.parse(require("fs").readFileSync("queue/telos.json","utf8")).telos)')"
+    bash "$ROOT/scripts/auto_advance.sh" || true
+    echo "--- fixture poll (green path) ---"
+    set +e
+    bash "$ROOT/scripts/ci_poll.sh" --fixture "$ROOT/scripts/fixtures/gh-pr-checks-green.json"
+    echo "ci_poll_green_exit=$?"
+    set -e
+    cat <<EOF
+S: 25
+DELIVERABLE: docs/AUTO_AGENT_FRAMEWORK.md commands/auto-agent.md scripts/{ci_poll,local_gates,solution_spot}
+TREE: $(git status --porcelain | wc -l | awk '{print ($1==0)?"clean":"dirty"}')
+GITHUB: pr-open-only
+TESTS: see local_gates
+RESTATE: Telos is the ending; markers are waypoints; do not merge PRs; T3 ≠ Zed.
+SEALS: measured_omega=false · no invent-green
+NEXT: scripts/telos_next.sh
+EOF
+    ;;
+esac
