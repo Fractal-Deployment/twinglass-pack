@@ -14,4 +14,3 @@ Spawn (`assertLegalSpawnNote` / `diverge`) requires **quoted** strings, not vibe
 
 Missing either evidence field → throw. Synonym of a live lane → throw. Assigned antithesis → throw.
 
-`measured_omega=false` · no invent-green

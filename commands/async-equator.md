@@ -6,9 +6,6 @@ description: Four diamond equator paths are async. pendingProjection is per-path
 # Async equator paths
 
 Engine: `pendingProjection: Partial<Record<EquatorId, true>>` in `engine/diamond-engine.ts`.  
-Seal on `define` does not block `redefine`. `projectIntegrity` is **this path**.
-
-`measured_omega=false` · no invent-green
 
 ## Lock
 

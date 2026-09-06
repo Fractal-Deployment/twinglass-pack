@@ -9,9 +9,6 @@ description: >
 
 Desktop CLI. Not grok.com. Not a GPU.
 
-`measured_omega=false` · no invent-green
-
-
 **Do not drop hibernation as the default** until this board lands.
 
 Two hypotheses (exclusive):
@@ -50,7 +47,6 @@ PARAPHRASE: B restates A before its own sources? yes/no
 MINTED_DUMP_METER: false
 RESTATE:
 H0/H1: 
-SEALS: measured_omega=false · no invent-green
 ```
 
 H0 if P has sibling_read=false, paraphrase=no, true parallel. 

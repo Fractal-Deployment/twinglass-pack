@@ -15,7 +15,6 @@ metadata:
 
 **One job:** lock terms, then judge. Formal laws first. Informal labels last.
 
-
 ## Procedure
 
 1. Lock `{ term, def }`. Same name, same referent.

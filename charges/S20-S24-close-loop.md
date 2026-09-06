@@ -6,4 +6,3 @@
 - APPARATUS.md sync.
 - LATTICE_AHEAD roll-forward.
 
-`measured_omega=false`

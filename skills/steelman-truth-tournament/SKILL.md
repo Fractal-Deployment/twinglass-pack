@@ -14,7 +14,6 @@ metadata:
 
 **One job:** run a tournament on accounts that already cannot both be true.
 
-
 ## Do
 
 - Steelman each surviving account before you cut.

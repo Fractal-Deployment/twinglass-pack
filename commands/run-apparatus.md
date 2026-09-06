@@ -11,9 +11,6 @@ Repo: https://github.com/Fractal-Deployment/twinglass-pack
 Engine: `engine/main-lattice.ts` + `engine/diamond-engine.ts` 
 Spec: `APPARATUS.md` · `ASYNC_TIMING.md` · `engine/RAM_PAD.md`
 
-`measured_omega=false` · no invent-green
-
-
 ## Load
 
 - `logic-ration-reason` on the **research** agent
@@ -38,7 +35,6 @@ Path: **Find → Maintain (pathing structure) → Let-fail.** Not hold a token. 
 
 **3D diamond** — **one** agent’s **internal critique**, not a spawn.
 
-5. When that agent must process: `enterCritiqueDiamond`. Four equator paths (**async to each other**): define / redefine-watch / explore / adapt. SI+LCD after each seal. South mark = join. **Other legs hibernate.**
 6. Diamond done → this leg `awaiting-meet`; others resume walking.
 7. **Wait** until ≥1 other diamond-complete leg exists. Then **debate** (diverged) or **synthesis** (complementary). Never battle. Never antithesis.
 8. One comes out (synthesis or correction). It may diamond **again**, then keep researching (more hard notes → more legs).
@@ -69,7 +65,6 @@ SPAWN_REFUSED: n=
 SIBLING_SESSION_HUNT: false
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: measured_omega=false · no invent-green
 ```
 
 If `SENS > 10`: STOP. Hibernate. Do not spawn 11.

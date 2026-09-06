@@ -7,9 +7,6 @@ Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and
 
 **After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) — two lattices, not twin, not battle.
 
-
-`measured_omega=false` · no invent-green · fork only for a reason
-
 ## 0. Do not
 
 - Do not copy `mojo-cuda` into `~/.grok/skills`. It stays a plugin.

@@ -1,8 +1,5 @@
 # Sibling-read probe — isolation failed under attack
 
-`measured_omega=false` · no invent-green
-
-
 **Charge held.** Track W = snapshot ore (σ / eRank / convert-fidelity). Residual-path board = channel + leftover under hold/find/let-fail. Unlike functions. Dumps exist. No meter minted.
 
 **Isolation failed.** Both clones, both awake, **attempted** sibling reads. Both succeeded.

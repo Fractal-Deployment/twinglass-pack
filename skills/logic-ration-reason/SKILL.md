@@ -15,10 +15,7 @@ metadata:
 
 **One job:** hold Logic, Ration, and Reason as the standing cognition lock. Every other pack skill consumes this. None of them restate it as original.
 
-
 Load this on the **research / thinking agent**. That agent checks whether the argumentation path is self-consistent. Monitor is SI + LCD only. Do not put this skill on the sentinel.
-
-
 
 ## Logic
 
@@ -52,10 +49,6 @@ Telos does not move. The working prompt may. Fluency is not a warrant.
 Do **not** inverse CoT. Debugging by walking backwards from the bad conclusion is not LRR.
 
 **Forward crawl:** from the first claim to the first step that fails Logic or Reason (NC on the string, missing `necessary_because`, missing marker). That index is the diverge. Rebuild CoT from the consistent prefix. Then hand to the gait (fork only if exclusive accounts).
-
-Do not paste Pearl’s three rules. If seeing a sentence is doing the meter, identity already failed. Markers are residue patterns, never seals (`measured_omega=false` is not a marker). “Keep” means keep the lock, not the paper. Paper vs lock exclusive → crawl from the start, do not say “no diverge.”
-
-
 
 ## Each round (research agent)
 

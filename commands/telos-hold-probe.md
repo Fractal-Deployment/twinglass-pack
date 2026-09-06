@@ -8,8 +8,6 @@ description: After rewrite and two legal diverges, the original telos must still
 **improper:** Spawn can keep LRR local and drop the working telos.  
 **other-track:** Rewrite → diverge twice → restatement still names original telos, or SI redirects.
 
-`measured_omega=false` · no invent-green
-
 ## Walk
 
 1. Write the **original telos** as one sentence. Do not paraphrase it later.

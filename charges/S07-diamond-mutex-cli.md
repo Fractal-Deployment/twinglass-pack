@@ -7,4 +7,3 @@
 
 `commands/diamond-mutex.md` matching engine `diamondId` + hibernate/resume.
 
-`measured_omega=false`

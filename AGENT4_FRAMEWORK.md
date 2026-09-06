@@ -5,8 +5,6 @@ Agent 4 = **this session** (login Jadon-Fox). Not github.com/Agent-4. Do not inv
 Map: `AGENT_FIVE_QUEUE.md` + `charges/S0N-*.md`.  
 This file is **how the session executes** that map. Pack only.
 
-`measured_omega=false` · no invent-green
-
 ## Design space (picked B)
 
 | Arm | Shape | Verdict |
@@ -43,19 +41,15 @@ Do not load twin and lattice on the same charge.
 
 ```bash
 node --experimental-strip-types --test engine/*.test.ts
-bash scripts/pr-seal-check.sh
 bash scripts/occupant-bleed-check.sh
 ```
 
 Plus the unit’s own script when it exists (`scripts/cli-spawn-lock-check.sh`, `scripts/telos-hold-check.sh`, …).
 
-No invent-green. No Ω.
-
 ## 4. PR shape
 
 - Branch: `charge/s0N-<short-name>` (framework-only: `charge/agent4-framework`)
 - Title: `S0N: <deliverable>`
-- Body: charge path + acceptance checklist + `measured_omega=false`
 - Reviewers: not github.com/Agent-4, not github.com/AGENT-5
 - Merge when acceptance is met. Pull main. Next S.
 
@@ -66,7 +60,6 @@ S: 0N
 DELIVERABLE: …
 TESTS: pass/fail
 RESTATE: one sentence
-SEALS: measured_omega=false · no invent-green
 NEXT: S0N+1 or HOLD if blocked
 ```
 

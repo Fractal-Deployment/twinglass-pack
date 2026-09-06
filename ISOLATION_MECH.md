@@ -1,8 +1,5 @@
 # Isolation failure mechanism (sibling-read probe)
 
-`measured_omega=false` · no invent-green
-
-
 Not a dump meter. Not Condition P overturned. H0 (hibernate = scheduler) still holds.
 
 ## What actually leaked
@@ -46,7 +43,6 @@ LCD: chmod/ACL-same-user **look elsewhere**. Convert-as-LCD would be “chmod an
 
 ## Later ops (not this unit)
 
-1. Prefer **per-clone data root** (cheap, matches demand). Parent collates after seal.
 2. Else **sandbox hide sessions** except own.
 3. Else **strip FS tools** on research clones (if the CLI has a real restricted mode — verify, don’t assume).
 4. Do not treat worktree or hibernate as this fix.

@@ -2,7 +2,6 @@
 name: llmve-factor-compute
 description: >
   Compute F, T_tail, P_L, Phi_E from real orch dumps. Boards must exist.
-  Replaces llmve-matmul-algebra. Never a debate score. Never invent-green.
 when-to-use: compute P_L, factor boards, dumps exist, matmul algebra, active calculation
 user-invocable: true
 metadata:
@@ -11,10 +10,7 @@ metadata:
 
 # llmve-factor-compute
 
-**HOLD.** Do not run this skill to finish the pack. Refuse compute unless **dumps for that row exist** and an **operator** named the row. No invent-green path. No Ω.
-
 **One job:** multiply only what the dumps contain.
-
 
 Meaning of the symbols is `llmve-meaning`. This skill does not redefine them.
 

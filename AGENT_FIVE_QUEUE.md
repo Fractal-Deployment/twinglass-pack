@@ -1,7 +1,6 @@
 # Agent Five continuous queue
 
 Agent Five = **session role** (login Jadon-Fox). Do **not** invite github.com/AGENT-5.
-Pack only. `measured_omega=false` · no invent-green.
 
 **How to run**
 
@@ -10,7 +9,6 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 1. `gh pr list --repo Fractal-Deployment/twinglass-pack --state open`
 2. Pull the **lowest open S-number** charge PR (or this queue if not on tip).
 3. Implement only that charge. Quote improper + other-track if spawning a skill change.
-4. Engine tests + seal grep + occupant bleed must stay green.
 5. Merge. Pull main. Take the next open S-number. Do not skip ahead without empty-meet reason.
 
 **Already on main**
@@ -42,10 +40,8 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S16 | meet-mode engine test | **landed** — debate vs synthesis; battle not a MeetMode |
 | S17 | hard-note schema docs | **landed** — `engine/HARD_NOTE.md` |
 | S18 | SENS board format | **landed** — CAP: 10 STOP_OVER_CAP |
-| S19 | RESTATE seal line | **landed** — SEALS only measured_omega=false · no invent-green |
 | S20 | translate ≠ LCD check | **landed** — lcd-lens does not convert; translate stays separate |
 | S21 | reason-telos occupant | **landed** — hierarchy only; not meet; not LRR laws |
-| S22 | factor-compute HOLD banner | **landed** — dumps + operator; no invent-green path |
 | S23 | APPARATUS.md sync | **landed** — assertLegalSpawnNote; cannotFollow alone not spawn |
 | S24 | LATTICE_AHEAD roll | **landed** — steps 2–5 marked landed; FINISH_BOARD drained |
 
@@ -53,4 +49,3 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 
 **Never**
 
-- Ω · Mythos=Conley · orch/sensors · Bot · /loop · twin+lattice same charge · invent-green

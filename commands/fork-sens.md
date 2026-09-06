@@ -10,8 +10,6 @@ description: >
 
 Bypass isolation-ACL. Do not chmod sessions. Do not sandbox. Do not rerun leftover-vs-greedy or sibling-read.
 
-`measured_omega=false` · no invent-green
-
 ## Spawn lock (engine)
 
 Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
@@ -77,7 +75,6 @@ FORKS:
 ATTEMPTED_SYNONYM_FORKS: (must be 0)
 MINTED_DUMP_METER: false
 RESTATE:
-SEALS: measured_omega=false · no invent-green
 ```
 
 Fail: SENS>10 and kept going. Fail: synonym/specialization cloned. Fail: leftover-vs-greedy rerun. Fail: minted meter.

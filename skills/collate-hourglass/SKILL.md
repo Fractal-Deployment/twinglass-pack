@@ -14,14 +14,11 @@ metadata:
 
 **One job:** turn isolated pathway residue into one research explanation the operator can use.
 
-
 Load `../DISCOVERED.md`. After isolated pads. Not a clone. Not LCD convert.
 
 Former folder name `morph-shared-research`. That name is dead. This is collation, not a second copy of Logic · Ration · Reason.
 
 ## When
-
-After paths have been isolated (single walker, or clones under interrupt-hibernate) and the integrity monitor has projected at each seal.
 
 ## Gait
 

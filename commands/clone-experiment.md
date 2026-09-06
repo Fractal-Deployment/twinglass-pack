@@ -7,8 +7,6 @@ description: Grok Build CLI experiment. Isolated parallel clones. Methodology, n
 
 Not grok.com. Not a GPU. This CLI.
 
-`measured_omega=false` · no invent-green
-
 ## Spawn lock (engine)
 
 Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
@@ -25,8 +23,6 @@ Load `pack/DISCOVERED.md`, then `logic-ration-reason` on each **research** clone
 
 Can isolated clones run the **methodology**: maintain layer-to-layer operational sets so leftover tokens enter on merit — vs greedy/top-p — **without** minting \(P_L\)?
 
-Do not compute meters. Do not close seals.
-
 ## Protocol
 
 1. **Scout** (one awake). If two exclusive accounts: (A) leftover-on-merit / let-fail vs (B) greedy/top-p as if it were \(P_L\).
@@ -41,7 +37,6 @@ Do not compute meters. Do not close seals.
 - Clone B actually starts the exclusive pathway (not a paraphrase of A).
 - Methodology named; \(P_L\) not minted; greedy named as Price-surface.
 - LCD asked or let-fail; did not convert; did not unlike-units an open map.
-- One restatement, seals still open.
 
 ## Fail
 

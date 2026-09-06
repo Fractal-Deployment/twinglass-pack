@@ -14,7 +14,6 @@ metadata:
 
 **One job:** keep parallel tracks going until they hit an endpoint. Hand the join to `collate-hourglass`. **Battle is not this job.**
 
-
 Load `../APPARATUS.md`. LRR on the research agent. Monitor = SI + `lcd-lens`. After endpoints, load `collate-hourglass` (that skill owns debate or synthesis).
 
 ## Two lattices

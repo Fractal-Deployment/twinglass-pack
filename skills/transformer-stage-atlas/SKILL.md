@@ -13,7 +13,6 @@ metadata:
 
 **One job:** the map. Not the measurement.
 
-
 ## Do
 
 - Name the stage, the matmul, the shape, the failure mode.

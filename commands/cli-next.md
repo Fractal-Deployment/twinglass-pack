@@ -7,9 +7,6 @@ description: Paste this whole file into Grok Build CLI. Load paces lock. Run hib
 
 You are on **Grok Build CLI**, not grok.com, not a GPU.
 
-`measured_omega=false` · no invent-green
-
-
 ## 0. Load (do not invent)
 
 If local plugin is `twinglass-pack-2fecf99d` or lacks these files, **fetch from GitHub** `Fractal-Deployment/twinglass-pack` `main`. Do not paste from memory.
@@ -20,8 +17,6 @@ Required:
 - `PACES_BOARD.md`
 - `commands/hibernate-ab.md`
 - skills: `logic-ration-reason`, `llmve-meaning`, `lcd-lens`, `lcd-glossary-integrity`, `twinglass-lattice`
-
-Paces board already landed. Do **not** rerun clone-paces. Do **not** spawn clone C. Do **not** mint a dump meter. Do **not** close seals.
 
 **Restatement (keep):** leftover-on-merit is not a sampler. Greedy / top-p / nucleus / CD / DoLa live on the Price surface. A paper that collected a sampler is not a viability board. Residual stream = channel + deltas + feature directions. Logit lens = snapshot. Sequential awake ≠ parallel.
 
@@ -61,7 +56,6 @@ SHARED_TRANSCRIPT: yes/no
 MINTED_DUMP_METER: false
 H0_or_H1_or_CONFOUNDED:
 RESTATE: one paragraph
-SEALS: measured_omega=false · no invent-green
 ```
 
 H0 only if true parallel AND sibling_read=false AND paraphrase=no. 

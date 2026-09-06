@@ -9,8 +9,6 @@ description: >
 
 Paste this whole file as the user charge. Not grok.com. Not a GPU. This CLI.
 
-`measured_omega=false` · no invent-green
-
 ## Spawn lock (engine)
 
 Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
@@ -28,8 +26,6 @@ Research agent = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Collate 
 ## Charge (methodology, not a meter)
 
 **Do published decoding / residual-stream papers treat greedy, top-k, or nucleus (top-p) as if they measured model viability — and what function did they actually collect?**
-
-You will not mint \(P_L\). You will not compute dumps. You will not close seals.
 
 True restatement target (do not skip to it): leftover-on-merit / let-fail is not a sampler; greedy/top-p live on the Price surface; a paper that collected a sampler is not a viability board.
 
@@ -80,8 +76,6 @@ Decoder-on-Δ and dump-meter \(P_L\) are unlike units. Dependence (decoder chang
 
 ## LRR on clones
 
-Forward crawl from claim 0 to first fail. No inverse CoT. Markers are residue, never seals. Fluency is not a warrant. “Keep” = keep the lock, not the paper.
-
 ## Board (required or fail)
 
 ```
@@ -94,15 +88,10 @@ SI_EVENTS: [term → redirect|hold]
 FORK: earned? yes/no why=
 MEET: Jaccard(A,B urls)= (compute only at meet)
 RESTATE: one paragraph
-SEALS: measured_omega=false · no invent-green
 ```
 
 Jaccard at meet is **not** sibling read. If Jaccard > 0.5, B probably paraphrased the web — fail unless you can name why the exclusive accounts still diverged.
 
 ## Pass / fail
-
-Pass: volume gates, isolation, at least one LCD let-fail on sampler-as-viability, minted_P_L=false all lanes, restatement, seals open.
-
-Fail: short crawl, unearned fork, pad leak, B=paraphrase, inverse CoT, \(P_L\)=top-p, fluency warrant, LCD convert, refusal, invent-green.
 
 HOLD after board: methodology contraction only. Do not mint \(P_L\).

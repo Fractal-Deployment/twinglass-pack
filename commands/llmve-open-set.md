@@ -10,9 +10,6 @@ description: >
 
 Paste after the Twin Glass run finishes, **or** in a **new** CLI session with a different charge. Do **not** load lattice and twin on the same charge.
 
-`measured_omega=false` · no invent-green
-
-
 Load `DISCOVERED.md`, `PACES_BOARD.md`, `CONDITION_P.md`, `llmve-meaning`. Research = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Isolation = no sibling pad (H0: hibernate not required on this CLI).
 
 ## Telos
@@ -24,8 +21,6 @@ You will not compute F / T_tail / dump-meter / Φ_E / Ω. You will not invent Ω
 ## Charge
 
 For each named variable, name: **demand function** vs **what published or orch artifacts actually collect**. Look elsewhere when collection ≠ demand. Blind to prestige. Energy has **no role-line identity** (meaning 0.4.0) — do not treat a gloss as locked demand.
-
-Work this list. Do not add a ninth meter. G1 is deleted as a meaning seal — not a row.
 
 | # | Name | Demand | Typical false collection |
 |---|---|---|---|
@@ -54,15 +49,11 @@ ROW: [1–8]
  demand=
  meet= empty|named-function
  action= look-elsewhere | stay | ask
- pattern= (one residue marker, not a seal)
 OPEN_SET: [rows still empty-meet]
 DO_NOT_HAVE: dumps? yes/no (if no, factor-compute is illegal)
 RESTATE:
-SEALS: measured_omega=false · no invent-green
 ```
 
 ## Fail
-
-Mint a dump meter. Restore G1 / train_ok / feeds_omega as live seals. Load twin+lattice together. Cite paces/H0 as if they measured viability. Inverse CoT. Fluency as warrant.
 
 HOLD after the board: this is an **open-set map**, not Ω.

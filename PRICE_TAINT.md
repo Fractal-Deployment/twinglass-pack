@@ -2,9 +2,6 @@
 
 Meaning is being corrected in `Fractal-Deployment/llmve-meaning` **right now**. This file does **not** rewrite meaning. It names copies that still treat Price’s Law as the **top / defining** variable.
 
-`measured_omega=false` · no invent-green
-
-
 ## The taint
 
 **Class A — definition mash (must follow meaning once it lands):** “Viability under Price’s Law” / “Price-shaped working set” / \(P_L\) as locate-the-√N-tokens. That puts Price’s Law **on top of viability**. User: that does not make sense.
@@ -21,7 +18,6 @@ Meaning is being corrected in `Fractal-Deployment/llmve-meaning` **right now**. 
 | **training_orchestrator** | `artifacts/LLMVE_SSOT_20260818/LLMVE_INSTRUCTION_SET_20260818.md` **verbatim copy** of the tainted §4. `LLMVE_CD_*` “capacity to find the Price pool”. `LLMVE_TAU_*` “find the Price set”. `LLMVE_FOURWAY_*` / `...MYTHOS_PRICE_TAU...`. `START_HERE.md` “Price’s Law × attn telos SSOT”. `docs/designs/2026-08-05-PRICES-LAW-ATTENTION-TELOS-SSOT.md`. `scripts/llmve_price/*`. Workflow arm `P_L-PRICE`. | A — **stale SSOT copy** |
 | **llmve-methodology** | `POINTERS_TO_MEANING.md` `D1.tau_governing` → Price-surface protocols; `D1.P_L_path` still find→hold→let-fail (path is OK if not *under Price’s Law*). | B, check A after meaning |
 | **pattern-matching-machine** | `scripts/pattern_machine/SSOT.md`: telos “universal **Price / Pareto geometry**” to finish measuring viability. V1 “Focus/Price√/Pareto proxies”. | A-shaped hunt |
-| **course-creation-framework** | `SEALS.md` section “Price / Pareto”. | check |
 | **twinglass-pack** | `PACES_BOARD.md`, `clone-paces.md`, `clone-experiment.md`, `cli-next.md`, `llmve-meaning/SKILL.md`: “greedy lives on the **Price surface**”. | B only (knobs). Path hold/let-fail **not** “under Price’s Law”. |
 | **lcd-lens** | Pointer to meaning; reconstruction “steer is Price-surface”. | B |
 | **This grok.com sandbox** | `AGENTS.project.md` lines ~129–131 **verbatim** “Viability under Price’s Law” + causally-select Price-shaped set. | A — **stale local copy** |
