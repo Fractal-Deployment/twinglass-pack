@@ -27,6 +27,7 @@ Telos does not move. The working prompt may.
 ## Do not
 
 - Load `morph-shared` as well. That folder is an alias. Dead.
+- Invent product-green from a fluent paragraph.
 - Become the lattice or the twin.
 
 Grok.com: Twin lock phase. CLI: this folder. `/activate` in this pack loads this skill, nothing else.
