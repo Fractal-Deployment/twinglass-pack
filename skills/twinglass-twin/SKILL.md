@@ -14,7 +14,6 @@ metadata:
 
 **One job:** predetermined two tracks when you already know the split is Reason vs inverse-pool.
 
-`measured_omega=false` · no invent-green
 
 Load `honest-prompt-rewrite`. Do not also load `evidence-hourglass-research` or `deep-research`.
 

@@ -15,7 +15,6 @@ metadata:
 
 **One job:** hold Logic, Ration, and Reason as the standing cognition lock. Every other pack skill consumes this. None of them restate it as original.
 
-`measured_omega=false` · no invent-green
 
 Load this on the **research / thinking agent**. That agent checks whether the argumentation path is self-consistent. Monitor is SI + LCD only. Do not put this skill on the sentinel.
 

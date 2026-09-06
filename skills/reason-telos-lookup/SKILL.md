@@ -14,7 +14,6 @@ metadata:
 
 **One job:** rank values. Friend-enemy lattice. CFP gait. Hierarchy only.
 
-`measured_omega=false` · no invent-green
 
 ## Do
 

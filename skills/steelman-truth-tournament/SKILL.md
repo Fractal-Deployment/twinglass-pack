@@ -14,7 +14,6 @@ metadata:
 
 **One job:** run a tournament on accounts that already cannot both be true.
 
-`measured_omega=false` · no invent-green
 
 ## Do
 

@@ -15,7 +15,6 @@ metadata:
 
 **One job:** lock terms, then judge. Formal laws first. Informal labels last.
 
-`measured_omega=false` · no invent-green
 
 ## Procedure
 

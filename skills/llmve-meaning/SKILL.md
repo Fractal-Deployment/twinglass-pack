@@ -14,7 +14,6 @@ metadata:
 
 **One job:** lock what symbols may answer. Read `llmve-meaning`. Do not restate the variables here.
 
-`measured_omega=false` · no invent-green
 
 ## Do
 

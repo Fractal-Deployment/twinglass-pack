@@ -15,7 +15,6 @@ metadata:
 
 **One job:** multiply only what the dumps contain.
 
-`measured_omega=false` · no invent-green
 
 Meaning of the symbols is `llmve-meaning`. This skill does not redefine them.
 

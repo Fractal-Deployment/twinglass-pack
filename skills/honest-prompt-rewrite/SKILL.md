@@ -14,7 +14,6 @@ metadata:
 
 **One job:** rewrite the working prompt under LRR. This is the shared gate. Lattice and twin consume it. They do not fork it.
 
-`measured_omega=false` · no invent-green
 
 Load `logic-ration-reason`. Do not restate the laws. This folder applies the lock; it does not own it.
 
