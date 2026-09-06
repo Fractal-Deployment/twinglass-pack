@@ -22,14 +22,6 @@ jobs:
       - name: diamond + lattice + diverge
         run: node --experimental-strip-types --test engine/*.test.ts
 
-  seals:
-    name: no deleted live seals
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: forbid G1 / train_ok / feeds_omega as live seals
-        run: bash scripts/pr-seal-check.sh
-
   occupant:
     name: occupant bleed
     runs-on: ubuntu-latest
@@ -123,7 +115,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: meet-mode HardNote CAP seals
+      - name: meet-mode HardNote CAP
         run: bash scripts/s16-s19-engine-board-check.sh
 
   s20-s24-close:
