@@ -1,8 +1,5 @@
 # RAM scratch pad vs Mojo/MLIR
 
-`measured_omega=false` · no invent-green
-
-
 LCD. Collection vs demand.
 
 **Demand:** agent pads that live **in RAM**, not `~/.grok/sessions/*/chat_history.jsonl` (that leak is named). Sibling cannot open sibling pad.

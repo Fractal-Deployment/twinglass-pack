@@ -8,8 +8,6 @@ description: CLI spawn must quote improperEvidence and otherTrackEvidence. Same 
 Engine: `assertLegalSpawnNote` in `engine/main-lattice.ts` (`spawnLegsBurst`).  
 CLI gait: this file + `run-apparatus.md` step 3.
 
-`measured_omega=false` · no invent-green
-
 ## Lock (same as engine)
 
 A hard note may spawn a new **leg** only when **both** are quoted:

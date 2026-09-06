@@ -13,4 +13,3 @@
 
 Mint Ω. Change engine tests that already pass. Twin.
 
-`measured_omega=false`

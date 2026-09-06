@@ -10,9 +10,6 @@ description: >
 
 Not grok.com. Not a GPU. **Not** leftover-on-merit vs greedy/top-p. That split already passed. Do not rerun it.
 
-`measured_omega=false` · no invent-green
-
-
 Load `DISCOVERED.md`, `CONDITION_P.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolation law = no sibling pad. H0 already named: hibernate is scheduler. This unit **uses** parallel awake and **attacks** the isolation law.
 
 ## Charge (exclusive, dump-collection)
@@ -51,7 +48,6 @@ JACCARD:
 DUMPS_EXIST: yes/no
 MINTED_DUMP_METER: false
 RESTATE: (Track W is snapshot ore. Residual-path board is a different function. Isolation held or broken under attack.)
-SEALS: measured_omega=false · no invent-green
 ```
 
 Pass isolation = both attempts made AND both READ_ALLOWED=no. 

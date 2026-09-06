@@ -2,9 +2,6 @@
 
 **Job:** gather **evidence** of what would finish this pack. Not judgment that it is finished. Not Ω.
 
-`measured_omega=false` · no invent-green  
-Meaning: `llmve-meaning` **0.3.4**. Do not list `G1`, `train_ok`, or `feeds_omega` as seals.
-
 Former name `morph-shared-research` is **collate-hourglass**. Steelman is **only** for leftover exclusive accounts.
 
 ## Demand (what “finished” means here)
@@ -44,7 +41,6 @@ Pack for this gait: **`81201b0` or later**. `ff62674` is too old.
 | Translate | `llmve-translate` | Collected math → Mythos/friction **path**. Not LCD. |
 | Research gait | `twinglass-lattice` | `diverge()` legs; 3D diamond mutex; meet = debate/synthesis. |
 | Other gait | `twinglass-twin` | Known two-track. **Never** same charge as lattice. |
-| Meet | `collate-hourglass` | After pads seal. Expand / debate-or-synthesis / contract. |
 | Exclusive leftover | `steelman-truth-tournament` | Only if two accounts still cannot both be true **after** collate. |
 | Compute | `llmve-factor-compute` | HOLD. No measured leaves. Do not run to finish. |
 | Atlas | `transformer-stage-atlas` | Stage map. Not Ω. |
@@ -63,8 +59,6 @@ inventory → per-skill LCD (collection vs demand)
          → steelman only on exclusive leftover
          → FINISH_BOARD.md on disk
 ```
-
-Forced `diverge()` when: README says X, SKILL.md says Y; or two skills claim the same occupant; or a command still emits deleted seals.
 
 Do **not** load twin. Do **not** mint. Do **not** run factor-compute. Do **not** implement Conley/MDL as code. Do **not** diamond Mythos this unit.
 
@@ -90,7 +84,6 @@ LCD: collection ∩ demand. If empty, **look elsewhere** — do not convert a me
 
 Write `FINISH_BOARD.md` (repo root or `docs/evidence/`). One restatement. Rows for every skill. Then:
 
-- **Keep** — full meet, no overlap, no stale seal.
 - **Morph** — same job as another; change one so they separate.
 - **Delete/dead** — still installed alias.
 - **HOLD** — `llmve-factor-compute` until measured leaves exist.

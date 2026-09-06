@@ -1,7 +1,5 @@
 # Finish board — Twinglass pack skills inventory
 
-`measured_omega=false` · no invent-green  
-Meaning: Fractal-Deployment/llmve-meaning **0.3.4**. Do not list `G1`, `train_ok`, `feeds_omega`.  
 Pack tip this board: `origin/main` after S01–S24 close-loop. Prior Mythos 5-leg walk is collection in `FINISH_EVIDENCE.md` — not recrawled. Queue: `AGENT_FIVE_QUEUE.md` **drained** (S10–S24 landed or HOLD). Residual: `llmve-factor-compute` HOLD; no Ω.
 
 This file is **evidence of what would finish the pack**. It is not Ω.
@@ -22,7 +20,6 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | `skills/` | 13 folders; README lists the same 13 including `collate-hourglass` |
 | Dead aliases in `skills/` | none |
 | Engine tests | 31 gait + 3 spawn-lock |
-| Live banners | `measured_omega=false` · no invent-green (pack #1) |
 | `llmve-factor-compute` | HOLD. No measured leaves. |
 
 ## diverge() this unit
@@ -41,4 +38,3 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | HOLD | `llmve-factor-compute` — do not run to finish. |
 | Delete | Dead aliases already gone. |
 
-No invent-green. Not a close of Ω.

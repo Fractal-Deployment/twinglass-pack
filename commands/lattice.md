@@ -10,4 +10,3 @@ This command **does not own meet**. Meet is `collate-hourglass` (debate or synth
 
 Spawn lock: `assertLegalSpawnNote` (improperEvidence AND otherTrackEvidence).
 
-`measured_omega=false` · no invent-green

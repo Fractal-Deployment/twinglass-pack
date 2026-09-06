@@ -1,7 +1,6 @@
 # Five-ahead lattices
 
 Agent Five = this session (login Jadon-Fox). Pack only.  
-`measured_omega=false` · no invent-green  
 Not Ω. Not Mythos recrawl. Not orch/sensors.
 
 Telos of the **pack**: a methodology so an agent stays locked on **telos** under Logic · Ration · Reason, by **branching** when a track is improper *and* another track is evidenced, and **converging** by debate or synthesis.
@@ -24,7 +23,6 @@ flowchart TD
   MEET --> STL[steelman only if exclusive leftover]
   MON --> LOOK[lcd-lens looks]
   MON --> TR[llmve-translate is not LCD]
-  JUDGE --> SEAL[meaning 0.3.4: only measured_omega=false as seal]
 ```
 
 Empty meets **already named** (ore, stay empty): Conley shape ≠ Mythos-in-W; MDL ≠ \(e^{\sigma_{sub}}\); greedy/top-p ≠ \(P_L\); attach-seed ≠ this pack.
@@ -69,7 +67,6 @@ flowchart TD
     T1[diverge mutex diamond converge — engine]
     T2[spawn refuse: missing improper / synonym]
     T3[spawn allow: improper + other, parent walks]
-    T4[pr-seal-check: no G1/train_ok/feeds_omega]
   end
   subgraph notyet [Not tested as suite]
     X1[CLI spawn lock vs engine spawn lock]

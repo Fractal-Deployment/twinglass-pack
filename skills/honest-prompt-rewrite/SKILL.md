@@ -14,7 +14,6 @@ metadata:
 
 **One job:** rewrite the working prompt under LRR. This is the shared gate. Lattice and twin consume it. They do not fork it.
 
-
 Load `logic-ration-reason`. Do not restate the laws. This folder applies the lock; it does not own it.
 
 ## Each round
@@ -28,7 +27,6 @@ Telos does not move. The working prompt may.
 ## Do not
 
 - Load `morph-shared` as well. That folder is an alias. Dead.
-- Close product seals from a fluent paragraph.
 - Become the lattice or the twin.
 
 Grok.com: Twin lock phase. CLI: this folder. `/activate` in this pack loads this skill, nothing else.

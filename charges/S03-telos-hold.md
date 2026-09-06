@@ -12,4 +12,3 @@
 
 Factor-compute. Mythos crawl.
 
-`measured_omega=false`

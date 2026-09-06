@@ -8,4 +8,3 @@
 1. `lcd-lens` SKILL: empty meet → look elsewhere / let-fail. Never invent comparison values.
 2. `llmve-translate` stays separate (convert is not LCD).
 
-`measured_omega=false`

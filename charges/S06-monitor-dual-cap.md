@@ -8,4 +8,3 @@
 1. Document in run-apparatus + lcd-glossary + lcd-lens.
 2. Optional grep: forbid loading logic-ration-reason as monitor.
 
-`measured_omega=false`

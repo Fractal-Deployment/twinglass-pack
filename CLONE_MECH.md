@@ -1,8 +1,5 @@
 # Agent cloning mechanisms
 
-`measured_omega=false` · no invent-green
-
-
 Not a dump meter. Not ACL this unit.
 
 ## Names (do not mash)

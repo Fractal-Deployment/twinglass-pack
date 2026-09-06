@@ -4,7 +4,6 @@ description: >
  Symbol jurisdiction for LLMVE. Use when F, T_tail, P_L, Φ_E, Ω, or
  residual are about to be redefined in prose. Pointer to llmve-meaning.
  Not a compute skill. Not a research gait.
-when-to-use: meaning lock, operator definition, what P_L is allowed to answer, do not invent-green
 user-invocable: true
 metadata:
  short-description: "What each meter is allowed to answer"
@@ -13,7 +12,6 @@ metadata:
 # llmve-meaning
 
 **One job:** lock what symbols may answer. Read `llmve-meaning`. Do not restate the variables here.
-
 
 ## Do
 
@@ -29,7 +27,5 @@ metadata:
 - Paste a second copy of the equation into this skill.
 
 Path capacity is Find → Maintain (pathing structure) → Let-fail. Maintain is not hold a token. It is not greedy/top-p. Operable knobs are not Price’s Law. Methodology ≠ measurement. . Meaning SSOT: Fractal-Deployment/llmve-meaning `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`.
-
-
 
 Grok.com: Atlas. CLI: this folder only. No alias folder.

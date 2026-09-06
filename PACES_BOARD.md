@@ -1,8 +1,5 @@
 # Clone-paces board (live) — locked leftovers
 
-`measured_omega=false` · no invent-green
-
-
 Not a rerun. Not a dump-meter. Methodology contraction only.
 
 **Restatement:** leftover-on-merit is not a sampler. Greedy / top-p / nucleus live on the Price surface. A paper that collected a sampler is not a viability board.

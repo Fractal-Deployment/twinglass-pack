@@ -10,5 +10,3 @@ Load **`skills/twinglass-twin`** and **honest-prompt-rewrite**. Consume a lock f
 
 Tracks stay isolated until battle. Sequential A-then-B is contamination.
 
-`measured_omega=false` · no invent-green
-

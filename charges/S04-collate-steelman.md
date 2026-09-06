@@ -9,4 +9,3 @@
 2. `scripts/collate-steelman-gate.sh` greps the order.
 3. Wire gate into PR checks if cheap.
 
-`measured_omega=false`

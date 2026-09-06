@@ -4,8 +4,6 @@ One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattic
 
 Load `DISCOVERED.md`, `APPARATUS.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 
-Meaning Version: 0.3.4 · no invent-green · fork only for a reason
-
 ## Skills (attach these)
 
 | Skill | Occupant | Job |
@@ -21,7 +19,6 @@ Meaning Version: 0.3.4 · no invent-green · fork only for a reason
 | `twinglass-lattice` | walk / diverge | `diverge()` on improper-track + other-track evidence; diamond mutex |
 | `twinglass-twin` | twin | Known two-track. Never with lattice. |
 | `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
-| `llmve-factor-compute` | HOLD | No measured leaves. No invent-green path. |
 | `transformer-stage-atlas` | atlas | Stage map, not Ω |
 
 ## Dead (do not attach)

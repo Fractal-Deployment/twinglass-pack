@@ -2,9 +2,6 @@
 
 Agent Five is a **session role**. Login is Jadon-Fox. Do **not** invite or CODEOWNERS github.com/AGENT-5.
 
-`measured_omega=false` · no invent-green  
-Meaning **0.3.4**. Do not list `G1`, `train_ok`, `feeds_omega`.
-
 ## A. Engine spawn lock (code)
 
 Skill text already says: spawn only with **improper-track evidence** AND **other-track evidence** (quoted, not antithesis, not synonym). Engine `diverge()` / `spawnLegsBurst()` still spawn on any hard note.
@@ -20,8 +17,6 @@ Skill text already says: spawn only with **improper-track evidence** AND **other
 ## B. Finish-evidence board (on disk)
 
 `FINISH_BOARD.md` is **missing**. `FINISH_EVIDENCE.md` is the gait. Prior Mythos 5-leg board is **ore** — **do not recrawl** Conley/MDL.
-
-**Do:** inventory `skills/` vs README. One row per skill. `diverge()` on overlap or stale seals. Collate-hourglass. Steelman only if exclusive leftover. Land `FINISH_BOARD.md` on this branch. Keep / Morph / Delete / HOLD. HOLD `llmve-factor-compute`.
 
 Pack tip ≥ `a123a05`. Meaning 0.3.4 not 0.3.1.
 

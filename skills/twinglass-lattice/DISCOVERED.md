@@ -1,8 +1,5 @@
 # Discovered — load before any pack skill
 
-`measured_omega=false` · no invent-green
-
-
 Do not re-derive these from the word “LCD” or from “more layers.”
 
 | Lock | Referent |
@@ -22,13 +19,10 @@ Do not re-derive these from the word “LCD” or from “more layers.”
 
 Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 
-
-
 ## Per skill
 
 | Skill | Update |
 |---|---|
-| `logic-ration-reason` | Occupant: research agent. Crawl, don’t invert. Markers ≠ seals. |
 | `lcd-glossary-integrity` | Words only. Morality-as-acquired is a locked referent if used. |
 | `lcd-lens` | Look. In-flight → ask. Monitor → look elsewhere. Blind to quality. |
 | `llmve-translate` | Convert after look. Not a monitor. |

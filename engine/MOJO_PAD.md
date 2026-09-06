@@ -1,8 +1,5 @@
 # Mojo memref / named pipes / RAM pad
 
-`measured_omega=false` · no invent-green
-
-
 Demand: a **leg’s scratch pad** other legs cannot open, not on `~/.grok/sessions`.
 
 | Collection | What it is | Meet? |

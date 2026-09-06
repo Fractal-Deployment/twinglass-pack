@@ -1,7 +1,5 @@
 # Twinglass apparatus — two lattices
 
-`measured_omega=false` · no invent-green
-
 Path: **Find → Maintain (pathing) → Let-fail.** Not hold a token. Not battle. Not Price’s Law as master.
 
 There are **two** lattices. Mixing them was the bug.
@@ -21,8 +19,6 @@ Logic-fail means the three laws broke on this track’s argument. Reaching a cor
 ## 2. 3D diamond (internal critique of ONE agent)
 
 Not a spawn. Not a child research track.
-
-When **one** leg needs to process what it has: it enters the octahedron — four equatorial paths (define / redefine-watch / explore / adapt), SI + LCD at each seal, asynchronous among those four. Integrity `pendingProjection` is **per-path**, not a global pending that blocks sibling equators. South mark joins only sealed + projected paths. **Other main-lattice legs hibernate** until that diamond completes.
 
 Then that agent **continues its own main-lattice leg**, or **pauses (`awaiting-meet`)** until another diamond-complete leg is ready.
 
