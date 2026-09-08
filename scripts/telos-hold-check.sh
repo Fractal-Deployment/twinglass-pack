@@ -34,5 +34,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "TELOS_HOLD_RED fail=$fail"
   exit 1
 fi
-echo "TELOS_HOLD_GREEN measured_omega=false"
+echo "TELOS_HOLD_GREEN"
 exit 0

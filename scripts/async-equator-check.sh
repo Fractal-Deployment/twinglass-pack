@@ -35,5 +35,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "ASYNC_EQUATOR_RED fail=$fail"
   exit 1
 fi
-echo "ASYNC_EQUATOR_GREEN measured_omega=false"
+echo "ASYNC_EQUATOR_GREEN"
 exit 0
