@@ -29,7 +29,7 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S05 | LCD look-elsewhere | **landed** — empty meet → look elsewhere / let-fail |
 | S06 | SI+LCD dual cap | **landed** — overload refuse on third watch object |
 | S07 | Diamond mutex CLI | **landed** — `commands/diamond-mutex.md` |
-| S08 | Async equator | **landed** — per-path `pendingProjection`; south mark sealed only |
+| S08 | Async equator | **landed** — per-path `pendingProjection`; south mark closed pads only |
 | S09 | FINISH_BOARD refresh | **landed** — Morph done; next legal S10 |
 | S10 | fork-sens align | **landed** — spawn lock tokens + refuse synonym/antithesis |
 | S11 | clone-experiment align | **landed** — same spawn lock language |

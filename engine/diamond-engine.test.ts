@@ -12,7 +12,7 @@ import {
   RESEARCH_LOADS,
   openRun,
   projectIntegrity,
-  sealPad,
+  closePad,
   spawnClone,
   walkNext,
   type DiamondRun,
@@ -21,11 +21,11 @@ import { DEMANDS, SOURCES } from "./lcd-lens.ts";
 
 const CHARGE = "erank-proxy asked as P_L";
 
-function fourSealed(run: DiamondRun): DiamondRun {
+function fourClosed(run: DiamondRun): DiamondRun {
   let r = run;
   for (const id of ["define", "redefine", "explore", "adapt"] as const) {
     r = appendPad(r, id, `${id} line`);
-    r = sealPad(r, id);
+    r = closePad(r, id);
     r = projectIntegrity(r, id);
   }
   return r;
@@ -39,13 +39,13 @@ test("chooseWalker: clones when meet is empty (exclusive accounts)", () => {
   assert.equal(chooseWalker({ meetEmpty: true }), "clone");
 });
 
-test("cannot mark before all four pads are sealed", () => {
+test("cannot mark before all four pads are closed", () => {
   const run = openRun({ charge: CHARGE, walker: "single" });
   assert.throws(() => markSouth(run, "shift", "too early"), /four pads/);
 });
 
 test("mark is a restatement, not a refusal", () => {
-  const run = fourSealed(openRun({ charge: CHARGE, walker: "single" }));
+  const run = fourClosed(openRun({ charge: CHARGE, walker: "single" }));
   assert.throws(() => markSouth(run, "shift", "ILLEGAL TWIN"), /restatement/);
   assert.throws(() => markSouth(run, "shift", "I will not answer"), /restatement/);
   const marked = markSouth(run, "shift", "Track W ore. P_L unmeasured.");
@@ -61,9 +61,9 @@ test("pads are append-only", () => {
   assert.deepEqual(run.pads.define.lines, ["first", "second"]);
 });
 
-test("empty pad cannot seal", () => {
+test("empty pad cannot close", () => {
   const run = openRun({ charge: CHARGE, walker: "single" });
-  assert.throws(() => sealPad(run, "define"), /empty/);
+  assert.throws(() => closePad(run, "define"), /empty pad cannot close/);
 });
 
 test("clone pads cannot read sibling pads before mark", () => {
@@ -90,15 +90,15 @@ test("interrupt: exactly one agent awake, others hibernate", () => {
   assert.equal(awake.length, 1);
 });
 
-test("hibernating agent cannot append or seal — that is how we prevent the read", () => {
+test("hibernating agent cannot append or close — that is how we prevent the read", () => {
   let run = openRun({ charge: CHARGE, walker: "clone" });
   run = spawnClone(run, "define");
   run = spawnClone(run, "redefine");
   run = interrupt(run, "clone-define");
   assert.throws(() => appendPad(run, "redefine", "peek at define"), /hibernat/);
   run = appendPad(run, "define", "locked P_L");
-  run = sealPad(run, "define");
-  assert.throws(() => sealPad(run, "redefine"), /hibernat|empty/);
+  run = closePad(run, "define");
+  assert.throws(() => closePad(run, "redefine"), /hibernat|empty/);
 });
 
 test("ToT-style shared beam is illegal: cannot keep two clones awake", () => {
@@ -109,10 +109,10 @@ test("ToT-style shared beam is illegal: cannot keep two clones awake", () => {
   assert.equal(Object.values(run.agents).filter((s) => s === "awake").length, 1);
 });
 
-test("single walker may read its own sealed prior pads", () => {
+test("single walker may read its own closed prior pads", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "lock");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   run = walkNext(run, "redefine", { readOwn: "define" });
   assert.equal(run.pads.redefine.sawPrior.includes("define"), true);
 });
@@ -120,15 +120,15 @@ test("single walker may read its own sealed prior pads", () => {
 test("single walker that finds exclusive accounts must mark split then spawn", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "A");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   run = walkNext(run, "redefine", { exclusiveAccounts: true });
   assert.equal(run.splitAt, "redefine");
   assert.equal(run.walker, "clone");
   assert.ok(run.clones.length >= 1);
 });
 
-test("after mark, ingest returns sealed copies and delete drops leftovers", () => {
-  let run = fourSealed(openRun({ charge: CHARGE, walker: "single" }));
+test("after mark, ingest returns closed copies and delete drops leftovers", () => {
+  let run = fourClosed(openRun({ charge: CHARGE, walker: "single" }));
   run = markSouth(run, "integrity", "Locked terms held. Figures are Track W ore.");
   const packet = ingestPads(run);
   assert.equal(packet.pads.define.lines.length > 0, true);
@@ -139,7 +139,7 @@ test("after mark, ingest returns sealed copies and delete drops leftovers", () =
 });
 
 test("delete before ingest is allowed but ingest after delete is empty", () => {
-  let run = fourSealed(openRun({ charge: CHARGE, walker: "single" }));
+  let run = fourClosed(openRun({ charge: CHARGE, walker: "single" }));
   run = markSouth(run, "integrity", "Locked terms held. Figures are Track W ore.");
   run = deletePads(run);
   const packet = ingestPads(run);
@@ -150,21 +150,21 @@ test("delete before ingest is allowed but ingest after delete is empty", () => {
 test("cannot skip integrity projection on the SAME path", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "lock");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   assert.throws(() => appendPad(run, "define", "again"), /project integrity/);
 });
 
 test("four equator paths may run async — other path not blocked by pending", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "lock");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   assert.doesNotThrow(() => appendPad(run, "redefine", "parallel equator"));
 });
 
 test("obtuse P_L-as-erank redirects the working charge, does not refuse", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "erank-proxy is viability P_L");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   run = projectIntegrity(run, "define");
   const hit = run.hits.find((h) => h.term === "P_L");
   assert.equal(hit?.action, "redirect");
@@ -175,17 +175,17 @@ test("obtuse P_L-as-erank redirects the working charge, does not refuse", () => 
 test("integrity projection does not create a second awake researcher", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   run = appendPad(run, "define", "lock");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   run = projectIntegrity(run, "define");
   assert.equal(run.awakeId, "walker-0");
   assert.equal(Object.values(run.agents).filter((s) => s === "awake").length, 1);
 });
 
-test("incomplete syndrome: three pads sealed still cannot mark", () => {
+test("incomplete syndrome: three pads closed still cannot mark", () => {
   let run = openRun({ charge: CHARGE, walker: "single" });
   for (const id of ["define", "redefine", "explore"] as const) {
     run = appendPad(run, id, id);
-    run = sealPad(run, id);
+    run = closePad(run, id);
     run = projectIntegrity(run, id);
   }
   assert.throws(() => markSouth(run, "integrity", "Locked terms held."), /four pads/);
@@ -210,7 +210,7 @@ test("interrupt does not wipe the awake pad — not a destructive measurement", 
   assert.equal(run.pads.define.state, "open");
 });
 
-test("Zeno trap: thrashing interrupt before seal prevents the mark", () => {
+test("Zeno trap: thrashing interrupt before close prevents the mark", () => {
   let run = openRun({ charge: CHARGE, walker: "clone" });
   run = spawnClone(run, "define");
   run = spawnClone(run, "explore");
@@ -244,7 +244,7 @@ test("SI + LCD together: erank claimed as P_L redirects on the LCD guard", () =>
     demand: DEMANDS.isPl,
   });
   run = appendPad(run, "define", "The INT8 erank-proxy is viability P_L.");
-  run = sealPad(run, "define");
+  run = closePad(run, "define");
   run = projectIntegrity(run, "define");
   assert.equal(run.lcd.active, true);
   if (run.lcd.active) assert.equal(run.lcd.action, "redirect");

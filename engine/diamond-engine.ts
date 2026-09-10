@@ -14,7 +14,7 @@ export const PATHS: EquatorId[] = ["define", "redefine", "explore", "adapt"];
 
 export type Walker = "single" | "clone";
 export type Schedule = "hibernate" | "parallel";
-export type PadState = "empty" | "open" | "sealed" | "deleted";
+export type PadState = "empty" | "open" | "closed" | "deleted";
 
 export type ScratchPad = {
   path: EquatorId;
@@ -155,7 +155,7 @@ export function appendPad(
   if (run.pendingProjection[path]) throw new Error("project integrity first");
   assertAwake(run, path);
   const p = run.pads[path];
-  if (p.state === "sealed" || p.state === "deleted") throw new Error("pad closed");
+  if (p.state === "closed" || p.state === "deleted") throw new Error("pad closed");
   if (!line.trim()) throw new Error("empty line");
   return {
     ...run,
@@ -170,14 +170,14 @@ export function appendPad(
   };
 }
 
-export function sealPad(run: DiamondRun, path: EquatorId): DiamondRun {
+export function closePad(run: DiamondRun, path: EquatorId): DiamondRun {
   assertAwake(run, path);
   const p = run.pads[path];
-  if (p.lines.length === 0) throw new Error("empty pad cannot seal");
+  if (p.lines.length === 0) throw new Error("empty pad cannot close");
   return {
     ...run,
     pendingProjection: { ...run.pendingProjection, [path]: true },
-    pads: { ...run.pads, [path]: { ...p, state: "sealed" } },
+    pads: { ...run.pads, [path]: { ...p, state: "closed" } },
   };
 }
 
@@ -210,13 +210,13 @@ export function projectIntegrity(
   };
 }
 
-function allSealed(run: DiamondRun): boolean {
-  return PATHS.every((id) => run.pads[id].state === "sealed");
+function allClosed(run: DiamondRun): boolean {
+  return PATHS.every((id) => run.pads[id].state === "closed");
 }
 
 export function markSouth(run: DiamondRun, kind: MarkKind, restatement: string): DiamondRun {
   if (PATHS.some((id) => run.pendingProjection[id])) throw new Error("project integrity first");
-  if (!allSealed(run)) throw new Error("cannot mark before four pads are sealed");
+  if (!allClosed(run)) throw new Error("cannot mark before four pads are closed");
   if (!restatement.trim() || REFUSAL.test(restatement)) {
     throw new Error("mark must be a restatement, not a refusal");
   }
@@ -274,7 +274,7 @@ export function walkNext(
   let next = run;
   if (opts?.readOwn) {
     const prior = run.pads[opts.readOwn];
-    if (prior.state !== "sealed") throw new Error("can only read sealed own pads");
+    if (prior.state !== "closed") throw new Error("can only read closed own pads");
     next = {
       ...run,
       pads: {
@@ -328,9 +328,9 @@ export const OPEN_QUESTIONS = [
     a: "Operator can ingest. Agent writes. After delete, only the ingest packet remains.",
   },
   {
-    id: "sealed-carry",
+    id: "closed-carry",
     q: "When the single walker goes back, what may it carry?",
-    a: "Only sealed pads. Unmarked guesses are contamination of a different kind.",
+    a: "Only closed pads. Unmarked guesses are contamination of a different kind.",
   },
   {
     id: "delete-when",
@@ -345,16 +345,16 @@ export const OPEN_QUESTIONS = [
   {
     id: "hibernate",
     q: "How do we prevent a sibling read without trusting the prompt?",
-    a: "Interrupt: exactly one agent awake. All others hibernate. A hibernating pad cannot append, seal, or read. ToT BFS keeps a shared beam of b thoughts — that is the contamination we refuse.",
+    a: "Interrupt: exactly one agent awake. All others hibernate. A hibernating pad cannot append, close, or read. ToT BFS keeps a shared beam of b thoughts — that is the contamination we refuse.",
   },
   {
     id: "zeno",
     q: "Is hibernation the quantum Zeno effect?",
-    a: "Jacobian only. Freeze the siblings. Thrash the walker before seal and you freeze the gait. Interrupt does not wipe the awake pad.",
+    a: "Jacobian only. Freeze the siblings. Thrash the walker before close and you freeze the gait. Interrupt does not wipe the awake pad.",
   },
   {
     id: "sentinel",
     q: "Who enforces semantic integrity on the map?",
-    a: "A supervisor projection after every seal. It does not occupy the research awake slot. Obtuse deflection reroots the working charge. Redirect, not shutdown. Skill: lcd-glossary-integrity, consumed — not a tenth copy.",
+    a: "A supervisor projection after every close. It does not occupy the research awake slot. Obtuse deflection reroots the working charge. Redirect, not shutdown. Skill: lcd-glossary-integrity, consumed — not a tenth copy.",
   },
 ] as const;

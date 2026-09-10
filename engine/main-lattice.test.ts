@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { appendPad, projectIntegrity, sealPad, type DiamondRun } from "./diamond-engine.ts";
+import { appendPad, closePad, projectIntegrity, type DiamondRun } from "./diamond-engine.ts";
 import {
   awaiting,
   completeCritiqueDiamond,
@@ -29,11 +29,11 @@ function trackNote(
   };
 }
 
-function fourSeal(run: DiamondRun): DiamondRun {
+function fourClosed(run: DiamondRun): DiamondRun {
   let r = run;
   for (const id of ["define", "redefine", "explore", "adapt"] as const) {
     r = appendPad(r, id, `${id} critique`);
-    r = sealPad(r, id);
+    r = closePad(r, id);
     r = projectIntegrity(r, id);
   }
   return r;
@@ -73,8 +73,8 @@ test("one diamond: others hibernate; complete awaits meet", () => {
   assert.equal(m.diamondId, child);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "in-diamond");
   assert.equal(m.legs.find((l) => l.id === root)?.state, "hibernating");
-  const sealed = fourSeal(m.legs.find((l) => l.id === child)!.run);
-  m = { ...m, legs: m.legs.map((l) => (l.id === child ? { ...l, run: sealed } : l)) };
+  const closed = fourClosed(m.legs.find((l) => l.id === child)!.run);
+  m = { ...m, legs: m.legs.map((l) => (l.id === child ? { ...l, run: closed } : l)) };
   m = completeCritiqueDiamond(m, child, "Child diamond restated. Path capacity unmeasured.");
   assert.equal(m.diamondId, null);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "awaiting-meet");
@@ -91,8 +91,8 @@ test("converge waits for two diamond-complete legs; emit walks", () => {
   const b = m.legs[2].id;
   function diamond(id: string, text: string) {
     m = enterCritiqueDiamond(m, id);
-    const sealed = fourSeal(m.legs.find((l) => l.id === id)!.run);
-    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: sealed } : l)) };
+    const closed = fourClosed(m.legs.find((l) => l.id === id)!.run);
+    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: closed } : l)) };
     m = completeCritiqueDiamond(m, id, text);
   }
   diamond(a, "A restated. Complementary account.");
@@ -121,8 +121,8 @@ test("converge debate vs synthesis selection under lock", () => {
   const b = m.legs[2].id;
   function diamond(id: string, text: string) {
     m = enterCritiqueDiamond(m, id);
-    const sealed = fourSeal(m.legs.find((l) => l.id === id)!.run);
-    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: sealed } : l)) };
+    const closed = fourClosed(m.legs.find((l) => l.id === id)!.run);
+    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: closed } : l)) };
     m = completeCritiqueDiamond(m, id, text);
   }
   diamond(a, "A exclusive leftover.");

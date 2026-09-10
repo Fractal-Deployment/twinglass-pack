@@ -57,7 +57,7 @@ If a search snippet is not browsed, it does not count.
 3. On earned fork: clone B on the decoder-as-viability account (steelman it; do not strawman). A stays leftover-on-merit.
 4. Clone B must open pages A never listed. If B’s first 4 URLs are the scout’s list in order, B is a paraphrase = fail.
 5. If a clone hits a **new** exclusive split (e.g. logit-lens-as-\(P_L\) vs snapshot-as-Track-W), clone C — depth wall 3.
-6. Meet only after pads sealed. Then `collate-hourglass`. Restate what is true. No refusal.
+6. Meet only after pads closed. Then `collate-hourglass`. Restate what is true. No refusal.
 
 ## LCD / SI (monitor, not helper)
 

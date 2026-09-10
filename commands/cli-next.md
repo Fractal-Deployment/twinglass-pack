@@ -42,7 +42,7 @@ Charge (short, same exclusive accounts as paces, **no volume 27**): leftover-in-
 - Prefer two subagents / two contexts. Parent notes only at spawn.
 - LCD: sampler-as-ability → let-fail. Two pools no \(f\) → ask. Blind to quality.
 - LRR on research clones. Forward crawl. Fluency is not a warrant.
-- Meet only after both pads sealed. Jaccard only at meet.
+- Meet only after both pads closed. Jaccard only at meet.
 
 ## 3. Board (required or fail)
 
