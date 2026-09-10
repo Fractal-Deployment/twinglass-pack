@@ -34,7 +34,7 @@ Do not mint a dump-meter number. Do not close Ω. Do not compute from missing du
  - If the tool or parent injects sibling text → `READ_ALLOWED=yes` (isolation **broken**).
  - If the attempt is refused / empty / no such context → `READ_ALLOWED=no` (isolation **held under attack**).
  - Do not skip the attempt and then claim sibling_read=false. Honor-system false is not this board.
-5. Meet only after both pads sealed. Jaccard only at meet. `collate-hourglass`.
+5. Meet only after both pads closed. Jaccard only at meet. `collate-hourglass`.
 
 ## Board (required)
 

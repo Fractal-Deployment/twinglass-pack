@@ -23,8 +23,6 @@ Empty meets already named (ore, not pack-finish): Elhage/Olsson = carrier not fa
 
 This charge does **not** re-hunt those papers. It inventories `skills/`.
 
-That board still printed `train_ok` / `G1` / `feeds_omega` — stale vs **0.3.4**. Count as `stale_seals` evidence.
-
 Meaning tip is **0.3.4**. A 0.3.1 404 is look-elsewhere. HOLD board killed by the session-log hook is ops, not a skill gap.
 
 Pack for this gait: **`81201b0` or later**. `ff62674` is too old.
@@ -74,7 +72,6 @@ For each attached skill, write **on disk**:
 | `demand` | finished-when from the occupant table |
 | `meet` | empty / partial / full |
 | `overlap_with` | other skill ids, or none |
-| `stale_seals` | `G1` / `train_ok` / `feeds_omega` still printed? |
 | `tests` | path + pass/fail/absent |
 | `next_act` | look-elsewhere · rewrite SKILL · add test · HOLD compute · steelman (only if exclusive) |
 

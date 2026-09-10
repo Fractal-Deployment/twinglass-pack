@@ -43,7 +43,7 @@ Do **not** put collected math onto an LLMVE pathway. That is `llmve-translate`.
 
 If there is no function-set data this round, **skip**. Do not hunt for data to stay busy.
 
-**Data vs information:** sealed collections are data. An agent turning pool A into pool B is **information** — one function in flight. Those two pools are not two studies. If you cannot see the map, **ask** what function takes A to B. Do not call unlike-units on an unfinished calculation.
+**Data vs information:** completed collections are data. An agent turning pool A into pool B is **information** — one function in flight. Those two pools are not two studies. If you cannot see the map, **ask** what function takes A to B. Do not call unlike-units on an unfinished calculation.
 
 **Monitor job (like SI):** redirect the research agent to **look elsewhere** when collection does not meet demand. Blind to whether the study is “good.” Do not score methodology. Do not convert pools into comparable values — that is `llmve-translate`. Do not judge if the study is viable.
 

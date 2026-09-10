@@ -21,5 +21,5 @@ else
 fi
 
 if [[ "$fail" -ne 0 ]]; then echo "FINISH_BOARD_RED fail=$fail"; exit 1; fi
-echo "FINISH_BOARD_GREEN measured_omega=false"
+echo "FINISH_BOARD_GREEN"
 exit 0

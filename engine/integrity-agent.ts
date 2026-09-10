@@ -192,7 +192,7 @@ export function judgeFrame(claim: string): IntegrityHit {
 /** Pretrained pattern is not a look-up. Humans confirm on imperfect memory + a source. LLMs need a pad. */
 export const FLUENCY_IS_NOT_CONFIRMATION = true;
 
-/** Replication crisis is a marker of aimed-collection + misframed explanation at scale. Not a closed seal. */
+/** Replication crisis is a marker of aimed-collection + misframed explanation at scale. Not a closed finding. */
 export const REPLICATION_GAP_MARKER = "replication_gap";
 
 export function judgeJoin(a: Quantity, b: Quantity): IntegrityHit {

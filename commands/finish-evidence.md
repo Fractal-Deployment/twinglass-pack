@@ -20,7 +20,7 @@ Load: `logic-ration-reason` on **you**. Monitor = SI + lcd-lens. Meet = `collate
 1. Fetch pack **main ≥ 81201b0**. `ff62674` lacks this file — stop and fetch. Meaning **0.3.4**, not 0.3.1.
 2. Do **not** recrawl Mythos/MDL/Conley. That 5-leg board is prior collection in `FINISH_EVIDENCE.md`. This unit inventories **skills/**.
 3. Inventory every folder under `skills/` vs README. `collate-hourglass` must be listed.
-4. One row per skill: collection / claimed / demand / meet / overlap / stale_seals / tests / next_act. Quote paths. Stale = still printing G1 / train_ok / feeds_omega.
+4. One row per skill: collection / claimed / demand / meet / overlap / tests / next_act. Quote paths.
 6. Diamond **one overlapped skill** at a time if earned. Not a Mythos diamond.
 7. Collate. Steelman only on exclusive leftover.
 8. Write `FINISH_BOARD.md` **in the repo tree** (if the session-log hook blocks other writes, still land this file). Keep / Morph / Delete / HOLD. One restatement. No meter.

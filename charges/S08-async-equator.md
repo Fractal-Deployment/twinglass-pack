@@ -4,5 +4,5 @@
 
 ## Do
 
-Document in APPARATUS + command: four paths async; south mark joins only sealed paths.
+Document in APPARATUS + command: four paths async; south mark joins only closed paths.
 

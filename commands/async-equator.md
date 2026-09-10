@@ -11,7 +11,7 @@ Engine: `pendingProjection: Partial<Record<EquatorId, true>>` in `engine/diamond
 
 - Four paths: define / redefine / explore / adapt. Async to each other.
 - `pendingProjection[path]` — per-path. Not a global pending flag.
-- South mark (`markSouth`) joins only when **all four pads are sealed** and **no path still has pending projection**.
+- South mark (`markSouth`) joins only when **all four pads are closed** and **no path still has pending projection**.
 - A pending projection on `explore` does not freeze `adapt`.
 
 ## Do not

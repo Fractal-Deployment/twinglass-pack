@@ -28,8 +28,8 @@ Can isolated clones run the **methodology**: maintain layer-to-layer operational
 1. **Scout** (one awake). If two exclusive accounts: (A) leftover-on-merit / let-fail vs (B) greedy/top-p as if it were \(P_L\).
 2. **Fork** — only if spawn lock passes. Clone B. Parent notes only. New scratchpad. Interrupt A → A hibernates.
 3. Exactly one research agent awake. No sibling pad read. Contamination = fail.
-4. Each clone: LRR forward crawl if they leave reason. LCD: in-flight numbers → **ask**; sealed empty meet → **let fail / look elsewhere**. Blind to quality.
-5. Meet only after both pads sealed. Collate with `collate-hourglass`. Restate what is true. No refusal.
+4. Each clone: LRR forward crawl if they leave reason. LCD: in-flight numbers → **ask**; completed-collection empty meet → **let fail / look elsewhere**. Blind to quality.
+5. Meet only after both pads closed. Collate with `collate-hourglass`. Restate what is true. No refusal.
 
 ## Pass
 

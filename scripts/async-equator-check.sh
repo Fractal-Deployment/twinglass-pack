@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# S08 — per-path pendingProjection; south mark joins sealed paths only.
-# improper: global pending blocks independent equator seals.
+# S08 — per-path pendingProjection; south mark joins closed paths only.
+# improper: global pending blocks independent equator closes.
 # other-track: engine pendingProjection is Partial<Record<EquatorId, true>>.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -21,7 +21,7 @@ if [[ -f "$CMD" ]]; then
 fi
 
 grep -q 'pendingProjection' "$ENG" || red "engine missing pendingProjection"
-grep -q 'cannot mark before four pads are sealed' "$ENG" || red "engine south-mark seal gate drifted"
+grep -q 'cannot mark before four pads' "$ENG" || red "engine south-mark closed-pad gate drifted"
 
 if grep -q 'per-path' "$APP" || grep -q 'pendingProjection' "$APP"; then
   pass "APPARATUS names per-path pending"
@@ -35,5 +35,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "ASYNC_EQUATOR_RED fail=$fail"
   exit 1
 fi
-echo "ASYNC_EQUATOR_GREEN measured_omega=false"
+echo "ASYNC_EQUATOR_GREEN"
 exit 0
