@@ -43,5 +43,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "S20_S24_RED fail=$fail"
   exit 1
 fi
-echo "S20_S24_GREEN measured_omega=false"
+echo "S20_S24_GREEN omega_was_measured=false"
 exit 0

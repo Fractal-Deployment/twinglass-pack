@@ -45,5 +45,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "CLI_SPAWN_LOCK_RED fail=$fail"
   exit 1
 fi
-echo "CLI_SPAWN_LOCK_PROXY_GREEN measured_omega=false"
+echo "CLI_SPAWN_LOCK_PROXY_GREEN omega_was_measured=false"
 exit 0

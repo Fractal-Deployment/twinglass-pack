@@ -20,7 +20,7 @@ metadata:
 
 ## Do not
 
-- Claim `measured_omega` from the atlas.
+- Claim `omega_was_measured` from the atlas.
 - Absorb factor-compute.
 - Become a second vram-geometry-mapper.
 

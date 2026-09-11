@@ -27,5 +27,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "CI_PUSH_ENGINE_RED fail=$fail"
   exit 1
 fi
-echo "CI_PUSH_ENGINE_GREEN measured_omega=false"
+echo "CI_PUSH_ENGINE_GREEN omega_was_measured=false"
 exit 0

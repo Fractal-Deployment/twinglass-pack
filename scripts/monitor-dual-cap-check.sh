@@ -29,5 +29,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "MONITOR_DUAL_RED fail=$fail"
   exit 1
 fi
-echo "MONITOR_DUAL_GREEN measured_omega=false"
+echo "MONITOR_DUAL_GREEN omega_was_measured=false"
 exit 0

@@ -75,7 +75,7 @@ Do **not** inverse CoT. Debugging by walking backwards from the bad conclusion i
 
 ## Do not
 
-- Close `measured_omega` from a fluent paragraph.
+- Close `omega_was_measured` from a fluent paragraph.
 - Copy this folder as `morph-shared`. Collation is `collate-hourglass` and does not own these laws.
 - Load this onto the integrity monitor as extra objects. The monitor judges two objects (terms, quantities) **by** the three laws. Ration and Reason stay here. Laws-as-a-third-watch-object overloads and refuses.
 - Become meaning, LCD, telos-ranking, lattice, or twin.

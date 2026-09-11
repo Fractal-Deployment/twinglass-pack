@@ -71,5 +71,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "OCCUPANT_BLEED_RED fail=$fail"
   exit 1
 fi
-echo "OCCUPANT_BLEED_GREEN one_occupant_per_named_skill measured_omega=false"
+echo "OCCUPANT_BLEED_GREEN one_occupant_per_named_skill omega_was_measured=false"
 exit 0

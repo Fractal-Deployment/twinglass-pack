@@ -33,5 +33,5 @@ if [[ "$fail" -ne 0 ]]; then
   echo "COLLATE_STEELMAN_RED fail=$fail"
   exit 1
 fi
-echo "COLLATE_STEELMAN_GREEN measured_omega=false"
+echo "COLLATE_STEELMAN_GREEN omega_was_measured=false"
 exit 0
