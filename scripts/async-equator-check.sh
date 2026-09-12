@@ -29,5 +29,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "ASYNC_EQUATOR_RED fail=$fail"
   exit 1
 fi
-echo "ASYNC_EQUATOR_GREEN =false"
 exit 0

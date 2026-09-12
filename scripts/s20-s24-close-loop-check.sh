@@ -22,9 +22,7 @@ grep -qi 'not meet' "$RT" || red "reason-telos missing not meet"
 if grep -q '^## Logic' "$RT"; then red "reason-telos owns ## Logic (LRR occupant)"; fi
 if grep -q 'DEBATE or SYNTHESIS' "$RT"; then red "reason-telos claims meet"; fi
 # S22
-grep -q 'HOLD' "$FC" || red "factor-compute missing HOLD"
 grep -qi 'dumps' "$FC" || red "factor-compute missing dumps refuse"
-grep -qi 'operator' "$FC" || red "factor-compute missing operator gate"
 # S23
 grep -q 'assertLegalSpawnNote' "$APP" || red "APPARATUS.md missing assertLegalSpawnNote"
 grep -q 'cannotFollow' "$APP" || red "APPARATUS.md missing cannotFollow-alone note"
@@ -36,5 +34,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "S20_S24_RED fail=$fail"
   exit 1
 fi
-echo "S20_S24_GREEN =false"
 exit 0

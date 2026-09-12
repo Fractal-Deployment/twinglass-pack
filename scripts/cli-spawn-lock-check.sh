@@ -39,5 +39,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "CLI_SPAWN_LOCK_RED fail=$fail"
   exit 1
 fi
-echo "CLI_SPAWN_LOCK_PROXY_GREEN =false"
 exit 0

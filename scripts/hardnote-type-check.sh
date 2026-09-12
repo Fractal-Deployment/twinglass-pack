@@ -24,5 +24,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "HARDNOTE_TYPE_RED fail=$fail"
   exit 1
 fi
-echo "HARDNOTE_TYPE_GREEN =false"
 exit 0

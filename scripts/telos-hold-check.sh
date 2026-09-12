@@ -29,5 +29,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "TELOS_HOLD_RED fail=$fail"
   exit 1
 fi
-echo "TELOS_HOLD_GREEN =false"
 exit 0

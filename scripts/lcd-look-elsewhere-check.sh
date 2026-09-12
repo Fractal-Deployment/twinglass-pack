@@ -29,5 +29,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "LCD_LOOK_RED fail=$fail"
   exit 1
 fi
-echo "LCD_LOOK_GREEN =false"
 exit 0

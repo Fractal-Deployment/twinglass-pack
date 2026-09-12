@@ -28,5 +28,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "S10_S12_ALIGN_RED fail=$fail"
   exit 1
 fi
-echo "S10_S12_ALIGN_GREEN =false"
 exit 0

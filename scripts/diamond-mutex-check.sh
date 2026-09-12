@@ -14,5 +14,4 @@ if [[ -f "$CMD" ]]; then
 fi
 grep -q 'another leg is already in diamond' "$ENG" || red "engine mutex string drifted"
 if [[ "$fail" -ne 0 ]]; then echo "DIAMOND_MUTEX_RED fail=$fail"; exit 1; fi
-echo "DIAMOND_MUTEX_GREEN =false"
 exit 0

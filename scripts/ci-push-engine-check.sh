@@ -8,7 +8,7 @@ fail=0
 red() { echo "FAIL: $*" >&2; fail=$((fail + 1)); }
 pass() { echo "PASS: $*"; }
 grep -q 'pull_request:' "$WF" || red "workflow missing pull_request"
-if grep -A20 '^on:' "$WF" | grep -q '^ push:'; then
+if grep -A20 '^on:' "$WF" | grep -q '^  push:'; then
   pass "on.push present"
 else
   red "on.push missing (pull_request-only: engine never runs on main tip)"
@@ -25,5 +25,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "CI_PUSH_ENGINE_RED fail=$fail"
   exit 1
 fi
-echo "CI_PUSH_ENGINE_GREEN =false"
 exit 0

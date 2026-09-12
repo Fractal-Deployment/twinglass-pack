@@ -63,5 +63,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "OCCUPANT_BLEED_RED fail=$fail"
   exit 1
 fi
-echo "OCCUPANT_BLEED_GREEN one_occupant_per_named_skill =false"
 exit 0

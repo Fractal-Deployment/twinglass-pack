@@ -26,5 +26,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "S13_S15_RED fail=$fail"
   exit 1
 fi
-echo "S13_S15_GREEN =false"
 exit 0

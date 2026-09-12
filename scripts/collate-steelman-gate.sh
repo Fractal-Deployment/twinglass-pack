@@ -28,5 +28,4 @@ if [[ "$fail" -ne 0 ]]; then
   echo "COLLATE_STEELMAN_RED fail=$fail"
   exit 1
 fi
-echo "COLLATE_STEELMAN_GREEN =false"
 exit 0
