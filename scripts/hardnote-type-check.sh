@@ -5,7 +5,6 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 fail=0
 red() { echo "FAIL: $*" >&2; fail=$((fail + 1)); }
 pass() { echo "PASS: $*"; }
-
 if grep -n 'as never' "$ROOT/engine/spawn-lock.test.ts"; then
   red "spawn-lock.test.ts uses as never (type lie)"
 else
@@ -21,10 +20,9 @@ if grep -n 'otherTrackEvidence?.trim' "$ROOT/engine/main-lattice.ts"; then
 else
   pass "otherTrackEvidence.trim without ?."
 fi
-
 if [[ "$fail" -ne 0 ]]; then
   echo "HARDNOTE_TYPE_RED fail=$fail"
   exit 1
 fi
-echo "HARDNOTE_TYPE_GREEN omega_was_measured=false"
+echo "HARDNOTE_TYPE_GREEN =false"
 exit 0

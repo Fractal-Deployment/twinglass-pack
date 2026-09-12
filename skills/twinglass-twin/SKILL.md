@@ -9,28 +9,19 @@ user-invocable: true
 metadata:
   short-description: "Known two-track, isolated until battle"
 ---
-
 # twinglass-twin
-
 **One job:** predetermined two tracks when you already know the split is Reason vs inverse-pool.
-
 Load `honest-prompt-rewrite`. Do not also load `evidence-hourglass-research` or `deep-research`.
-
 ## Gait
-
 1. Lock glossary (shared, before isolation).
 2. **Split** — Track A Reason and Track B Disconfirm start together, then cannot see each other.
 3. Parallel diamonds.
 4. Parallel hourglasses.
 5. Battle diamond (three laws on this gutter — not LRR restated here).
 6. Hand contraction to `collate-hourglass`. Twin does not own collation.
-
 Isolation gutter holds until battle. Sequential A-then-B on shared state is contamination.
-
 ## Do not
-
 - Replace lattice with twin on a question that has not earned a Disconfirm track.
 - Run one agent through both tracks.
 - Average the two answers.
-
 Grok.com: /twin. CLI: this folder.

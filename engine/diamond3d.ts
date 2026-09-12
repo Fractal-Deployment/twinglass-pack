@@ -1,11 +1,8 @@
 /** 3D diamond = octahedron. Four equatorial paths, then a mark. Not a 2D rhombus. */
-
 export type EquatorId = "define" | "redefine" | "explore" | "adapt";
 export type PoleId = "north" | "south";
 export type DiamondVertex = EquatorId | PoleId;
-
 export type MarkKind = "integrity" | "shift";
-
 export const EQUATOR: {
   id: EquatorId;
   label: string;
@@ -37,7 +34,6 @@ export const EQUATOR: {
     axis: [0, -1, 0],
   },
 ];
-
 export const POLES: Record<
   PoleId,
   { label: string; job: string; axis: [number, number, number] }
@@ -53,19 +49,16 @@ export const POLES: Record<
     axis: [0, 0, -1],
   },
 };
-
 export type PathWalk = {
   id: EquatorId;
   found: string;
 };
-
 export type DiamondWalk = {
   charge: string;
   paths: Record<EquatorId, string>;
   mark: MarkKind;
   markText: string;
 };
-
 /** Walked on the Track-W probe. Restatement, not refusal. */
 export const TRACK_W_WALK: DiamondWalk = {
   charge:
@@ -84,7 +77,6 @@ export const TRACK_W_WALK: DiamondWalk = {
   markText:
     "Mark: conceptual-geometry shift on the operator’s map (P_L used as erank). Semantic integrity holds on the locked glossary. The true restatement is the south pole, not a shutdown.",
 };
-
 export function isometric(
   x: number,
   y: number,

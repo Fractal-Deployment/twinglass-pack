@@ -6,7 +6,6 @@ fail=0
 red() { echo "FAIL: $*" >&2; fail=$((fail + 1)); }
 pass() { echo "PASS: $*"; }
 B="$ROOT/FINISH_BOARD.md"
-
 grep -q 'Occupant bleed \*\*landed\*\*' "$B" || grep -q 'Occupant bleed **landed**' "$B" || red "FINISH_BOARD Morph not marked landed"
 if grep -q 'Not this commit' "$B"; then
   red "FINISH_BOARD still says Morph Not this commit"
@@ -19,7 +18,6 @@ if grep -q 'AGENT_FIVE_QUEUE' "$B" || grep -q 'S10' "$B"; then
 else
   red "FINISH_BOARD missing next legal S10 / AGENT_FIVE_QUEUE"
 fi
-
 if [[ "$fail" -ne 0 ]]; then echo "FINISH_BOARD_RED fail=$fail"; exit 1; fi
-echo "FINISH_BOARD_GREEN omega_was_measured=false"
+echo "FINISH_BOARD_GREEN =false"
 exit 0

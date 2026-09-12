@@ -1,26 +1,18 @@
 # Agent Five continuous queue
-
 Agent Five = **session role** (login Jadon-Fox). Do **not** invite github.com/AGENT-5.
-
 **How to run**
-
 Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com/Agent-4).
-
 1. `gh pr list --repo Fractal-Deployment/twinglass-pack --state open`
 2. Pull the **lowest open S-number** charge PR (or this queue if not on tip).
 3. Implement only that charge. Quote improper + other-track if spawning a skill change.
 5. Merge. Pull main. Take the next open S-number. Do not skip ahead without empty-meet reason.
-
 **Already on main**
-
 | ID | Status |
 |---|---|
 | S00 map (`LATTICE_AHEAD.md`) | merged #8 |
 | S01 occupant bleed | merged #9 |
 | Engine spawn lock + `FINISH_BOARD` | merged #4 |
-
 **Open sequence (implement in order)**
-
 | ID | Track | Deliverable |
 |---|---|---|
 | S02 | CLI spawn-lock | **landed** — `commands/cli-spawn-lock.md` + `SPAWN_REFUSED` |
@@ -44,8 +36,5 @@ Runner: `AGENT4_FRAMEWORK.md` (Agent 4 session = login Jadon-Fox; not github.com
 | S21 | reason-telos occupant | **landed** — hierarchy only; not meet; not LRR laws |
 | S23 | APPARATUS.md sync | **landed** — assertLegalSpawnNote; cannotFollow alone not spawn |
 | S24 | LATTICE_AHEAD roll | **landed** — steps 2–5 marked landed; FINISH_BOARD drained |
-
 **Parallel only when** improper+other both quoted and empty-meet with the live S-track. Default is serial.
-
 **Never**
-

@@ -8,20 +8,13 @@ user-invocable: true
 metadata:
   short-description: "Stage map. Not a meter."
 ---
-
 # transformer-stage-atlas
-
 **One job:** the map. Not the measurement.
-
 ## Do
-
 - Name the stage, the matmul, the shape, the failure mode.
 - Point at meaning if a stage is being used as a fake Omega.
-
 ## Do not
-
-- Claim `omega_was_measured` from the atlas.
+- Claim `` from the atlas.
 - Absorb factor-compute.
 - Become a second vram-geometry-mapper.
-
 Grok.com: Atlas. CLI: this folder. Long-form stage notes stay in grok-morph-skills references if you still need them — this skill is the job lock.

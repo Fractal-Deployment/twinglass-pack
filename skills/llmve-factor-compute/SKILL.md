@@ -7,23 +7,15 @@ user-invocable: true
 metadata:
   short-description: "Meters from dumps, not from debate"
 ---
-
 # llmve-factor-compute
-
 **One job:** multiply only what the dumps contain.
-
 Meaning of the symbols is `llmve-meaning`. This skill does not redefine them.
-
 ## Do
-
 - Read orch dumps / sensor joins / boards.
 - Refuse the compute if the board is missing.
 - Name the dump ids in the answer.
-
 ## Do not
-
 - Use a tournament ranking as P_L.
 - Close Omega from a clean writeup.
 - Run lattice in order to get a number.
-
 Grok.com: no runner (needs dumps). CLI: this folder.

@@ -12,9 +12,7 @@ import {
   openMain,
   spawnLegsBurst,
 } from "./main-lattice.ts";
-
 const CHARGE = "parallel-could-diverge research";
-
 function trackNote(
   functionSet: string,
   cannotFollow: string,
@@ -28,7 +26,6 @@ function trackNote(
     otherTrackEvidence: `quoted: ${functionSet} is a different function-set`,
   };
 }
-
 function fourSeal(run: DiamondRun): DiamondRun {
   let r = run;
   for (const id of ["define", "redefine", "explore", "adapt"] as const) {
@@ -38,7 +35,6 @@ function fourSeal(run: DiamondRun): DiamondRun {
   }
   return r;
 }
-
 test("diverge = note + spawn; parent keeps walking", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
@@ -48,7 +44,6 @@ test("diverge = note + spawn; parent keeps walking", () => {
   assert.equal(m.legs[1].parentId, root);
   assert.equal(m.diamondId, null);
 });
-
 test("hard notes spawn MAIN lattice legs, not diamonds", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
@@ -62,7 +57,6 @@ test("hard notes spawn MAIN lattice legs, not diamonds", () => {
   assert.ok(m.legs.slice(1).every((l) => l.state === "walking" && l.parentId === root));
   assert.equal(m.diamondId, null);
 });
-
 test("one diamond: others hibernate; complete awaits meet", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
@@ -80,7 +74,6 @@ test("one diamond: others hibernate; complete awaits meet", () => {
   assert.equal(m.legs.find((l) => l.id === child)?.state, "awaiting-meet");
   assert.equal(m.legs.find((l) => l.id === root)?.state, "walking");
 });
-
 test("converge waits for two diamond-complete legs; emit walks", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
@@ -108,7 +101,6 @@ test("converge waits for two diamond-complete legs; emit walks", () => {
   assert.ok(out);
   assert.equal(out?.state, "walking");
 });
-
 test("converge debate vs synthesis selection under lock", () => {
   assert.deepEqual([...MEET_MODES], ["debate", "synthesis"]);
   assert.equal((MEET_MODES as readonly string[]).includes("battle"), false);

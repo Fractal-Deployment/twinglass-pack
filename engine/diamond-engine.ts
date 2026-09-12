@@ -7,15 +7,12 @@ import {
   type IntegrityHit,
 } from "./integrity-agent.ts";
 import { lcdGuard, type Demand, type LcdGuard, type SourceFns } from "./lcd-lens.ts";
-
 export const RESEARCH_LOADS = "logic-ration-reason" as const;
 export const MONITOR_LOADS = ["semantic-integrity", "lcd-lens"] as const;
 export const PATHS: EquatorId[] = ["define", "redefine", "explore", "adapt"];
-
 export type Walker = "single" | "clone";
 export type Schedule = "hibernate" | "parallel";
 export type PadState = "empty" | "open" | "sealed" | "deleted";
-
 export type ScratchPad = {
   path: EquatorId;
   lines: string[];
@@ -23,13 +20,10 @@ export type ScratchPad = {
   agentId: string;
   sawPrior: EquatorId[];
 };
-
 export type AgentState = "awake" | "hibernating";
-
 export const SENS_CAP = 10;
 export const SENS_CLI_PRACTICAL = 8;
 const SESSION_LEAK = /~\/\.grok\/sessions|chat_history\.jsonl/i;
-
 export type HardNote = {
   id: string;
   cannotFollow: string;
@@ -40,7 +34,6 @@ export type HardNote = {
   /** Quoted: a different function-set, not antithesis, not a live-lane synonym. */
   otherTrackEvidence: string;
 };
-
 export type DiamondRun = {
   charge: string;
   walker: Walker;
@@ -63,19 +56,15 @@ export type DiamondRun = {
   hardNotes: HardNote[];
   sens: number;
 };
-
 export type IngestPacket = {
   restatement: string;
   pads: Record<EquatorId, { lines: string[]; state: PadState }>;
   lost: boolean;
 };
-
 const REFUSAL = /illegal\b|will not answer|i refuse|no comment/i;
-
 function pad(path: EquatorId, agentId: string): ScratchPad {
   return { path, lines: [], state: "empty", agentId, sawPrior: [] };
 }
-
 export function openRun(opts: {
   charge: string;
   walker: Walker;
@@ -114,11 +103,9 @@ export function openRun(opts: {
     sens: 0,
   };
 }
-
 export function chooseWalker(opts: { meetEmpty: boolean }): Walker {
   return opts.meetEmpty ? "clone" : "single";
 }
-
 function assertAwake(run: DiamondRun, path: EquatorId): void {
   const id = run.pads[path].agentId;
   if (id === "unspawned") throw new Error("hibernating: no clone spawned");
@@ -130,7 +117,6 @@ function assertAwake(run: DiamondRun, path: EquatorId): void {
     throw new Error("hibernating: interrupt another agent first");
   }
 }
-
 export function interrupt(run: DiamondRun, agentId: string): DiamondRun {
   if (!run.clones.includes(agentId) && !(agentId in run.agents)) {
     throw new Error("unknown agent");
@@ -141,7 +127,6 @@ export function interrupt(run: DiamondRun, agentId: string): DiamondRun {
   agents[agentId] = "awake";
   return { ...run, agents, awakeId: agentId };
 }
-
 export function appendPad(
   run: DiamondRun,
   path: EquatorId,
@@ -169,7 +154,6 @@ export function appendPad(
     },
   };
 }
-
 export function sealPad(run: DiamondRun, path: EquatorId): DiamondRun {
   assertAwake(run, path);
   const p = run.pads[path];
@@ -180,7 +164,6 @@ export function sealPad(run: DiamondRun, path: EquatorId): DiamondRun {
     pads: { ...run.pads, [path]: { ...p, state: "sealed" } },
   };
 }
-
 export function projectIntegrity(
   run: DiamondRun,
   path: EquatorId,
@@ -209,11 +192,9 @@ export function projectIntegrity(
     workingCharge: lcdRedirect ?? (redirect ? redirect.reroot : run.workingCharge),
   };
 }
-
 function allSealed(run: DiamondRun): boolean {
   return PATHS.every((id) => run.pads[id].state === "sealed");
 }
-
 export function markSouth(run: DiamondRun, kind: MarkKind, restatement: string): DiamondRun {
   if (PATHS.some((id) => run.pendingProjection[id])) throw new Error("project integrity first");
   if (!allSealed(run)) throw new Error("cannot mark before four pads are sealed");
@@ -222,7 +203,6 @@ export function markSouth(run: DiamondRun, kind: MarkKind, restatement: string):
   }
   return { ...run, mark: kind, restatement };
 }
-
 export function spawnClone(run: DiamondRun, path: EquatorId): DiamondRun {
   const id = `clone-${path}`;
   const state: AgentState = run.schedule === "parallel" ? "awake" : "hibernating";
@@ -239,7 +219,6 @@ export function spawnClone(run: DiamondRun, path: EquatorId): DiamondRun {
     },
   };
 }
-
 export function noteDivergence(
   run: DiamondRun,
   note: Omit<HardNote, "id">,
@@ -253,7 +232,6 @@ export function noteDivergence(
     hardNotes: [...run.hardNotes, { ...note, id }],
   };
 }
-
 export function walkNext(
   run: DiamondRun,
   path: EquatorId,
@@ -288,7 +266,6 @@ export function walkNext(
   }
   return next;
 }
-
 export function ingestPads(run: DiamondRun): IngestPacket {
   const lost = PATHS.some((id) => run.pads[id].state === "deleted");
   return {
@@ -302,7 +279,6 @@ export function ingestPads(run: DiamondRun): IngestPacket {
     },
   };
 }
-
 export function deletePads(run: DiamondRun): DiamondRun {
   const wiped = (p: ScratchPad): ScratchPad => ({
     ...p,
@@ -320,7 +296,6 @@ export function deletePads(run: DiamondRun): DiamondRun {
     },
   };
 }
-
 export const OPEN_QUESTIONS = [
   {
     id: "who-owns-pad",

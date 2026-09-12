@@ -7,17 +7,14 @@ import {
   type DiamondRun,
   type HardNote,
 } from "./diamond-engine.ts";
-
 export const MEET_MODES = ["debate", "synthesis"] as const;
 export type MeetMode = (typeof MEET_MODES)[number];
-
 export type LegState =
   | "walking"
   | "in-diamond"
   | "awaiting-meet"
   | "hibernating"
   | "emitted";
-
 export type LatticeLeg = {
   id: string;
   parentId: string | null;
@@ -25,7 +22,6 @@ export type LatticeLeg = {
   run: DiamondRun;
   emit: { kind: MeetMode | "correction"; restatement: string } | null;
 };
-
 export type MainLattice = {
   charge: string;
   legs: LatticeLeg[];
@@ -33,15 +29,12 @@ export type MainLattice = {
   diamondId: string | null;
   resume: Record<string, LegState>;
 };
-
 function nid(n: number) {
   return `leg-${n}`;
 }
-
 function normLane(s: string): string {
   return s.trim().toLowerCase().replace(/[\s_]+/g, "-");
 }
-
 function liveFunctionSets(m: MainLattice): string[] {
   const out = new Set<string>();
   out.add(normLane(m.charge.split("\n")[0] ?? m.charge));
@@ -51,7 +44,6 @@ function liveFunctionSets(m: MainLattice): string[] {
   }
   return [...out];
 }
-
 function assertLegalSpawnNote(
   note: Omit<HardNote, "id">,
   live: string[],
@@ -70,7 +62,6 @@ function assertLegalSpawnNote(
     throw new Error("spawn refuses: other-track is a synonym of a live lane");
   }
 }
-
 export function openMain(charge: string): MainLattice {
   const run = openRun({ charge, walker: "single", schedule: "parallel" });
   return {
@@ -81,11 +72,9 @@ export function openMain(charge: string): MainLattice {
     resume: {},
   };
 }
-
 function mapLeg(m: MainLattice, id: string, fn: (leg: LatticeLeg) => LatticeLeg): MainLattice {
   return { ...m, legs: m.legs.map((l) => (l.id === id ? fn(l) : l)) };
 }
-
 /** Stay on this leg. Note data you cannot follow. Do not enter diamond. Do not switch tracks. */
 export function noteOnLeg(
   m: MainLattice,
@@ -97,7 +86,6 @@ export function noteOnLeg(
   if (leg.state !== "walking") throw new Error("only a walking leg writes hard notes");
   return mapLeg(m, legId, (l) => ({ ...l, run: noteDivergence(l.run, note) }));
 }
-
 /** Main lattice: burst-spawn new LEGS from this leg's hard notes. Parent keeps walking. */
 export function spawnLegsBurst(m: MainLattice, parentId: string): MainLattice {
   const parent = m.legs.find((l) => l.id === parentId);
@@ -128,7 +116,6 @@ export function spawnLegsBurst(m: MainLattice, parentId: string): MainLattice {
   );
   return { ...m, legs: [...legs, ...spawned], sens: m.sens + take.length };
 }
-
 /**
  * Dedicated track: cannotFollow secondary research → spawn a NEW walking leg.
  * Parent keeps walking. This is the gait, not optional later burst.
@@ -140,7 +127,6 @@ export function diverge(
 ): MainLattice {
   return spawnLegsBurst(noteOnLeg(m, parentId, note), parentId);
 }
-
 /** One agent enters 3D diamond (internal critique). All other legs hibernate. */
 export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice {
   if (m.diamondId) throw new Error("another leg is already in diamond");
@@ -156,7 +142,6 @@ export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice
   });
   return { ...m, diamondId: legId, resume, legs };
 }
-
 /** Diamond finished: this leg awaits a partner. Restore others. */
 export function completeCritiqueDiamond(
   m: MainLattice,
@@ -179,11 +164,9 @@ export function completeCritiqueDiamond(
     }),
   };
 }
-
 export function awaiting(m: MainLattice): LatticeLeg[] {
   return m.legs.filter((l) => l.state === "awaiting-meet");
 }
-
 /**
  * Two (or more) diamond-complete legs meet.
  * Debate if they diverged; synthesis if complementary. Not battle.

@@ -1,18 +1,14 @@
 /** LCD lens: look at function sets. Guard uses three laws on functions only. Skip if no data. */
-
 export type Fn = { id: string; does: string };
-
 export type SourceFns = {
   id: string;
   collection: Fn[];
   claimed: Fn[];
 };
-
 export type Demand = {
   charge: string;
   need: Fn[];
 };
-
 export type LcdLensVerdict = {
   meet: Fn[];
   onlyTheirs: Fn[];
@@ -22,7 +18,6 @@ export type LcdLensVerdict = {
   handToSteelman: boolean;
   reroot: string;
 };
-
 export const FN = {
   snapshot: { id: "weight-geometry-snapshot", does: "Dump SVD / erank-proxy on weights." },
   viability: { id: "viability-P_L", does: "Hold, find, let fail on a residual path. Not select." },
@@ -32,7 +27,6 @@ export const FN = {
     does: "Inference-time residual / Price-surface steer. Does not rewrite Mythos.",
   },
 } as const;
-
 export const SOURCES: Record<string, SourceFns> = {
   phi4int8: {
     id: "phi4-int8-attn.o",
@@ -50,7 +44,6 @@ export const SOURCES: Record<string, SourceFns> = {
     claimed: [FN.viability, FN.hold],
   },
 };
-
 export const DEMANDS: Record<string, Demand> = {
   isPl: {
     charge: "Is the INT8 erank-proxy viability P_L?",
@@ -69,33 +62,26 @@ export const DEMANDS: Record<string, Demand> = {
     need: [FN.steer, FN.snapshot],
   },
 };
-
 function ids(fns: Fn[]): Set<string> {
   return new Set(fns.map((f) => f.id));
 }
-
 function pick(fns: Fn[], keep: Set<string>): Fn[] {
   return fns.filter((f) => keep.has(f.id));
 }
-
 export function lcdLens(source: SourceFns, demand: Demand): LcdLensVerdict {
   const coll = ids(source.collection);
   const claim = ids(source.claimed);
   const need = ids(demand.need);
-
   const meetIds = new Set([...coll].filter((id) => need.has(id)));
   const onlyTheirsIds = new Set([...coll].filter((id) => !need.has(id)));
   const onlyOursIds = new Set([...need].filter((id) => !coll.has(id)));
   const claimedNotHeldIds = new Set([...claim].filter((id) => !coll.has(id)));
-
   const meet = pick([...source.collection, ...demand.need], meetIds);
   const onlyTheirs = pick(source.collection, onlyTheirsIds);
   const onlyOurs = pick(demand.need, onlyOursIds);
   const claimedNotHeld = pick(source.claimed, claimedNotHeldIds);
-
   const exclusive = [...claimedNotHeldIds].some((id) => need.has(id));
   const handToSteelman = exclusive || (meet.length === 0 && claimedNotHeld.length > 0);
-
   let reroot: string;
   if (exclusive) {
     reroot = `LCD lens: they claim a function we demand (${[...claimedNotHeldIds].filter((id) => need.has(id)).join(", ")}) that their collection does not hold. Two accounts of what the data does. Steelman both. Do not import the claimed function.`;
@@ -106,7 +92,6 @@ export function lcdLens(source: SourceFns, demand: Demand): LcdLensVerdict {
   } else {
     reroot = `LCD lens: empty meet. They can ${source.collection.map((f) => f.id).join(", ") || "nothing"}. We need ${demand.need.map((f) => f.id).join(", ")}. No shared function. Do not force a join.`;
   }
-
   return {
     meet,
     onlyTheirs,
@@ -117,7 +102,6 @@ export function lcdLens(source: SourceFns, demand: Demand): LcdLensVerdict {
     reroot,
   };
 }
-
 export type LcdGuard =
   | { active: false; reason: "no-function-set-data" }
   | {
@@ -127,7 +111,6 @@ export type LcdGuard =
       reroot: string;
       exclusive: boolean;
     };
-
 /** Three laws as LCD guard on functions. Skip when there is no data. Not SI. Not LRR. */
 export function lcdGuard(source?: SourceFns | null, demand?: Demand | null): LcdGuard {
   if (!source || !demand || source.collection.length === 0 || demand.need.length === 0) {

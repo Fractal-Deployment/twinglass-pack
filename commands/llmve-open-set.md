@@ -5,23 +5,14 @@ description: >
  equation still needs vs what dumps/papers actually collect. Do not mint
  a dump meter. Not a paces rerun. Not Condition P.
 ---
-
 # LLMVE open-set (Grok Build CLI)
-
 Paste after the Twin Glass run finishes, **or** in a **new** CLI session with a different charge. Do **not** load lattice and twin on the same charge.
-
 Load `DISCOVERED.md`, `PACES_BOARD.md`, `CONDITION_P.md`, `llmve-meaning`. Research = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Isolation = no sibling pad (H0: hibernate not required on this CLI).
-
 ## Telos
-
 Discovery of **patterns and evidence classes** still required to *measure* the LLMVE — not to invent a number.
-
 You will not compute F / T_tail / dump-meter / Φ_E / Ω. You will not invent Ω.
-
 ## Charge
-
 For each named variable, name: **demand function** vs **what published or orch artifacts actually collect**. Look elsewhere when collection ≠ demand. Blind to prestige. Energy has **no role-line identity** (meaning 0.4.0) — do not treat a gloss as locked demand.
-
 | # | Name | Demand | Typical false collection |
 |---|---|---|---|
 | 1 | Energy | OPEN — no role-line identity | Softmax mass, fluency; also Helmholtz or live-set Δu as *identity* |
@@ -32,16 +23,12 @@ For each named variable, name: **demand function** vs **what published or orch a
 | 6 | τ | Dual health: Mythos + cooperation toward vital few | A vibe score |
 | 7 | C_d | Resistance tax on attention transfer | “Attention is all you need” |
 | 8 | Parameter inflation | Extra parameters without useful work | Param count as quality |
-
 ## Protocol
-
 1. Scout (web_search + browse, and/or orch docs if present). ≥1 real source per row that **claims** to measure it.
 2. LCD: collection ∩ demand. Empty meet → **look elsewhere / let fail**. In-flight numbers → **ask**.
 3. Fork only on exclusive accounts (e.g. shape-as-viability vs residual-path let-fail). Clones: no sibling pads. Parallel awake OK on this CLI (H0).
 4. Meet → `collate-hourglass`. One board. Restate what is true.
-
 ## Board (required)
-
 ```
 ROW: [1–8]
  collection=
@@ -53,7 +40,5 @@ OPEN_SET: [rows still empty-meet]
 DO_NOT_HAVE: dumps? yes/no (if no, factor-compute is illegal)
 RESTATE:
 ```
-
 ## Fail
-
 HOLD after the board: this is an **open-set map**, not Ω.

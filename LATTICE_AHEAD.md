@@ -1,14 +1,9 @@
 # Five-ahead lattices
-
-Agent Five = this session (login Jadon-Fox). Pack only.  
+Agent Five = this session (login Jadon-Fox). Pack only. 
 Not Ω. Not Mythos recrawl. Not orch/sensors.
-
-Telos of the **pack**: a methodology so an agent stays locked on **telos** under Logic · Ration · Reason, by **branching** when a track is improper *and* another track is evidenced, and **converging** by debate or synthesis.
-
+Telos of the **pack**: a methodology so an agent stays locked on **telos** under Logic Ration Reason, by **branching** when a track is improper *and* another track is evidenced, and **converging** by debate or synthesis.
 ## Already converged (thread → pack)
-
 These are not open fights. Do not spawn synonym legs.
-
 ```mermaid
 flowchart TD
   T[Telos lock under LRR] --> LRR[LRR on research agent]
@@ -24,11 +19,8 @@ flowchart TD
   MON --> LOOK[lcd-lens looks]
   MON --> TR[llmve-translate is not LCD]
 ```
-
 Empty meets **already named** (ore, stay empty): Conley shape ≠ Mythos-in-W; MDL ≠ \(e^{\sigma_{sub}}\); greedy/top-p ≠ \(P_L\); attach-seed ≠ this pack.
-
 ## Lattice A — evidence
-
 ```mermaid
 flowchart LR
   subgraph have [Have on disk]
@@ -44,9 +36,7 @@ flowchart LR
   end
   have -->|improper: inventory ≠ occupant table| need
 ```
-
 ## Lattice B — research (understand vs want)
-
 ```mermaid
 flowchart TD
   U[Understand] --> U1[Dedicated track + hard note ≠ sibling-pad death]
@@ -58,9 +48,7 @@ flowchart TD
   U1 -.->|could diverge| W1
   U2 -.->|not a synonym| W2
 ```
-
 ## Lattice C — tests
-
 ```mermaid
 flowchart TD
   subgraph done [Tested]
@@ -76,11 +64,8 @@ flowchart TD
   end
   done --> notyet
 ```
-
 ## Five steps ahead (legal next diverges)
-
 Do **not** run all five at once. Each is a spawn only if the current track is improper **and** the other track is quoted.
-
 | Step | Track | Improper if… | Other-track evidence | Converge as |
 |---|---|---|---|---|
 | 1 | Morph occupant bleed | FINISH_BOARD: rewrite restates laws; lattice/twin/steelman all claim meet | Quote SKILL.md collisions | **landed** — one occupant per named skill |
@@ -88,11 +73,7 @@ Do **not** run all five at once. Each is a spawn only if the current track is im
 | 3 | Telos-hold across forks | Spawn can keep LRR local and drop the working telos | Rewrite → diverge twice → restatement still names original telos | **landed** — `telos-hold-probe.md` |
 | 4 | Collate vs steelman | Meet defaults to tournament | Exclusive leftover after collate only | **landed** — steelman gated |
 | 5 | LCD look-elsewhere live | Monitor converts empty meet into help/translate | A page with collection ∩ demand empty | **landed** — redirect, not convert |
-
 **HOLD behind these:** `llmve-factor-compute`, Mythos=Conley, Ω, twin-on-same-charge, orch/sensors.
-
 ## How to use this file
-
 Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Diamond one restatement at a time. Collate. Do not mint.
-
 If you only run one: **step 1** (occupant bleed) — FINISH_BOARD already marked Morph, not Keep.

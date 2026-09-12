@@ -7,9 +7,8 @@ WF="$ROOT/.github/workflows/pr-checks.yml"
 fail=0
 red() { echo "FAIL: $*" >&2; fail=$((fail + 1)); }
 pass() { echo "PASS: $*"; }
-
 grep -q 'pull_request:' "$WF" || red "workflow missing pull_request"
-if grep -A20 '^on:' "$WF" | grep -q '^  push:'; then
+if grep -A20 '^on:' "$WF" | grep -q '^ push:'; then
   pass "on.push present"
 else
   red "on.push missing (pull_request-only: engine never runs on main tip)"
@@ -22,10 +21,9 @@ fi
 grep -q 'node --experimental-strip-types --test engine/\*\.test.ts' "$WF" \
   || grep -q 'engine/\*.test.ts' "$WF" \
   || red "workflow missing engine/*.test.ts command"
-
 if [[ "$fail" -ne 0 ]]; then
   echo "CI_PUSH_ENGINE_RED fail=$fail"
   exit 1
 fi
-echo "CI_PUSH_ENGINE_GREEN omega_was_measured=false"
+echo "CI_PUSH_ENGINE_GREEN =false"
 exit 0

@@ -9,22 +9,15 @@ user-invocable: true
 metadata:
   short-description: "What may be sacrificed for what"
 ---
-
 # reason-telos-lookup
-
 **One job:** rank values. Friend-enemy lattice. CFP gait. Hierarchy only.
-
 ## Do
-
 - Keep the value diamond here.
 - Pressure-test a ranking. Name what loses.
-
 ## Do not
-
 - Redefine F, P_L, Omega (`llmve-meaning`).
 - Run ArgueForge (`steelman-truth-tournament`).
 - Run lattice or twin. **Not meet** (`collate-hourglass` owns debate/synthesis).
 - Host LRR laws — they live in `logic-ration-reason`. **Not LRR laws.**
 - Restate `## Logic` here.
-
 Grok.com: not a runner. CLI: this folder. Delete LLMVE intake from this package if it still exists; pointer only.
