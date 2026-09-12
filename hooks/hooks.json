@@ -2,10 +2,11 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "read_file|grep|Read|Grep",
         "hooks": [
           {
             "type": "command",
-            "command": "deny-session-read.sh",
+            "command": "${GROK_PLUGIN_ROOT}/hooks/deny-session-read.sh",
             "timeout": 5
           }
         ]
