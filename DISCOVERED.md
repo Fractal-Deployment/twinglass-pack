@@ -37,3 +37,4 @@ Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 | Drive | Past. Not meaning SSOT. |
 | Width | Engine SENS_CAP 10 stays. CLI ACTIVE typical 25, hard 30. Start from research priorities. |
 | Ring | TwinGlass = turn gait. LIVE_NAME schedule. Sleep packet. Wake on quotes. Not a second swarm. |
+| Circular | Variable groups seated around V. Push-pull rotates the live name. LLMVE Energy first. General charges do not mint mythos tags. |

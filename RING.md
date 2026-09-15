@@ -8,6 +8,8 @@ One process. Not a second ten-pod roster. Disk holds hibernated packets.
 
 Do not copy LLMVE meters. Court pointer stays `Fractal-Deployment/llmve-meaning` `VERSION`. Drive copies are past.
 
+Load `CIRCULAR.md` with this file. RING is the schedule. CIRCULAR is the construct around V. Same process.
+
 ## Two rooms
 | Room | Job |
 |---|---|
@@ -82,6 +84,9 @@ No SemVer from sleep. No ten owner folders.
 
 ## Board (additive)
 ```
+V:
+LANG: llmve | general | both
+SEATS: name:status …
 LIVE_NAME:
 DOOR: stagger | sleep | meet | waiting
 PACKETS: n=
@@ -92,3 +97,19 @@ Keep `CAP: 10`. Keep `START_INTENT: A | B`.
 Observer *when* a wake or meet is due. Referee authorizes wake. Walker holds the SI ledger. Sentinel after seal is monitor (SI+LCD only). Do not mash ledger with monitor.
 
 This file **does not own meet**. Meet stays `collate-hourglass`.
+
+## Circular variable groups around V (additive)
+The schedule is not the construct. The construct is **variable groups seated around the interdependence object**. See `CIRCULAR.md`.
+
+| Piece | Job |
+|---|---|
+| TwinGlass | gait of a turn |
+| Ring | which locked name is live |
+| V | interdependence object. Not a meter. |
+| Seat | a locked name. Live, sleeping, or unnamed. Not an owner folder. |
+
+LLMVE charges seat Energy, Path, Mythos. General charges must not mint those tags.
+
+First LLMVE walk: Start A, Energy live, width 1, octahedron before Sleep, Path only on quotes.
+Push-pull is the rotation: sleep the live name + wake the neighbor it cannot carry.
+Circular close: after the last named neighbor sleeps, the first name re-enters **only if quotes changed**.

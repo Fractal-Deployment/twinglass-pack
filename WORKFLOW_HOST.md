@@ -28,6 +28,7 @@ After B’s first synthesis, return to A on the survivor.
 | 2D harvest (rhombus) | The walk. Split then join. Width lives here. | live walkers |
 | 3D octahedron | Critique of **one** pad. Mutex. Four equator paths, then a mark. | +0 |
 | join-hourglass | Packet product after isolated endpoints | +0 |
+| circular construct | Variable groups seated around V. Which name is live. | live walkers (default 1) |
 
 Occupants (walker, observer, referee, rewriter) are **roles**. They are not width.
 
@@ -43,7 +44,7 @@ Occupants (walker, observer, referee, rewriter) are **roles**. They are not widt
 Active = walking or in-diamond (a live CLI/ACP session). Filling cap is not an init ritual.
 
 `W_{n+1} = Rewrite(Collapse(Meet(Ref(Octahedron(Harvest(W_n))))))`
-Collapse writes a **prompt**, not Ω. Project telos does not move. Intention may.
+Collapse writes a **prompt**, not Omega. Project telos does not move. Intention may.
 
 ## Prefabricated dispatch
 A legal hard note (`assertLegalSpawnNote`: `improperEvidence` AND `otherTrackEvidence`) becomes a **dispatch brief**:
@@ -75,14 +76,14 @@ Observer (when a meet is due) ≠ referee (SI + LCD + wake). Dual monitor cap un
 
 ## Phases
 lock → dispatch → harvest(2D) → octahedron(3D, mutex) → spawn-gate → gather → meet → collapse → rewrite
+ring: LIVE_NAME schedule around V; Sleep writes packet; wake on quotes
 
 Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.md`.
 
 ## LLMVE
-Do **not** ingest Google Drive copies. They are past. Live meaning is `Fractal-Deployment/llmve-meaning` `VERSION` on GitHub (read the file; do not pin a number in this pack). This pack still only **points**. `llmve-factor-compute` stays HOLD. Do not mint Ω.
+Do **not** ingest Google Drive copies. They are past. Live meaning is `Fractal-Deployment/llmve-meaning` `VERSION` on GitHub (read the file; do not pin a number in this pack). This pack still only **points**. `llmve-factor-compute` stays HOLD. Do not mint Omega.
 Do not copy Energy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy. TwinGlass produces information that later hits tokenize.
 
 ## Ring (additive)
-Load `RING.md`. `LIVE_NAME` is the schedule, not a standing team. Sleep packet. Wake on quotes. Default live width 1 on an LLMVE ring charge. Path wakes only when Energy quotes other-track.
+Load `RING.md` and `CIRCULAR.md`. `LIVE_NAME` is the schedule, not a standing team. Seats around V are the construct. Sleep packet. Wake on quotes. Default live width 1 on an LLMVE ring charge. Path wakes only when Energy quotes other-track. General charges do not mint mythos tags.
 This host still **does not own meet**.
-
