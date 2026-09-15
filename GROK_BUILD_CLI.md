@@ -1,9 +1,9 @@
 # Grok Build CLI — paste this as the session prompt
 You are installing **Twinglass pack** as the only cognition skill set on this machine.
 Repo: `https://github.com/Fractal-Deployment/twinglass-pack`
-Install from `main` (plugin **1.4.3**). If the clone is 1.3.0 or 1.4.2, you have the old pack — fetch again.
+Install from `main` (plugin **1.4.4**). If the clone is 1.3.0, 1.4.2, or 1.4.3, you have the old pack — fetch again.
 Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and duplicate config paths. Do not touch silicon, hooks, or security plugins except to stop copying their skills.
-**After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) **plus** [`WORKFLOW_HOST.md`](./WORKFLOW_HOST.md) **plus** [`CIRCULAR.md`](./CIRCULAR.md) — one apparatus, two start intents, circular construct around V, not twin, not battle.
+**After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) **plus** [`WORKFLOW_HOST.md`](./WORKFLOW_HOST.md) **plus** [`CIRCULAR.md`](./CIRCULAR.md) — one apparatus, two start intents, NS methods bound, not ten chairs, not twin as default, not battle.
 Spawn is a **CLI notification** (`workflow.agent()`, new-context). SI **gathers**. Meet **staggers**. Collapse writes a **prompt**, not Omega.
 ## 0. Do not
 - Do not copy `mojo-cuda` into `~/.grok/skills`. It stays a plugin.
@@ -15,7 +15,8 @@ Spawn is a **CLI notification** (`workflow.agent()`, new-context). SI **gathers*
 - Do not `session/fork` or load the parent transcript into a child. Isolation is empty history + parent notes.
 - Do not fill cap as an init ritual. Start size = research priorities + situation.
 - Do not mint Energy/Path/Mythos seats on a general charge.
-- Do not stand up a second ten-pod swarm. The ring is a schedule, not a roster.
+- Do not stand up ten owner folders (one crew owns Exergy). The ring is a schedule, not a roster.
+- Do not run Proof-team vs Disproof-team as the default gait. That is dialectic. Twin is leftover only.
 ## 1. Inventory (print before you delete)
 List, if they exist:
 - `~/.grok/skills/`
@@ -51,7 +52,7 @@ If `mojo-cuda` also exists under `~/.grok/skills/mojo-cuda`, **delete that skill
 ## 4. Install the pack (one source)
 ```bash
 git clone https://github.com/Fractal-Deployment/twinglass-pack.git /tmp/twinglass-pack
-# confirm plugin.json version is 1.4.3 or newer; if older, git -C /tmp/twinglass-pack pull
+# confirm plugin.json version is 1.4.4 or newer; if older, git -C /tmp/twinglass-pack pull
 mkdir -p ~/.grok/skills
 rm -rf ~/.grok/skills/logic-ration-reason \
   ~/.grok/skills/llmve-meaning \
@@ -95,10 +96,10 @@ In the current repo, if `.grok/skills/` still has alias folders, delete them. If
 Cognition pack is Twinglass.
 Load honest-prompt-rewrite on every think/research round.
 Unearned split → twinglass-lattice.
-Known Reason vs Disconfirm → twinglass-twin.
+Known Reason vs Disconfirm → twinglass-twin (leftover only).
 Do not load both gaits. Do not load morph-shared, deep-think, or deep-research.
 Spawn is workflow.agent() new-context (twinglass-dispatch). SI gathers (twinglass-tracker). Meet is collate-hourglass.
-Circular construct around V: CIRCULAR.md + RING.md. Not a second swarm.
+Circular construct: CIRCULAR.md + RING.md. NS methods bound. Not ten chairs.
 ```
 ## 7. Verify (fail if any check fails)
 Print a table:
@@ -127,7 +128,7 @@ Nine pack skills plus two workflow-host occupants:
 11. `twinglass-tracker`
 Also on disk: `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.md`, `commands/workflow-host.md`, `commands/ring.md`, `commands/circular.md`, `.grok/workflows/twinglass.rhai`.
 Slash commands that must exist: `/activate` (pack), `/twinglass-lattice`, `/twinglass-twin`, `/workflow-host`, `/ring`, `/circular`.
-Confirm `plugin.json` version ≥ 1.4.3.
+Confirm `plugin.json` version ≥ 1.4.4.
 Reload plugins (`r` on Plugins tab) or start a new session.
 ## 8. After install — run this gait
 Load: `WORKFLOW_HOST.md` + `CIRCULAR.md` + `RING.md` + `commands/run-apparatus.md` + `commands/workflow-host.md`.
@@ -158,31 +159,36 @@ RESTATE:
 ```
 Width law:
 - Start harvest from **research priorities and the situation**. Do not fan to 25 as ritual. Do not fill 10 as ritual.
-- Engine `SENS_CAP` = 10 stays (do not delete that lock).
+- Engine `SENS_CAP` = 10 stays (do not delete that lock). Cap 10 = STOP, not a roster.
 - Concurrent CLI `workflow.agent()` sessions: typical ≤ 25; hard STOP 30 (crash observed). Sleeping / awaiting-meet pads are not active.
 - Occupants are not width. Octahedron and hourglasses add zero width.
+- Default live width 1. Width 2 only as Energy P vs R inside one packet.
 Start:
-- **A generate** — default when the partition is unknown. One or more function-sets as the charge actually needs.
+- **A generate** — default when the partition is unknown.
 - **B converge** — only if court-named packets are already held. Then return to A.
-- **PAIR** — only if one pad would clutter a named gutter. Two isolated agents. Complementary, not exclusive.
-- **Twin** — XOR leftover. Separate charge. Never with lattice.
-Spawn: legal note (`improperEvidence` AND `otherTrackEvidence`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking. `cannotFollow` alone is not a spawn. Assigned antithesis refuses. Live-lane synonym refuses.
-SI: `twinglass-tracker` ledger. Gather. Do not wipe the pad. Stagger meet until axes named. Complementary named planes = protocol synthesis. Meet occupant remains `collate-hourglass`.
+- **PAIR** — only if one pad would clutter a named gutter. Complementary, not exclusive.
+- **Twin** — XOR leftover. Separate charge. Never with lattice. Not the default gait.
+Spawn: legal note (`improperEvidence` AND `otherTrackEvidence`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking.
+SI: `twinglass-tracker` ledger. Gather. Meet occupant remains `collate-hourglass`.
 Collapse writes a working prompt. Project telos does not move. `llmve-factor-compute` HOLD. No Omega.
-## 9. Workflow host (1.4.3, additive)
+## 9. Workflow host (1.4.4, additive)
 Do not delete the nine. Also copy `twinglass-dispatch`, `twinglass-tracker`.
 Also copy `RING.md`, `CIRCULAR.md`, `commands/ring.md`, `commands/circular.md`.
 Google Drive LLMVE files are past. Do not install them. Meaning stays a pointer to `Fractal-Deployment/llmve-meaning`.
 Do not rewrite LLMVE meters. `llmve-factor-compute` remains HOLD.
 ## 10. Ring
 TwinGlass is the gait of a turn. The ring schedules `LIVE_NAME`.
-Sleep writes a packet (live count drops). Wake only on `why_neighbor` + `otherTrackEvidence` + referee + width. Empty history. No calendar wake. No fill-ten. No second ten-pod swarm.
+Sleep writes a packet (live count drops). Wake only on `why_neighbor` + `otherTrackEvidence` + referee + width. Empty history. No calendar wake. No fill-ten. No ten owner folders.
 Default live width 1 on an LLMVE Energy charge. Path wakes only when Energy quotes other-track.
 Board: `LIVE_NAME`, `DOOR`, `PACKETS`. Keep `CAP: 10`.
-## 11. Circular construct around V
-The schedule is not the construct. The construct is **variable groups seated around the interdependence object**.
-LLMVE seats: Energy, Path, Mythos — only on an LLMVE project charge. General charges use event-plane / G / energy / path / units. Do not mint mythos tags.
-Push-pull rotates the live name. After the last named neighbor sleeps, the first name re-enters only on **new quotes**.
-First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only.
-Load `CIRCULAR.md`. Command `/circular`. Same process as `/ring`. Not a second roster.
+## 11. Circular construct (NS bound)
+The NS piece is real. It is not ten standing teams, one named Exergy.
+Functionality stays in the machine. The 10 chairs do not.
+Copy: cousin-transfer, variant-split, consolidator, dead-end bank, post-search verify.
+Refuse 10k as the method. Cap 10 = STOP, not a fill roster.
+Default gait: **one walker** + `negation_map[]` on one pad, then the ring pushes the neighbor.
+Proof/disproof = “this expression covers the word problem” vs “this expression is the wrong object.” Not two camps. Twin leftover only.
+Cousin Euler = Energy first; Path only when Energy quotes it.
+Rewriter after Meet = Codex: markers only, telos unmoved.
+Load `CIRCULAR.md`. Command `/circular`. Same process as `/ring`.
 Then stop.

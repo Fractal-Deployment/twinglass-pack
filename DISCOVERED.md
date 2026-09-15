@@ -3,16 +3,16 @@ Do not re-derive these from the word “LCD” or from “more layers.”
 | Lock | Referent |
 |---|---|
 | Data | Sealed collection (completed function). |
-| Information | In-flight map: pool A --[f]--> pool B. Not two studies. If no \(f\), **ask**. |
+| Information | In-flight map: pool A --[f]--> pool B. Not two studies. If no \\(f\\), **ask**. |
 | LCD monitor | SI-shaped: **look elsewhere / let fail**. Blind to study quality. Does not convert. |
 | `llmve-translate` | Conversion onto an LLMVE pathway. Not LCD. |
 | LRR | Research / thinking agent. Forward crawl to first diverge. Not inverse CoT. |
 | SI | Load-bearing words. Monitor with LCD only. |
-| \(P_L\) | Hold, find, **let fail**. Not select. Not greedy/top-p. Never erank. |
+| \\(P_L\\) | Hold, find, **let fail**. Not select. Not greedy/top-p. Never erank. |
 | Hold | Grip now. Opposite: drop. |
 | Maintain | Layer-to-layer operational sets so leftover tokens enter on **merit**. Methodology, not measurement. |
 | Depth | More let-fail surface on **structure** (incl. preference matrix). Not extra tests of reality. Logos only if a pretraining regime encoded it. |
-| Morality | Acquired: observation, acting out, mirroring. Preference matrix in \(W\) is that function. Not consciousness. |
+| Morality | Acquired: observation, acting out, mirroring. Preference matrix in \\(W\\) is that function. Not consciousness. |
 | Parallel clones | No sibling pad. Desktop CLI **H0**: hibernate is scheduler. **Attack board:** spawn-time “no list” is not enough — `~/.grok/sessions/*/chat_history.jsonl` was readable by the sibling (`SIBLING_READ_BOARD.md`). Isolation-under-attack = fail until ACL/ops. |
 Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 ## Per skill
@@ -21,20 +21,20 @@ Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 | `lcd-glossary-integrity` | Words only. Morality-as-acquired is a locked referent if used. |
 | `lcd-lens` | Look. In-flight → ask. Monitor → look elsewhere. Blind to quality. |
 | `llmve-translate` | Convert after look. Not a monitor. |
-| `llmve-meaning` | \(P_L\) hold/let-fail. Maintain ≠ \(P_L\). Methodology ≠ measurement. |
+| `llmve-meaning` | \\(P_L\\) hold/let-fail. Maintain ≠ \\(P_L\\). Methodology ≠ measurement. |
 | `llmve-factor-compute` | Dumps are data. Active calc is information. Don’t unlike-units an open map. |
 | `honest-prompt-rewrite` | Apply LRR. Don’t own laws. Fluency ≠ warrant. |
 | `twinglass-lattice` | Isolated clones. No pad leak. Spawn on improper-track evidence + other-track evidence. Exclusive fight is optional, not the goal. Same conclusion / synthesis allowed. Experiment path: `commands/clone-experiment.md`. |
-| `twinglass-twin` | Same isolation. Known gutter only. |
+| `twinglass-twin` | Same isolation. Known gutter only. Leftover exclusive accounts. Not the default gait. |
 | `collate-hourglass` | After isolation + monitor. Not a walker. |
 | `steelman-truth-tournament` | Exclusive accounts only. Not conversion. |
-| `reason-telos-lookup` | Value ranking. Preference matrix is morality-as-acquired; this skill ranks sacrifice, it does not mint \(P_L\). |
+| `reason-telos-lookup` | Value ranking. Preference matrix is morality-as-acquired; this skill ranks sacrifice, it does not mint \\(P_L\\). |
 | `transformer-stage-atlas` | Stages are structure. Not reality tests. |
 | `twinglass-dispatch` | Hard note → CLI workflow.agent() brief. Persona, priors, vector, isolated charge. New context. Not transcript fork. |
 | `twinglass-tracker` | SI ledger. Gather, do not reset. Stagger meet until axes named. Complementary planes = protocol synthesis. |
 
 | Workflow host | Spawn is a CLI notification. SI is a ledger. Meet staggers. Collapse writes a prompt. |
 | Drive | Past. Not meaning SSOT. |
-| Width | Engine SENS_CAP 10 stays. CLI ACTIVE typical 25, hard 30. Start from research priorities. |
-| Ring | TwinGlass = turn gait. LIVE_NAME schedule. Sleep packet. Wake on quotes. Not a second swarm. |
-| Circular | Variable groups seated around V. Push-pull rotates the live name. LLMVE Energy first. General charges do not mint mythos tags. |
+| Width | Engine SENS_CAP 10 stays as STOP, not a fill roster. CLI ACTIVE typical 25, hard 30. |
+| Ring | TwinGlass = turn gait. LIVE_NAME schedule. Sleep packet. Wake on quotes. |
+| Circular | NS methods bound (cousin, variant-split, consolidator, dead-end). Not ten standing chairs. Default = one walker + negation_map[]. Twin leftover only. |

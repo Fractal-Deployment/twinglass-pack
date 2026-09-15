@@ -13,7 +13,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.m
 | `honest-prompt-rewrite` | rewrite | Apply LRR to the working prompt |
 | `collate-hourglass` | meet | After isolated pads: expand, debate or synthesis, contract |
 | `twinglass-lattice` | walk / diverge | `diverge()` on improper-track + other-track evidence; diamond mutex |
-| `twinglass-twin` | twin | Known two-track. Never with lattice. |
+| `twinglass-twin` | twin | Known two-track. Leftover only. Never with lattice. |
 | `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
 | `transformer-stage-atlas` | atlas | Stage map, not Omega |
 | `twinglass-dispatch` | CLI notify | Legal spawn note → workflow.agent() brief. Not a walker. |
@@ -34,10 +34,10 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/lattice` → twinglass-lattice (see `APPARATUS.md`)
 - `/activate` → logic-ration-reason, then honest-prompt-rewrite
 - `/finish-evidence` → `FINISH_EVIDENCE.md`
-- `/twin` → twinglass-twin
+- `/twin` → twinglass-twin (leftover exclusive accounts only)
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 - `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
-- `/circular` → CIRCULAR.md (variable groups around V; same process as /ring)
+- `/circular` → CIRCULAR.md (NS methods bound; not ten chairs)
 Do not load lattice and twin on the same charge.
 ## License
 MIT
