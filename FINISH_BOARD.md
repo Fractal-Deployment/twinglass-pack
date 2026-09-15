@@ -27,3 +27,12 @@ This file is **evidence of what would finish the pack**. It is not Ω.
 | Morph | Occupant bleed **landed** — rewrite consumes LRR (no `## Three laws`); lattice/twin hand meet/contraction to `collate-hourglass`; steelman is exclusive leftover only. |
 | HOLD | `llmve-factor-compute` — do not run to finish. |
 | Delete | Dead aliases already gone. |
+
+## Workflow host addendum (S26) — additive
+Does not recrawl S01–S24. Occupant bleed **landed** stands. Queue: `AGENT_FIVE_QUEUE.md` drained / S10–S24 stands. Residual: `llmve-factor-compute` HOLD; no Ω.
+| Item | On disk |
+|---|---|
+| `twinglass-dispatch` | CLI notify occupant. Legal note → workflow.agent() brief. |
+| `twinglass-tracker` | SI ledger occupant. Gather; stagger; do not reset. |
+| Drive LLMVE | Past. Do not ingest. Live meaning = GitHub `llmve-meaning` VERSION. |
+| Keep | Existing 13 skills and engine spawn lock. |

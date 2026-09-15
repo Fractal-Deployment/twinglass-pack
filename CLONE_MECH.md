@@ -20,3 +20,11 @@ Our clone is **spawn + parent notes**, not transcript-fork. Forking the full sco
 Interesting-resolving clone = another **spawn**, SENS+1. Not a transcript fork. Not a synonym of the current lane.
 If the parent pastes scout URLs into every child, that is a **fork of the scout list**, not a clone. B’s first pages must not be the scout list in order (paces gate).
 HOLD. No dump meter. No session ACL.
+
+## Workflow host
+Map onto Grok Build CLI without mashing names:
+| Name | CLI |
+|---|---|
+| **Spawn (ours)** | `workflow.agent()` new-context + parent notes + vector map + priors. Empty history. |
+| **Fork (transcript)** | Still not what we want. |
+Hard note → `twinglass-dispatch` brief. Parent session keeps walking. Child does not inherit `chat_history.jsonl`.

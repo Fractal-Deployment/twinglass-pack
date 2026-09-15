@@ -1,11 +1,11 @@
 # Twinglass pack
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
-Load `DISCOVERED.md`, `APPARATUS.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
+Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 ## Skills (attach these)
 | Skill | Occupant | Job |
 |---|---|---|
 | `logic-ration-reason` | laws | Standing Logic Ration Reason lock |
-| `llmve-meaning` | meaning | What meters may answer (pointer to 0.3.4) |
+| `llmve-meaning` | meaning | What meters may answer (pointer to Fractal-Deployment/llmve-meaning live VERSION; Drive copies are past) |
 | `lcd-glossary-integrity` | SI | Lock a term, then judge |
 | `lcd-lens` | LCD look | Look: their functions vs our demand |
 | `llmve-translate` | translate | Collected math onto Mythos/friction. Not LCD. |
@@ -16,6 +16,8 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.m
 | `twinglass-twin` | twin | Known two-track. Never with lattice. |
 | `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
 | `transformer-stage-atlas` | atlas | Stage map, not Ω |
+| `twinglass-dispatch` | CLI notify | Legal spawn note → workflow.agent() brief. Not a walker. |
+| `twinglass-tracker` | SI ledger | Gather debts; stagger meet until axes named. Not a reset. |
 ## Dead (do not attach)
 `morph-shared` `deep-think` `deep-research` `argueforge` `llmve-matmul-algebra` `transformer-matmul-geometry` `breakthrough-multi-path-thinking` `evidence-hourglass-research` `precise-activate` / `precise-activate-plugin`
 ## Stay plugins
@@ -33,6 +35,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/activate` → logic-ration-reason, then honest-prompt-rewrite
 - `/finish-evidence` → `FINISH_EVIDENCE.md`
 - `/twin` → twinglass-twin
+- `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 Do not load lattice and twin on the same charge.
 ## License
 MIT

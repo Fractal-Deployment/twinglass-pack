@@ -107,3 +107,14 @@ Nine pack skills:
 9. `transformer-stage-atlas`
 Slash commands that must exist: `/activate` (pack), `/twinglass-lattice`, `/twinglass-twin`.
 Reload plugins (`r` on Plugins tab) or start a new session. Then stop.
+
+## 8. Workflow host (1.4, additive)
+Do not delete the nine. Also copy:
+```
+twinglass-dispatch
+twinglass-tracker
+```
+Also copy `WORKFLOW_HOST.md`, `commands/workflow-host.md`, `.grok/workflows/twinglass.rhai`.
+`cp -R /tmp/twinglass-pack/skills/* ~/.grok/skills/` already picks up the new folders.
+Google Drive LLMVE files are past. Do not install them. Meaning stays a pointer to `Fractal-Deployment/llmve-meaning`.
+Do not rewrite LLMVE meters. `llmve-factor-compute` remains HOLD.

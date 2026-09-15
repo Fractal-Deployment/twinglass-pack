@@ -30,3 +30,6 @@ The three laws of logic are the **method** of SI and of LCD (how those two objec
 - Compute F, T_tail, P_L from dumps (`llmve-factor-compute`).
 - Run always-two (`twinglass-twin`) or earned forks (`twinglass-lattice`). Those already happened.
 Grok.com: /sim and /twin contraction. CLI: this folder.
+
+## Workflow host
+Load `twinglass-tracker` before contracting. If required axes are unnamed: **stagger** — keep pads, keep walking, do not contract. Complementary named planes = protocol synthesis (still **DEBATE or SYNTHESIS** in this skill). Unnamed axes are not exclusive leftover. Exclusive leftover after this step still goes to `steelman-truth-tournament`.

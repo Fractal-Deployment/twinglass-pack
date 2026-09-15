@@ -9,6 +9,7 @@ Gates for a **new** track: evidence the current track is improper evidence for a
 Logic-fail means the three laws broke on this track’s argument. Reaching a correct conclusion, agreeing with a sibling, or synthesizing is not a Logic fail. A false assigned persona is improper-track evidence.
 ## 2. 3D diamond (internal critique of ONE agent)
 Not a spawn. Not a child research track.
+Inside diamond, equator paths are **per-path** `pendingProjection` — not a global freeze.
 Then that agent **continues its own main-lattice leg**, or **pauses (`awaiting-meet`)** until another diamond-complete leg is ready.
 ## Converge (active)
 Two (or more) legs that have finished diamond: **debate** if they formed an exclusive empty meet under the lock, **synthesis** if complementary or they reached the same true conclusion. Synthesis is a good meet, not a miss. One comes out (synthesis or **correction**). That survivor may **enter diamond again** (critique the meet), then keep researching — including more clone-spawns.
@@ -18,3 +19,10 @@ If after debate the accounts are still exclusive: `steelman-truth-tournament` (l
 - Hunt `~/.grok/sessions`.
 - Load twin for discovery.
 - Mint path capacity.
+
+## Workflow host (additive)
+Does not replace the two lattices above.
+A legal hard note is a **Grok Build CLI notification** (`twinglass-dispatch`): persona, priors, vector map, isolated charge, `workflow.agent()`, new-context. Not a transcript fork. Parent keeps walking. `cannotFollow` alone is still not a spawn. `assertLegalSpawnNote` unchanged.
+SI (`twinglass-tracker`) gathers. Meet staggers until axes are named. Complementary named planes synthesize protocols. Collapse writes a prompt, not Ω.
+Prefab: `WORKFLOW_HOST.md` + `.grok/workflows/twinglass.rhai`.
+Drive LLMVE copies are past. Do not ingest. Meaning pointer stays `llmve-meaning`.

@@ -49,3 +49,13 @@ MINTED_DUMP_METER: false
 RESTATE:
 ```
 If `SENS > 10`: STOP. Hibernate. Do not spawn 11.
+
+## Workflow host (additive)
+After pack install, the CLI gait may also load `WORKFLOW_HOST.md`, `twinglass-dispatch`, `twinglass-tracker`.
+- PAIR or SPAWN — not both on one charge.
+- Each walker is a `workflow.agent()` brief (persona, priors, vector map, isolated charge).
+- Diamond is a phase on this pad. Mutex unchanged.
+- SI debts gather. Stagger meet until axes named. Do not wipe pads.
+- Collapse writes one working prompt. Telos held.
+Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.md`.
+Do not ingest Google Drive LLMVE copies.
