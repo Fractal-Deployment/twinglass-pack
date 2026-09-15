@@ -23,7 +23,7 @@ If after debate the accounts are still exclusive: `steelman-truth-tournament` (l
 ## Workflow host (additive)
 Does not replace the two lattices above.
 A legal hard note is a **Grok Build CLI notification** (`twinglass-dispatch`): persona, priors, vector map, isolated charge, `workflow.agent()`, new-context. Not a transcript fork. Parent keeps walking. `cannotFollow` alone is still not a spawn. `assertLegalSpawnNote` unchanged.
-SI (`twinglass-tracker`) gathers. Meet staggers until axes are named. Complementary named planes synthesize protocols. Collapse writes a prompt, not Ω.
+SI (`twinglass-tracker`) gathers. Meet staggers until axes are named. Complementary named planes synthesize protocols. Collapse writes a prompt, not Omega.
 Prefab: `WORKFLOW_HOST.md` + `.grok/workflows/twinglass.rhai`.
 Drive LLMVE copies are past. Do not ingest. Meaning pointer stays `llmve-meaning`.
 
@@ -36,3 +36,9 @@ Harvest (2D) is the walk. Octahedron (3D) is critique of one pad (width +0).
 Does not replace the two lattices or the workflow host.
 TwinGlass is the gait of a turn. The ring schedules `LIVE_NAME`. Sleep writes a packet (live count drops). Wake on quotes + referee + width. No calendar wake. No second ten-pod roster. `RING.md`.
 This section **does not own meet**.
+
+## Circular construct (additive — around V)
+Does not replace the ring schedule. Same process. `CIRCULAR.md`.
+Variable groups seated around the interdependence object. Seats are names, not owner folders. LLMVE: Energy, Path, Mythos. General charges do not mint those tags.
+Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only.
+After the last named neighbor sleeps, the first name re-enters only on new quotes.
