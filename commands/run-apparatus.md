@@ -73,12 +73,16 @@ If `ACTIVE > 25`: warn. If `ACTIVE` would exceed 30: STOP fan (crash observed). 
 Engine `SENS_CAP` remains 10 (board `CAP: 10`). That lock is not deleted.
 
 ### Ring (additive — circular schedule)
-Load `RING.md`. TwinGlass is the gait of a turn. The ring is which locked name is live.
+Load `RING.md` and `CIRCULAR.md`. TwinGlass is the gait of a turn. The ring is which locked name is live around V.
 Board also prints:
 ```
+V:
+LANG: llmve | general | both
+SEATS: name:status ...
 LIVE_NAME:
 DOOR: stagger | sleep | meet | waiting
 PACKETS: n=
 ```
 Sleep writes a packet; live walker count drops. Wake only on quotes + referee + width. No calendar wake. No fill-ten. No second ten-pod roster.
+First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only. General charges do not mint mythos tags.
 This command still **does not own meet**.
