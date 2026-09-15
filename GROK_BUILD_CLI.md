@@ -54,17 +54,17 @@ If `mojo-cuda` also exists under `~/.grok/skills/mojo-cuda`, **delete that skill
 git clone https://github.com/Fractal-Deployment/twinglass-pack.git /tmp/twinglass-pack
 # confirm plugin.json version is 1.4.4 or newer; if older, git -C /tmp/twinglass-pack pull
 mkdir -p ~/.grok/skills
-rm -rf ~/.grok/skills/logic-ration-reason \\
-  ~/.grok/skills/llmve-meaning \\
-  ~/.grok/skills/lcd-glossary-integrity \\
-  ~/.grok/skills/reason-telos-lookup \\
-  ~/.grok/skills/honest-prompt-rewrite \\
-  ~/.grok/skills/twinglass-lattice \\
-  ~/.grok/skills/twinglass-twin \\
-  ~/.grok/skills/steelman-truth-tournament \\
-  ~/.grok/skills/llmve-factor-compute \\
-  ~/.grok/skills/transformer-stage-atlas \\
-  ~/.grok/skills/twinglass-dispatch \\
+rm -rf ~/.grok/skills/logic-ration-reason \
+  ~/.grok/skills/llmve-meaning \
+  ~/.grok/skills/lcd-glossary-integrity \
+  ~/.grok/skills/reason-telos-lookup \
+  ~/.grok/skills/honest-prompt-rewrite \
+  ~/.grok/skills/twinglass-lattice \
+  ~/.grok/skills/twinglass-twin \
+  ~/.grok/skills/steelman-truth-tournament \
+  ~/.grok/skills/llmve-factor-compute \
+  ~/.grok/skills/transformer-stage-atlas \
+  ~/.grok/skills/twinglass-dispatch \
   ~/.grok/skills/twinglass-tracker
 cp -R /tmp/twinglass-pack/skills/* ~/.grok/skills/
 mkdir -p ~/.grok/skills/_twinglass ~/.grok/commands ~/.grok/workflows
