@@ -96,6 +96,14 @@ Variant-split stays on **one** pad this turn (`negation_map`).
 After the last named neighbor sleeps, the observer may wake the first name **only if new quotes exist**.
 No calendar wake. No “enough pages.” No fill-ten.
 
+## Sleep write (the kit writer)
+Energy is **already live** when the walk starts (`LIVE_NAME=Energy`). Sleep is hibernation **after** octahedron, not how Energy becomes live.
+
+Write `packets/<name>.md` in the CLI workspace with the ordinary file write. That **is** the writer. Command `/sleep`.
+Do **not** hunt MCP `filesystem_*` / `search_tool`. Do not spawn the neighbor in this session. Do not mix dump-swarm or a second skill onto this pad.
+
+Wake is a **new** session: empty history, packet fields only, quotes required.
+
 ## First LLMVE walk
 Start A. Energy live. Width 1. Octahedron before Sleep. Path wakes only on quotes. Mythos only if other-track persists.
 Site as court `VERSION` states it. Do not copy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy.
