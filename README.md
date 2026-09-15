@@ -1,9 +1,9 @@
 # Twinglass pack
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
-Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
+Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 ## Skills (attach these)
 | Skill | Occupant | Job |
-|---|---|---|
+|---|---|
 | `logic-ration-reason` | laws | Standing Logic Ration Reason lock |
 | `llmve-meaning` | meaning | What meters may answer (pointer to Fractal-Deployment/llmve-meaning live VERSION; Drive copies are past) |
 | `lcd-glossary-integrity` | SI | Lock a term, then judge |
@@ -15,7 +15,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `FINISH_EVI
 | `twinglass-lattice` | walk / diverge | `diverge()` on improper-track + other-track evidence; diamond mutex |
 | `twinglass-twin` | twin | Known two-track. Never with lattice. |
 | `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
-| `transformer-stage-atlas` | atlas | Stage map, not Ω |
+| `transformer-stage-atlas` | atlas | Stage map, not Omega |
 | `twinglass-dispatch` | CLI notify | Legal spawn note → workflow.agent() brief. Not a walker. |
 | `twinglass-tracker` | SI ledger | Gather debts; stagger meet until axes named. Not a reset. |
 ## Dead (do not attach)
@@ -37,6 +37,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/twin` → twinglass-twin
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 - `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
+- `/circular` → CIRCULAR.md (variable groups around V; same process as /ring)
 Do not load lattice and twin on the same charge.
 ## License
 MIT
