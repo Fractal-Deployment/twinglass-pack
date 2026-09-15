@@ -1,6 +1,6 @@
 # Twinglass pack
 One list of non-overlapping skills for **Grok Build CLI**. Same pack runs lattice and twin on grok.com.
-Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
+Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `FINISH_EVIDENCE.md`, and `LATTICE_AHEAD.md` before any skill. Apparatus gait: lattice or twin, never both. Finish-evidence gait gathers **how to complete this pack**.
 ## Skills (attach these)
 | Skill | Occupant | Job |
 |---|---|---|
@@ -36,6 +36,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/finish-evidence` → `FINISH_EVIDENCE.md`
 - `/twin` → twinglass-twin
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
+- `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
 Do not load lattice and twin on the same charge.
 ## License
 MIT

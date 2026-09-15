@@ -71,3 +71,14 @@ Start size = research priorities + situation. Not a fill-to-cap ritual.
 `ACTIVE` = concurrent CLI sessions (walking / in-diamond). Sleeping and awaiting-meet do not count.
 If `ACTIVE > 25`: warn. If `ACTIVE` would exceed 30: STOP fan (crash observed). Walk the survivor.
 Engine `SENS_CAP` remains 10 (board `CAP: 10`). That lock is not deleted.
+
+### Ring (additive — circular schedule)
+Load `RING.md`. TwinGlass is the gait of a turn. The ring is which locked name is live.
+Board also prints:
+```
+LIVE_NAME:
+DOOR: stagger | sleep | meet | waiting
+PACKETS: n=
+```
+Sleep writes a packet; live walker count drops. Wake only on quotes + referee + width. No calendar wake. No fill-ten. No second ten-pod roster.
+This command still **does not own meet**.
