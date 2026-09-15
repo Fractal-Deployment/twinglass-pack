@@ -21,3 +21,6 @@ metadata:
 - Paste a second copy of the equation into this skill.
 Path capacity is Find → Maintain (pathing structure) → Let-fail. Maintain is not hold a token. It is not greedy/top-p. Operable knobs are not Price’s Law. Methodology ≠ measurement. . Meaning SSOT: Fractal-Deployment/llmve-meaning `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md`.
 Grok.com: Atlas. CLI: this folder only. No alias folder.
+
+## Pointer hygiene
+Live SSOT is `Fractal-Deployment/llmve-meaning` `VERSION` on GitHub. Google Drive instruction-set copies are **past**. Do not paste Drive into this pack. Do not restate the variables here.

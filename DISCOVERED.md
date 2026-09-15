@@ -30,3 +30,9 @@ Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 | `steelman-truth-tournament` | Exclusive accounts only. Not conversion. |
 | `reason-telos-lookup` | Value ranking. Preference matrix is morality-as-acquired; this skill ranks sacrifice, it does not mint \(P_L\). |
 | `transformer-stage-atlas` | Stages are structure. Not reality tests. |
+| `twinglass-dispatch` | Hard note → CLI workflow.agent() brief. Persona, priors, vector, isolated charge. New context. Not transcript fork. |
+| `twinglass-tracker` | SI ledger. Gather, do not reset. Stagger meet until axes named. Complementary planes = protocol synthesis. |
+
+| Workflow host | Spawn is a CLI notification. SI is a ledger. Meet staggers. Collapse writes a prompt. |
+| Drive | Past. Not meaning SSOT. |
+| Width | Engine SENS_CAP 10 stays. CLI ACTIVE typical 25, hard 30. Start from research priorities. |

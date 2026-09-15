@@ -22,3 +22,6 @@ Telos does not move. The working prompt may.
 - Invent product-green from a fluent paragraph.
 - Become the lattice or the twin.
 Grok.com: Twin lock phase. CLI: this folder. `/activate` in this pack loads this skill, nothing else.
+
+## Workflow host
+Collapse writes the working prompt, not Ω. Open SI debts stay in the prompt as gather items. Telos does not move. Do not wipe the pad to “go back.”

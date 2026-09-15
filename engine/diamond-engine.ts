@@ -23,6 +23,10 @@ export type ScratchPad = {
 export type AgentState = "awake" | "hibernating";
 export const SENS_CAP = 10;
 export const SENS_CLI_PRACTICAL = 8;
+/** Concurrent CLI workflow.agent() sessions. Situation + research priorities size the start. Sleeping pads do not count. */
+export const SENS_TYPICAL = 25;
+/** Observed crash at 30 active sessions. Hard STOP for CLI dispatch. Does not delete SENS_CAP. */
+export const SENS_HARD = 30;
 const SESSION_LEAK = /~\/\.grok\/sessions|chat_history\.jsonl/i;
 export type HardNote = {
   id: string;

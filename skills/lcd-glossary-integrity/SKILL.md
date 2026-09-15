@@ -23,3 +23,6 @@ metadata:
 - Invent cosine scores. You do not have embeddings.
 - Watch more than two objects. Dual cap = this skill (terms) + `lcd-lens` (functions). A third watch object is **overload refuse**.
 Grok.com: Order (FCA table) and Lattice glossary lock. CLI: this folder. lcd-glossary owns the console; gaits consume M.
+
+## Workflow host
+SI is a **ledger** (`twinglass-tracker`). Open debts are gather items. Filling a debt closes it. It does not wipe the pad or send the walker back. Dual cap unchanged: this skill (terms) + `lcd-lens` (functions). A third watch object is still **overload refuse**.

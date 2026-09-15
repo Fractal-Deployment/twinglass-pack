@@ -29,3 +29,7 @@ Logic-fail means the three laws broke on **this** track’s argument. It does **
 - Kill a lane because it is “the opposite.”
 - Inverse CoT. Mint meters. Close Ω.
 Grok.com: /lattice. CLI: this folder.
+
+## Workflow host
+Clone is **spawn + parent notes**, not a transcript fork. A legal hard note is a **CLI notification**: load `twinglass-dispatch` (persona, priors, vector map, isolated charge → `workflow.agent()`). Isolation = new-context. Parent keeps walking. Width counts walkers only. Diamond stays a phase, not a body of critique-children.
+Tracker may **stagger** the hand-off to `collate-hourglass` until axes are named. Stagger is not a reset. This skill still does not own debate or synthesis.

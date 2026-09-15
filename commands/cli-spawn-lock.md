@@ -22,3 +22,6 @@ SPAWN_REFUSED: n=
 ```
 ## Do not
 Change passing engine tests. Twin. Mint Ω.
+
+## Workflow host
+A legal note does not clone the parent transcript. It writes a dispatch brief (persona, priors, vector map, isolated charge) for Grok Build CLI `workflow.agent()`. Isolation: new-context. Parent keeps walking.
