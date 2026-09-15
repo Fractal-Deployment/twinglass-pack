@@ -1,7 +1,7 @@
 {
   "name": "twinglass",
-  "version": "1.4.0",
-  "description": "Twinglass pack + engine. Two lattices (main legs ≠ 3D diamond). Workflow host: spawn is CLI agent() dispatch; SI gather ledger; staggered meet. SI+LCD monitor. LRR on research. Not twin-as-discovery.",
+  "version": "1.4.1",
+  "description": "Twinglass pack + engine. One apparatus, two start intents. Workflow host: spawn is CLI agent() dispatch; SI gather ledger; staggered meet. Active typical ≤25, hard 30. SI+LCD monitor. LRR on research. Not twin-as-discovery.",
   "author": { "name": "Jadon Fox", "url": "https://github.com/Jadon-Fox" },
   "homepage": "https://github.com/Fractal-Deployment/twinglass-pack",
   "license": "MIT",

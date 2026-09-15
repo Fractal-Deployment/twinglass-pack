@@ -35,3 +35,4 @@ Paces: `PACES_BOARD.md`. Condition P: `CONDITION_P.md`.
 
 | Workflow host | Spawn is a CLI notification. SI is a ledger. Meet staggers. Collapse writes a prompt. |
 | Drive | Past. Not meaning SSOT. |
+| Width | Engine SENS_CAP 10 stays. CLI ACTIVE typical 25, hard 30. Start from research priorities. |

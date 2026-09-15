@@ -52,10 +52,22 @@ If `SENS > 10`: STOP. Hibernate. Do not spawn 11.
 
 ## Workflow host (additive)
 After pack install, the CLI gait may also load `WORKFLOW_HOST.md`, `twinglass-dispatch`, `twinglass-tracker`.
-- PAIR or SPAWN — not both on one charge.
-- Each walker is a `workflow.agent()` brief (persona, priors, vector map, isolated charge).
-- Diamond is a phase on this pad. Mutex unchanged.
+- Start A (generate) or Start B (converge seated pile) — not both on one charge. PAIR is clutter-two, not Start B. Twin is XOR, separate charge.
+- Each walker is a `workflow.agent()` brief (persona, priors, vector map, isolated charge). New-context. Not a transcript fork.
+- Harvest (2D) is the walk. Octahedron (3D) is critique of one pad. Mutex unchanged. Occupants are not width.
 - SI debts gather. Stagger meet until axes named. Do not wipe pads.
-- Collapse writes one working prompt. Telos held.
+- Collapse writes one working prompt. Project telos held. Intention may move.
 Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.md`.
-Do not ingest Google Drive LLMVE copies.
+Do not ingest Google Drive LLMVE copies. Live meaning: GitHub `llmve-meaning` `VERSION`.
+
+### Width (additive — do not delete CAP: 10 above)
+```
+START_INTENT: A | B
+ACTIVE: n=
+TYPICAL: 25
+HARD: 30
+```
+Start size = research priorities + situation. Not a fill-to-cap ritual.
+`ACTIVE` = concurrent CLI sessions (walking / in-diamond). Sleeping and awaiting-meet do not count.
+If `ACTIVE > 25`: warn. If `ACTIVE` would exceed 30: STOP fan (crash observed). Walk the survivor.
+Engine `SENS_CAP` remains 10 (board `CAP: 10`). That lock is not deleted.

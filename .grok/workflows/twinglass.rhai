@@ -50,7 +50,9 @@ phase("dispatch") {
 phase("spawn-gate") {
     // Hard note → notification. Not a local clone of the parent transcript.
     // assertLegalSpawnNote: improperEvidence AND otherTrackEvidence.
-    // Width cap 10. Parent keeps walking.
+    // Active sessions typical ≤25, hard STOP 30 (crash observed). Sleeping pads do not count.
+    // Engine SENS_CAP remains 10. Parent keeps walking.
+    // Start width is situation + research priorities, not a fill-to-cap ritual.
 }
 
 phase("gather") {

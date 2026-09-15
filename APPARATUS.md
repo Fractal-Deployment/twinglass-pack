@@ -26,3 +26,8 @@ A legal hard note is a **Grok Build CLI notification** (`twinglass-dispatch`): p
 SI (`twinglass-tracker`) gathers. Meet staggers until axes are named. Complementary named planes synthesize protocols. Collapse writes a prompt, not Ω.
 Prefab: `WORKFLOW_HOST.md` + `.grok/workflows/twinglass.rhai`.
 Drive LLMVE copies are past. Do not ingest. Meaning pointer stays `llmve-meaning`.
+
+Operator identity (additive; does not delete the two-lattice geometry split above):
+**one apparatus, two start intents** (A generate / B converge). After start, one gait. PAIR is clutter-two. Twin is XOR leftover, separate charge.
+Width: engine `SENS_CAP` 10 stays. Concurrent CLI sessions typical ≤25, hard STOP 30 active. Start size = research priorities + situation. Sleeping pads are not active. Occupants are not width.
+Harvest (2D) is the walk. Octahedron (3D) is critique of one pad (width +0).
