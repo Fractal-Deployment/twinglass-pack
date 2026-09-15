@@ -31,3 +31,8 @@ Operator identity (additive; does not delete the two-lattice geometry split abov
 **one apparatus, two start intents** (A generate / B converge). After start, one gait. PAIR is clutter-two. Twin is XOR leftover, separate charge.
 Width: engine `SENS_CAP` 10 stays. Concurrent CLI sessions typical ≤25, hard STOP 30 active. Start size = research priorities + situation. Sleeping pads are not active. Occupants are not width.
 Harvest (2D) is the walk. Octahedron (3D) is critique of one pad (width +0).
+
+## Ring (additive — circular schedule)
+Does not replace the two lattices or the workflow host.
+TwinGlass is the gait of a turn. The ring schedules `LIVE_NAME`. Sleep writes a packet (live count drops). Wake on quotes + referee + width. No calendar wake. No second ten-pod roster. `RING.md`.
+This section **does not own meet**.

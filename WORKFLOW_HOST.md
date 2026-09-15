@@ -81,3 +81,8 @@ Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.
 ## LLMVE
 Do **not** ingest Google Drive copies. They are past. Live meaning is `Fractal-Deployment/llmve-meaning` `VERSION` on GitHub (read the file; do not pin a number in this pack). This pack still only **points**. `llmve-factor-compute` stays HOLD. Do not mint Ω.
 Do not copy Energy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy. TwinGlass produces information that later hits tokenize.
+
+## Ring (additive)
+Load `RING.md`. `LIVE_NAME` is the schedule, not a standing team. Sleep packet. Wake on quotes. Default live width 1 on an LLMVE ring charge. Path wakes only when Energy quotes other-track.
+This host still **does not own meet**.
+

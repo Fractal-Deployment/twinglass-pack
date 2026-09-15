@@ -1,7 +1,7 @@
 # Grok Build CLI — paste this as the session prompt
 You are installing **Twinglass pack** as the only cognition skill set on this machine.
 Repo: `https://github.com/Fractal-Deployment/twinglass-pack`
-**Install from `main` (plugin 1.4.1).** If the clone is 1.3.0, you have the old pack — fetch again.
+Install from `main` (plugin **1.4.2**). If the clone is 1.3.0, you have the old pack — fetch again.
 Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and duplicate config paths. Do not touch silicon, hooks, or security plugins except to stop copying their skills.
 **After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) **plus** [`WORKFLOW_HOST.md`](./WORKFLOW_HOST.md) — one apparatus, two start intents, not twin, not battle.
 Spawn is a **CLI notification** (`workflow.agent()`, new-context). SI **gathers**. Meet **staggers**. Collapse writes a **prompt**, not Ω.
@@ -49,7 +49,7 @@ If `mojo-cuda` also exists under `~/.grok/skills/mojo-cuda`, **delete that skill
 ## 4. Install the pack (one source)
 ```bash
 git clone https://github.com/Fractal-Deployment/twinglass-pack.git /tmp/twinglass-pack
-# confirm plugin.json version is 1.4.1 or newer; if 1.3.0, git -C /tmp/twinglass-pack pull
+# confirm plugin.json version is 1.4.2 or newer; if 1.3.0, git -C /tmp/twinglass-pack pull
 mkdir -p ~/.grok/skills
 rm -rf ~/.grok/skills/logic-ration-reason \
   ~/.grok/skills/llmve-meaning \
@@ -68,6 +68,7 @@ mkdir -p ~/.grok/skills/_twinglass ~/.grok/commands ~/.grok/workflows
 cp /tmp/twinglass-pack/DISCOVERED.md ~/.grok/skills/_twinglass/DISCOVERED.md
 cp /tmp/twinglass-pack/DISCOVERED.md ~/.grok/skills/twinglass-lattice/DISCOVERED.md
 cp /tmp/twinglass-pack/WORKFLOW_HOST.md ~/.grok/skills/_twinglass/WORKFLOW_HOST.md
+cp /tmp/twinglass-pack/RING.md ~/.grok/skills/_twinglass/RING.md
 cp /tmp/twinglass-pack/commands/*.md ~/.grok/commands/ 2>/dev/null || true
 cp /tmp/twinglass-pack/.grok/workflows/twinglass.rhai ~/.grok/workflows/twinglass.rhai
 ```
@@ -120,9 +121,9 @@ Nine pack skills plus two workflow-host occupants:
 9. `transformer-stage-atlas`
 10. `twinglass-dispatch`
 11. `twinglass-tracker`
-Also on disk: `WORKFLOW_HOST.md`, `commands/workflow-host.md`, `.grok/workflows/twinglass.rhai`.
-Slash commands that must exist: `/activate` (pack), `/twinglass-lattice`, `/twinglass-twin`, `/workflow-host`.
-Confirm `plugin.json` version ≥ 1.4.1.
+Also on disk: `WORKFLOW_HOST.md`, `RING.md`, `commands/workflow-host.md`, `commands/ring.md`, `.grok/workflows/twinglass.rhai`.
+Slash commands that must exist: `/activate` (pack), `/twinglass-lattice`, `/twinglass-twin`, `/workflow-host`, `/ring`.
+Confirm `plugin.json` version ≥ 1.4.2.
 Reload plugins (`r` on Plugins tab) or start a new session.
 ## 8. After install — run this gait
 Load: `WORKFLOW_HOST.md` + `commands/run-apparatus.md` + `commands/workflow-host.md`.
@@ -158,8 +159,14 @@ Start:
 Spawn: legal note (`improperEvidence` AND `otherTrackEvidence`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking. `cannotFollow` alone is not a spawn. Assigned antithesis refuses. Live-lane synonym refuses.
 SI: `twinglass-tracker` ledger. Gather. Do not wipe the pad. Stagger meet until axes named. Complementary named planes = protocol synthesis. Meet occupant remains `collate-hourglass`.
 Collapse writes a working prompt. Project telos does not move. `llmve-factor-compute` HOLD. No Ω.
-## 9. Workflow host (1.4.1, additive)
+## 9. Workflow host (1.4.2, additive)
 Do not delete the nine. Also copy `twinglass-dispatch`, `twinglass-tracker`.
+Also copy `RING.md` and `commands/ring.md`.
 Google Drive LLMVE files are past. Do not install them. Meaning stays a pointer to `Fractal-Deployment/llmve-meaning`.
 Do not rewrite LLMVE meters. `llmve-factor-compute` remains HOLD.
+## 10. Ring
+TwinGlass is the gait of a turn. The ring schedules `LIVE_NAME`.
+Sleep writes a packet (live count drops). Wake only on `why_neighbor` + `otherTrackEvidence` + referee + width. Empty history. No calendar wake. No fill-ten. No second ten-pod swarm.
+Default live width 1 on an LLMVE Energy charge. Path wakes only when Energy quotes other-track.
+Board: `LIVE_NAME`, `DOOR`, `PACKETS`. Keep `CAP: 10`.
 Then stop.
