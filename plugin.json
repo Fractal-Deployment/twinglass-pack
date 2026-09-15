@@ -1,9 +1,9 @@
 {
   "name": "twinglass",
-  "version": "1.4.2",
-  "description": "Twinglass pack + engine. One apparatus, two start intents. Workflow host + circular LIVE_NAME ring. Spawn is CLI agent() dispatch. SI gather. Sleep packet / wake on quotes. Active typical ≤25, hard 30. Not twin-as-discovery.",
+  "version": "1.4.3",
+  "description": "Twinglass pack + engine. One apparatus, two start intents. Circular construct around V. LIVE_NAME ring. Spawn is CLI agent() dispatch. SI gather. Sleep packet / wake on quotes. Active typical <=25, hard 30. Not twin-as-discovery.",
   "author": { "name": "Jadon Fox", "url": "https://github.com/Jadon-Fox" },
   "homepage": "https://github.com/Fractal-Deployment/twinglass-pack",
   "license": "MIT",
-  "keywords": ["twinglass", "lattice", "lrr", "llmve", "skills", "engine", "workflow", "ring"]
+  "keywords": ["twinglass", "lattice", "lrr", "llmve", "skills", "engine", "workflow", "ring", "circular"]
 }
