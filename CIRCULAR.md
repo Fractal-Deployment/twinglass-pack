@@ -89,17 +89,67 @@ live Path
   wake Energy if why_neighbor + referee pass + width allows
 ```
 
+Field identity (do not mash):
+- `otherTrackEvidence` = **who to wake**. One of the **eight** seats or `none`.
+- `why_neighbor` = **what this seat cannot carry**.
+Eight seats (Logos out this cycle; `domain.json` `logos.in_active_account=false`). INSTRUCTION_SET 1–7 plus Labor (`energy.next` in `domain.json`):
+`Energy`, `Labor`, `Exergy`, `Path`, `Mythos`, `Shape`, `Tau`, `Cd`.
+Remainder \(U\) and overhead *terms* are not seats. `C_d` **is** a seat (variable 7). Exergy **is** a seat (usable after overhead). Do not stand ten owner folders. `drive_as_energy` is a forbidden identity (`domain.json`). Energy is potential at ingest, not drive. Telos is the circuit, not a drive metaphor.
+After all eight have slept once, **return to Energy** with those packets. One pass is not the framework. Sha-only Energy↔Path ping-pong is not a cycle.
+
 Cousin-transfer: Energy site first. Path only when Energy quotes other-track.
 Variant-split stays on **one** pad this turn (`negation_map`).
 
 ## Circular close
 After the last named neighbor sleeps, the observer may wake the first name **only if new quotes exist**.
+New quotes = the sleeping neighbor's `otherTrackEvidence` is a ring seat **and** that packet's digest changed since the last wake of the named seat. Not "the woken packet's own digest changed." Not calendar.
 No calendar wake. No “enough pages.” No fill-ten.
 
 ## First LLMVE walk
 Start A. Energy live. Width 1. Octahedron before Sleep. Path wakes only on quotes. Mythos only if other-track persists.
 Site as court `VERSION` states it. Do not copy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy.
 Post-search verify = octahedron / rewrite after the walk, not a standing formalizer crew.
+
+## One seat per turn (coded)
+`~/.grok/workflows/circular.rhai` is **one variable group’s turn**, not 10k and not a child-spawn of the neighbor.
+Host disk referee: `reports/circular_packets/ring_args.sh`. Exit 0 prints `live_name=`. Exit 2 is circuit-close. No calendar. Next run is a new empty-history launch with that `live_name`.
+The 15-minute timer is **not** this machine. It is only a host watching that a live run is still working. It must not start a seat.
+
+## Pad (inside one live seat)
+One pad. One seat. Proof and disproof are **math**, not a debate club and not antithesis.
+
+| Role | Job | Not |
+|------|-----|-----|
+| **math-proof** | This *expression* covers the word problem. Formula, derivation, identity. Dump-backed. | “I disagree with them.” Narrative counterpoint. |
+| **math-disproof** | This expression is the **wrong object**, or the identity fails (counterexample, category error, broken derivation). | Antithesis. A second political camp. |
+| **research** | One agent. Task list comes from **both** math sides. Writes the pad. Does not pick a side. | A third opinion. |
+| **neutral** | Critique, steelman, and ground the *math* accounts. If they cannot both be true of the same object, say exclusive leftover (then `steelman-truth-tournament`, not a story). | Splitting the difference. |
+| **walker** | At first wake and at endpoint: semantic integrity (same term, same referent) and data integrity (LCD: collection ∩ demand). Then octahedron on this pad. Writes the sleep packet. | A calendar. A neighbor spawn. |
+
+A **group** is one seat. Inside it: **four subgroups**, concurrent, talking on one pad. Each subgroup has **at least four** live agents (4×4=16, CAP 20 is STOP not a fill). Subgroups: math-proof, math-disproof, research, neutral. Then walker SI+LCD and octahedron on the same pad (width +0, not a fifth debate team).
+Rhai `parallel`/`agent` is the tool format. The host keeps the ring moving. Completing seven workflow runs is not “eight variables mapped.”
+After the eight have been touched, wake Energy again so it can integrate the neighbor math. Not a clock. Not drive.
+
+OpenAI published Lean certificates and a blowup paper. They did **not** publish agent personas. Blog method we can use: in-group talk, cousin first, Clay **A/B vs C/D as math variants of the statement** (smoothness vs blowup), Codex after search, Lean after search, tools = read + run code. We do not copy 10k, isolation-as-camps, or mid-walk Codex.
+
+### Pad kit (persona, skill, MCP)
+
+| Role | Persona (brief) | Skills to load | MCP / disk |
+|------|-----------------|----------------|------------|
+| math-proof | not `twin-walker`. Formula covers the word problem. | `llmve-meaning`, `honest-prompt-rewrite` | filesystem: `MATH_*.md`, lakes boards; github `llmve-meaning` VERSION |
+| math-disproof | not `twin-walker`. Wrong object / identity fails. | `lcd-lens`, `llmve-meaning` | same dumps; LCD = collection ∩ demand, never claimed ∩ demand |
+| research | not a walker. Executes **both** task lists. Writes one pad. | `honest-prompt-rewrite` | filesystem write `reports/circular_packets/<seat>.pad.md` |
+| neutral | not rewriter. Steelman **math** accounts. Ground. | `steelman-truth-tournament` only if exclusive leftover; `lcd-glossary-integrity` | filesystem pad + dumps |
+| walker | `lattice-walker` | `logic-ration-reason`, `lcd-glossary-integrity`, `lcd-lens` | filesystem sleep packet; chromadb `recall_context` only after a named card |
+
+Do not load `twinglass-twin` on this pad. Twin is leftover after exclusive leftover, separate charge. Context7 `/modular/modular` is not this math. Rewriter stays after Meet (`collate-hourglass`).
+
+Activation (function of the pad, not a clock):
+- `endpoint_research` — this run has generated the math it can
+- `need_neighbor` — the next step needs an interdependent variable
+- `cannot_agree` — exclusive leftover after steelman
+
+Before another seat wakes: walker SI+LCD, octahedron, sleep with a **breakdown** (where we arrived, vector map, missing frameworks, math still needed). The woken seat starts empty-history with that packet. No antithesis. No remainder/`C_d` as a seat.
 
 ## Board (additive)
 ```

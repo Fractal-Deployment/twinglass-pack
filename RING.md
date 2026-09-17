@@ -31,7 +31,9 @@ live Path
   wake Energy if why_neighbor + referee pass + width allows
 ```
 
-Circular: after the last named neighbor sleeps, the observer may wake the first name **only** if new quotes exist. No calendar wake. No “enough pages.” No fill-ten.
+`otherTrackEvidence` = who to wake (`Energy` | `Path` | `Mythos` | `none`). `why_neighbor` = what this seat cannot carry. Remainder / `C_d` / Exergy / overhead never occupy `otherTrackEvidence`. After Path cannot carry remainder / `C_d`, quote Energy.
+
+Circular: after the last named neighbor sleeps, the observer may wake the first name **only** if new quotes exist. New quotes = the sleeping neighbor quotes a ring seat and that packet digest changed since last wake of the named seat — not the woken packet's own digest. No calendar wake. No “enough pages.” No fill-ten.
 
 Default live width **1** on the ring. Width 2 only as Energy P vs R inside **one** packet. The next variable existing is not a reason to go width 2.
 
