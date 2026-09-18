@@ -1,7 +1,7 @@
 {
   "name": "twinglass",
-  "version": "1.4.4",
-  "description": "Twinglass pack + engine. NS methods bound: cousin, variant-split, consolidator, dead-end. Not ten standing chairs. Circular LIVE_NAME. Spawn is CLI agent() dispatch. SI gather. Active typical <=25, hard 30.",
+  "version": "1.4.5",
+  "description": "Twinglass pack + engine. NS methods bound. Sleep writes packets/<name>.md in the workspace. Not MCP. Not ten chairs. LIVE_NAME ring. Active typical <=25, hard 30.",
   "author": { "name": "Jadon Fox", "url": "https://github.com/Jadon-Fox" },
   "homepage": "https://github.com/Fractal-Deployment/twinglass-pack",
   "license": "MIT",

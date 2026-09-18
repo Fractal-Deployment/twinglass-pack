@@ -38,6 +38,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 - `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
 - `/circular` → CIRCULAR.md (NS methods bound; not ten chairs)
+- `/sleep` → write `packets/<name>.md` (workspace file write; not MCP)
 Do not load lattice and twin on the same charge.
 ## License
 MIT
