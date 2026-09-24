@@ -41,7 +41,7 @@ D1.P_L_path
 If a file is a **dated artifact**, stamp SUPERSEDED at the top and point at live meaning. Do not keep two live instruction sets.
 `hold_id` / `hold_m` **sensors** may stay as readouts of pathing cohesion. Do not let those names put “hold a token” back as the middle step. Prefer `D1.maintain`.
 ## Do not
-- Mint a dump meter or close Ω.
+- Mint a dump meter, invent an Ω close, or seal against Ω close.
 - Restore Price’s Law as master.
 - Rewrite `PATH_CHAIN_FIND_MAINTAIN_LETFAIL.md` backwards to Hold.
 - Attack `~/.grok/sessions`.

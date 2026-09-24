@@ -15,7 +15,7 @@ You are collecting boards/dumps. Two accounts cannot both be true:
 | A | A weight-geometry / attn.o / INT8 / SVD dump is **Track W** (snapshot, convert-fidelity ore). It is **not** a residual-path viability board. |
 | B | That same dump **is** the viability board (shape or erank or “the meter”). |
 Empty meet: snapshot-collection ≠ hold/find/let-fail on a residual path. Fork earned on that identity split — not on decoding.
-Do not mint a dump-meter number. Do not close Ω. Do not compute from missing dumps — name whether dumps exist.
+Do not invent a dump-meter number. Do not invent an Ω close or seal against close. Do not compute from missing dumps — name whether dumps exist.
 ## Protocol
 1. Scout until the exclusive split above is earned from sources (Elhage/residual-path vs SVD/erank/shape papers is enough; **do not** open Holtzman/HF generate as the fork).
 2. Spawn **A and B both awake** (`context_source=new` if that is how this CLI two-traces). Parent notes only. No URL lists exchanged.
