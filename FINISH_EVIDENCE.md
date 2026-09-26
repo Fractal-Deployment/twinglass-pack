@@ -12,7 +12,6 @@ A skill is **not** finished because a white paper exists, a CLI run felt good, o
 Last lattice unit (CLI, pack `ff62674`): LEGS=5 SENS=4. Mythos → Friction → f(dT/dR) → C_d → Exergy. MEET=waiting. No diamond (restatement not earned). MINTED=false.
 Empty meets already named (ore, not pack-finish): Elhage/Olsson = carrier not factor; Conley shape not Mythos-in-W; MDL not e^{sigma_sub} not Mythos; IB/KL not MDL/C_d/P_L; Exergy not f(dT/dR); do not flip Kelvin to dR/dT; greedy/top-p/CE/hunt-score not P_L.
 This charge does **not** re-hunt those papers. It inventories `skills/`.
-That board still printed `` / `G1` / `` — stale vs **0.3.4**. Count as `stale_seals` evidence.
 Meaning tip is **0.3.4**. A 0.3.1 404 is look-elsewhere. HOLD board killed by the session-log hook is ops, not a skill gap.
 Pack for this gait: **`81201b0` or later**. `ff62674` is too old.
 ## Occupants (do not mash)
@@ -51,7 +50,6 @@ For each attached skill, write **on disk**:
 | `demand` | finished-when from the occupant table |
 | `meet` | empty / partial / full |
 | `overlap_with` | other skill ids, or none |
-| `stale_seals` | `G1` / `` / `` still printed? |
 | `tests` | path + pass/fail/absent |
 | `next_act` | look-elsewhere rewrite SKILL add test HOLD compute steelman (only if exclusive) |
 LCD: collection ∩ demand. If empty, **look elsewhere** — do not convert a metaphor into a meet.

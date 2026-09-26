@@ -18,5 +18,4 @@ Attachments in this workspace (`ASSET_DENSITY_PL_LOCK_*`, `SENSOR_GAP_*`, `LLM V
 ## Do not
 - Rewrite meaning here.
 - Invent a replacement top variable.
-- Invent an Ω close from this map (or seal against close from it).
 - Keep orch `LLMVE_INSTRUCTION_SET_20260818.md` as SSOT after meaning lands — it will be a **forked taint**.
