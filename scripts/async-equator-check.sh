@@ -18,7 +18,7 @@ if [[ -f "$CMD" ]]; then
   grep -qi 'south' "$CMD" || red "async-equator missing south mark"
 fi
 grep -q 'pendingProjection' "$ENG" || red "engine missing pendingProjection"
-grep -q 'cannot mark before four pads are closed' "$ENG" || red "engine south-mark close gate drifted"
+grep -q 'cannot mark before four pads are finished' "$ENG" || red "engine south-mark finish gate drifted"
 if grep -q 'per-path' "$APP" || grep -q 'pendingProjection' "$APP"; then
   pass "APPARATUS names per-path pending"
 else

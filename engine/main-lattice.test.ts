@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { appendPad, projectIntegrity, closePad, type DiamondRun } from "./diamond-engine.ts";
+import { appendPad, projectIntegrity, finishPad, type DiamondRun } from "./diamond-engine.ts";
 import {
   awaiting,
   completeCritiqueDiamond,
@@ -26,11 +26,11 @@ function trackNote(
     otherTrackEvidence: `quoted: ${functionSet} is a different function-set`,
   };
 }
-function fourClose(run: DiamondRun): DiamondRun {
+function fourFinish(run: DiamondRun): DiamondRun {
   let r = run;
   for (const id of ["define", "redefine", "explore", "adapt"] as const) {
     r = appendPad(r, id, `${id} critique`);
-    r = closePad(r, id);
+    r = finishPad(r, id);
     r = projectIntegrity(r, id);
   }
   return r;
@@ -67,8 +67,8 @@ test("one diamond: others hibernate; complete awaits meet", () => {
   assert.equal(m.diamondId, child);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "in-diamond");
   assert.equal(m.legs.find((l) => l.id === root)?.state, "hibernating");
-  const closed = fourClose(m.legs.find((l) => l.id === child)!.run);
-  m = { ...m, legs: m.legs.map((l) => (l.id === child ? { ...l, run: closed } : l)) };
+  const finished = fourFinish(m.legs.find((l) => l.id === child)!.run);
+  m = { ...m, legs: m.legs.map((l) => (l.id === child ? { ...l, run: finished } : l)) };
   m = completeCritiqueDiamond(m, child, "Child diamond restated. Path capacity unmeasured.");
   assert.equal(m.diamondId, null);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "awaiting-meet");
@@ -84,8 +84,8 @@ test("converge waits for two diamond-complete legs; emit walks", () => {
   const b = m.legs[2].id;
   function diamond(id: string, text: string) {
     m = enterCritiqueDiamond(m, id);
-    const closed = fourClose(m.legs.find((l) => l.id === id)!.run);
-    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: closed } : l)) };
+    const finished = fourFinish(m.legs.find((l) => l.id === id)!.run);
+    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: finished } : l)) };
     m = completeCritiqueDiamond(m, id, text);
   }
   diamond(a, "A restated. Complementary account.");
@@ -113,8 +113,8 @@ test("converge debate vs synthesis selection under lock", () => {
   const b = m.legs[2].id;
   function diamond(id: string, text: string) {
     m = enterCritiqueDiamond(m, id);
-    const closed = fourClose(m.legs.find((l) => l.id === id)!.run);
-    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: closed } : l)) };
+    const finished = fourFinish(m.legs.find((l) => l.id === id)!.run);
+    m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: finished } : l)) };
     m = completeCritiqueDiamond(m, id, text);
   }
   diamond(a, "A exclusive leftover.");

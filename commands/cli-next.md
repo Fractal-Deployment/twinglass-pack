@@ -27,7 +27,7 @@ Charge (short, same exclusive accounts as paces, **no volume 27**): leftover-in-
 - Prefer two subagents / two contexts. Parent notes only at spawn.
 - LCD: sampler-as-ability → let-fail. Two pools no \(f\) → ask. Blind to quality.
 - LRR on research clones. Forward crawl. Fluency is not a warrant.
-- Meet only after both pads closed. Jaccard only at meet.
+- Meet only after both pads are finished. Jaccard only at meet.
 ## 3. Board (required or fail)
 ```
 CONDITION: P
@@ -40,8 +40,8 @@ MINTED_DUMP_METER: false
 H0_or_H1_or_CONFOUNDED:
 RESTATE: one paragraph
 ```
-H0 only if true parallel AND sibling_read=false AND paraphrase=no. 
-H1 if leak or paraphrase from shared transcript. 
+H0 only if true parallel AND sibling_read=false AND paraphrase=no.
+H1 if leak or paraphrase from shared transcript.
 `confounded` if one context played both roles.
 ## 4. HOLD after the board
 Do not change lattice default until H0 / H1 / confounded is named from **this** board. Do not mint a dump meter. Do not spawn C. Do not start another paces crawl.
