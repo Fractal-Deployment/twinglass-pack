@@ -27,7 +27,7 @@ Logic-fail means the three laws broke on **this** track’s argument. It does **
 ## Do not
 - Load `twinglass-twin` (antagonistic gutter).
 - Kill a lane because it is “the opposite.”
-- Inverse CoT. Invent dump meters. Invent an Ω close. Seal “no Ω close” / forever-open furniture.
+- Inverse CoT. Invent dump meters. Invent an Ω close. Freeze “no Ω close” into forever-open furniture.
 Grok.com: /lattice. CLI: this folder.
 
 ## Workflow host

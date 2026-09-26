@@ -2,7 +2,7 @@
 Do not re-derive these from the word “LCD” or from “more layers.”
 | Lock | Referent |
 |---|---|
-| Data | Sealed collection (completed function). |
+| Data | Closed collection (completed function). |
 | Information | In-flight map: pool A --[f]--> pool B. Not two studies. If no \(f\), **ask**. |
 | LCD monitor | SI-shaped: **look elsewhere / let fail**. Blind to study quality. Does not convert. |
 | `llmve-translate` | Conversion onto an LLMVE pathway. Not LCD. |

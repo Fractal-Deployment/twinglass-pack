@@ -22,7 +22,7 @@ This run: clone when the walker has **both**:
 Plus: `necessary_because` + a residue **marker** + not a live-lane synonym.
 An “interesting other file” without (1) is not enough. Occupying the opposite account to force a split is not enough. Same conclusion as a sibling is allowed.
 That is a **nudge**, not a fight.
-Do not invent a dump meter. Do not invent an Ω close or seal against close. Do not factor-compute unless dumps for **that row** exist and LCD stay.
+Do not invent a dump meter. Do not invent an Ω close or rule out close. Do not factor-compute unless dumps for **that row** exist and LCD stay.
 ## Sensitivity (start as low as possible)
 ```
 SENS = 0

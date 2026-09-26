@@ -104,7 +104,7 @@ PACKETS: n=
 Keep `CAP: 10`. Keep `START_INTENT: A | B`.
 
 ## Occupants
-Observer *when* a wake or meet is due. Referee authorizes wake. Walker holds the SI ledger. Sentinel after seal is monitor (SI+LCD only). Do not mash ledger with monitor.
+Observer *when* a wake or meet is due. Referee authorizes wake. Walker holds the SI ledger. Sentinel after close is monitor (SI+LCD only). Do not mash ledger with monitor.
 Rewriter after Meet = Codex consolidator: markers only, telos unmoved.
 
 This file **does not own meet**. Meet stays `collate-hourglass`.
