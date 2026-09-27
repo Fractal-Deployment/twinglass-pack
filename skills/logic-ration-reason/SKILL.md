@@ -21,7 +21,7 @@ Three laws. Always.
 If two internally coherent accounts cannot both be true under the lock, that is an exclusive split. Specialization (`usedAs ≤ lockedDef`) is not a split. Synonyms are not a split.
 ## Ration
 Mint short pattern markers from residue. Do not narrate residue away.
-A marker names a recurring structure on the working material (a dump, a charge, a skill job, a claim package). Markers do not stamp leaves. Markers do not invent an Ω close.
+A marker names a recurring structure on the working material (a dump, a charge, a skill job, a claim package). Markers do not stamp leaves.
 Examples of legal markers (pattern only): `identity_rotating`, `late_cut_only`, `packing_illusion`, `silent_rename`, `second_copy_of_job`.
 ## Reason
 Keep a claim only with **both**:
