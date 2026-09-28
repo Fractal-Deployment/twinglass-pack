@@ -18,6 +18,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.m
 | `transformer-stage-atlas` | atlas | Stage map, not Omega |
 | `twinglass-dispatch` | CLI notify | Legal spawn note → workflow.agent() brief. Not a walker. |
 | `twinglass-tracker` | SI ledger | Gather debts; stagger meet until axes named. Not a reset. |
+| `presuppositional-rag` | active RAG | P1-P5 entailments -> 7 causal mechanisms -> active RAG with 4-stage provenance |
 ## Dead (do not attach)
 `morph-shared` `deep-think` `deep-research` `argueforge` `llmve-matmul-algebra` `transformer-matmul-geometry` `breakthrough-multi-path-thinking` `evidence-hourglass-research` `precise-activate` / `precise-activate-plugin`
 ## Stay plugins
@@ -38,6 +39,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 - `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
 - `/circular` → CIRCULAR.md (NS methods bound; not ten chairs)
+- `/presuppositional-rag` → PRESUPPOSITIONAL_RAG.md (P1-P5 active causal RAG)
 Do not load lattice and twin on the same charge.
 ## License
 MIT
