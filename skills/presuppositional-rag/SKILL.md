@@ -27,6 +27,7 @@ Load `../../PRESUPPOSITIONAL_RAG.md`, `../logic-ration-reason`, `../lcd-glossary
 | **Primary Retriever** | Provenance Enforcer | Fetches Layer C primary sources; enforces 4-stage provenance chain. |
 | **Semantic Integrity Agent** | Definition Gate | Enforces inferential load precision rule; intercepts term inversions. |
 | **Causal Discriminator** | Constraint Evaluator | Evaluates empirical fit against competing mechanisms; prunes failures. |
+| **Tetrahedral Critic** | 4-Track Evaluator | Decomposes pad into Bare Data, Lit Frame, Bias Audit, Phase Space. |
 | **Anomaly Agent** | Residue Handler | Isolates unexplained evidence and formulates new research vectors. |
 | **Synthesis Agent** | Model Assembler | Assembles validated survivors into provisional syntheses ($S$). |
 
@@ -40,9 +41,13 @@ $$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Propos
 4. **Retrieve**: Formulate active RAG charges for primary source documents.
 5. **Gate**: Evaluate Semantic Integrity (`judge_use`) and Laws of Formal Logic.
 6. **Discriminate**: Prune ungrounded branches (target $DFR \ge 0.40$).
-7. **Isolate**: Extract residual anomalies ($A$).
-8. **Export**: Emit machine-readable `TwinglassResearchNode` JSON record.
-9. **Escalate**: Request human operator review for potential axiom promotions ($P_n \rightarrow P_{n+1}?$).
+7. **Critique**: Execute 4-track Tetrahedral Critique (Bare data, Lit frame, Parametric bias audit, Geometric phase space).
+8. **Isolate & Route**: Extract residual anomalies ($A$). Evaluate Tri-State Exit Gate:
+   - `CONTINUE_RESEARCH`: Active exploration paths remain.
+   - `SLEEP_DOOR`: Needs interdependent neighbor variable; write sleep packet (`why_neighbor`, `otherTrackEvidence`).
+   - `CONSTRICTION_POINT`: Logical endpoint reached; hand off to `collate-hourglass` (`debate` or `synthesis`).
+9. **Export**: Emit machine-readable `TwinglassResearchNode` JSON record.
+10. **Escalate**: Request human operator review for potential axiom promotions ($P_n \rightarrow P_{n+1}?$).
 
 ## Do not
 - Allow empirical context to silently rewrite Layer A presuppositions.

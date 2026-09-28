@@ -8,6 +8,8 @@ import {
   validateProvenanceChain,
   evaluateCausalBranches,
   buildResearchNode,
+  executeTetrahedralCritique,
+  evaluateTriStateExitGate,
   type EmpiricalEvidence,
 } from "./presuppositional-rag.ts";
 
@@ -138,3 +140,71 @@ test("Research Node Schema: builds fully compliant TwinglassResearchNode", () =>
   assert.equal(node.competing_branch_ids.length, 7);
   assert.equal(node.unresolved_anomalies.length, 1);
 });
+
+test("3D Tetrahedral Critique: executes 4 tracks and generates structural critique report", () => {
+  const critique = executeTetrahedralCritique({
+    bareData: "All-to-all connectivity detected in 11-neuron cluster without transmission loss.",
+    literatureFrame: "Author asserts this proves non-classical quantum coherence in cortical columns.",
+    pretrainingBiasCheck: "Parametric prior defaults to synaptic neurotransmission. RAG prompt biased towards quantum narrative.",
+    phaseSpaceAnalysis: "Phase space reveals that classical cable theory with ephaptic coupling accounts for synchrony without quantum states.",
+  });
+
+  assert.match(critique.structural_critique_report, /Bare Data/);
+  assert.match(critique.structural_critique_report, /Literature Frame/);
+  assert.match(critique.structural_critique_report, /Bias Audit/);
+  assert.match(critique.structural_critique_report, /Geometric Phase Space/);
+});
+
+test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE_RESEARCH", () => {
+  const critique = executeTetrahedralCritique({
+    bareData: "Data",
+    literatureFrame: "Frame",
+    pretrainingBiasCheck: "Bias",
+    phaseSpaceAnalysis: "Trajectory",
+  });
+
+  // Test 1: Needs neighbor variable -> SLEEP_DOOR
+  const sleepGate = evaluateTriStateExitGate({
+    critique,
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: true,
+    neighborName: "Simplicial_Cliques",
+    isEndpointReached: false,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(sleepGate.decision, "SLEEP_DOOR");
+  assert.equal(sleepGate.sleepPacket?.otherTrackEvidence, "Simplicial_Cliques");
+
+  // Test 2: Endpoint reached with mutually exclusive accounts -> CONSTRICTION_POINT (debate)
+  const debateGate = evaluateTriStateExitGate({
+    critique,
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: true,
+    isMutuallyExclusive: true,
+  });
+  assert.equal(debateGate.decision, "CONSTRICTION_POINT");
+  assert.equal(debateGate.constrictionMode, "debate");
+
+  // Test 3: Endpoint reached with complementary accounts -> CONSTRICTION_POINT (synthesis)
+  const synthGate = evaluateTriStateExitGate({
+    critique,
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: true,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(synthGate.decision, "CONSTRICTION_POINT");
+  assert.equal(synthGate.constrictionMode, "synthesis");
+
+  // Test 4: Open research path -> CONTINUE_RESEARCH
+  const continueGate = evaluateTriStateExitGate({
+    critique,
+    hasUnresolvedAnomalies: true,
+    needsNeighborVariable: false,
+    isEndpointReached: false,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(continueGate.decision, "CONTINUE_RESEARCH");
+});
+

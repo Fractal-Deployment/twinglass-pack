@@ -215,6 +215,82 @@ class TwinglassResearchNode:
     next_research_action: str
 
 # =====================================================================
+# 4b. 3D TETRAHEDRAL SELF-CRITIQUE & TRI-STATE EXIT GATE
+# =====================================================================
+
+@dataclass
+class TetrahedralCritique:
+    track1_bare_data: str
+    track2_literature_frame: str
+    track3_prior_bias_audit: str
+    track4_phase_space_trajectory: str
+    structural_critique_report: str
+
+@dataclass
+class SleepPacket:
+    why_neighbor: str
+    other_track_evidence: str
+
+@dataclass
+class TriStateGateResult:
+    decision: str  # "CONTINUE_RESEARCH" | "SLEEP_DOOR" | "CONSTRICTION_POINT"
+    reason: str
+    sleep_packet: Optional[SleepPacket] = None
+    constriction_mode: Optional[str] = None  # "debate" | "synthesis"
+
+def execute_tetrahedral_critique(
+    bare_data: str,
+    literature_frame: str,
+    pretraining_bias_check: str,
+    phase_space_analysis: str
+) -> TetrahedralCritique:
+    report = (
+        "[STRUCTURAL SELF-CRITIQUE REPORT]\n"
+        f"1. Bare Data (Zero Interpretation): {bare_data}\n"
+        f"2. Literature Frame (Author Narrative): {literature_frame}\n"
+        f"3. Bias Audit (Parametric vs RAG Sycophancy): {pretraining_bias_check}\n"
+        f"4. Geometric Phase Space Trajectory: {phase_space_analysis}"
+    )
+    return TetrahedralCritique(
+        track1_bare_data=bare_data,
+        track2_literature_frame=literature_frame,
+        track3_prior_bias_audit=pretraining_bias_check,
+        track4_phase_space_trajectory=phase_space_analysis,
+        structural_critique_report=report
+    )
+
+def evaluate_tri_state_exit_gate(
+    critique: TetrahedralCritique,
+    has_unresolved_anomalies: bool,
+    needs_neighbor_variable: bool,
+    neighbor_name: Optional[str] = None,
+    is_endpoint_reached: bool = False,
+    is_mutually_exclusive: bool = False
+) -> TriStateGateResult:
+    # Gate 1: If neighbor variable is needed and cannot carry alone -> SLEEP_DOOR
+    if needs_neighbor_variable and neighbor_name:
+        return TriStateGateResult(
+            decision="SLEEP_DOOR",
+            reason=f"Pad reached structural boundary requiring interdependent variable: {neighbor_name}",
+            sleep_packet=SleepPacket(
+                why_neighbor=f"Cannot evaluate phase space without {neighbor_name}",
+                other_track_evidence=neighbor_name
+            )
+        )
+    # Gate 2: If endpoint reached -> CONSTRICTION_POINT (debate or synthesis)
+    if is_endpoint_reached:
+        return TriStateGateResult(
+            decision="CONSTRICTION_POINT",
+            reason="Research pad reached logical endpoint. Ready for collate-hourglass.",
+            constriction_mode="debate" if is_mutually_exclusive else "synthesis"
+        )
+    # Gate 3: Default -> CONTINUE_RESEARCH
+    return TriStateGateResult(
+        decision="CONTINUE_RESEARCH",
+        reason="Research pad has active exploration paths and requires further empirical friction."
+    )
+
+# =====================================================================
 # 5. MULTI-AGENT TWIN-LATTICE RESEARCH ENGINE
 # =====================================================================
 
@@ -296,7 +372,29 @@ class PresuppositionalTwinLatticeEngine:
         unresolved_anomaly = "Anomalous residue: 11D cavities collapse rapidly upon sensory cessation, leaving unexplained topological hysteresis."
         print(f" -> [ANOMALY DETECTED] {unresolved_anomaly}\n")
 
-        # Step 6: Machine-Readable Node Export (TwinglassResearchNode)
+        # Step 6: 3D Tetrahedral Self-Critique (4-Track Decomposition)
+        print("[DISCRIMINATING LATTICE: 3D TETRAHEDRAL SELF-CRITIQUE (4-TRACK DECOMPOSITION)]")
+        critique = execute_tetrahedral_critique(
+            bare_data="All-to-all connectivity detected in 11-neuron cluster forming simplicial cavities without transmission loss.",
+            literature_frame="Literature framing: Cortical columns process information through dynamic high-dimensional geometric structures.",
+            pretraining_bias_check="Model prior defaults to flat pairwise synaptic summation. Prompt/RAG bias towards exotic claims. Prior disentanglement: require topological vs classical discrimination.",
+            phase_space_analysis="Geometric phase space reveals that 11D simplicial cavities act as transient attractor basins requiring high-dimensional coordinates beyond flat Euclidean graphs."
+        )
+        print(critique.structural_critique_report + "\n")
+
+        # Step 7: Tri-State Exit Gate Evaluation
+        print("[LAYER B / GLASS: TRI-STATE EXIT GATE EVALUATION]")
+        exit_gate = evaluate_tri_state_exit_gate(
+            critique=critique,
+            has_unresolved_anomalies=True,
+            needs_neighbor_variable=False,
+            is_endpoint_reached=False,
+            is_mutually_exclusive=False
+        )
+        print(f" -> Gate Decision: {exit_gate.decision}")
+        print(f" -> Reason: {exit_gate.reason}\n")
+
+        # Step 8: Machine-Readable Node Export (TwinglassResearchNode)
         node_id = f"NODE-{uuid.uuid4().hex[:8].upper()}"
         primary_survivor = TwinglassResearchNode(
             node_id=node_id,
@@ -331,7 +429,7 @@ class PresuppositionalTwinLatticeEngine:
         )
         self.nodes[node_id] = primary_survivor
 
-        print("[STEP 7: MACHINE-READABLE NODE EXPORT (TwinglassResearchNode)]")
+        print("[STEP 8: MACHINE-READABLE NODE EXPORT (TwinglassResearchNode)]")
         print(json.dumps(asdict(primary_survivor), indent=2))
         print()
 
@@ -345,6 +443,7 @@ class PresuppositionalTwinLatticeEngine:
         print(f" -> Discriminative Friction Ratio (DFR): {dfr:.2f} (Target >= 0.40)")
         print(f" -> Provenance Density (PD): 1.00 (Target = 1.00)")
         print(f" -> Semantic Drift Rate: 0.00 (100% Locked)")
+        print(f" -> Exit Gate State: {exit_gate.decision}")
         print("=" * 80 + "\n")
 
 # =====================================================================

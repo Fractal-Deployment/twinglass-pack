@@ -266,6 +266,85 @@ export type TwinglassResearchNode = {
   next_research_action: string;
 };
 
+export type TetrahedralCritique = {
+  track1_bare_data: string;
+  track2_literature_frame: string;
+  track3_prior_bias_audit: string;
+  track4_phase_space_trajectory: string;
+  structural_critique_report: string;
+};
+
+export type TriStateExitDecision = "CONTINUE_RESEARCH" | "SLEEP_DOOR" | "CONSTRICTION_POINT";
+
+export type TriStateGateResult = {
+  decision: TriStateExitDecision;
+  reason: string;
+  sleepPacket?: {
+    whyNeighbor: string;
+    otherTrackEvidence: string;
+  };
+  constrictionMode?: "debate" | "synthesis";
+};
+
+export function executeTetrahedralCritique(opts: {
+  bareData: string;
+  literatureFrame: string;
+  pretrainingBiasCheck: string;
+  phaseSpaceAnalysis: string;
+}): TetrahedralCritique {
+  const report = [
+    "[STRUCTURAL SELF-CRITIQUE REPORT]",
+    `1. Bare Data (Zero Interpretation): ${opts.bareData}`,
+    `2. Literature Frame (Author Narrative): ${opts.literatureFrame}`,
+    `3. Bias Audit (Parametric vs RAG Sycophancy): ${opts.pretrainingBiasCheck}`,
+    `4. Geometric Phase Space Trajectory: ${opts.phaseSpaceAnalysis}`,
+  ].join("\n");
+
+  return {
+    track1_bare_data: opts.bareData,
+    track2_literature_frame: opts.literatureFrame,
+    track3_prior_bias_audit: opts.pretrainingBiasCheck,
+    track4_phase_space_trajectory: opts.phaseSpaceAnalysis,
+    structural_critique_report: report,
+  };
+}
+
+export function evaluateTriStateExitGate(opts: {
+  critique: TetrahedralCritique;
+  hasUnresolvedAnomalies: boolean;
+  needsNeighborVariable: boolean;
+  neighborName?: string;
+  isEndpointReached: boolean;
+  isMutuallyExclusive: boolean;
+}): TriStateGateResult {
+  // Gate 1: If neighbor variable is needed and cannot carry alone -> SLEEP_DOOR
+  if (opts.needsNeighborVariable && opts.neighborName) {
+    return {
+      decision: "SLEEP_DOOR",
+      reason: `Pad reached structural boundary requiring interdependent variable: ${opts.neighborName}`,
+      sleepPacket: {
+        whyNeighbor: `Cannot evaluate phase space without ${opts.neighborName}`,
+        otherTrackEvidence: opts.neighborName,
+      },
+    };
+  }
+
+  // Gate 2: If endpoint reached -> CONSTRICTION_POINT (debate or synthesis)
+  if (opts.isEndpointReached) {
+    return {
+      decision: "CONSTRICTION_POINT",
+      reason: "Research pad reached logical endpoint. Ready for collate-hourglass.",
+      constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
+    };
+  }
+
+  // Gate 3: Default -> CONTINUE_RESEARCH
+  return {
+    decision: "CONTINUE_RESEARCH",
+    reason: "Research pad has active exploration paths and requires further empirical friction.",
+  };
+}
+
 export function evaluateCausalBranches(
   branches: CausalMechanism[],
   evidence: EmpiricalEvidence[],
