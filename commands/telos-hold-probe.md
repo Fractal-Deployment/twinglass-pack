@@ -8,7 +8,7 @@ description: After rewrite and two legal diverges, the original telos must still
 ## Walk
 1. Write the **original telos** as one sentence. Do not paraphrase it later.
 2. Load `honest-prompt-rewrite`. Telos does not move. The working prompt may.
-3. First legal diverge (quoted `improperEvidence` AND `otherTrackEvidence`).
+3. First legal diverge (quoted `divergenceEvidence` AND `otherTrackEvidence`; parent route may remain valid).
 4. Second legal diverge (same lock).
 5. Restate. The restatement must contain the original telos string **or** record `SI redirect` (term/referent split named).
 ## Pass / fail
