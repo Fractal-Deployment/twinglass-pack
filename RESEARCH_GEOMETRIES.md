@@ -45,8 +45,8 @@ An Hourglass starts with two persistent research agents/directions.
 Each cycle:
 1. both agents research outward independently;
 2. the outside integrity pair watches both pads;
-3. when a real comparison is ready, both agents independently run the pre-debate tetrahedral self-critique;
-4. the integrity pair clears the two cleaned packets;
+3. when a real comparison is ready, the outside integrity pair classifies the relation; if it is a genuine debate path, both agents independently run the pre-debate tetrahedral self-critique;
+4. the integrity pair clears the evidence packets; after a debate-path tetrahedron it clears the cleaned packets again;
 5. the agents meet for **DEBATE or SYNTHESIS**;
 6. both agents go outward again:
    - after debate, each strengthens/revises its own account against the discovered incompatibility;
@@ -84,7 +84,7 @@ The orchestrator decides whether to pair. Pairing does not itself mean debate.
 
 ## 6. Pre-debate 3D tetrahedral self-critique
 
-The tetrahedron runs **only when an agent is preparing to enter a debate/comparison**.
+The tetrahedron runs **only when an agent is preparing to enter a debate**. Complementary synthesis does not require a tetrahedron merely to create symmetry.
 
 Each paired agent runs it on its **own** pad before seeing the other agent's cleaned argument:
 
@@ -97,7 +97,7 @@ The six cross-track relations test the agent against itself.
 
 **Tetrahedron = self-comparison, not opponent-comparison.**
 
-After each agent completes the tetrahedron, the outside Semantic Integrity + Data Integrity pair checks the cleaned packet. Only then is it debate-eligible.
+After each agent completes the tetrahedron, the outside Semantic Integrity + Data Integrity pair checks the cleaned packet again. Only then is it debate-eligible.
 
 Canonical order:
 
@@ -105,9 +105,11 @@ Canonical order:
 research
   -> evidence-backed divergence as needed
   -> outside pairing decision
-  -> each agent independently self-critiques
-  -> semantic + data integrity clearance
-  -> debate or synthesis
+  -> semantic + data integrity classification/clearance
+  -> if complementary: synthesis
+  -> if genuinely incompatible: each agent independently self-critiques
+       -> semantic + data integrity re-clearance
+       -> debate
   -> downstream adjudication
 ```
 
