@@ -401,7 +401,7 @@ def evaluate_tri_state_exit_gate(
     critique: Optional[TetrahedralCritique] = None,
     integrity: Optional[IntegrityClearance] = None
 ) -> TriStateGateResult:
-    """Route research; require tetrahedral self-critique only for an actual debate."""
+    """Route research; require tetrahedral self-critique before every comparison."""
     if needs_neighbor_variable and neighbor_name:
         return TriStateGateResult(
             decision="SLEEP_DOOR",
@@ -424,38 +424,29 @@ def evaluate_tri_state_exit_gate(
             reason="Unresolved evidence remains that warrants more research before this meet."
         )
 
-    # Complementary/convergent evidence can synthesize directly.
-    if not is_mutually_exclusive:
-        return TriStateGateResult(
-            decision="CONSTRICTION_POINT",
-            reason="Evidence packets are complementary/convergent. Ready for synthesis.",
-            constriction_mode="synthesis"
-        )
-
-    # A real incompatibility has emerged: now run the pre-debate tetrahedron.
     if critique is None:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Debate identified, but the debating agent has not completed its pre-debate tetrahedral self-critique."
+            reason="Comparison identified, but the participating agent has not completed the mandatory tetrahedral self-critique."
         )
 
     if not critique.is_self_critique_passed:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Pre-debate tetrahedral self-critique did not clear the pad."
+            reason="Mandatory pre-comparison tetrahedral self-critique did not clear the pad."
         )
 
     if integrity is None or not integrity.semantic_integrity_clear or not integrity.data_integrity_clear:
         reasons = "; ".join(integrity.reasons or []) if integrity else ""
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason=f"Pre-debate integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
+            reason=f"Pre-comparison integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
         )
 
     return TriStateGateResult(
         decision="CONSTRICTION_POINT",
-        reason="Debate identified; pre-debate tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
-        constriction_mode="debate"
+        reason="Mandatory tetrahedral self-critique and both outside integrity checks are complete. Ready to compare the cleaned research packets.",
+        constriction_mode="debate" if is_mutually_exclusive else "synthesis"
     )
 
 # =====================================================================
@@ -584,15 +575,15 @@ class PresuppositionalTwinLatticeEngine:
         unresolved_anomaly = "Anomalous residue: 11D cavities collapse rapidly upon sensory cessation, leaving unexplained topological hysteresis."
         print(f" -> [ANOMALY NOTE] {unresolved_anomaly}\n")
 
-        # Step 6: Ordinary research routing. Tetrahedral self-critique is PRE-DEBATE ONLY.
+        # Step 6: Ordinary research routing. Tetrahedral self-critique runs at EVERY comparison/constriction.
         print("[LAYER B / GLASS: RESEARCH ROUTING]")
         pairing_identified = False
-        debate_identified = False
+        relationship_is_mutually_exclusive = False
         critique = None
         integrity = None
 
-        if debate_identified:
-            print("[PRE-DEBATE: 3D TETRAHEDRAL SELF-CRITIQUE]")
+        if pairing_identified:
+            print("[PRE-COMPARISON: 3D TETRAHEDRAL SELF-CRITIQUE]")
             critique = execute_tetrahedral_critique(
                 bare_data="All-to-all connectivity detected in 11-neuron cluster forming simplicial cavities without transmission loss.",
                 literature_frame="Literature framing: Cortical columns process information through dynamic high-dimensional geometric structures.",
@@ -606,13 +597,13 @@ class PresuppositionalTwinLatticeEngine:
             )
             print(critique.structural_critique_report + "\n")
         else:
-            print(" -> No debate pending: tetrahedral self-critique correctly not run.\n")
+            print(" -> No comparison/constriction pending: tetrahedral self-critique correctly not run.\n")
 
         exit_gate = evaluate_tri_state_exit_gate(
             has_unresolved_anomalies=False,
             needs_neighbor_variable=False,
             is_endpoint_reached=pairing_identified,
-            is_mutually_exclusive=debate_identified,
+            is_mutually_exclusive=relationship_is_mutually_exclusive,
             critique=critique,
             integrity=integrity
         )
