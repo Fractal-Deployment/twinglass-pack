@@ -1,89 +1,104 @@
 # Workflow host — Grok Build CLI plug
-This file is **additive**. It does not replace `APPARATUS.md`, `CLONE_MECH.md`, or the engine.
-It names how this pack plugs into **Grok Build CLI workflows** so a spawn note is a notification, not a transcript clone.
 
-## Two rooms
+This file is additive. Canonical geometry lives in `RESEARCH_GEOMETRIES.md`.
+
+## Roles
+
 | Room | Job |
 |---|---|
-| This pack | Occupants, locks, spawn lock, diamond mutex, collapse-writes-prompt. |
-| Grok Build CLI | `workflow.agent()`, `parallel()`, `phase()`. Child sessions. Isolation = new-context. |
+| Research agents | Follow their assigned/evidence-discovered research direction under LRR. |
+| Orchestrator | Manages geometry, spawning, pairing, sleep/wake, and width. |
+| Semantic Integrity auditor | Watches referents, definitions, scope, and inference integrity. |
+| Data Integrity / LCD auditor | Watches what acquired data actually holds, provenance/function-set fit, duplicate/incomparable evidence. |
+| Grok Build CLI | `workflow.agent()`, isolation, `parallel()`, `phase()`. |
 
-The apparatus **conducts**. The CLI **walks**. Prefabricated — not invented per charge.
+The two auditors are outside the research lattice and do not occupy research width.
 
-## One apparatus, two start intents (not two products)
-Charge picks **one**. After start, one gait.
+## Geometry
 
-| Intent | When | Start width |
-|---|---|---|
-| **Start A — generate** | Partition unknown. Harvest function-sets. | Research priorities + situation. Not a fill-to-cap ritual. |
-| **Start B — converge** | Court-named packets already held. Eliminate or bolster, one synthesis, return to A. | N = size of the already-named pile (≤ hard STOP). |
-| **PAIR** | Gutter already named and one pad would clutter. Two isolated walkers. | 2. Not Start B. Complementary, not exclusive. |
-| **Twin** | Two accounts cannot both be true. **Separate charge.** XOR lattice. | 2. Never with lattice discovery. |
+Do not mash these:
 
-After B’s first synthesis, return to A on the survivor.
+- **Research Diamond** — one bounded divergent evidence round and one convergence.
+- **Hourglass** — two persistent research directions with repeated outward research and inward meets.
+- **Spectral lattice** — one researcher recursively spawns new research agents when evidence reveals a distinct route.
+- **Local lattice** — branch structure inside any research leg.
+- **3D tetrahedron** — pre-debate self-critique only. Each paired agent runs it independently on its own pad.
 
-## Geometries (do not mash “diamond”)
-| Geometry | Job | Width |
-|---|---|---|
-| 2D harvest (rhombus) | The walk. Split then join. Width lives here. | live walkers |
-| 3D octahedron | Critique of **one** pad. Mutex. Four equator paths, then a mark. | +0 |
-| join-hourglass | Packet product after isolated endpoints | +0 |
-| circular construct | Variable groups seated around V. Which name is live. | live walkers (default 1) |
+Legacy `diamondId` / `in-diamond` names are compatibility state for the older critique substrate, not the canonical Research Diamond.
 
-Occupants (walker, observer, referee, rewriter) are **roles**. They are not width.
+## Dispatch
 
-## Width (two counts — do not mash)
-| Count | What | Number |
-|---|---|---|
-| **Start** | Research priorities + situation | charge-sized |
-| **TYPICAL** | Healthy concurrent CLI `workflow.agent()` sessions | **≤ 25** |
-| **HARD STOP** | Operator crash at 30 active | **30** active |
-| **Engine `SENS_CAP`** | In-process lattice lock (tests, board `CAP: 10`) | **10** — do not delete |
-| Sleep / awaiting-meet | Parked pads | **not active** |
+A legal spectral hard note (`assertLegalSpawnNote`) requires:
 
-Active = walking or in-diamond (a live CLI/ACP session). Filling cap is not an init ritual.
+- `divergenceEvidence`
+- `otherTrackEvidence`
+- `necessaryBecause`
+- non-synonym route
+- not an assigned antithesis
 
-`W_{n+1} = Rewrite(Collapse(Meet(Ref(Octahedron(Harvest(W_n))))))`
-Collapse writes a **prompt**, not Omega. Project telos does not move. Intention may.
+The parent route need not be wrong. `cannotFollow` alone is not a spawn.
 
-## Prefabricated dispatch
-A legal hard note (`assertLegalSpawnNote`: `improperEvidence` AND `otherTrackEvidence`) becomes a **dispatch brief**:
-- persona (`lattice-walker` / `twin-walker` / `referee` / `rewriter`)
-- priors (LRR lock consume; parent locks; track tags)
-- vector / coordinate map (event-plane, G-definition, energy form, path form, units, tags)
+A legal note becomes an isolated dispatch brief:
+- persona
+- priors / locks
+- route / coordinate map
 - isolated charge
-- isolation: **new-context** (spawn + parent notes; empty history; not a fork of the scout list)
-- CLI tool: `workflow.agent()` · `subagent_type: explore` · `capability_mode: read-only`
+- `workflow.agent()` with new context
 
-`cannotFollow` alone is not a spawn. Synonym of a live lane refuses. Assigned antithesis refuses. Parent keeps walking.
+No parent transcript fork.
 
-ACP `session/new` is the same wire as `workflow.agent()` new-context. `session/fork` / `session/load` of the parent is the contamination path. Do not fuse T3 CLI with the desk.
+## Pairing and meet
 
-## Tracking (SI as ledger, not a smack-back)
-Open debts are gather items. Filling one **closes** it. The pad is **merged**, not wiped.
-Axes: event-plane · G-definition · energy · path · units · locks · residue.
+Auditors may flag **PAIR-CANDIDATE** relations. The orchestrator decides whether a meet is warranted.
 
-Three doors:
-| Door | When | Act |
-|---|---|---|
-| **Stagger** | Axes unnamed | Keep pads. Keep walking. Do not join yet. |
-| **Sleep** | Join attempted; no quotes / cannot carry neighbor | Hibernate. No wake. |
-| **Meet** | Axes named | Complementary → synthesis. Exclusive leftover → steelman. Incomparable → stay awake. |
+Before every debate/comparison:
 
-Complementary named planes (PAIR gutter) = **protocol synthesis**, not a miss. Numerical meet only when units join.
+1. Agent A independently performs its tetrahedral self-critique.
+2. Agent B independently performs its tetrahedral self-critique.
+3. Semantic Integrity clears both cleaned pads.
+4. Data Integrity/LCD clears both cleaned pads.
+5. `collate-hourglass` runs **DEBATE or SYNTHESIS**.
 
-Observer (when a meet is due) ≠ referee (SI + LCD + wake). Dual monitor cap unchanged: SI + LCD on the sentinel only.
+Debate is discovered, not assigned. Falsification or replacement may emerge only after evidence comparison.
 
-## Phases
-lock → dispatch → harvest(2D) → octahedron(3D, mutex) → spawn-gate → gather → meet → collapse → rewrite
-ring: LIVE_NAME schedule around V; Sleep writes packet; wake on quotes
+## Hourglass
 
-Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.md`.
+When two persistent research directions are selected, keep the same pair across repeated cycles:
+
+```text
+outward A + outward B
+-> pre-debate critique
+-> dual audit clearance
+-> debate/synthesis
+-> outward A + outward B again
+```
+
+Plan roughly 4–5 cycles, but terminate earlier when sufficient information closes the pair.
+
+## Width
+
+| Count | Meaning |
+|---|---|
+| Engine `SENS_CAP` | 10 — STOP, not a roster |
+| CLI healthy concurrent sessions | typically <=25 |
+| Hard STOP | 30 active |
+| Sleeping / awaiting meet | not active |
+| Auditors | not research width |
+| Tetrahedron | no new research agent |
+
+## Tracking
+
+Integrity debts are gather items, not reset commands. Filling a debt closes it; do not wipe the pad.
+
+Three operational doors:
+- **Stagger** — insufficiently named relation; keep researching.
+- **Sleep** — dependency/neighbor cannot proceed yet.
+- **Meet** — evidence relation is mature and both agents can prepare for pre-debate critique.
+
+## Ring / circular schedule
+
+`RING.md` and `CIRCULAR.md` schedule which locked variable/name is live. They do not replace the research geometries above and do not own meet.
 
 ## LLMVE
-Do **not** ingest Google Drive copies. They are past. Live meaning is `Fractal-Deployment/llmve-meaning` `VERSION` on GitHub (read the file; do not pin a number in this pack). This pack still only **points**. `llmve-factor-compute` stays HOLD. Do not mint Omega.
-Do not copy Energy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy. TwinGlass produces information that later hits tokenize.
 
-## Ring (additive)
-Load `RING.md` and `CIRCULAR.md`. `LIVE_NAME` is the schedule, not a standing team. Seats around V are the construct. Sleep packet. Wake on quotes. Default live width 1 on an LLMVE ring charge. Path wakes only when Energy quotes other-track. General charges do not mint mythos tags.
-This host still **does not own meet**.
+Do not ingest stale Google Drive copies as authority. Live meaning remains the GitHub `llmve-meaning` VERSION. Do not mint Omega or rewrite LLMVE meters in this pack.
