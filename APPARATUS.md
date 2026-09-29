@@ -1,44 +1,88 @@
-# Twinglass apparatus — two lattices
-Path: **Find → Maintain (pathing) → Let-fail.** Not hold a token. Not battle. Not Price’s Law as master.
-There are **two** lattices. Mixing them was the bug.
-## 1. Main lattice (where clones come from)
-Many agents. Many **legs**. Async. Under LRR. Not “find a fight.” Not “ask for divergence.” Not “spawn an enemy.”
-A walker on a leg finds **differential** data it cannot follow without cluttering its own argument — **evidence this track is not the proper track** and **evidence for a different track**. It writes a **hard note** and **keeps walking**. The note **spawns a clone onto a new leg** only via `assertLegalSpawnNote` (`improperEvidence` AND `otherTrackEvidence`). `cannotFollow` alone is not a spawn. Parent does not backtrack. Do not assign an opposite account to force a split. Same conclusion is allowed. Five notes can flush **five new legs at once** (SENS cap 10; STOP over cap).
-Walking legs may run in parallel (H0).
-Gates for a **new** track: evidence the current track is improper evidence for a different track marker `necessary_because` not a synonym of a live lane. Exclusive fight is **optional discovery**, not the goal.
-Logic-fail means the three laws broke on this track’s argument. Reaching a correct conclusion, agreeing with a sibling, or synthesizing is not a Logic fail. A false assigned persona is improper-track evidence.
-## 2. 3D diamond (internal critique of ONE agent)
-Not a spawn. Not a child research track.
-Inside diamond, equator paths are **per-path** `pendingProjection` — not a global freeze.
-Then that agent **continues its own main-lattice leg**, or **pauses (`awaiting-meet`)** until another diamond-complete leg is ready.
-## Converge (active)
-Two (or more) legs that have finished diamond: **debate** if they formed an exclusive empty meet under the lock, **synthesis** if complementary or they reached the same true conclusion. Synthesis is a good meet, not a miss. One comes out (synthesis or **correction**). That survivor may **enter diamond again** (critique the meet), then keep researching — including more clone-spawns.
-If after debate the accounts are still exclusive: `steelman-truth-tournament` (long form). Not the default meet. Never antithesis/battle as the gait.
+# TwinGlass apparatus — canonical orchestration
+
+Path: **Find -> Maintain (pathing) -> Let-fail.** Not battle. Not assigned thesis/antithesis.
+
+Read **RESEARCH_GEOMETRIES.md first**. It is the canonical geometry map.
+
+## Geometry separation
+
+TwinGlass has three orchestration geometries plus a local research lattice:
+
+1. **Research Diamond** — one bounded divergent evidence round, one convergence.
+2. **Hourglass** — two persistent research directions, repeated outward research and inward constriction.
+3. **Spectral lattice** — one researcher recursively spawns new researchers only when evidence reveals a distinct route.
+4. **Local research lattice** — the branching evidence trajectory inside any research leg.
+
+The **3D tetrahedron is none of those**. It is a pre-debate self-critique run independently by each paired agent.
+
+## Outside integrity envelope
+
+Every workflow is watched by exactly two outside integrity occupants:
+
+- `lcd-glossary-integrity` / Semantic Integrity — referent, definition, scope, inference integrity.
+- `lcd-lens` / Data Integrity — collection/function-set truth, provenance/data fit, claimed-not-held functions.
+
+The integrity pair watches pads continuously but does not become a research agent, does not choose conclusions, and does not assign an antithesis. A third monitor object is overload refuse.
+
+LRR remains on the research agent.
+
+## Spectral spawn gait
+
+The default lattice skill is the Spectral research topology.
+
+A walker keeps researching its live route. When evidence reveals a distinct route that deserves its own investigation, write a hard note and keep walking.
+
+`assertLegalSpawnNote` requires:
+- `divergenceEvidence` — quoted evidence of the distinct route;
+- `otherTrackEvidence` — quoted evidence naming that route/function-set;
+- `necessaryBecause` — telos-preserving reason to separate it;
+- not a live-lane synonym;
+- not an assigned antithesis.
+
+`cannotFollow` alone is not a spawn.
+
+The current route does **not** need to be false or improper. `improperEvidence` is a legacy field name and must not be interpreted as a present requirement.
+
+Walking legs may run in parallel. Parent keeps walking. SENS cap 10 remains a STOP, not a fill target.
+
+## Pre-debate gate
+
+When the orchestrator/integrity pair identifies two pads that are ready for comparison:
+
+1. pair the pads;
+2. each agent independently runs the 3D tetrahedral self-critique on its own pad;
+3. Semantic Integrity clears semantic/referential integrity;
+4. Data Integrity/LCD clears the acquired data/function set;
+5. only then hand the pair to `collate-hourglass` for **DEBATE or SYNTHESIS**.
+
+Debate is discovered, not assigned.
+
+Falsification/replacement can be a downstream result of the meet. It is not a search instruction.
+
+## Legacy critique substrate
+
+`engine/diamond-engine.ts`, `diamondId`, and `in-diamond` are compatibility names for the older internal-critique substrate. Do not infer the canonical Research Diamond from those names.
+
+Its `pendingProjection` remains **per-path**, not a global freeze.
+
+## Workflow host
+
+A legal divergence note becomes a Grok Build CLI dispatch brief via `twinglass-dispatch`: persona, priors, vector map, isolated charge, `workflow.agent()`, new-context. Not a transcript fork.
+
+SI/data-integrity monitors stay outside research width.
+
+Width:
+- engine `SENS_CAP = 10` remains;
+- concurrent CLI sessions typical <=25;
+- hard STOP 30 active;
+- sleeping / awaiting-meet pads are not active.
+
 ## Do not
-- Treat diamond as “spawn five critique children.”
-- Hunt `~/.grok/sessions`.
-- Load twin for discovery.
-- Mint path capacity.
 
-## Workflow host (additive)
-Does not replace the two lattices above.
-A legal hard note is a **Grok Build CLI notification** (`twinglass-dispatch`): persona, priors, vector map, isolated charge, `workflow.agent()`, new-context. Not a transcript fork. Parent keeps walking. `cannotFollow` alone is still not a spawn. `assertLegalSpawnNote` unchanged.
-SI (`twinglass-tracker`) gathers. Meet staggers until axes are named. Complementary named planes synthesize protocols. Collapse writes a prompt, not Omega.
-Prefab: `WORKFLOW_HOST.md` + `.grok/workflows/twinglass.rhai`.
-Drive LLMVE copies are past. Do not ingest. Meaning pointer stays `llmve-meaning`.
-
-Operator identity (additive; does not delete the two-lattice geometry split above):
-**one apparatus, two start intents** (A generate / B converge). After start, one gait. PAIR is clutter-two. Twin is XOR leftover, separate charge.
-Width: engine `SENS_CAP` 10 stays. Concurrent CLI sessions typical ≤25, hard STOP 30 active. Start size = research priorities + situation. Sleeping pads are not active. Occupants are not width.
-Harvest (2D) is the walk. Octahedron (3D) is critique of one pad (width +0).
-
-## Ring (additive — circular schedule)
-Does not replace the two lattices or the workflow host.
-TwinGlass is the gait of a turn. The ring schedules `LIVE_NAME`. Sleep writes a packet (live count drops). Wake on quotes + referee + width. No calendar wake. No second ten-pod roster. `RING.md`.
-This section **does not own meet**.
-
-## Circular construct (additive — around V)
-Does not replace the ring schedule. Same process. `CIRCULAR.md`.
-Variable groups seated around the interdependence object. Seats are names, not owner folders. LLMVE: Energy, Path, Mythos. General charges do not mint those tags.
-Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only.
-After the last named neighbor sleeps, the first name re-enters only on new quotes.
+- Do not create proof-team vs disproof-team research.
+- Do not spawn an assigned opposite.
+- Do not require the parent route to be wrong before a valid spectral spawn.
+- Do not run the tetrahedron continuously during research.
+- Do not call the tetrahedron the Research Diamond.
+- Do not let auditors choose the conclusion.
+- Do not hunt session logs or mint unsupported meters.
