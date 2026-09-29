@@ -51,13 +51,13 @@ No parent transcript fork.
 
 Auditors may flag **PAIR-CANDIDATE** relations. The orchestrator decides whether a meet is warranted.
 
-Before every debate/comparison:
+Before every genuine debate:
 
-1. Agent A independently performs its tetrahedral self-critique.
-2. Agent B independently performs its tetrahedral self-critique.
-3. Semantic Integrity clears both cleaned pads.
-4. Data Integrity/LCD clears both cleaned pads.
-5. `collate-hourglass` runs **DEBATE or SYNTHESIS**.
+1. Semantic Integrity + Data Integrity/LCD first classify and clear the paired evidence.
+2. If complementary: `collate-hourglass` runs **SYNTHESIS**; no tetrahedron is required merely to synthesize.
+3. If genuinely incompatible: Agent A and Agent B each independently perform their own tetrahedral self-critique.
+4. Semantic Integrity + Data Integrity/LCD re-clear both cleaned debate packets.
+5. `collate-hourglass` runs **DEBATE**.
 
 Debate is discovered, not assigned. Falsification or replacement may emerge only after evidence comparison.
 
@@ -67,13 +67,13 @@ When two persistent research directions are selected, keep the same pair across 
 
 ```text
 outward A + outward B
--> pre-debate critique
--> dual audit clearance
--> debate/synthesis
+-> dual audit classification
+-> complementary: synthesis
+-> incompatible: A tetrahedron + B tetrahedron -> dual re-clearance -> debate
 -> outward A + outward B again
 ```
 
-Plan roughly 4–5 cycles, but terminate earlier when sufficient information closes the pair.
+Roughly 4–5 cycles is a planning horizon, not a forced stop. Terminate only when sufficient information closes the pair; otherwise continue.
 
 ## Width
 
