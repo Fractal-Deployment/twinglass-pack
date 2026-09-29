@@ -223,7 +223,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     isMutuallyExclusive: false,
   });
   assert.equal(anomalyBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(anomalyBlockedGate.reason, /Unresolved empirical anomalies/);
+  assert.match(anomalyBlockedGate.reason, /Unresolved evidence remains/);
 
   // Test 5: Endpoint claimed BUT critique failed (zero causal friction) -> BLOCKS constriction
   const failingCritique = executeTetrahedralCritique({
@@ -255,7 +255,7 @@ test("Ordinary research gathering does not require tetrahedral critique", () => 
     isMutuallyExclusive: false,
   });
   assert.equal(gate.decision, "CONTINUE_RESEARCH");
-  assert.match(gate.reason, /Keep walking/);
+  assert.match(gate.reason, /Keep gathering research/);
 });
 
 test("A proposed debate requires both outside integrity auditors after self-critique", () => {
