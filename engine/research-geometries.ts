@@ -22,8 +22,12 @@ export type PreDebatePacket = {
   audit: IntegrityAudit;
 };
 
+export function integrityReady(packet: PreDebatePacket): boolean {
+  return packet.audit.semanticClean && packet.audit.dataClean;
+}
+
 export function preDebateReady(packet: PreDebatePacket): boolean {
-  return packet.selfCritiqueComplete && packet.audit.semanticClean && packet.audit.dataClean;
+  return packet.selfCritiqueComplete && integrityReady(packet);
 }
 
 export type EvidenceLeg = {
@@ -104,6 +108,7 @@ export type Hourglass = {
   leftDirection: string;
   rightDirection: string;
   round: number;
+  /** Planning/review horizon only. Reaching it never forces closure without sufficient information. */
   maxRounds: number;
   state: "researching" | "complete";
   history: {
@@ -147,13 +152,16 @@ export function meetHourglass(
   if (opts.left.agentId !== hourglass.leftAgent || opts.right.agentId !== hourglass.rightAgent) {
     throw new Error("hourglass meet must use the persistent pair");
   }
-  if (!preDebateReady(opts.left) || !preDebateReady(opts.right)) {
-    throw new Error("hourglass meet requires self-critique plus semantic and data integrity clearance");
+  if (!integrityReady(opts.left) || !integrityReady(opts.right)) {
+    throw new Error("hourglass meet requires semantic and data integrity clearance");
+  }
+  if (opts.mode === "debate" && (!preDebateReady(opts.left) || !preDebateReady(opts.right))) {
+    throw new Error("hourglass debate requires each agent's own tetrahedral self-critique plus dual integrity clearance");
   }
   if (!opts.summary.trim()) throw new Error("hourglass meet needs a summary");
 
   const history = [...hourglass.history, { round: hourglass.round, mode: opts.mode, summary: opts.summary }];
-  const complete = opts.sufficientInformation || hourglass.round >= hourglass.maxRounds;
+  const complete = opts.sufficientInformation;
   return {
     ...hourglass,
     history,
