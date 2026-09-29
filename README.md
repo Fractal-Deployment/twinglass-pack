@@ -11,14 +11,14 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.m
 | `llmve-translate` | translate | Collected math onto Mythos/friction. Not LCD. |
 | `reason-telos-lookup` | hierarchy | What may be sacrificed for what |
 | `honest-prompt-rewrite` | rewrite | Apply LRR to the working prompt |
-| `collate-hourglass` | hourglass meet | Persistent paired research: outward evidence -> pre-debate critique -> debate/synthesis -> outward again |
+| `collate-hourglass` | hourglass meet | Persistent paired research: outward evidence -> dual audit -> synthesis OR debate-path tetrahedra -> debate -> outward again |
 | `twinglass-lattice` | spectral walk / diverge | Spawn only on evidence-backed distinct routes; parent keeps walking |
 | `twinglass-twin` | twin | Known two-track. Leftover only. Never with lattice. |
 | `steelman-truth-tournament` | exclusive leftover | Tournament **after** exclusive leftover |
 | `transformer-stage-atlas` | atlas | Stage map, not Omega |
 | `twinglass-dispatch` | CLI notify | Legal spawn note → workflow.agent() brief. Not a walker. |
 | `twinglass-tracker` | SI ledger | Gather debts; stagger meet until axes named. Not a reset. |
-| `presuppositional-rag` | active RAG | Evidence-first causal research; outside SI+data auditors; tetrahedron only pre-debate |
+| `presuppositional-rag` | active RAG | Evidence-first causal research; outside SI+data auditors; tetrahedron only before genuine debate |
 ## Dead (do not attach)
 `morph-shared` `deep-think` `deep-research` `argueforge` `llmve-matmul-algebra` `transformer-matmul-geometry` `breakthrough-multi-path-thinking` `evidence-hourglass-research` `precise-activate` / `precise-activate-plugin`
 ## Stay plugins
