@@ -10,8 +10,8 @@ ENG="$ROOT/engine/main-lattice.ts"
 if [[ -f "$CMD" ]]; then
   grep -q 'diamondId' "$CMD" || red "diamond-mutex missing diamondId"
   grep -qi 'hibernate' "$CMD" || red "diamond-mutex missing hibernate"
-  grep -q 'enterCritiqueDiamond' "$CMD" || red "diamond-mutex missing enterCritiqueDiamond"
+  grep -q 'enterPreDebateCritique' "$CMD" || red "diamond-mutex missing enterPreDebateCritique"
 fi
-grep -q 'another leg is already in diamond' "$ENG" || red "engine mutex string drifted"
+grep -q 'another leg is already in pre-debate critique' "$ENG" || red "engine mutex string drifted"
 if [[ "$fail" -ne 0 ]]; then echo "DIAMOND_MUTEX_RED fail=$fail"; exit 1; fi
 exit 0
