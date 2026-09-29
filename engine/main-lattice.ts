@@ -1,4 +1,4 @@
-/** Main lattice (clone legs) ≠ 3D diamond (one agent's internal critique). */
+/** Spectral-style clone lattice. NOTE: legacy `diamond` API names below refer to an older critique mutex, NOT the canonical Diamond research round. See RESEARCH_GEOMETRIES.md. */
 import {
   markSouth,
   noteDivergence,
@@ -127,7 +127,7 @@ export function diverge(
 ): MainLattice {
   return spawnLegsBurst(noteOnLeg(m, parentId, note), parentId);
 }
-/** One agent enters 3D diamond (internal critique). All other legs hibernate. */
+/** Legacy compatibility API: enter the older single-agent critique mutex. Not the canonical Diamond and not the pre-meet tetrahedral critique. */
 export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice {
   if (m.diamondId) throw new Error("another leg is already in diamond");
   const leg = m.legs.find((l) => l.id === legId);
@@ -142,7 +142,7 @@ export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice
   });
   return { ...m, diamondId: legId, resume, legs };
 }
-/** Diamond finished: this leg awaits a partner. Restore others. */
+/** Legacy critique finished: this leg awaits a partner. Restore others. */
 export function completeCritiqueDiamond(
   m: MainLattice,
   legId: string,
