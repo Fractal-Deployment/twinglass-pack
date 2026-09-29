@@ -10,10 +10,10 @@ if grep -n 'as never' "$ROOT/engine/spawn-lock.test.ts"; then
 else
   pass "spawn-lock.test.ts has no as never"
 fi
-if grep -n 'improperEvidence?.trim' "$ROOT/engine/main-lattice.ts"; then
-  red "assertLegalSpawnNote optional-chains required improperEvidence"
+if grep -n 'divergenceEvidence?.trim' "$ROOT/engine/main-lattice.ts"; then
+  red "assertLegalSpawnNote optional-chains required divergenceEvidence"
 else
-  pass "improperEvidence.trim without ?."
+  pass "divergenceEvidence.trim without ?."
 fi
 if grep -n 'otherTrackEvidence?.trim' "$ROOT/engine/main-lattice.ts"; then
   red "assertLegalSpawnNote optional-chains required otherTrackEvidence"
