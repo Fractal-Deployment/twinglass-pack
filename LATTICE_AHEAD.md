@@ -1,6 +1,8 @@
 # Five-ahead lattices
 
 **Canonical geometry map:** `RESEARCH_GEOMETRIES.md`. Historical `diamond`/`diamondId` API names below must not be read as the canonical Diamond research round.
+
+**Canonical geometry map:** `RESEARCH_GEOMETRIES.md`. Historical `diamond`/`diamondId` API names below must not be read as the canonical Diamond research round.
 Agent Five = this session (login Jadon-Fox). Pack only. 
 Not Ω. Not Mythos recrawl. Not orch/sensors.
 Telos of the **pack**: a methodology so an agent stays locked on **telos** under Logic Ration Reason, by **branching** when a track is improper *and* another track is evidenced, and **converging** by debate or synthesis.
