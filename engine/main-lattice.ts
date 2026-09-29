@@ -1,4 +1,4 @@
-/** Main lattice (clone legs) ≠ 3D diamond (one agent's internal critique). */
+/** Spectral research lattice. Research Diamond, Hourglass, and pre-debate tetrahedron are distinct geometries. */
 import {
   markSouth,
   noteDivergence,
@@ -26,6 +26,7 @@ export type MainLattice = {
   charge: string;
   legs: LatticeLeg[];
   sens: number;
+  /** Legacy compatibility key: current pre-debate critique mutex holder. Not the Research Diamond. */
   diamondId: string | null;
   resume: Record<string, LegState>;
 };
@@ -48,8 +49,8 @@ function assertLegalSpawnNote(
   note: Omit<HardNote, "id">,
   live: string[],
 ): void {
-  if (!note.improperEvidence.trim()) {
-    throw new Error("spawn refuses: improper-track evidence required");
+  if (!note.divergenceEvidence.trim()) {
+    throw new Error("spawn refuses: evidence-backed divergence required");
   }
   if (!note.otherTrackEvidence.trim()) {
     throw new Error("spawn refuses: other-track evidence required");
@@ -127,9 +128,9 @@ export function diverge(
 ): MainLattice {
   return spawnLegsBurst(noteOnLeg(m, parentId, note), parentId);
 }
-/** One agent enters 3D diamond (internal critique). All other legs hibernate. */
-export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice {
-  if (m.diamondId) throw new Error("another leg is already in diamond");
+/** One already-paired agent enters its own pre-debate self-critique. All other legs hibernate. */
+export function enterPreDebateCritique(m: MainLattice, legId: string): MainLattice {
+  if (m.diamondId) throw new Error("another leg is already in pre-debate critique");
   const leg = m.legs.find((l) => l.id === legId);
   if (!leg) throw new Error("unknown leg");
   if (leg.state !== "walking") throw new Error("only walking enters diamond");
@@ -142,8 +143,8 @@ export function enterCritiqueDiamond(m: MainLattice, legId: string): MainLattice
   });
   return { ...m, diamondId: legId, resume, legs };
 }
-/** Diamond finished: this leg awaits a partner. Restore others. */
-export function completeCritiqueDiamond(
+/** Pre-debate self-critique finished: this leg awaits the authorized meet. Restore others. */
+export function completePreDebateCritique(
   m: MainLattice,
   legId: string,
   restatement: string,
@@ -164,13 +165,18 @@ export function completeCritiqueDiamond(
     }),
   };
 }
+/** @deprecated Legacy name; use enterPreDebateCritique. */
+export const enterCritiqueDiamond = enterPreDebateCritique;
+/** @deprecated Legacy name; use completePreDebateCritique. */
+export const completeCritiqueDiamond = completePreDebateCritique;
+
 export function awaiting(m: MainLattice): LatticeLeg[] {
   return m.legs.filter((l) => l.state === "awaiting-meet");
 }
 /**
- * Two (or more) diamond-complete legs meet.
- * Debate if they diverged; synthesis if complementary. Not battle.
- * Exclusive leftover after debate → steelman-truth-tournament (not this function).
+ * Two pre-debate-critique-complete legs meet after outside SI + data-integrity clearance.
+ * Debate only if gathered accounts are genuinely incompatible; synthesis if complementary.
+ * Replacement/falsification are downstream outcomes of evidence comparison, never assigned research roles.
  */
 export function converge(
   m: MainLattice,
@@ -183,7 +189,7 @@ export function converge(
   const b = m.legs.find((l) => l.id === bId);
   if (!a || !b) throw new Error("unknown leg");
   if (a.state !== "awaiting-meet" || b.state !== "awaiting-meet") {
-    throw new Error("converge waits until both finished diamond");
+    throw new Error("converge waits until both finished pre-debate critique");
   }
   if (!restatement.trim()) throw new Error("meet needs a restatement");
   const emitId = nid(m.legs.length + 1);
