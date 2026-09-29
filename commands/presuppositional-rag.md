@@ -1,6 +1,6 @@
 ---
 name: presuppositional-rag
-description: Execute Presuppositional Twin-Lattice RAG research. Expands 7 causal mechanisms from P1-P5 entailments, enforces 4-stage primary provenance, and prunes via discriminating lattice.
+description: Execute Presuppositional Twin-Lattice research. Gather evidence along divergent non-dialectic routes under semantic/data integrity; self-critique only at pre-meet constriction, then adjudicate.
 ---
 # /presuppositional-rag
 Load `PRESUPPOSITIONAL_RAG.md`, `skills/presuppositional-rag`, `logic-ration-reason`, `lcd-glossary-integrity`.
@@ -14,10 +14,11 @@ RESEARCH_Q: Q_1 .. Q_k
 BRANCHES_M: M_1 .. M_7 (causal, not dialectic)
 ACTIVE_RAG_PROVENANCE: primary-doc -> quote -> context -> derived
 SI_GATE: HOLD | REDIRECT (precision proportional to inferential load)
-TETRAHEDRAL_CRITIQUE: bare data | literature frame | bias audit | phase space trajectory
-FALSIFIED_BRANCHES: count / total (target DFR >= 0.40)
+INTEGRITY_ENVELOPE: semantic auditor | data/LCD auditor
+TETRAHEDRAL_CRITIQUE: PRE-MEET ONLY | bare data | literature frame | bias audit | phase space trajectory
 ANOMALIES: unexplained residue
-EXIT_GATE: CONTINUE_RESEARCH | SLEEP_DOOR (sleep packet) | CONSTRICTION_POINT (debate | synthesis)
+ADJUDICATION: none during active gathering | synthesis | replacement | falsification | unresolved at convergence
+EXIT_GATE: CONTINUE_RESEARCH | SLEEP_DOOR (sleep packet) | CONSTRICTION_POINT (then pre-meet critique + integrity clearance + debate/synthesis)
 SURVIVOR_NODE: TwinglassResearchNode ID
 HUMAN_ESCALATION: true | false (P_n -> P_{n+1}?)
 ```
@@ -26,16 +27,17 @@ HUMAN_ESCALATION: true | false (P_n -> P_{n+1}?)
 1. **Orient (Layer A)**: Select presupposition $P_n \in \{P_1..P_5\}$. Do not allow empirical context to overwrite $P_n$.
 2. **Project (Rationalization)**: Generate logical entailment $E_i$ and discriminating research question $Q_i$.
 3. **Branch**: Expand 7 competing causal explanations ($M_1..M_7$). No binary pro/con camps.
-4. **Active RAG**: Formulate targeted queries for disconfirming observations. Fetch primary sources with 4-stage provenance chain.
-5. **Constrain (Logic)**: Apply Semantic Integrity gate and Laws of Formal Logic. Term inversions trigger obtuse redirect. Prune falsified branches.
-6. **Tetrahedral Critique**: Run the 4-track decomposition:
-   - Track 1: Bare Data Inscription (zero interpretation).
-   - Track 2: Literature / Narrative Frame (author framing audit).
-   - Track 3: Prior Bias Audit (parametric priors vs RAG sycophancy).
-   - Track 4: Geometric Phase Space Trajectory (attractor basins & causal friction test).
-7. **Select & Exit Gate (Reason)**: Evaluate surviving branches relative to Telos. Isolate anomalies. Evaluate Tri-State Exit Gate:
-   - `CONTINUE_RESEARCH`: Active exploration paths remain.
-   - `SLEEP_DOOR`: Needs interdependent neighbor variable; write sleep packet (`why_neighbor`, `otherTrackEvidence`).
-   - `CONSTRICTION_POINT`: Logical endpoint reached; hand off to `collate-hourglass` (`debate` or `synthesis`).
-   Export `TwinglassResearchNode` JSON.
-8. **Escalate**: If residual anomaly challenges foundational axioms, halt for human escalation before modifying presuppositions.
+4. **Active RAG / Research Walk**: Gather real evidence along the current route. Follow relevant evidence; do not search under an assigned falsifier and do not create thesis/antithesis roles. A genuine additional route may spawn a separate research agent.
+5. **Outside Integrity Envelope**: The Semantic Integrity auditor watches referents/inference. The Data Integrity/LCD auditor watches source identity, provenance, measurements, duplication, and observation/interpretation separation. They flag/hold but do not research the answer.
+6. **Route**: Continue gathering until the path has enough information for a legitimate meet, needs a neighbor variable, or reaches a structural boundary:
+   - `CONTINUE_RESEARCH`: keep walking and gathering.
+   - `SLEEP_DOOR`: needs interdependent neighbor variable; write sleep packet (`why_neighbor`, `otherTrackEvidence`).
+   - `CONSTRICTION_POINT`: a pairing/comparison is now warranted.
+7. **Pre-Meet Tetrahedral Self-Critique**: Only after a pairing/constriction is identified, each participating agent independently critiques its own pad:
+   - T1: Bare Data Inscription.
+   - T2: Literature / Narrative Frame.
+   - T3: Prior Bias / RAG Echo Audit.
+   - T4: Current Causal Trajectory.
+   The Semantic + Data auditors must clear both pads.
+8. **Compare / Adjudicate**: Debate only a real discovered incompatibility; synthesize complementary accounts. Replacement or falsification may occur here from the assembled evidence. Never assign falsification as the research gait. Export the resulting `TwinglassResearchNode` or unresolved survivor set.
+9. **Escalate**: If residual anomaly challenges foundational axioms, halt for human escalation before modifying presuppositions.
