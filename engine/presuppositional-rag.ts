@@ -174,6 +174,7 @@ export type CausalMechanism = {
   description: string;
   generatingConstraint: string;
   testablePredictions: string[];
+  /** Post-gather adjudication metadata only. Never a retrieval/search assignment. */
   falsificationCriteria: string[];
   falsificationReason?: string;
 };
@@ -446,7 +447,17 @@ export type TriStateGateResult = {
     whyNeighbor: string;
     otherTrackEvidence: string;
   };
-  constrictionMode?: "debate" | "synthesis";
+};
+
+export type IntegrityPairAudit = {
+  semanticIntegrityClean: boolean;
+  dataIntegrityClean: boolean;
+  reasons: string[];
+};
+
+export type PreDebateClearance = {
+  ready: boolean;
+  reasons: string[];
 };
 
 export function executeTetrahedralCritique(opts: {
@@ -556,66 +567,68 @@ export function executeTetrahedralCritique(opts: {
   };
 }
 
+/**
+ * Research routing only. The tetrahedral self-critique is deliberately NOT part
+ * of this function: it runs after pairing, immediately before debate/comparison.
+ * Unresolved anomalies travel with the pad and may be the reason to pair.
+ */
 export function evaluateTriStateExitGate(opts: {
-  critique: TetrahedralCritique;
-  hasUnresolvedAnomalies: boolean;
   needsNeighborVariable: boolean;
   neighborName?: string;
   isEndpointReached: boolean;
-  isMutuallyExclusive: boolean;
+  hasSufficientInformation?: boolean;
+  /** Compatibility inputs from v1.5 callers; ignored for research routing. */
+  critique?: TetrahedralCritique;
+  hasUnresolvedAnomalies?: boolean;
+  isMutuallyExclusive?: boolean;
 }): TriStateGateResult {
-  // Gate 1: If neighbor variable is needed and cannot carry alone -> SLEEP_DOOR
   if (opts.needsNeighborVariable && opts.neighborName) {
     return {
       decision: "SLEEP_DOOR",
       reason: `Pad reached structural boundary requiring interdependent variable: ${opts.neighborName}`,
       sleepPacket: {
-        whyNeighbor: `Cannot evaluate phase space without ${opts.neighborName}`,
+        whyNeighbor: `Cannot carry the research dependency without ${opts.neighborName}`,
         otherTrackEvidence: opts.neighborName,
       },
     };
   }
 
-  // Gate 2: Unresolved anomalies prevent constriction -> CONTINUE_RESEARCH
-  if (opts.hasUnresolvedAnomalies) {
-    return {
-      decision: "CONTINUE_RESEARCH",
-      reason: "Unresolved empirical anomalies / residue remain. Constriction blocked until residue is resolved or branched.",
-    };
-  }
-
-  // Gate 3: Tetrahedral Critique failures prevent constriction -> CONTINUE_RESEARCH
-  if (!opts.critique.isSelfCritiquePassed) {
-    const reasons: string[] = [];
-    if (opts.critique.relations.t2_t3_sycophancy_audit.isEcho) {
-      reasons.push("Sycophancy detected: model echoes retrieved narrative without independent derivation");
-    }
-    if (!opts.critique.relations.t3_t4_causal_friction.deflected) {
-      reasons.push("Zero causal friction: model parametric attractor was not deflected by empirical evidence");
-    }
-    return {
-      decision: "CONTINUE_RESEARCH",
-      reason: `Self-critique gate blocked constriction: ${reasons.join("; ") || "Critique conditions unsatisfied"}.`,
-    };
-  }
-
-  // Gate 4: Endpoint reached with clean critique and zero anomalies -> CONSTRICTION_POINT
-  if (opts.isEndpointReached) {
+  if (opts.isEndpointReached || opts.hasSufficientInformation) {
     return {
       decision: "CONSTRICTION_POINT",
-      reason: "Research pad reached logical endpoint with clean tetrahedral critique and zero unresolved anomalies. Ready for collate-hourglass.",
-      constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
+      reason: "Research pad has sufficient information for pairing/comparison. Preserve anomalies in the packet; do not adjudicate them here.",
     };
   }
 
-  // Gate 5: Default -> CONTINUE_RESEARCH
   return {
     decision: "CONTINUE_RESEARCH",
-    reason: "Research pad has active exploration paths and requires further empirical friction.",
+    reason: "Research pad has active evidence paths and should keep researching.",
   };
 }
 
-export function evaluateCausalBranches(
+/**
+ * Pre-debate gate. Each paired agent first performs its own tetrahedral
+ * self-critique; then the outside Semantic Integrity + Data Integrity pair
+ * independently clears the cleaned packet.
+ */
+export function evaluatePreDebateClearance(
+  critique: TetrahedralCritique,
+  audit: IntegrityPairAudit,
+): PreDebateClearance {
+  const reasons = [...audit.reasons];
+  if (!critique.isSelfCritiquePassed) reasons.push("tetrahedral self-critique not clean");
+  if (!audit.semanticIntegrityClean) reasons.push("semantic integrity not clear");
+  if (!audit.dataIntegrityClean) reasons.push("data integrity not clear");
+  return { ready: reasons.length === 0, reasons };
+}
+
+/**
+ * POST-GATHER adjudication only.
+ * Research agents do not call this to choose what to retrieve or to manufacture
+ * a falsifier. It may be invoked only after independently gathered evidence is
+ * brought to comparison/constriction.
+ */
+export function adjudicateCausalBranches(
   branches: CausalMechanism[],
   evidence: EmpiricalEvidence[]
 ): {
@@ -688,6 +701,9 @@ export function evaluateCausalBranches(
 
   return { survivors, falsified, anomalies };
 }
+
+/** @deprecated v1.5 compatibility alias. Use only for post-gather adjudication. */
+export const evaluateCausalBranches = adjudicateCausalBranches;
 
 export function buildResearchNode(opts: {
   nodeId: string;
