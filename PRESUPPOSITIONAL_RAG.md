@@ -1,306 +1,307 @@
 # Presuppositional Twin-Lattice RAG Research Architecture
 **Class:** ADDON / EXTENSION SPECIFICATION  
-**Version:** 1.5.0  
+**Version:** 1.6.0  
 **Repository:** `Fractal-Deployment/twinglass-pack`  
-**Governing Invariant:**
-$$\boxed{\text{Ontology generates the search space; reality determines what survives.}}$$
+**Geometry authority:** `RESEARCH_GEOMETRIES.md`
 
----
+**Governing invariant**
+[
+\boxed{\text{Ontology generates the search space; reality determines what survives.}}
+]
 
-## 1. Overview & Purpose
+## 1. Purpose
 
-This addon extends the Twinglass multi-agent architecture with a **Presupposition-Anchored RAG Research Machine**. Traditional RAG (Retrieval-Augmented Generation) is passive:
-$$\text{query} \rightarrow \text{retrieve documents} \rightarrow \text{generate answer}$$
-This leads to sycophancy, confirmation bias, RAG echo chambers, and "ontology laundering" (allowing retrieved context to silently alter foundational assumptions or definitions).
+The Presuppositional RAG layer turns retrieval into **evidence-following research**, not a falsifier search.
 
-The Presuppositional Twin-Lattice RAG architecture replaces passive retrieval with active, causal, anomaly-driven scientific discovery:
-$$\text{Presuppositional Axes } (P_n) \rightarrow \text{Entailments } (E) \rightarrow \text{Questions } (Q) \rightarrow \text{Competing Mechanisms } (M_{1..k}) \rightarrow \text{Active Retrieval } (R) \rightarrow \text{Discrimination} \rightarrow \text{Anomalies } (A) \rightarrow \text{Synthesis } (S) \rightarrow P_{n+1}?$$
+Canonical research order:
 
----
-
-## 2. Three Epistemic Layers
-
-The architecture structurally isolates three distinct operational planes:
-
-```mermaid
-flowchart TD
-    subgraph LAYER_A ["LAYER A: Presuppositional / Orienting Horizon (IMMUTABLE)"]
-        P1["P1: Antecedent Principles (Logos)"]
-        P2["P2: Hierarchical Differentiation (Telos)"]
-        P3["P3: Pattern Recognition"]
-        P4["P4: Causal Interaction"]
-        P5["P5: Instrumental Abstraction"]
-    end
-
-    subgraph LAYER_B ["LAYER B: Mediating Logic / Glass (DISCRIMINATING INTERFACE)"]
-        GLOSS["Glossary Locks & Definition Precision"]
-        LOGIC["3 Laws of Formal Logic"]
-        COGNITION["Cognitive Flow: Rationalization -> Logic -> Reason"]
-        GEN_LAT["Generative Lattice (Search Expansion)"]
-        DISC_LAT["Discriminating Lattice (Search Constraint)"]
-    end
-
-    subgraph LAYER_C ["LAYER C: Empirical / Retrieval Domain (DYNAMIC CONTEXT)"]
-        PRIMARY["Primary Sources & Datasets"]
-        ACTIVE_RAG["Targeted Active RAG Queries"]
-        FRICTION["Interactive Code Execution & Environmental Friction"]
-    end
-
-    LAYER_A -->|"Generates orientation & initial questions"| LAYER_B
-    LAYER_B -->|"Issues dynamic query charges & active RAG"| LAYER_C
-    LAYER_C -->|"Returns primary empirical evidence"| LAYER_B
-    LAYER_B -->|"Enforces SI, prunes, & reroots prompts"| LAYER_A
+```text
+orient under P1-P5
+-> formulate research question
+-> follow real primary evidence
+-> record observations / interpretations / anomalies separately
+-> spawn a new spectral route only when evidence reveals a distinct route
+-> outside Semantic Integrity + Data Integrity/LCD watch the pads
+-> orchestrator identifies a legitimate pair
+-> EACH paired agent independently runs the 3D tetrahedral self-critique
+-> both cleaned packets pass semantic + data integrity clearance
+-> collate-hourglass runs debate or synthesis
+-> only then may adjudication yield synthesis / replacement / falsification / unresolved
 ```
 
-### Layer A — Presuppositional / Orienting Horizon (Immutable)
-- **Contents**: Presuppositions **P1–P5**, Logos, Telos, locked project terminology, and explicit ontological foundations.
-- **Rule**: Empirical context *cannot* directly modify Layer A. Updates to presuppositions ($P_n \rightarrow P_{n+1}?$) are never automatic and require formal human-in-the-loop synthesis gates.
+No agent is assigned an antithesis. No retrieval planner is told to disprove another route. Falsification is a possible **result of completed evidence comparison**.
 
-### Layer B — Mediating Logic / Glass (Discriminating Interface)
-- **Contents**: Glossary locks, Laws of Formal Logic (Identity, Non-Contradiction, Excluded Middle), Semantic Integrity monitors, inferential rules, entailment generators, causal decomposers, and anomaly detectors.
-- **Rule**: Operates as an impenetrable glass interface. When empirical data or model projections diverge from locked definitions, Layer B generates an **Inversion / Subversion Redirect Signal** rather than allowing definitions to drift.
+## 2. Epistemic layers
 
-### Layer C — Empirical / Retrieval Domain (Dynamic Context)
-- **Contents**: Primary research papers, historical sources, datasets, simulation outputs, web retrieval, and experimental measurements.
-- **Rule**: Raw empirical context remains uninterpreted until passed through Layer B's semantic integrity and logic checks.
+### Layer A — Presuppositional / orienting horizon
+P1-P5, Logos, Telos, and locked project terminology orient the search space. Empirical context does not silently rewrite Layer A. Any proposed change to a presupposition requires explicit human review.
 
----
+### Layer B — Logic / integrity interface
+Layer B keeps distinctions intact:
+- identity, non-contradiction, excluded middle where applicable;
+- Semantic Integrity on terms/referents/scope;
+- Data Integrity/LCD on what the acquired data actually holds;
+- provenance validation;
+- observation vs interpretation separation;
+- anomaly/residue recording.
 
-## 3. Twin-Lattice Topology
+### Layer C — empirical / retrieval domain
+Primary papers, datasets, simulations, web evidence, code/tool output, and measurements.
 
-```mermaid
-flowchart LR
-    subgraph LG ["Generative Lattice (Search Space Expansion)"]
-        E["Entailment Generator"]
-        Q["Question Generator"]
-        M["7 Competing Causal Mechanisms"]
-    end
+Layer C supplies evidence. It does not carry authority to silently redefine Layer A.
 
-    subgraph LD ["Discriminating Lattice (Search Space Constraint)"]
-        SI["Semantic Integrity & Definition Guard"]
-        PRUNE["Contradiction & Logic Pruner"]
-        PROV["Primary Source Provenance Validator"]
-        ANOM["Residue & Anomaly Discriminator"]
-    end
+## 3. Research topology
 
-    LG -->|"Proposes candidate branches (M_1..k)"| LD
-    LD -->|"Prunes, flags anomalies, & sends reroot signals"| LG
+This addon uses the canonical geometries from `RESEARCH_GEOMETRIES.md`.
+
+- **Research Diamond:** one bounded divergent evidence round, one convergence.
+- **Hourglass:** two persistent directions, repeated outward research and inward meetings.
+- **Spectral lattice:** one researcher recursively spawns isolated research agents when evidence reveals distinct routes.
+- **Local lattice:** branching evidence trajectory inside a research leg.
+- **3D tetrahedron:** pre-debate self-critique only; it is not the Diamond.
+
+For Presuppositional RAG, the default discovery gait is the **Spectral lattice**.
+
+## 4. Candidate causal mechanisms
+
+A research question may instantiate multiple causal mechanism families such as:
+
+1. M1 — common generating constraint.
+2. M2 — independent convergent mechanisms.
+3. M3 — generic mathematical attractor.
+4. M4 — selection / sampling effect.
+5. M5 — measurement or processing artifact.
+6. M6 — genuine structural isomorphism.
+7. M7 — unidentified residual mechanism / open mechanism space.
+
+These are **candidate research routes**, not proof/disproof teams.
+
+A mechanism may carry:
+- expected observations;
+- boundary conditions;
+- open questions;
+- post-gather contradiction/falsification criteria.
+
+Those criteria are **adjudication metadata**. They are not retrieval instructions and do not tell a research agent what evidence it must find.
+
+Predictions may guide where evidence is likely to be informative. The agent still records what reality supplies, including contrary, neutral, or unresolved evidence.
+
+## 5. Evidence-first Active RAG
+
+The retrieval planner asks:
+
+> What primary evidence is relevant to this research question or route?
+
+It does **not** ask by default:
+
+> What can I find to kill this branch?
+
+A live research pad should keep at least these distinct:
+
+```text
+source / artifact identity
+literal observation or exact source span
+empirical context / method
+derived interpretation
+uncertainty / anomaly
+route relevance
 ```
 
-### Generative Lattice ($L_G$)
-- **Objective**: Expands search space under Layer A constraints.
-- **Outputs**: Logical entailments ($E$), candidate analogies, cross-domain structural isomorphisms, competing causal mechanisms ($M_{1..k}$), predicted observations, and candidate interventions.
-- **Width**: Starts with 1 live walker; expands via legal hard notes (`improperEvidence` AND `otherTrackEvidence`) up to `SENS_CAP = 10`.
+### 4-stage provenance chain
 
-### Discriminating Lattice ($L_D$)
-- **Objective**: Constrains search space and prunes ungrounded branches.
-- **Evaluation**: Validates causal sufficiency, checks boundary conditions, identifies confounders, enforces primary source provenance, and executes 3D Octahedron internal critique on finished pads.
+[
+\boxed{\text{Primary Source}}
+\rightarrow
+\boxed{\text{Literal Observation / Span}}
+\rightarrow
+\boxed{\text{Empirical Context}}
+\rightarrow
+\boxed{\text{Derived Interpretation}}
+]
 
----
+The first three fields may feed evidence collection. The derived interpretation must remain separately identifiable so interpretation cannot masquerade as raw evidence.
 
-## 4. Causal Multi-Branching (Evidence-Driven Discrimination)
+### SSRL anchor fields
 
-Research branches are **not** dialectic "pro vs. con" camps. For every observed phenomenon $O$, the engine generates $k$ competing causal explanations, each instantiated with **mechanism-specific testable predictions** and **falsification criteria**:
+- `locator`
+- `sourceDigest`
+- `exactSpanMatch`
 
-$$\text{Observation } O \implies \begin{cases}
-M_1: \text{Common generating constraint} & [\text{Predictions: packing limits; Falsifier: zero density correlation}] \\
-M_2: \text{Independent convergent mechanisms} & [\text{Predictions: multi-lineage rules; Falsifier: strictly singular developmental pathway}] \\
-M_3: \text{Generic mathematical attractor} & [\text{Predictions: configuration model; Falsifier: high-D cavities impossible in random nulls}] \\
-M_4: \text{Selection effect / sampling bias} & [\text{Predictions: disappearing in global view; Falsifier: persistence across whole reconstructions}] \\
-M_5: \text{Measurement artifact / noise} & [\text{Predictions: destroyed by varying parameters; Falsifier: dynamic stimulus-locked cycles}] \\
-M_6: \text{Genuine cross-scale isomorphism} & [\text{Predictions: volume scales with }\Phi\text{; Falsifier: zero information-integration efficacy}] \\
-M_7: \text{Unidentified residual mechanism} & [\text{Predictions: residual variance unaccounted; Falsifier: variance fully closed by } M_{1..6}]
-\end{cases}$$
+`FixtureEvidenceRetriever` is an offline test harness. `LiveEvidenceRetriever` is the extension point for SSRL/search/vector/tool-backed evidence.
 
-### Conformance Rule on Survival:
-$$\boxed{\text{Ontology generates candidate mechanisms; empirical evidence determines which survive.}}$$
-The engine does **not** hardcode which branches live or die by mechanism ID. Instead, empirical evidence propositions are matched directly against the falsification criteria and predictions of each candidate branch.
+## 6. Spectral divergence
 
----
+A new research agent is spawned only when acquired evidence reveals a genuinely distinct route.
 
-## 5. Active RAG & Primary-Source Provenance Chain (SSRL Identity Binding)
+Canonical note fields:
+- `divergenceEvidence` — quoted evidence that the distinct route exists;
+- `otherTrackEvidence` — quoted evidence naming the route/function-set;
+- `necessaryBecause` — why separating the route preserves the telos.
 
-### Provenance Chain Invariant
-Every empirical claim must maintain an unbroken 4-stage link:
-$$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Proposition / Observation}} \rightarrow \boxed{\text{Empirical Implementation}} \rightarrow \boxed{\text{Derived Causal Interpretation}}$$
+The parent path does **not** have to be wrong.
 
-### SSRL EvidenceAnchor Binding
-To move beyond loose string validation, the engine supports cryptographic/physical anchor binding:
-1. **`locator`**: Exact structural citation (e.g., `Section 2.1, p. 4`, line offset, or URI fragment).
-2. **`sourceDigest`**: SHA-256 digest of the primary source artifact.
-3. **`exactSpanMatch`**: Verbatim substring verification asserting that `literalQuote` exists inside the primary source text. Tautological self-paraphrase (`derivedInterpretation == literalQuote`) is explicitly rejected.
+Refuse:
+- missing route evidence;
+- live-lane synonym;
+- assigned antithesis;
+- artificial proof/disproof split.
 
-### Retrieval Architecture: Fixture vs. Live Active RAG
-The engine implements an abstract `EvidenceRetriever` interface:
-- **`FixtureEvidenceRetriever`**: Deterministic test harness providing primary literature evidence shapes (e.g., Markram, Reimann et al., *Frontiers in Computational Neuroscience 2017* in-silico neocortical microcircuit reconstruction) for offline verification.
-- **`LiveEvidenceRetriever`**: Pluggable backend attaching to external search, hybrid embeddings, SSRL registries, or interactive tool friction.
+Parent keeps walking.
 
----
+## 7. Outside integrity envelope
 
-## 6. Semantic Integrity & Definition Precision
+Every workflow has two outside auditors.
 
-### Core Definition Rules
-1. **Inferential Load Precision Rule**:
-   $$\text{Precision}(\text{Definition}) \propto \text{Inferential Load}(\text{Definition})$$
-2. **Constraint Invariant**: Definitions are not arbitrary labels attached after the fact; definitions constrain what can subsequently be inferred.
-3. **Drift Detection**: Term inversion (name kept, referent discarded or flipped) triggers an obtuse redirect signal.
+### Semantic Integrity auditor
+Watches:
+- referent fidelity;
+- definition drift;
+- scope drift;
+- contradiction;
+- inference changes hidden by vocabulary.
 
----
+### Data Integrity / LCD auditor
+Watches:
+- source/provenance integrity;
+- what data actually holds;
+- claimed-not-held functions;
+- incomparable quantities;
+- duplicate evidence presented as independent evidence;
+- evidence/interpretation contamination.
 
-## 7. Epistemic Status Taxonomy (15 States)
+These auditors do not choose the conclusion and do not occupy research width.
 
-Every node in the Twin-Lattice memory space is explicitly tagged:
-- `PRESUPPOSITION`
-- `DEFINITION`
-- `LOGICAL_ENTAILMENT`
-- `HYPOTHESIS`
-- `CANDIDATE_MECHANISM`
-- `ANALOGY`
-- `ISOMORPHISM_CANDIDATE`
-- `EMPIRICAL_OBSERVATION`
-- `MEASURED_RESULT`
-- `HISTORICAL_CLAIM`
-- `INTERPRETATION`
-- `CONTRADICTION`
-- `UNRESOLVED_ANOMALY`
-- `FALSIFIED_BRANCH`
-- `PROVISIONAL_SYNTHESIS`
+A pair is debate-eligible only when both auditors clear the cleaned packets.
 
----
+## 8. Pairing
 
-## 8. Environmental Friction Hierarchy
+The outside auditors may flag a **PAIR-CANDIDATE** when two independently developed pads have a mature relationship.
 
-Grounding strength strictly follows:
-$$\boxed{\text{Parametric Generation}} < \boxed{\text{Retrieval-Grounded Generation (RAG)}} < \boxed{\text{Interactive Causal Grounding (Code / Tool Friction)}}$$
+The orchestrator decides whether to pair.
 
----
+Pairing may discover:
+- complementarity -> synthesis candidate;
+- genuine incompatibility -> debate candidate;
+- incomparability -> no forced meet;
+- insufficient maturity -> continue research.
 
-## 9. Machine-Readable Research Node Schema
+Debate is discovered, not assigned.
+
+## 9. Pre-debate 3D tetrahedral self-critique
+
+The tetrahedron runs **after pairing and immediately before debate/comparison**.
+
+Each agent runs it independently on its own pad before seeing the other agent's cleaned argument.
+
+### Four vertices
+
+1. **T1 Bare Data Inscription** — raw measurements, counts, coordinates, exact source spans.
+2. **T2 Literature / Narrative Frame** — author or consensus interpretation.
+3. **T3 Prior Bias / Pre-training Disentanglement** — parametric prior and RAG-echo audit.
+4. **T4 Current Causal / Phase-Space Account** — the mechanism the agent is prepared to carry into comparison.
+
+### Six self-relations
+
+- T1 ↔ T2 — inferential load added.
+- T1 ↔ T3 — parametric-prior divergence.
+- T2 ↔ T3 — sycophancy / echo audit.
+- T1 ↔ T4 — explanatory fit.
+- T2 ↔ T4 — mechanism/parsimony comparison.
+- T3 ↔ T4 — causal-friction / prior-deflection check.
+
+[
+\boxed{\text{Tetrahedron = self-comparison, not opponent-comparison.}}
+]
+
+The tetrahedron cleans an account. It does not produce an opponent and does not itself falsify another research path.
+
+## 10. Research routing before the tetrahedron
+
+During research, the tri-state router asks only what should happen to the **research pad**:
+
+- `CONTINUE_RESEARCH` — useful evidence paths remain.
+- `SLEEP_DOOR` — the pad requires a neighbor/dependency it cannot carry alone.
+- `CONSTRICTION_POINT` — sufficient information or a logical endpoint makes the pad eligible for pairing/comparison.
+
+Unresolved anomalies are carried into the comparison packet; they do not automatically mean "kill the branch" and they do not automatically prevent pairing.
+
+The tetrahedral critique is not part of ordinary research routing.
+
+## 11. Pre-debate clearance
+
+After pairing:
+
+```text
+Agent A own pad -> A tetrahedron
+Agent B own pad -> B tetrahedron
+
+A cleaned pad ----                   -> Semantic Integrity + Data Integrity clearance -> meet
+B cleaned pad ----/
+```
+
+A failed self-critique or failed integrity audit sends that agent back to research/repair before the meet.
+
+## 12. Hourglass meet
+
+`collate-hourglass` owns the meeting.
+
+- **DEBATE** only when gathered evidence produced genuinely incompatible accounts.
+- **SYNTHESIS** when accounts are complementary.
+- After the meet, persistent hourglass agents normally research outward again.
+- Replacement or falsification may emerge from the comparison.
+- Exclusive unresolved residue may escalate to `steelman-truth-tournament`.
+
+## 13. Post-gather adjudication
+
+Only after evidence has been gathered and compared may the system classify an account as:
+- strengthened;
+- narrowed;
+- complementary;
+- replaced;
+- contradicted;
+- falsified;
+- unresolved.
+
+The active researcher never receives "falsify Mx" as its research telos.
+
+## 14. Metrics
+
+### Provenance Density (PD)
+Tracks how much empirical material satisfies the required provenance level.
+
+### Semantic Drift Rate / integrity events
+Tracks detected definition/referent violations and redirects.
+
+### DFR
+If retained, DFR is **retrospective only**:
+
+[
+DFR = \frac{\text{branches ultimately falsified after adjudication}}
+{\text{branches examined}}
+]
+
+There is **no target DFR** and it exerts **zero steering pressure** on retrieval or research. A round in which nothing is falsified can still be excellent research.
+
+### Tetrahedral controller scores
+Values such as independence/friction scores are controller heuristics unless separately calibrated. They are not probabilities of truth.
+
+## 15. Machine-readable research state
+
+A research node records the live route and evidence without forcing a winner:
 
 ```json
 {
-  "node_id": "NODE-F931BD29",
-  "parent_node_id": null,
+  "node_id": "NODE-...",
   "originating_proposition": "P3",
-  "claim_statement": "Recurring neural connectivity patterns reflect underlying structural constraints on information flow.",
-  "epistemic_status": "PROVISIONAL_SYNTHESIS",
-  "causal_mechanism": {
-    "name": "M6_cross_scale_isomorphism",
-    "description": "Cortical column simplicial cavities mirror high-dimensional manifold information integration."
-  },
-  "expected_observations": ["Dynamic high-dimensional cavities form under stimulation."],
-  "disconfirming_observations": ["Cavities collapse to 2D flat graphs under stimulation."],
-  "retrieved_evidence": [
-    {
-      "source_id": "DOC-NEURO-2024-BLUEBRAIN",
-      "provenance_chain": {
-        "primary_doc": "Blue Brain Project Topological Connectomics Dataset",
-        "literal_quote": "Neuron groups assemble into all-to-all connected cliques forming up to 11-dimensional geometric simplicial complexes...",
-        "empirical_context": "Digital reconstruction of cortical column under sensory stimulation.",
-        "derived_interpretation": "Connectivity exhibits high-dimensional simplicial cavities beyond flat 2D/3D embeddings."
-      }
-    }
-  ],
-  "semantic_locks": [{"term": "Logos", "locked_def": "Antecedent ordering principle..."}],
-  "competing_branch_ids": ["M1_generating_constraint", "M2_independent_convergence", "M3_math_attractor"],
-  "contradictions": ["Flat 2D Euclidean models fail to predict 11D clique density."],
-  "unresolved_anomalies": ["11D cavities collapse leaving unexplained topological hysteresis."],
-  "confidence_score": 0.92,
-  "next_research_action": "Execute Tier 3 interactive simulation."
+  "claim_statement": "...",
+  "epistemic_status": "CANDIDATE_MECHANISM",
+  "expected_observations": [],
+  "retrieved_evidence": [],
+  "semantic_locks": [],
+  "competing_branch_ids": [],
+  "unresolved_anomalies": [],
+  "next_research_action": "..."
 }
 ```
 
----
-
-## 10. Evaluation Metrics
-
-1. **Discriminative Friction Ratio ($DFR$)**:
-   $$DFR = \frac{\text{Count of Falsified / Pruned Branches}}{\text{Total Generated Causal Branches}} \ge 0.40$$
-2. **Provenance Density ($PD$)**:
-   $$PD = \frac{\text{Primary Source Quotes with Full 4-Stage Provenance}}{\text{Total Empirical Claims}} = 1.00$$
-3. **Zero Semantic Drift Rate ($SDR$)**: 100% detection and redirection of term inversions.
-
----
-
-## 11. 3D Tetrahedral Self-Critique Modeling Function (Cross-Track Relational Discrimination)
-
-To eliminate sycophancy, confirmation bias, and RAG echo chambers, every research pad evaluated in the Discriminating Lattice ($L_D$) must undergo a **4-Track Tetrahedral Critique**. Inside the design, the tetrahedron is not decorative geometry; it defines **four mutually discriminating surfaces** and the **six relational edges** connecting them:
-
-```mermaid
-flowchart TD
-    subgraph TETRAHEDRON ["3D Tetrahedral Self-Critique Geometry"]
-        T1["Track 1: Bare Data Inscription\n(Zero Interpretation / Raw Numbers / Direct Inscriptions)"]
-        T2["Track 2: Literature / Narrative Frame\n(Author Framing / Consensus Paradigm / Model Imposition)"]
-        T3["Track 3: Prior Bias & Pre-Training Disentanglement\n(Parametric Weights Prior Audit vs RAG Sycophancy)"]
-        T4["Track 4: Geometric Phase Space & Trajectory Neutrality\n(Phase Space Attractor Basins / Causal Friction Test)"]
-    end
-    T1 ---|"T1 <-> T2: Inferential Load Added"| T2
-    T2 ---|"T2 <-> T3: Sycophancy & Echo Audit"| T3
-    T3 ---|"T3 <-> T4: Causal Friction Test"| T4
-    T4 ---|"T1 <-> T4: Causal Explanatory Fit"| T1
-    T1 ---|"T1 <-> T3: Parametric Prior Divergence"| T3
-    T2 ---|"T2 <-> T4: Mechanism Parsimony Delta"| T4
-```
-
-### The 4 Vertices:
-1. **Track 1 (Bare Data Inscription)**: Pure, uninterpreted empirical inscriptions (measurements, counts, coordinates, literal quotes, instrument traces). Strictly stripped of causal vocabulary or theoretical adjectives.
-2. **Track 2 (Literature / Narrative Frame)**: The theoretical framing, narrative, or interpretation imposed upon the data by the original authors or academic consensus.
-3. **Track 3 (Prior Bias & Pre-Training Disentanglement)**: Explicit audit of the LLM's own internal parametric priors (training distribution attractors). Isolates what the model would assert in the absence of retrieved text.
-4. **Track 4 (Geometric Phase Space & Trajectory Neutrality)**: Maps competing causal explanations onto dynamical phase space trajectories and attractor basins. Evaluates whether empirical evidence possesses sufficient causal friction to alter the trajectory away from the parametric default.
-
-### The 6 Cross-Track Relational Discriminations:
-1. **$T_1 \leftrightarrow T_2$ (Inferential Load Gap)**: Quantifies the inferential distance added between bare data and author narrative. Detects unwarranted speculative leaps.
-2. **$T_1 \leftrightarrow T_3$ (Parametric Prior Divergence)**: Disentangles what the model's pre-training weights would assert from what the empirical observation literally recorded.
-3. **$T_2 \leftrightarrow T_3$ (Sycophancy & Echo Audit)**: Tests whether the model is independently evaluating the claim or merely echoing retrieved phrases. A high echo rate blocks verification.
-4. **$T_1 \leftrightarrow T_4$ (Trajectory Explanatory Fit)**: Evaluates which candidate dynamical phase space trajectories directly predict the raw inscription.
-5. **$T_2 \leftrightarrow T_4$ (Mechanism Parsimony Delta)**: Tests whether the literature's complex narrative mechanism survives comparison against more parsimonious dynamical trajectories (e.g. classical geometric packing vs exotic quantum coherence).
-6. **$T_3 \leftrightarrow T_4$ (Causal Friction Test)**: Measures whether empirical evidence exerted sufficient causal friction to deflect the model from its default parametric attractor basin ($DFR > 0.30$).
-
----
-
-## 12. Tri-State Exit Gate Mechanics (Active Routing Precedence)
-
-When an active research walker completes an empirical cycle or reaches a structural boundary, it passes through the **Tri-State Exit Gate**. The gate enforces strict epistemic precedence where anomalies and failed critiques actively block premature constriction:
-
-```mermaid
-stateDiagram-v2
-    [*] --> TetrahedralCritique
-    TetrahedralCritique --> TriStateGate
-    
-    state TriStateGate {
-        direction TB
-        c1: Needs Neighbor Variable?
-        c2: Unresolved Anomalies Present?
-        c3: Self-Critique Passed?
-        c4: Logical Endpoint Reached?
-    }
-    
-    TriStateGate --> SLEEP_DOOR: Gate 1: Yes (Needs Interdependent Variable)
-    TriStateGate --> CONTINUE_RESEARCH: Gate 2: Yes (Anomalous Residue Blocks Constriction)
-    TriStateGate --> CONTINUE_RESEARCH: Gate 3: No (Sycophancy / Zero Friction Blocks Constriction)
-    TriStateGate --> CONSTRICTION_POINT: Gate 4: Yes (Clean Critique + Zero Anomalies + Endpoint)
-    TriStateGate --> CONTINUE_RESEARCH: Gate 5: Default (Active Exploration Paths)
-    
-    SLEEP_DOOR --> HibernationLedger: Write Sleep Packet (why_neighbor, otherTrackEvidence)
-    CONSTRICTION_POINT --> CollateHourglass: Handoff (debate if exclusive, synthesis if complementary)
-    CONTINUE_RESEARCH --> ActiveRAGFriction: Next targeted research cycle
-```
-
-### Precedence Hierarchy:
-1. **Gate 1 (`SLEEP_DOOR`)**:
-   - **Condition**: `needsNeighborVariable == true` and `neighborName` is set.
-   - **Action**: Research pad cannot proceed alone. Emits structured **Sleep Packet** (`why_neighbor`, `otherTrackEvidence`), parks in the hibernation ledger, and frees execution capacity.
-2. **Gate 2 (`CONTINUE_RESEARCH` via Anomaly Guard)**:
-   - **Condition**: `hasUnresolvedAnomalies == true`.
-   - **Action**: Constriction is **strictly blocked**. Unexplained anomalous residue cannot be swept into a clean consensus. The gate routes to further targeted empirical friction or explicit anomaly branching.
-3. **Gate 3 (`CONTINUE_RESEARCH` via Self-Critique Guard)**:
-   - **Condition**: `critique.isSelfCritiquePassed == false` (e.g., $T_2 \leftrightarrow T_3$ detected sycophancy echo or $T_3 \leftrightarrow T_4$ measured zero causal deflection).
-   - **Action**: Constriction is **strictly blocked**. Requires independent prior disentanglement or targeted disconfirming tests.
-4. **Gate 4 (`CONSTRICTION_POINT`)**:
-   - **Condition**: `isEndpointReached == true` AND `hasUnresolvedAnomalies == false` AND `critique.isSelfCritiquePassed == true`.
-   - **Action**: Hands off clean survivors to `collate-hourglass`:
-     - **Mode `debate`**: If surviving accounts are mutually exclusive.
-     - **Mode `synthesis`**: If surviving accounts represent complementary facets across scales.
-5. **Gate 5 (`CONTINUE_RESEARCH` Default)**:
-   - **Condition**: Open research pad with pending empirical queries.
-
+A post-meet adjudication record may later attach synthesis/replacement/falsification status. Research collection and adjudication remain separate.
