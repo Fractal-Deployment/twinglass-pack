@@ -13,7 +13,7 @@ TwinGlass has three orchestration geometries plus a local research lattice:
 3. **Spectral lattice** — one researcher recursively spawns new researchers only when evidence reveals a distinct route.
 4. **Local research lattice** — the branching evidence trajectory inside any research leg.
 
-The **3D tetrahedron is none of those**. It is a pre-debate self-critique run independently by each paired agent.
+The **3D tetrahedron is none of those**. It is a pre-debate self-critique run independently by each agent only on a genuine debate path.
 
 ## Outside integrity envelope
 
@@ -50,10 +50,11 @@ Walking legs may run in parallel. Parent keeps walking. SENS cap 10 remains a ST
 When the orchestrator/integrity pair identifies two pads that are ready for comparison:
 
 1. pair the pads;
-2. each agent independently runs the 3D tetrahedral self-critique on its own pad;
-3. Semantic Integrity clears semantic/referential integrity;
-4. Data Integrity/LCD clears the acquired data/function set;
-5. only then hand the pair to `collate-hourglass` for **DEBATE or SYNTHESIS**.
+2. Semantic Integrity + Data Integrity/LCD classify and clear the relation;
+3. if complementary, hand directly to `collate-hourglass` for **SYNTHESIS**;
+4. if genuinely incompatible, each agent independently runs the 3D tetrahedral self-critique on its own pad;
+5. the outside integrity pair re-clears the cleaned debate packets;
+6. only then hand the pair to `collate-hourglass` for **DEBATE**.
 
 Debate is discovered, not assigned.
 
