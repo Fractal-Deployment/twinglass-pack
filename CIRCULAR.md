@@ -62,7 +62,7 @@ The NS exclusive split is the **twin door**, leftover only. Default gait is not 
 ## Two rooms (do not mash)
 | Room | Job |
 |---|---|
-| TwinGlass turn | harvest → outside SI+data audit → spawn-gate → stagger/sleep → pre-debate tetrahedron only if meeting → meet → rewrite |
+| TwinGlass turn | harvest → outside SI+data audit → spawn-gate → stagger/sleep → incompatible meet: pre-debate tetrahedron → debate; complementary meet: synthesis → rewrite |
 | Circular construct | seats around V. `LIVE_NAME`. Sleep packet. Wake on quotes. NS methods bound as the table above. |
 
 ## Seats
@@ -106,9 +106,9 @@ New quotes = the sleeping neighbor's `otherTrackEvidence` is a ring seat **and**
 No calendar wake. No “enough pages.” No fill-ten.
 
 ## First LLMVE walk
-Start A. Energy live. Width 1. Outside Semantic Integrity + Data Integrity/LCD clear the sleep packet. Tetrahedron runs only when two agents are preparing to meet. Path wakes only on quotes. Mythos only if other-track persists.
+Start A. Energy live. Width 1. Outside Semantic Integrity + Data Integrity/LCD clear the sleep packet. Tetrahedron runs only when agents are preparing for a genuine debate; complementary synthesis does not require it. Path wakes only on quotes. Mythos only if other-track persists.
 Site as court `VERSION` states it. Do not copy T0–T3, Exergy, or pollutants into this pack. TwinGlass is not Exergy.
-Post-search verify = outside integrity audit; if a meet is due, each paired agent then runs its own tetrahedron before debate/synthesis. Rewriter remains downstream of the meet.
+Post-search verify = outside integrity audit; if a genuine debate is due, each paired agent then runs its own tetrahedron before debate. Complementary synthesis skips the tetrahedron. Rewriter remains downstream of the meet.
 
 ## One seat per turn (coded)
 `~/.grok/workflows/circular.rhai` is **one variable group’s turn**, not 10k and not a child-spawn of the neighbor.
@@ -126,7 +126,7 @@ One pad. One seat. Proof and disproof are **math**, not a debate club and not an
 | **neutral** | Critique, steelman, and ground the *math* accounts. If they cannot both be true of the same object, say exclusive leftover (then `steelman-truth-tournament`, not a story). | Splitting the difference. |
 | **walker** | At first wake and at endpoint: semantic integrity (same term, same referent) and data integrity (LCD: collection ∩ demand). Then octahedron on this pad. Writes the sleep packet. | A calendar. A neighbor spawn. |
 
-A **group** is one seat. Inside it: **four subgroups**, concurrent, talking on one pad. Each subgroup has **at least four** live agents (4×4=16, CAP 20 is STOP not a fill). Subgroups: math-proof, math-disproof, research, neutral. Then the outside SI+Data Integrity/LCD pair audits the pad (width +0). The tetrahedron is not a standing fifth team; it runs only for a paired agent immediately before a meet.
+A **group** is one seat. Inside it: **four subgroups**, concurrent, talking on one pad. Each subgroup has **at least four** live agents (4×4=16, CAP 20 is STOP not a fill). Subgroups: math-proof, math-disproof, research, neutral. Then the outside SI+Data Integrity/LCD pair audits the pad (width +0). The tetrahedron is not a standing fifth team; it runs only for a paired agent immediately before a genuine debate.
 Rhai `parallel`/`agent` is the tool format. The host keeps the ring moving. Completing seven workflow runs is not “eight variables mapped.”
 After the eight have been touched, wake Energy again so it can integrate the neighbor math. Not a clock. Not drive.
 
