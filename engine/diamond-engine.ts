@@ -1,3 +1,4 @@
+/** Legacy internal-critique substrate. Canonical Research Diamond is defined in RESEARCH_GEOMETRIES.md / engine/research-geometries.ts. Do not infer orchestration geometry from this filename. */
 import type { EquatorId, MarkKind } from "./diamond3d.ts";
 import {
   TRACK_W_GLOSSARY,
@@ -8,6 +9,7 @@ import {
 } from "./integrity-agent.ts";
 import { lcdGuard, type Demand, type LcdGuard, type SourceFns } from "./lcd-lens.ts";
 export const RESEARCH_LOADS = "logic-ration-reason" as const;
+/** Outside integrity pair: semantic integrity + data/function integrity (LCD). They do not occupy research width. */
 export const MONITOR_LOADS = ["semantic-integrity", "lcd-lens"] as const;
 export const PATHS: EquatorId[] = ["define", "redefine", "explore", "adapt"];
 export type Walker = "single" | "clone";
@@ -33,9 +35,11 @@ export type HardNote = {
   cannotFollow: string;
   functionSet: string;
   necessaryBecause: string;
-  /** Quoted: this track is not the proper track. Required to spawn. */
-  improperEvidence: string;
-  /** Quoted: a different function-set, not antithesis, not a live-lane synonym. */
+  /** Quoted evidence that a distinct research route exists. Parent path need not be wrong. */
+  divergenceEvidence: string;
+  /** Retired vocabulary kept only for serialized/backward compatibility. Never required for a new spawn. */
+  improperEvidence?: string;
+  /** Quoted: a distinct function-set, not antithesis, not a live-lane synonym. */
   otherTrackEvidence: string;
 };
 export type DiamondRun = {
