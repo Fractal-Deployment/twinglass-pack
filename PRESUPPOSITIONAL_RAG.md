@@ -23,9 +23,11 @@ orient under P1-P5
 -> spawn a new spectral route only when evidence reveals a distinct route
 -> outside Semantic Integrity + Data Integrity/LCD watch the pads
 -> orchestrator identifies a legitimate pair
--> EACH paired agent independently runs the 3D tetrahedral self-critique
--> both cleaned packets pass semantic + data integrity clearance
--> collate-hourglass runs debate or synthesis
+-> outside Semantic Integrity + Data Integrity/LCD classify and clear the relation
+-> if complementary: collate-hourglass synthesizes
+-> if genuinely incompatible: EACH agent independently runs the 3D tetrahedral self-critique
+   -> both cleaned packets pass semantic + data integrity re-clearance
+   -> collate-hourglass runs debate
 -> only then may adjudication yield synthesis / replacement / falsification / unresolved
 ```
 
@@ -171,7 +173,7 @@ Watches:
 
 These auditors do not choose the conclusion and do not occupy research width.
 
-A pair is debate-eligible only when both auditors clear the cleaned packets.
+A pair is comparison-eligible when both auditors clear the evidence packets. If the relation is genuinely incompatible, each agent then runs its own tetrahedron and both auditors re-clear the cleaned packets before debate.
 
 ## 8. Pairing
 
@@ -189,7 +191,7 @@ Debate is discovered, not assigned.
 
 ## 9. Pre-debate 3D tetrahedral self-critique
 
-The tetrahedron runs **after pairing and immediately before debate/comparison**.
+The tetrahedron runs **after pairing and immediately before a genuine debate**. It is not required merely because two complementary pads will be synthesized.
 
 Each agent runs it independently on its own pad before seeing the other agent's cleaned argument.
 
@@ -245,8 +247,8 @@ A failed self-critique or failed integrity audit sends that agent back to resear
 
 `collate-hourglass` owns the meeting.
 
-- **DEBATE** only when gathered evidence produced genuinely incompatible accounts.
-- **SYNTHESIS** when accounts are complementary.
+- **SYNTHESIS** when accounts are complementary; no tetrahedron is required merely to synthesize.
+- **DEBATE** only when gathered evidence produced genuinely incompatible accounts; each agent must first complete its own tetrahedron and pass dual re-clearance.
 - After the meet, persistent hourglass agents normally research outward again.
 - Replacement or falsification may emerge from the comparison.
 - Exclusive unresolved residue may escalate to `steelman-truth-tournament`.
