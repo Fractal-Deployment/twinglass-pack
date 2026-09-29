@@ -8,9 +8,9 @@ description: >
 Paste this whole file as the user charge. Not grok.com. Not a GPU. This CLI.
 ## Spawn lock (engine)
 Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
-A clone/fork requires quoted **improperEvidence** AND **otherTrackEvidence**.
+A clone/fork requires quoted **divergenceEvidence** AND **otherTrackEvidence**. The parent route does not have to be wrong.
 Refuse (`SPAWN_REFUSED`, do not clone): missing either; other-track is a **synonym** of a live lane; assigned **antithesis** (`antithesis` / `assigned opposite` / `opposite account`).
-`cannotFollow` alone is not a spawn. Exclusive accounts still need the same two quotes if they fork. Volume gates below are unchanged.
+`cannotFollow` alone is not a spawn. Exclusive accounts may fork only if independently discovered; never assign an opposite to manufacture the split. Volume gates below are unchanged.
 Load `pack/DISCOVERED.md` if present. If absent, do not invent it — use `llmve-meaning` plus this paste. Locks below still bind.
 Research agent = `logic-ration-reason`. Monitor = SI + `lcd-lens` only. Collate only at meet = `collate-hourglass`. Translate is not this run.
 ## Charge (methodology, not a meter)
