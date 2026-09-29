@@ -229,7 +229,7 @@ test("hard note does not spawn — stay on track", () => {
     cannotFollow: "GoT aggregation as if it were lattice meet",
     functionSet: "intra-graph join anytime",
     necessaryBecause: "would clutter this track",
-    improperEvidence: "quoted: this track treated GoT join as lattice meet",
+    divergenceEvidence: "quoted: GoT aggregation opens a distinct intra-graph join route",
     otherTrackEvidence: "quoted: intra-graph join is a different function-set",
   });
   assert.equal(run.sens, 0);
