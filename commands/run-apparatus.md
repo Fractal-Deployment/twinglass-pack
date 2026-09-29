@@ -22,7 +22,7 @@ A third monitor object is **overload refuse**.
 - Hourglass = two persistent directions + repeated research/meet cycles.
 - Spectral lattice = evidence-backed recursive spawning.
 - Local lattice = branching research path inside a leg.
-- 3D tetrahedron = **pre-debate self-critique only**, one per paired agent.
+- 3D tetrahedron = **pre-debate self-critique only**, one per agent on a genuine debate path; complementary synthesis does not require it.
 
 Legacy `engine/diamond-engine.ts` / `diamondId` names do not redefine the Research Diamond.
 
@@ -42,9 +42,11 @@ The current route need not be wrong. Older `improperEvidence` wording is legacy 
 ```text
 research
 -> pair candidate
--> agent A tetrahedron + agent B tetrahedron
--> Semantic Integrity clearance + Data Integrity/LCD clearance
--> debate or synthesis
+-> Semantic Integrity + Data Integrity/LCD classify/clear
+-> complementary => synthesis
+-> genuinely incompatible => A tetrahedron + B tetrahedron
+   -> dual integrity re-clearance
+   -> debate
 -> downstream adjudication
 ```
 
