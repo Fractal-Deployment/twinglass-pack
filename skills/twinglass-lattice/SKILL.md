@@ -1,35 +1,54 @@
 ---
 name: twinglass-lattice
 description: >
-  Parallel research tracks. Walk each to a logical endpoint. Spawn when
-  a walker finds evidence this track is improper and evidence for another
-  track. Hand the join to collate-hourglass. Not twin. Not MCTS.
-when-to-use: lattice, parallel tracks, other-track evidence, reconverge
+  Spectral research lattice. One researcher follows evidence and recursively
+  spawns isolated researchers when evidence reveals a distinct route. Parent
+  keeps walking. Not thesis/antithesis. Meet is owned by collate-hourglass.
+when-to-use: spectral lattice, divergent evidence route, recursive research, other-track evidence
 user-invocable: true
 metadata:
-  short-description: "Parallel tracks to endpoint; collate meets"
+  short-description: "Evidence-backed spectral research paths"
 ---
 # twinglass-lattice
-**One job:** keep parallel tracks going until they hit an endpoint. Hand the join to `collate-hourglass`. **Battle is not this job.**
-Load `../APPARATUS.md`. LRR on the research agent. Monitor = SI + `lcd-lens`. After endpoints, load `collate-hourglass` (that skill owns debate or synthesis).
-## Two lattices
-**Main lattice:** clone **legs**. Hard note → spawn new leg. Parent keeps its leg. Burst of five is five **research** clones, not five diamonds. Spawn when the walker has **evidence this track is not the proper track** and **evidence for a different track**. Same conclusion as a sibling is allowed.
-**3D diamond:** one agent’s **internal critique** (four paths, SI+LCD). Other legs **hibernate**. Finish → continue the same leg, or **wait** for a partner.
-**After endpoints:** `collate-hourglass` runs debate or synthesis. This skill does not own that meet. Exclusive leftover after collate → `steelman-truth-tournament`. Never battle. Never antithesis.
-## Gait
-1. **Lock** — terms.
-2. **Scout** — find **parallel** function-sets (not “spawn an antithesis”, not “please diverge”).
-3. **Clone** — spawn + parent notes. Each track: LRR **to logical endpoint**. Same conclusion as a sibling is allowed. `SENS` +1; stop > 10.
-4. **Continue** — if a leaf finds **evidence this track is not the proper track** and **evidence for a different track**, clone the other track; parent stays (depth wall 3, lane wall 4). Gates: improper evidence, other-track evidence, marker, `necessary_because`, not a synonym of a live lane.
-5. **Hand off** — when ≥1 other diamond-complete leg exists, load `collate-hourglass`. Do not run debate/synthesis in this folder.
-6. **Resume** — after collate, the survivor may diamond again. Exclusive leftover is steelman’s job.
-Logic-fail means the three laws broke on **this** track’s argument. It does **not** mean “you agreed” or “you synthesized” or “the assigned persona was false.” A false assigned account is improper-track evidence, not a lattice defect.
-## Do not
-- Load `twinglass-twin` (antagonistic gutter).
-- Kill a lane because it is “the opposite.”
-- Inverse CoT. Invent dump meters.
-Grok.com: /lattice. CLI: this folder.
 
-## Workflow host
-Clone is **spawn + parent notes**, not a transcript fork. A legal hard note is a **CLI notification**: load `twinglass-dispatch` (persona, priors, vector map, isolated charge → `workflow.agent()`). Isolation = new-context. Parent keeps walking. Width counts walkers only. Diamond stays a phase, not a body of critique-children.
-Tracker may **stagger** the hand-off to `collate-hourglass` until axes are named. Stagger is not a reset. This skill still does not own debate or synthesis.
+**One job:** follow evidence and grow the Spectral research topology when a real new route appears. This skill does not own the meet.
+
+Load `../../RESEARCH_GEOMETRIES.md` and `../../APPARATUS.md`.
+LRR stays on each research agent. Outside monitor pair = Semantic Integrity + `lcd-lens` Data Integrity.
+
+## Spawn rule
+
+A spawn is earned by evidence, not by opposition.
+
+Required:
+- `divergenceEvidence` — quoted evidence that a distinct research route exists;
+- `otherTrackEvidence` — quoted evidence naming the route/function-set;
+- `necessaryBecause` — why separating the route preserves the telos;
+- route is not a synonym of a live lane;
+- route is not an assigned antithesis.
+
+The current parent route does **not** have to be wrong.
+
+`cannotFollow` alone is not a spawn. `improperEvidence` is legacy vocabulary and is not the canonical gate.
+
+## Gait
+
+1. **Lock** terms and research charge.
+2. **Walk** the current path honestly; gather primary/real evidence.
+3. **Record** evidence and anomalies. Do not hunt for a falsifier.
+4. **Diverge** only when the evidence exposes a distinct route. Spawn an isolated agent; parent keeps walking.
+5. **Watch** — outside Semantic Integrity + Data Integrity/LCD agents monitor pads without steering conclusions.
+6. **Pair candidate** — auditors/orchestrator may identify two mature pads as genuinely complementary or incompatible.
+7. **Pre-debate critique** — each paired agent independently runs the 3D tetrahedron on its own pad.
+8. **Hand off** — after dual integrity clearance, `collate-hourglass` owns **DEBATE or SYNTHESIS**.
+
+Same conclusion as a sibling is legal. Debate is discovered, not assigned.
+
+## Do not
+
+- Load `twinglass-twin` on the same research charge.
+- Spawn an opposite merely to create disagreement.
+- Require evidence that the parent path is "improper."
+- Run the tetrahedron as a continuous research loop.
+- Own debate, synthesis, replacement, or falsification.
+- Read sibling pads before an authorized meet.
