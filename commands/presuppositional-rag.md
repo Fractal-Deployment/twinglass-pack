@@ -38,10 +38,11 @@ POST_GATHER_ADJUDICATION: none | replacement | falsification | unresolved
 6. If evidence reveals a distinct route, write `divergenceEvidence` + `otherTrackEvidence` + `necessaryBecause`, spawn an isolated spectral agent, and keep the parent walking.
 7. Outside Semantic Integrity + Data Integrity/LCD watch pads continuously without choosing conclusions.
 8. Route research: continue, sleep for a dependency, or mark a mature pad as a constriction/pairing candidate.
-9. Once the orchestrator pairs two mature pads, **each agent independently runs its own tetrahedral self-critique**.
-10. Require semantic + data integrity clearance of both cleaned packets.
-11. Hand the clean pair to `collate-hourglass` for **DEBATE or SYNTHESIS**.
-12. Only after the evidence comparison may replacement/falsification/unresolved status be assigned.
+9. Once the orchestrator pairs two mature pads, the outside Semantic Integrity + Data Integrity/LCD pair classifies and clears the relation.
+10. If complementary, hand the clean pair to `collate-hourglass` for **SYNTHESIS**.
+11. If genuinely incompatible, **each agent independently runs its own tetrahedral self-critique**, then require semantic + data integrity re-clearance of both cleaned packets.
+12. Hand the debate-ready pair to `collate-hourglass` for **DEBATE**.
+13. Only after evidence comparison may replacement/falsification/unresolved status be assigned.
 13. Human review is required before any proposed change to P1-P5.
 
 No thesis/antithesis assignment. No proof-team/disproof-team. No target DFR.
