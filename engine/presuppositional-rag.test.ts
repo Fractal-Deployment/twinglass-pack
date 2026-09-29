@@ -218,6 +218,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   // Test 2: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (debate)
   const debateGate = evaluateTriStateExitGate({
     critique: cleanCritique,
+    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -229,6 +230,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   // Test 3: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (synthesis)
   const synthGate = evaluateTriStateExitGate({
     critique: cleanCritique,
+    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -240,6 +242,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   // Test 4: Endpoint claimed BUT unresolved anomalies exist -> BLOCKS constriction, routes to CONTINUE_RESEARCH
   const anomalyBlockedGate = evaluateTriStateExitGate({
     critique: cleanCritique,
+    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: true,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -258,6 +261,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(failingCritique.isSelfCritiquePassed, false);
   const critiqueBlockedGate = evaluateTriStateExitGate({
     critique: failingCritique,
+    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -267,3 +271,33 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.match(critiqueBlockedGate.reason, /Self-critique gate blocked constriction/);
 });
 
+
+
+test("Ordinary research does not require tetrahedral critique or a falsifier", () => {
+  const gate = evaluateTriStateExitGate({
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: false,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(gate.decision, "CONTINUE_RESEARCH");
+  assert.match(gate.reason, /Keep walking/);
+});
+
+test("A proposed meet requires both outside integrity auditors after self-critique", () => {
+  const cleanCritique = executeTetrahedralCritique({
+    bareData: "Observed connectivity data",
+    literatureFrame: "Interpretive frame",
+    pretrainingBiasCheck: "Disentangled prior from prompt",
+    phaseSpaceAnalysis: "Phase space reveals an evidence-responsive attractor",
+  });
+  const noAudit = evaluateTriStateExitGate({
+    critique: cleanCritique,
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: true,
+    isMutuallyExclusive: true,
+  });
+  assert.equal(noAudit.decision, "CONTINUE_RESEARCH");
+  assert.match(noAudit.reason, /integrity clearance incomplete/);
+});
