@@ -1,4 +1,6 @@
-# Asynchronous timing (two lattices)
+# Asynchronous timing
+
+**Canonical geometry map:** `RESEARCH_GEOMETRIES.md`. `diamondId` is a legacy mutex/API name for the older internal-critique implementation; it is not the canonical Diamond research geometry.
 Not a wall-clock. Not “wait for all five.” Event-driven joins.
 ## Main lattice (research legs)
 | Event | Clock |
@@ -11,8 +13,10 @@ Not a wall-clock. Not “wait for all five.” Event-driven joins.
 | Converge | **Join of ≥2** `awaiting-meet`. Not a join of all legs. The other three of five may still be walking. |
 | Emit | One walking survivor. May diamond again. |
 Dataflow DAG with anastomosing (split then join). Not a tree. Not a math lattice (partial order) except that meet is a join. Not Pathways TPU scheduling — same *word* “async dataflow,” unlike function.
-## 3D diamond (internal critique)
-One diamond at a time on the main lattice (hibernate others). Inside the diamond, the four equator paths (define / redefine / explore / adapt) are **async to each other**. `pendingProjection` is per-path. They are not a second main lattice.
+## Legacy octahedral critique mutex
+One legacy critique at a time on the current main-lattice implementation (hibernate others). Its define / redefine / explore / adapt equator is historical machinery and must not be conflated with either:
+- the canonical **Diamond** bounded divergent evidence round; or
+- the **pre-meet tetrahedral self-critique** defined in `RESEARCH_GEOMETRIES.md` and `PRESUPPOSITIONAL_RAG.md`.
 ## Structure
 ```text
 main DAG: leg →* legs (clone) … diamond? … join(2+) → emit → …
