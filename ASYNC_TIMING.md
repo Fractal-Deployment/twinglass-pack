@@ -16,7 +16,7 @@ Dataflow DAG with anastomosing (split then join). Not a tree. Not a math lattice
 ## Legacy octahedral critique mutex
 One legacy critique at a time on the current main-lattice implementation (hibernate others). Its define / redefine / explore / adapt equator paths remain **async to each other** as historical machinery and must not be conflated with either:
 - the canonical **Diamond** repeatable two-agent split-and-return action space; or
-- the **pre-debate tetrahedral self-critique** defined in `RESEARCH_GEOMETRIES.md` and `PRESUPPOSITIONAL_RAG.md`.
+- the **mandatory pre-comparison tetrahedral self-critique** defined in `RESEARCH_GEOMETRIES.md` and `PRESUPPOSITIONAL_RAG.md`.
 ## Structure
 ```text
 main DAG: leg →* legs (clone) … diamond? … join(2+) → emit → …
