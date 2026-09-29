@@ -268,7 +268,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     isMutuallyExclusive: false,
   });
   assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(critiqueBlockedGate.reason, /Self-critique gate blocked constriction/);
+  assert.match(critiqueBlockedGate.reason, /Pre-meet self-critique blocked comparison/);
 });
 
 
