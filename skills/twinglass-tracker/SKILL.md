@@ -30,7 +30,7 @@ Merge pads: union locks, markers, claims, units, tags. Newer named axis wins. Em
 ## Stagger
 If a required axis is unnamed: **stagger**. Keep pads. Keep walking. Do not contract.
 If both planes are **named** but different (PAIR gutter): protocol synthesis — hand to `collate-hourglass`. Not a reset.
-If units/relations join and a meet is due: pair the agents, run each agent's own pre-debate tetrahedron, require both auditors to clear the cleaned packets, then collate may debate or synthesize. Exclusive leftover after collate → `steelman-truth-tournament`. This skill does not run that meet.
+If units/relations join and a meet is due: pair the agents and let the outside auditors classify/clear the relation. Complementary -> synthesis. Genuinely incompatible -> each agent runs its own pre-debate tetrahedron, then both auditors re-clear the cleaned packets before debate. Exclusive leftover after collate → `steelman-truth-tournament`. This skill does not run that meet.
 
 ## Do not
 - Wipe the pad to “go back.”
