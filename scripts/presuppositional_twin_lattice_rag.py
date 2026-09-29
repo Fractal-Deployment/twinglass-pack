@@ -493,9 +493,53 @@ class PresuppositionalTwinLatticeEngine:
             CausalMechanism(
                 id="M1",
                 name="Common Generating Constraint",
-                description="Underlying structural or physical constraint forces identical organization across manifestations.",
+                description="Underlying structural or physical constraint may organize multiple manifestations.",
                 generating_constraint="Thermodynamic or topological necessity",
                 testable_predictions=["Spatial volume packing constraints correlate with clique dimension."]
+            ),
+            CausalMechanism(
+                id="M2",
+                name="Independent Convergent Mechanisms",
+                description="Distinct pathways may converge on similar macroscopic organization.",
+                generating_constraint="Multi-pathway optimization under common selection",
+                testable_predictions=["Different systems may develop similar topological cavities via distinct rules."]
+            ),
+            CausalMechanism(
+                id="M3",
+                name="Generic Mathematical Attractor",
+                description="Observed regularity may reflect a broad statistical or combinatoric attractor.",
+                generating_constraint="Probabilistic limit state",
+                testable_predictions=["Matched random/configuration models may reproduce parts of the observed distribution."]
+            ),
+            CausalMechanism(
+                id="M4",
+                name="Selection Effect / Sampling Bias",
+                description="Observed regularity may depend on sampling, survival, or observation window.",
+                generating_constraint="Measurement window truncation",
+                testable_predictions=["Changing sampling scope may alter the apparent high-dimensional structure."]
+            ),
+            CausalMechanism(
+                id="M5",
+                name="Measurement Artifact / Noise",
+                description="Instrument or processing methodology may contribute to apparent regularities.",
+                generating_constraint="Sensor / pipeline effects",
+                testable_predictions=["Changing reconstruction or processing parameters may alter cavity detection."]
+            ),
+            CausalMechanism(
+                id="M6",
+                name="Genuine Structural Isomorphism",
+                description="Relations may be preserved across distinct scales or substrates.",
+                generating_constraint="Invariant algebraic/relational mapping",
+                testable_predictions=["Comparable relational structure may recur across distinct systems or scales."]
+            ),
+            CausalMechanism(
+                id="M7",
+                name="Unidentified Residual Mechanism",
+                description="Relevant evidence may point to a mechanism not covered by the current route set.",
+                generating_constraint="Unmapped state variable",
+                testable_predictions=["Relevant observations may remain unexplained by M1-M6."]
+            )
+        ]
 
         branch_node_ids = []
         for m in competing_mechanisms:
