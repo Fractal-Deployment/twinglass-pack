@@ -79,5 +79,5 @@ Do **not** run all five at once. Each is a spawn only if the current track is im
 | 5 | LCD look-elsewhere live | Monitor converts empty meet into help/translate | A page with collection ∩ demand empty | **landed** — redirect, not convert |
 **HOLD behind these:** `llmve-factor-compute`, Mythos=Conley, Ω, twin-on-same-charge, orch/sensors.
 ## How to use this file
-Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Pre-debate self-critique one pad at a time where required. Collate. Do not mint.
+Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Pre-comparison tetrahedral self-critique on every participating pad before each convergence. Collate. Do not mint.
 If you only run one: **step 1** (occupant bleed) — FINISH_BOARD already marked Morph, not Keep.
