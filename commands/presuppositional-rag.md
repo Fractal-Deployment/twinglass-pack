@@ -1,6 +1,6 @@
 ---
 name: presuppositional-rag
-description: Execute Presuppositional Twin-Lattice research gathering. Follow divergent evidence routes under semantic/data integrity; use tetrahedral self-critique only when agents are preparing for an actual debate.
+description: Execute Presuppositional Twin-Lattice research gathering. Follow divergent evidence routes under semantic/data integrity; every convergence/comparison requires per-agent tetrahedral self-critique before the outcome is classified.
 ---
 # /presuppositional-rag
 Load `PRESUPPOSITIONAL_RAG.md`, `skills/presuppositional-rag`, `logic-ration-reason`, `lcd-glossary-integrity`.
