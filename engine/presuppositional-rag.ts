@@ -60,7 +60,6 @@ export type EpistemicStatus =
   | "INTERPRETATION"
   | "CONTRADICTION"
   | "UNRESOLVED_ANOMALY"
-  | "FALSIFIED_BRANCH"
   | "PROVISIONAL_SYNTHESIS";
 
 export type GlossaryLock = {
@@ -174,8 +173,6 @@ export type CausalMechanism = {
   description: string;
   generatingConstraint: string;
   testablePredictions: string[];
-  falsificationCriteria: string[];
-  falsificationReason?: string;
 };
 
 export function generateCompetingMechanisms(observation: string): CausalMechanism[] {
@@ -189,9 +186,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
         "Spatial volume packing constraints correlate with clique dimension",
         "Physical wiring length limits necessitate dense local clusters",
       ],
-      falsificationCriteria: [
-        "Zero correlation between geometric packing density and clique structure",
-      ],
     },
     {
       id: "M2",
@@ -200,9 +194,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       generatingConstraint: "Multi-pathway optimization under common selection",
       testablePredictions: [
         "Different phylogenetic lineages or artificial nets develop topological cavities via distinct rules",
-      ],
-      falsificationCriteria: [
-        "Identical genetic or developmental sequence strictly required for cavity formation",
       ],
     },
     {
@@ -213,9 +204,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       testablePredictions: [
         "Erdos-Renyi or configuration models with matching degree reproduce observed simplex dimension distribution",
       ],
-      falsificationCriteria: [
-        "Empirical network exhibits high-dimensional cavities (dimension > 3) that are statistically impossible in random/scale-free null models",
-      ],
     },
     {
       id: "M4",
@@ -224,9 +212,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       generatingConstraint: "Measurement window truncation",
       testablePredictions: [
         "Unbiased global sampling causes high-dimensional cavities to disappear",
-      ],
-      falsificationCriteria: [
-        "Dense simplicial complexes persist across full, unwindowed microcircuit reconstructions",
       ],
     },
     {
@@ -237,9 +222,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       testablePredictions: [
         "Varying reconstruction parameters or tissue processing destroys cavity detection",
       ],
-      falsificationCriteria: [
-        "Dynamic stimulation in-silico or in-vivo shows stimulus-locked assembly and disassembly of cavities, ruling out static processing artifacts",
-      ],
     },
     {
       id: "M6",
@@ -249,9 +231,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       testablePredictions: [
         "Topological cavity volume correlates with informational integration (Phi) and cognitive discrimination capability",
       ],
-      falsificationCriteria: [
-        "Cavities have zero causal efficacy or correlation with information integration",
-      ],
     },
     {
       id: "M7",
@@ -260,9 +239,6 @@ export function generateCompetingMechanisms(observation: string): CausalMechanis
       generatingConstraint: "Unmapped state variable",
       testablePredictions: [
         "Empirical variance remains unexplained after accounting for M1-M6",
-      ],
-      falsificationCriteria: [
-        "All empirical variance fully accounted for by M1-M6 without residue",
       ],
     },
   ];
@@ -384,7 +360,7 @@ export type TwinglassResearchNode = {
   epistemic_status: EpistemicStatus;
   causal_mechanism: CausalMechanism;
   expected_observations: string[];
-  disconfirming_observations: string[];
+  contrasting_observations: string[];
   retrieved_evidence: {
     source_id: string;
     provenance_chain: ProvenanceChain;
@@ -565,10 +541,12 @@ export function executeTetrahedralCritique(opts: {
 /**
  * Research routing boundary.
  *
- * Ordinary evidence gathering does NOT require a tetrahedral critique and is not
- * driven by a falsifier. The tetrahedron is consulted only after a legitimate
- * pairing/constriction has been identified. A clean meet then requires both
- * outside integrity planes to clear the agent's cleaned pad.
+ * Ordinary evidence gathering is research only: gather sources, follow real
+ * routes, and let the outside integrity agents watch the pad.
+ *
+ * The tetrahedral self-critique is specifically a pre-DEBATE operation. It is
+ * not required for ordinary research and is not automatically required for a
+ * synthesis meet.
  */
 export function evaluateTriStateExitGate(opts: {
   critique?: TetrahedralCritique;
@@ -579,157 +557,68 @@ export function evaluateTriStateExitGate(opts: {
   isEndpointReached: boolean;
   isMutuallyExclusive: boolean;
 }): TriStateGateResult {
-  // Gate 1: genuine dependency -> sleep without manufacturing an opponent.
   if (opts.needsNeighborVariable && opts.neighborName) {
     return {
       decision: "SLEEP_DOOR",
       reason: `Pad reached structural boundary requiring interdependent variable: ${opts.neighborName}`,
       sleepPacket: {
-        whyNeighbor: `Cannot evaluate phase space without ${opts.neighborName}`,
+        whyNeighbor: `Cannot continue this route cleanly without ${opts.neighborName}`,
         otherTrackEvidence: opts.neighborName,
       },
     };
   }
 
-  // Ordinary research keeps walking. No pre-meet self-critique is required yet.
   if (!opts.isEndpointReached) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Research pad has active evidence-gathering paths. Keep walking; no pre-meet critique or falsifier is required.",
+      reason: "Research pad still has live evidence-gathering paths. Keep gathering research.",
     };
   }
 
-  // A proposed meet cannot sweep unresolved residue under the comparison.
   if (opts.hasUnresolvedAnomalies) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Unresolved empirical anomalies / residue remain. Constriction blocked until the pad has enough information for a clean comparison.",
+      reason: "Unresolved evidence remains that warrants more research before this meet.",
     };
   }
 
-  // Pairing exists: now each agent must self-critique its own pad.
+  // Complementary/convergent evidence can synthesize directly.
+  if (!opts.isMutuallyExclusive) {
+    return {
+      decision: "CONSTRICTION_POINT",
+      reason: "Evidence packets are complementary/convergent. Ready for synthesis.",
+      constrictionMode: "synthesis",
+    };
+  }
+
+  // A real incompatibility has emerged. Now, and only now, run the tetrahedron.
   if (!opts.critique) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Pairing identified, but pre-meet tetrahedral self-critique has not been completed.",
+      reason: "Debate identified, but the debating agent has not completed its pre-debate tetrahedral self-critique.",
     };
   }
 
   if (!opts.critique.isSelfCritiquePassed) {
-    const reasons: string[] = [];
-    if (opts.critique.relations.t2_t3_sycophancy_audit.isEcho) {
-      reasons.push("Sycophancy detected: model echoes retrieved narrative without independent derivation");
-    }
-    if (!opts.critique.relations.t3_t4_causal_friction.deflected) {
-      reasons.push("Insufficient causal friction: the current account was not materially tested against the gathered evidence");
-    }
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: `Pre-meet self-critique blocked comparison: ${reasons.join("; ") || "Critique conditions unsatisfied"}.`,
+      reason: "Pre-debate tetrahedral self-critique did not clear the pad.",
     };
   }
 
-  // Outside integrity pair clears the cleaned pad; auditors do not pick the winner.
   if (!opts.integrity?.semanticIntegrityClear || !opts.integrity?.dataIntegrityClear) {
     const reasons = opts.integrity?.reasons?.filter(Boolean) ?? [];
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: `Pre-meet integrity clearance incomplete: semantic=${opts.integrity?.semanticIntegrityClear ?? false}, data=${opts.integrity?.dataIntegrityClear ?? false}${reasons.length ? `; ${reasons.join("; ")}` : ""}.`,
+      reason: `Pre-debate integrity clearance incomplete: semantic=${opts.integrity?.semanticIntegrityClear ?? false}, data=${opts.integrity?.dataIntegrityClear ?? false}${reasons.length ? `; ${reasons.join("; ")}` : ""}.`,
     };
   }
 
   return {
     decision: "CONSTRICTION_POINT",
-    reason: "Pairing identified; each pad completed tetrahedral self-critique and cleared both outside integrity auditors. Ready for clean comparison.",
-    constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
+    reason: "Debate identified; pre-debate tetrahedral self-critique is complete and both outside integrity auditors cleared the pad.",
+    constrictionMode: "debate",
   };
-}
-
-/**
- * POST-GATHERING ADJUDICATION ONLY.
- * This function must not steer active research or assign a falsifier to a walker.
- * It is used after evidence collection, self-critique, and integrity clearance.
- */
-export function adjudicateCausalBranches(
-  branches: CausalMechanism[],
-  evidence: EmpiricalEvidence[]
-): {
-  survivors: CausalMechanism[];
-  falsified: (CausalMechanism & { falsificationReason: string })[];
-  anomalies: string[];
-} {
-  const falsified: (CausalMechanism & { falsificationReason: string })[] = [];
-  const survivors: CausalMechanism[] = [];
-  const anomalies: string[] = [];
-
-  const evidenceCorpus = evidence
-    .map((e) => `${e.provenance.literalQuote} ${e.provenance.empiricalContext} ${e.provenance.derivedInterpretation}`)
-    .join(" ")
-    .toLowerCase();
-
-  for (const branch of branches) {
-    let isFalsified = false;
-    let reason = "";
-
-    // Test evidence against branch falsification criteria (Reality determines what survives)
-    for (const criterion of branch.falsificationCriteria) {
-      const critLower = criterion.toLowerCase();
-
-      // M3: Generic Mathematical Attractor falsification
-      if (
-        branch.id === "M3" &&
-        (evidenceCorpus.includes("11-dimensional") || evidenceCorpus.includes("simplicial") || evidenceCorpus.includes("clique"))
-      ) {
-        isFalsified = true;
-        reason = `Empirical evidence reports high-dimensional (up to 11D) simplicial complexes, which violates random/scale-free null model criterion: "${criterion}".`;
-        break;
-      }
-
-      // M5: Measurement Artifact / Noise falsification
-      if (
-        branch.id === "M5" &&
-        (evidenceCorpus.includes("dynamic") || evidenceCorpus.includes("stimulation") || evidenceCorpus.includes("in vivo") || evidenceCorpus.includes("in-silico"))
-      ) {
-        isFalsified = true;
-        reason = `Empirical evidence demonstrates dynamic stimulus-locked assembly/collapse, refuting static instrument artifact criterion: "${criterion}".`;
-        break;
-      }
-
-      // Generic match if evidence explicitly contains disconfirming terms
-      if (critLower.split(" ").some((w) => w.length > 5 && evidenceCorpus.includes(w) && evidenceCorpus.includes("falsif"))) {
-        isFalsified = true;
-        reason = `Disconfirmed by empirical evidence matching criterion: "${criterion}".`;
-        break;
-      }
-    }
-
-    if (isFalsified) {
-      falsified.push({ ...branch, falsificationReason: reason });
-    } else {
-      survivors.push(branch);
-    }
-  }
-
-  // Detect unexplained anomalous residue in evidence
-  if (
-    evidenceCorpus.includes("hysteresis") ||
-    evidenceCorpus.includes("unexplained") ||
-    (evidenceCorpus.includes("empty cavities") && evidenceCorpus.includes("11-dimensional"))
-  ) {
-    anomalies.push(
-      "Empirical finding indicates high-dimensional simplicial cavities beyond flat manifold embeddings with unexplained topological dynamics."
-    );
-  }
-
-  return { survivors, falsified, anomalies };
-}
-
-/** @deprecated Use adjudicateCausalBranches at convergence. */
-export function evaluateCausalBranches(
-  branches: CausalMechanism[],
-  evidence: EmpiricalEvidence[]
-) {
-  return adjudicateCausalBranches(branches, evidence);
 }
 
 export function buildResearchNode(opts: {
@@ -752,7 +641,7 @@ export function buildResearchNode(opts: {
       "Dynamic topological cavities form under sensory stimulation.",
       "Integrated causality metric scales with simplicial complex volume.",
     ],
-    disconfirming_observations: [
+    contrasting_observations: [
       "Complexes collapse to flat 2D network graphs under stimulation.",
       "Scalar spike counting accounts for all functional variance.",
     ],

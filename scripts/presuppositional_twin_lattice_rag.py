@@ -145,8 +145,6 @@ class CausalMechanism:
     description: str
     generating_constraint: str
     testable_predictions: List[str]
-    falsification_criteria: List[str]
-    falsification_reason: Optional[str] = None
 
 @dataclass
 class ProvenanceChain:
@@ -251,7 +249,7 @@ class TwinglassResearchNode:
     epistemic_status: str
     causal_mechanism: Dict[str, str]
     expected_observations: List[str]
-    disconfirming_observations: List[str]
+    contrasting_observations: List[str]
     retrieved_evidence: List[Dict]
     semantic_locks: List[Dict[str, str]]
     competing_branch_ids: List[str]
@@ -403,55 +401,61 @@ def evaluate_tri_state_exit_gate(
     critique: Optional[TetrahedralCritique] = None,
     integrity: Optional[IntegrityClearance] = None
 ) -> TriStateGateResult:
-    """Route research; require tetrahedral self-critique only at a proposed meet."""
+    """Route research; require tetrahedral self-critique only for an actual debate."""
     if needs_neighbor_variable and neighbor_name:
         return TriStateGateResult(
             decision="SLEEP_DOOR",
             reason=f"Pad reached structural boundary requiring interdependent variable: {neighbor_name}",
             sleep_packet=SleepPacket(
-                why_neighbor=f"Cannot evaluate phase space without {neighbor_name}",
+                why_neighbor=f"Cannot continue this route cleanly without {neighbor_name}",
                 other_track_evidence=neighbor_name
             )
         )
 
-    # Ordinary research: keep gathering. No falsifier and no tetrahedron required.
     if not is_endpoint_reached:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Research pad has active evidence-gathering paths. Keep walking; no pre-meet critique or falsifier is required."
+            reason="Research pad has active evidence-gathering paths. Keep gathering research."
         )
 
     if has_unresolved_anomalies:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Unresolved empirical anomalies / residue remain. Constriction blocked until the pad has enough information for a clean comparison."
+            reason="Unresolved evidence remains that warrants more research before this meet."
         )
 
-    # Pairing exists: now self-critique is required.
+    # Complementary/convergent evidence can synthesize directly.
+    if not is_mutually_exclusive:
+        return TriStateGateResult(
+            decision="CONSTRICTION_POINT",
+            reason="Evidence packets are complementary/convergent. Ready for synthesis.",
+            constriction_mode="synthesis"
+        )
+
+    # A real incompatibility has emerged: now run the pre-debate tetrahedron.
     if critique is None:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Pairing identified, but pre-meet tetrahedral self-critique has not been completed."
+            reason="Debate identified, but the debating agent has not completed its pre-debate tetrahedral self-critique."
         )
 
     if not critique.is_self_critique_passed:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Pre-meet tetrahedral self-critique did not clear the pad."
+            reason="Pre-debate tetrahedral self-critique did not clear the pad."
         )
 
-    # Outside semantic + data auditors must both clear the cleaned pad.
     if integrity is None or not integrity.semantic_integrity_clear or not integrity.data_integrity_clear:
         reasons = "; ".join(integrity.reasons or []) if integrity else ""
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason=f"Pre-meet integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
+            reason=f"Pre-debate integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
         )
 
     return TriStateGateResult(
         decision="CONSTRICTION_POINT",
-        reason="Pairing identified; tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
-        constriction_mode="debate" if is_mutually_exclusive else "synthesis"
+        reason="Debate identified; pre-debate tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
+        constriction_mode="debate"
     )
 
 # =====================================================================
@@ -463,12 +467,11 @@ class PresuppositionalTwinLatticeEngine:
         self.retriever = FixtureEvidenceRetriever()
         self.nodes: Dict[str, TwinglassResearchNode] = {}
         self.generated_branches: int = 0
-        self.falsified_branches: int = 0
 
     def run_presuppositional_research_cycle(self, target_prop_id: str = "P3"):
         print("=" * 80)
         print(" PRESUPPOSITIONAL TWIN-LATTICE RAG RESEARCH ENGINE EXECUTION")
-        print(" Core Invariant: Ontology generates the search space; reality determines what survives.")
+        print(" Core Invariant: gather real research along divergent routes; preserve semantic and data integrity.")
         print("=" * 80 + "\n")
 
         prop = PRESUPPOSITIONAL_AXES.get(target_prop_id, PRESUPPOSITIONAL_AXES["P3"])
@@ -484,64 +487,57 @@ class PresuppositionalTwinLatticeEngine:
         print(f" -> Entailment E_1: \"{entailment}\"")
         print(f" -> Research Question Q_1: \"{question}\"\n")
 
-        # Step 2: Causal Multi-Branching (7 Competing Mechanisms M_1..M_7)
-        print("[GENERATIVE LATTICE: CAUSAL MULTI-BRANCHING (M_1 .. M_7)]")
+        # Step 2: Research-route expansion using candidate mechanisms as search lenses
+        print("[GENERATIVE LATTICE: RESEARCH ROUTES / CANDIDATE MECHANISM LENSES]")
         competing_mechanisms = [
             CausalMechanism(
                 id="M1",
                 name="Common Generating Constraint",
-                description="Underlying structural or physical constraint forces identical organization across manifestations.",
+                description="Underlying structural or physical constraint may organize multiple manifestations.",
                 generating_constraint="Thermodynamic or topological necessity",
-                testable_predictions=["Spatial volume packing constraints correlate with clique dimension."],
-                falsification_criteria=["Zero correlation between geometric packing density and clique structure."]
+                testable_predictions=["Spatial volume packing constraints correlate with clique dimension."]
             ),
             CausalMechanism(
                 id="M2",
                 name="Independent Convergent Mechanisms",
-                description="Disparate evolutionary or functional pressures independently converge on similar macroscopic outputs.",
+                description="Distinct pathways may converge on similar macroscopic organization.",
                 generating_constraint="Multi-pathway optimization under common selection",
-                testable_predictions=["Different phylogenetic lineages develop topological cavities via distinct rules."],
-                falsification_criteria=["Identical genetic or developmental sequence strictly required for cavity formation."]
+                testable_predictions=["Different systems may develop similar topological cavities via distinct rules."]
             ),
             CausalMechanism(
                 id="M3",
                 name="Generic Mathematical Attractor",
-                description="Statistical or combinatoric universality class (e.g. Central Limit Theorem, random graph percolation).",
+                description="Observed regularity may reflect a broad statistical or combinatoric attractor.",
                 generating_constraint="Probabilistic limit state",
-                testable_predictions=["Erdos-Renyi configuration models reproduce observed simplex dimension distribution."],
-                falsification_criteria=["Empirical network exhibits high-dimensional cavities (dimension > 3) statistically impossible in random null models."]
+                testable_predictions=["Matched random/configuration models may reproduce parts of the observed distribution."]
             ),
             CausalMechanism(
                 id="M4",
                 name="Selection Effect / Sampling Bias",
-                description="Observation is an artifact of the observation filter, selective survival, or windowing.",
+                description="Observed regularity may depend on sampling, survival, or observation window.",
                 generating_constraint="Measurement window truncation",
-                testable_predictions=["Unbiased global sampling causes high-dimensional cavities to disappear."],
-                falsification_criteria=["Dense simplicial complexes persist across full, unwindowed microcircuit reconstructions."]
+                testable_predictions=["Changing sampling scope may alter the apparent high-dimensional structure."]
             ),
             CausalMechanism(
                 id="M5",
                 name="Measurement Artifact / Noise",
-                description="Instrument distortion or data processing methodology induces apparent regularities.",
-                generating_constraint="Sensor / pipeline defect",
-                testable_predictions=["Varying reconstruction parameters or tissue processing destroys cavity detection."],
-                falsification_criteria=["Dynamic stimulation in-silico or in-vivo shows stimulus-locked assembly and disassembly of cavities."]
+                description="Instrument or processing methodology may contribute to apparent regularities.",
+                generating_constraint="Sensor / pipeline effects",
+                testable_predictions=["Changing reconstruction or processing parameters may alter cavity detection."]
             ),
             CausalMechanism(
                 id="M6",
                 name="Genuine Structural Isomorphism",
-                description="Exact functional identity preserving relations across distinct scales or physical substrates.",
+                description="Relations may be preserved across distinct scales or substrates.",
                 generating_constraint="Invariant algebraic/relational mapping",
-                testable_predictions=["Topological cavity volume correlates with informational integration (Phi) and cognitive discrimination capability."],
-                falsification_criteria=["Cavities have zero causal efficacy or correlation with information integration."]
+                testable_predictions=["Comparable relational structure may recur across distinct systems or scales."]
             ),
             CausalMechanism(
                 id="M7",
                 name="Unidentified Residual Mechanism",
-                description="Anomalous causal factor not encompassed by current operational categories.",
+                description="Relevant evidence may point to a mechanism not covered by the current route set.",
                 generating_constraint="Unmapped state variable",
-                testable_predictions=["Empirical variance remains unexplained after accounting for M1-M6."],
-                falsification_criteria=["All empirical variance fully accounted for by M1-M6 without residue."]
+                testable_predictions=["Relevant observations may remain unexplained by M1-M6."]
             )
         ]
 
@@ -552,8 +548,8 @@ class PresuppositionalTwinLatticeEngine:
             branch_node_ids.append(m.id)
         print()
 
-        # Step 3: Layer B Mediating Glass & Active RAG Retrieval (Discriminating Lattice)
-        print("[DISCRIMINATING LATTICE: ACTIVE RAG RETRIEVAL & PROVENANCE CHAIN VALIDATION]")
+        # Step 3: Active research retrieval with provenance
+        print("[RESEARCH GATHERING: ACTIVE RAG RETRIEVAL & PROVENANCE CHAIN VALIDATION]")
         retrieved_evidence_list = self.retriever.fetch_primary_evidence(question)
         valid_provenance_count = 0
 
@@ -580,24 +576,23 @@ class PresuppositionalTwinLatticeEngine:
                 print(f" -> [SI HOLD] Term: '{lock.term}' ({lock.inferential_load}) -> Semantic integrity verified.")
         print()
 
-        # Step 5: Evidence accumulation / anomaly notes — no active falsifier
-        print("[RESEARCH WALK: EVIDENCE ACCUMULATION — ADJUDICATION DEFERRED]")
-        surviving_mechanisms = list(competing_mechanisms)
-        falsified_mechanisms = []
-        print(" -> Active research does not prune branches or assign a falsifier.")
-        print(" -> Evidence, anomalies, and alternate routes accumulate until a legitimate comparison is reached.\n")
+        # Step 5: Evidence accumulation
+        print("[RESEARCH WALK: EVIDENCE ACCUMULATION]")
+        print(" -> Gather relevant research; do not prune routes by a built-in falsifier.")
+        print(" -> Evidence, anomalies, and alternate routes accumulate until comparison is useful.\n")
 
         unresolved_anomaly = "Anomalous residue: 11D cavities collapse rapidly upon sensory cessation, leaving unexplained topological hysteresis."
         print(f" -> [ANOMALY NOTE] {unresolved_anomaly}\n")
 
-        # Step 6: Ordinary research routing. Tetrahedral self-critique is PRE-MEET ONLY.
+        # Step 6: Ordinary research routing. Tetrahedral self-critique is PRE-DEBATE ONLY.
         print("[LAYER B / GLASS: RESEARCH ROUTING]")
         pairing_identified = False
+        debate_identified = False
         critique = None
         integrity = None
 
-        if pairing_identified:
-            print("[PRE-MEET: 3D TETRAHEDRAL SELF-CRITIQUE]")
+        if debate_identified:
+            print("[PRE-DEBATE: 3D TETRAHEDRAL SELF-CRITIQUE]")
             critique = execute_tetrahedral_critique(
                 bare_data="All-to-all connectivity detected in 11-neuron cluster forming simplicial cavities without transmission loss.",
                 literature_frame="Literature framing: Cortical columns process information through dynamic high-dimensional geometric structures.",
@@ -611,13 +606,13 @@ class PresuppositionalTwinLatticeEngine:
             )
             print(critique.structural_critique_report + "\n")
         else:
-            print(" -> No comparison partner yet: tetrahedral self-critique correctly not run.\n")
+            print(" -> No debate pending: tetrahedral self-critique correctly not run.\n")
 
         exit_gate = evaluate_tri_state_exit_gate(
             has_unresolved_anomalies=False,
             needs_neighbor_variable=False,
             is_endpoint_reached=pairing_identified,
-            is_mutually_exclusive=False,
+            is_mutually_exclusive=debate_identified,
             critique=critique,
             integrity=integrity
         )
@@ -640,7 +635,7 @@ class PresuppositionalTwinLatticeEngine:
                 "High-dimensional (up to 11D) topological cavities form dynamically during sensory processing.",
                 "Integrated information metric Phi correlates with dynamic cavity volume."
             ],
-            disconfirming_observations=[
+            contrasting_observations=[
                 "Cavities collapse into flat 2D graph structures under stimulation.",
                 "Scalar spike counts account for all functional variance."
             ],
@@ -664,15 +659,12 @@ class PresuppositionalTwinLatticeEngine:
         print()
 
         # Metrics Evaluation (Dynamically Derived)
-        dfr = self.falsified_branches / max(1, self.generated_branches)  # retrospective adjudication metric only
         pd = valid_provenance_count / max(1, len(retrieved_evidence_list))
         sdr = si_redirect_count / max(1, len(GLOSSARY_LOCKS))
         print("=" * 80)
         print(" EXECUTION METRICS & PERFORMANCE EVALUATION (DYNAMICALLY DERIVED)")
         print("=" * 80)
         print(f" -> Total Generated Causal Branches: {self.generated_branches}")
-        print(f" -> Falsified / Pruned Causal Branches: {self.falsified_branches}")
-        print(f" -> Discriminative Friction Ratio (DFR, retrospective only): {dfr:.2f} (no active branch-kill target)")
         print(f" -> Provenance Density (PD): {pd:.2f} (Target = 1.00)")
         print(f" -> Semantic Drift Rate (SDR): {sdr:.2f} (100% Locked)")
         print(f" -> Exit Gate State: {exit_gate.decision}")

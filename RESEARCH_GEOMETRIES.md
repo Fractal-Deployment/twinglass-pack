@@ -4,23 +4,25 @@ This file is the canonical geometry map for TwinGlass research orchestration.
 
 ## Governing distinction
 
-TwinGlass does **not** use thesis/antithesis research assignment. Research agents follow legitimate divergent evidence routes. Debate, synthesis, replacement, or falsification are **downstream outcomes of evidence comparison**, never the initial research instruction.
+TwinGlass does **not** use thesis/antithesis research assignment. Its default job is **research gathering**: send agents down legitimate divergent routes, collect real evidence, preserve provenance, and compare what was found.
 
 ```text
 research first
-→ relationship discovery second
-→ self-critique before comparison
-→ integrity clearance
-→ debate / synthesis / replacement / falsification only at convergence
+→ gather evidence
+→ follow genuine divergent routes
+→ compare accumulated research
+→ synthesize / replace / debate / remain unresolved as warranted
 ```
+
+There is **no built-in falsifier in the normal research gait**. If the operator later wants an explicit falsification campaign, that is a separate commissioned research operation with its own team; it is not silently embedded in ordinary evidence gathering.
 
 The research geometry may change. The outside integrity envelope does not.
 
 ---
 
-## 1. Diamond — one bounded divergent evidence round
+## 1. Diamond — one two-agent research action space
 
-A Diamond is one bounded research charge that deliberately sends researchers down distinct legitimate evidence routes so the round covers more of the possibility space.
+A Diamond is a single **action space**: send two research agents down distinct legitimate evidence routes, let each gather research, then bring their evidence back together for comparison. "Single" describes the shape of one Diamond action, **not** a limit on how many Diamonds a workflow may run. Diamonds may be repeated or composed whenever the research requires another two-agent split-and-return action.
 
 ```text
                  CHARGE
@@ -38,7 +40,7 @@ A Diamond is one bounded research charge that deliberately sends researchers dow
                    │
           compare evidence sets
                    │
-      synthesize / replace / falsify /
+      synthesize / replace / debate /
                remain unresolved
 ```
 
@@ -48,8 +50,8 @@ Rules:
 - Neither side is tasked to disprove the other.
 - Each side gathers real evidence on its own route.
 - Each route may branch locally as evidence opens additional sub-paths.
-- Falsification, if it occurs, occurs only after the evidence packets are compared.
-- A Diamond normally has one primary convergence event.
+- The Diamond itself does not contain a falsifier.
+- One Diamond action sends two agents out and brings those two evidence packets back together. Another Diamond action can be run later if needed.
 
 ---
 
@@ -95,7 +97,7 @@ Rules:
 - If the accounts are incompatible, debate the actual discovered incompatibility.
 - If complementary, synthesize and diverge again from the synthesis.
 - A typical run may perform several research→constriction cycles.
-- The pair terminates when sufficient information closes the charge or one account is conclusively replaced/falsified by the accumulated evidence.
+- The pair terminates when sufficient information closes the charge, one account is replaced by a better-supported account, or the operator ends the research cycle.
 
 ---
 
@@ -175,13 +177,11 @@ CONVERGENCE_ELIGIBLE =
 
 ---
 
-## 6. 3D tetrahedral self-critique — pre-meet, per-agent
+## 6. 3D tetrahedral self-critique — pre-debate, per-agent
 
 The tetrahedron is **not** a research-spawn geometry and is **not** the Diamond.
 
-It is a self-critique run by each research agent on its own pad **after a pairing/constriction is identified and before debate or synthesis**.
-
-Each agent performs the critique independently before seeing the opponent's completed comparative argument.
+It is a self-critique run by each research agent on its own pad **when the agents are preparing to enter an actual debate**. It is not required merely because two evidence packets are being synthesized.
 
 ### Four tracks
 
@@ -193,7 +193,7 @@ Each agent performs the critique independently before seeing the opponent's comp
 The six cross-track relations test the agent **against itself**, not against its future debate partner.
 
 ```text
-pairing identified
+debate identified
       ↓
 Agent A tetrahedron     Agent B tetrahedron
       ↓                       ↓
@@ -204,23 +204,15 @@ semantic + data audit of each cleaned pad
 
 Invariant:
 
-> Debate is discovered, not assigned. Self-critique cleans the account immediately before comparison.
+> Debate is discovered, not assigned. The tetrahedron cleans each agent's own account immediately before debate.
 
 ---
 
-## 7. Adjudication timing
+## 7. Comparison and optional falsification campaigns
 
-During evidence gathering, researchers gather, follow, branch, and self-correct. They are not driven by a falsifier quota.
+Normal TwinGlass research compares gathered evidence without requiring a falsifier. A comparison may synthesize complementary findings, prefer one account over another, expose a real contradiction, or remain unresolved.
 
-At convergence, the cleaned evidence packets may yield:
-
-- synthesis;
-- replacement/refinement;
-- contradiction;
-- falsification;
-- continued uncertainty.
-
-Falsification is therefore a **downstream adjudication result**, not a research-search instruction.
+If the operator explicitly wants to test whether an assembled claim can be broken, that becomes a **separate falsification campaign**: another research team is commissioned to gather evidence relevant to that challenge. Do not smuggle that mission into ordinary research agents.
 
 ---
 
@@ -243,7 +235,7 @@ The geometries may share primitives such as:
 
 But orchestration semantics remain separate:
 
-- `DiamondCoordinator` — bounded divergent round, one primary convergence.
+- `DiamondCoordinator` — one two-agent split-and-return action space; repeatable as needed.
 - `HourglassCoordinator` — persistent pair, repeated divergence/constriction.
 - `SpectralCoordinator` — recursive evidence-driven spawning and auditor-selected pairing.
 

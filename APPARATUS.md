@@ -11,14 +11,14 @@ A walker on a leg finds **differential** data it cannot follow without clutterin
 Walking legs may run in parallel (H0).
 Gates for a **new** track: evidence the current track is improper evidence for a different track marker `necessary_because` not a synonym of a live lane. Exclusive fight is **optional discovery**, not the goal.
 Logic-fail means the three laws broke on this track’s argument. Reaching a correct conclusion, agreeing with a sibling, or synthesizing is not a Logic fail. A false assigned persona is improper-track evidence.
-## 2. Diamond — one bounded divergent evidence round
-The Diamond is a bounded research round. It sends agents down distinct legitimate evidence routes for coverage, **not** thesis/antithesis. Each route may contain its own local lattice of evidence-driven subpaths. The evidence packets meet once for comparison; synthesis, replacement, falsification, or unresolved continuation are downstream results of that comparison.
+## 2. Diamond — repeatable two-agent action space
+A Diamond is one split-and-return research action: send **two agents** down distinct legitimate evidence routes for coverage, then bring those two evidence packets back together. It is **not** thesis/antithesis and it is **not** limited to one use per workflow. A workflow may run another Diamond whenever another two-agent research split is useful. Each route may contain its own local lattice of evidence-driven subpaths.
 
 ## 3. Hourglass — repeated paired research and constriction
 The Hourglass starts with two persistent research directions. Each side researches outward, then the pair constricts to compare evidence. Debate occurs only when the accumulated evidence reveals a real incompatibility; synthesis occurs when the accounts are complementary. The pair then researches outward again. Several research→constriction cycles may occur before closure.
 
-## 4. Pre-meet 3D tetrahedral self-critique
-The tetrahedron is **not** the Diamond and is not a spawn structure. It is a per-agent self-critique performed **after a pairing/constriction has been identified and immediately before debate or synthesis**.
+## 4. Pre-debate 3D tetrahedral self-critique
+The tetrahedron is **not** the Diamond and is not a spawn structure. It is a per-agent self-critique performed when two agents are actually preparing to enter a **debate**. Ordinary synthesis does not automatically invoke it.
 
 Each agent independently separates:
 - T1 bare evidence,
@@ -29,10 +29,10 @@ Each agent independently separates:
 The outside Semantic Integrity and Data Integrity/LCD auditors inspect the cleaned pads. Only pads that clear both integrity planes are eligible for a clean meet.
 
 ## Converge (active)
-Two (or more) research paths with sufficient information may be paired by the orchestrator/auditors. Before comparison, each participant runs the tetrahedral self-critique on its own pad. **Debate is discovered, not assigned.** Debate if the cleaned accounts are genuinely incompatible under the same referents; synthesis if complementary or convergent. Falsification/replacement can occur here as an adjudication result, never as the research gait.
+Research paths with sufficient information may be paired by the orchestrator/auditors. **Debate is discovered, not assigned.** If the gathered evidence reveals a genuine incompatibility, each debating agent runs the tetrahedral self-critique on its own pad before debate. If the evidence is complementary or convergent, synthesize without inventing a debate. Normal research contains no falsifier. An explicit falsification campaign, if the operator wants one, is a separate commissioned research team.
 ## Do not
 - Treat the Diamond as an internal critique object or as “spawn five critique children.”
-- Treat the tetrahedron as a research-spawn geometry; it is pre-meet self-critique.
+- Treat the tetrahedron as a research-spawn geometry; it is pre-debate self-critique.
 - Hunt `~/.grok/sessions`.
 - Load twin for discovery.
 - Mint path capacity.
@@ -61,4 +61,4 @@ Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, oct
 After the last named neighbor sleeps, the first name re-enters only on new quotes.
 
 ## Legacy compatibility note
-The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or pre-meet tetrahedral geometry.
+The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or pre-debate tetrahedral geometry.
