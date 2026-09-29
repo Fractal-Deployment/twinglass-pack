@@ -59,3 +59,6 @@ Does not replace the ring schedule. Same process. `CIRCULAR.md`.
 Variable groups seated around the interdependence object. Seats are names, not owner folders. LLMVE: Energy, Path, Mythos. General charges do not mint those tags.
 Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only.
 After the last named neighbor sleeps, the first name re-enters only on new quotes.
+
+## Legacy compatibility note
+The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or pre-meet tetrahedral geometry.
