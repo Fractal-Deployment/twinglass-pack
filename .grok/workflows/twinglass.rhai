@@ -1,8 +1,8 @@
 let meta = #{
     name: "twinglass",
-    description: "Lattice apparatus: isolated walkers, diamond as a phase, gated spawn as CLI agent() dispatch, SI gather instead of reset, staggered meet, collapse to a prompt.",
-    when_to_use: "A research charge needs LRR-locked walking with optional spawn, not a fight.",
-    phases: ["lock", "dispatch", "diamond", "spawn-gate", "gather", "meet", "collapse", "rewrite"]
+    description: "Canonical TwinGlass: spectral evidence-driven research, outside SI+data auditors, pre-debate tetrahedral self-critique, clean debate/synthesis.",
+    when_to_use: "A research charge needs evidence-following orchestration without assigned thesis/antithesis.",
+    phases: ["lock", "dispatch", "gather", "spawn-gate", "pair", "pre-debate-critique", "audit-clearance", "meet", "collapse", "rewrite"]
 };
 
 let telos = args.telos;
@@ -14,54 +14,49 @@ fn walker_brief(track, pad_charge, vector, debts, persona) {
 TELOS (does not move): ${telos}
 PRIORS: Logic-Ration-Reason lock. Consume; do not rewrite the laws.
 VECTOR MAP (born with): ${vector}
-OPEN SI DEBTS (gather, do not reset): ${debts}
+OPEN INTEGRITY DEBTS (gather, do not reset): ${debts}
 TRACK: ${track}
 CHARGE (isolated): ${pad_charge}
-Do not read sibling pads. Do not hunt sessions. Diamond is a phase on this pad.
-If debts are open, fill them. Keep locks. Do not wipe the pad.`
+Follow real evidence. Do not read sibling pads. Do not hunt sessions.
+Do not manufacture an antithesis or search merely to falsify another route.
+If evidence reveals a distinct route, write divergenceEvidence + otherTrackEvidence + necessaryBecause and keep walking.`
 }
 
 phase("dispatch") {
-    if start == "PAIR" {
-        parallel([
-            agent(walker_brief("priors-as-claimed", args.left_charge, args.left_vector, "none", "lattice-walker"), #{
-                label: "walk priors",
-                persona: "lattice-walker",
-                capability_mode: "read-only",
-                subagent_type: "explore"
-            }),
-            agent(walker_brief("reality-event-plane", args.right_charge, args.right_vector, "none", "lattice-walker"), #{
-                label: "walk outcomes",
-                persona: "lattice-walker",
-                capability_mode: "read-only",
-                subagent_type: "explore"
-            })
-        ]);
-    } else {
-        agent(walker_brief("charge", charge, args.vector, "none", "lattice-walker"), #{
-            label: "walk charge",
-            persona: "lattice-walker",
-            capability_mode: "read-only",
-            subagent_type: "explore"
-        });
-    }
+    agent(walker_brief("charge", charge, args.vector, "none", "lattice-walker"), #{
+        label: "walk charge",
+        persona: "lattice-walker",
+        capability_mode: "read-only",
+        subagent_type: "explore"
+    });
 }
 
 phase("spawn-gate") {
-    // Hard note → notification. Not a local clone of the parent transcript.
-    // assertLegalSpawnNote: improperEvidence AND otherTrackEvidence.
-    // Active sessions typical ≤25, hard STOP 30 (crash observed). Sleeping pads do not count.
-    // Engine SENS_CAP remains 10. Parent keeps walking.
-    // Start width is situation + research priorities, not a fill-to-cap ritual.
+    // assertLegalSpawnNote: divergenceEvidence AND otherTrackEvidence + necessaryBecause.
+    // Parent route need not be wrong. Assigned antithesis refuses.
+    // Active sessions typical <=25, hard STOP 30. Engine SENS_CAP remains 10.
 }
 
 phase("gather") {
-    // SI debts are open items. The walker continues. The pad is not wiped.
+    // Outside Semantic Integrity + Data Integrity/LCD watch pads.
+    // They flag holds/pair candidates; they do not steer conclusions.
+}
+
+phase("pair") {
+    // Orchestrator pairs only when evidence makes the relation mature.
+}
+
+phase("pre-debate-critique") {
+    // Each paired agent independently runs the 3D tetrahedron on its own pad.
+}
+
+phase("audit-clearance") {
+    // Semantic Integrity AND Data Integrity must clear both cleaned packets.
 }
 
 phase("meet") {
-    // Combine only when coordinate maps are named.
-    // Complementary PAIR tracks may sit on different planes — protocol synthesis.
+    // collate-hourglass: DEBATE if genuinely incompatible, SYNTHESIS if complementary.
+    // Falsification/replacement are downstream outcomes, never assigned research roles.
 }
 
 phase("collapse") {
