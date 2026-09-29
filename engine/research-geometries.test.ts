@@ -5,6 +5,7 @@ import {
   addDiamondEvidence,
   closeResearchDiamond,
   finishDiamondLeg,
+  integrityReady,
   meetHourglass,
   openHourglass,
   openResearchDiamond,
@@ -90,7 +91,7 @@ test("pre-debate readiness requires self-critique and both outside auditors", ()
   );
 });
 
-test("hourglass keeps persistent pair across repeated meet cycles", () => {
+test("hourglass synthesis needs dual integrity but not tetrahedron; debate does", () => {
   let h = openHourglass({
     leftAgent: "A",
     rightAgent: "B",
@@ -98,27 +99,67 @@ test("hourglass keeps persistent pair across repeated meet cycles", () => {
     rightDirection: "direction-b",
     maxRounds: 5,
   });
-  const clean = (agentId: string) => ({
+  const packet = (agentId: string, selfCritiqueComplete: boolean) => ({
     agentId,
-    selfCritiqueComplete: true,
+    selfCritiqueComplete,
     audit: { semanticClean: true, dataClean: true, reasons: [] },
   });
+
+  assert.equal(integrityReady(packet("A", false)), true);
+
   h = meetHourglass(h, {
-    left: clean("A"),
-    right: clean("B"),
+    left: packet("A", false),
+    right: packet("B", false),
     mode: "synthesis",
-    summary: "round one synthesis",
+    summary: "complementary evidence",
     sufficientInformation: false,
   });
   assert.equal(h.round, 2);
   assert.equal(h.state, "researching");
+
+  assert.throws(
+    () =>
+      meetHourglass(h, {
+        left: packet("A", false),
+        right: packet("B", false),
+        mode: "debate",
+        summary: "genuine incompatibility",
+        sufficientInformation: false,
+      }),
+    /tetrahedral self-critique/,
+  );
+
   h = meetHourglass(h, {
-    left: clean("A"),
-    right: clean("B"),
+    left: packet("A", true),
+    right: packet("B", true),
     mode: "debate",
-    summary: "round two incompatibility",
+    summary: "genuine incompatibility after self-critique",
     sufficientInformation: true,
   });
   assert.equal(h.state, "complete");
   assert.equal(h.history.length, 2);
+});
+
+test("hourglass planning horizon never forces closure without sufficient information", () => {
+  let h = openHourglass({
+    leftAgent: "A",
+    rightAgent: "B",
+    leftDirection: "a",
+    rightDirection: "b",
+    maxRounds: 1,
+  });
+  const packet = (agentId: string) => ({
+    agentId,
+    selfCritiqueComplete: false,
+    audit: { semanticClean: true, dataClean: true, reasons: [] },
+  });
+  h = meetHourglass(h, {
+    left: packet("A"),
+    right: packet("B"),
+    mode: "synthesis",
+    summary: "not enough information yet",
+    sufficientInformation: false,
+  });
+  assert.equal(h.state, "researching");
+  assert.equal(h.round, 2);
 });
