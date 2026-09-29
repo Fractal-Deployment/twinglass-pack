@@ -3,10 +3,10 @@ import test from "node:test";
 import { appendPad, projectIntegrity, finishPad, type DiamondRun } from "./diamond-engine.ts";
 import {
   awaiting,
-  completeCritiqueDiamond,
   converge,
   diverge,
-  enterCritiqueDiamond,
+  enterPreDebateCritique,
+  completePreDebateCritique,
   MEET_MODES,
   noteOnLeg,
   openMain,
@@ -22,7 +22,7 @@ function trackNote(
     cannotFollow,
     functionSet,
     necessaryBecause,
-    improperEvidence: `quoted: this track is not the ${functionSet} object`,
+    divergenceEvidence: `quoted: evidence opens a distinct ${functionSet} research route`,
     otherTrackEvidence: `quoted: ${functionSet} is a different function-set`,
   };
 }
@@ -57,19 +57,19 @@ test("hard notes spawn MAIN lattice legs, not diamonds", () => {
   assert.ok(m.legs.slice(1).every((l) => l.state === "walking" && l.parentId === root));
   assert.equal(m.diamondId, null);
 });
-test("one diamond: others hibernate; complete awaits meet", () => {
+test("pre-debate critique: others hibernate; complete awaits meet", () => {
   let m = openMain(CHARGE);
   const root = m.legs[0].id;
   m = noteOnLeg(m, root, trackNote("B", "other fn", "parallel"));
   m = spawnLegsBurst(m, root);
   const child = m.legs[1].id;
-  m = enterCritiqueDiamond(m, child);
+  m = enterPreDebateCritique(m, child);
   assert.equal(m.diamondId, child);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "in-diamond");
   assert.equal(m.legs.find((l) => l.id === root)?.state, "hibernating");
   const finished = fourFinish(m.legs.find((l) => l.id === child)!.run);
   m = { ...m, legs: m.legs.map((l) => (l.id === child ? { ...l, run: finished } : l)) };
-  m = completeCritiqueDiamond(m, child, "Child diamond restated. Path capacity unmeasured.");
+  m = completePreDebateCritique(m, child, "Child diamond restated. Path capacity unmeasured.");
   assert.equal(m.diamondId, null);
   assert.equal(m.legs.find((l) => l.id === child)?.state, "awaiting-meet");
   assert.equal(m.legs.find((l) => l.id === root)?.state, "walking");
@@ -82,19 +82,19 @@ test("converge waits for two diamond-complete legs; emit walks", () => {
   m = spawnLegsBurst(m, root);
   const a = m.legs[1].id;
   const b = m.legs[2].id;
-  function diamond(id: string, text: string) {
-    m = enterCritiqueDiamond(m, id);
+  function preDebate(id: string, text: string) {
+    m = enterPreDebateCritique(m, id);
     const finished = fourFinish(m.legs.find((l) => l.id === id)!.run);
     m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: finished } : l)) };
-    m = completeCritiqueDiamond(m, id, text);
+    m = completePreDebateCritique(m, id, text);
   }
-  diamond(a, "A restated. Complementary account.");
+  preDebate(a, "A restated. Complementary account.");
   assert.equal(awaiting(m).length, 1);
   assert.throws(
     () => converge(m, a, b, "synthesis", "too early"),
-    /both finished diamond/,
+    /both finished pre-debate critique/,
   );
-  diamond(b, "B restated. Complementary account.");
+  preDebate(b, "B restated. Complementary account.");
   m = converge(m, a, b, "synthesis", "Both legs complementary. Not the same function. Unmeasured.");
   assert.equal(m.legs.find((l) => l.id === a)?.state, "emitted");
   const out = m.legs.find((l) => l.emit?.kind === "synthesis");
@@ -111,14 +111,14 @@ test("converge debate vs synthesis selection under lock", () => {
   m = spawnLegsBurst(m, root);
   const a = m.legs[1].id;
   const b = m.legs[2].id;
-  function diamond(id: string, text: string) {
-    m = enterCritiqueDiamond(m, id);
+  function preDebate(id: string, text: string) {
+    m = enterPreDebateCritique(m, id);
     const finished = fourFinish(m.legs.find((l) => l.id === id)!.run);
     m = { ...m, legs: m.legs.map((l) => (l.id === id ? { ...l, run: finished } : l)) };
-    m = completeCritiqueDiamond(m, id, text);
+    m = completePreDebateCritique(m, id, text);
   }
-  diamond(a, "A exclusive leftover.");
-  diamond(b, "B exclusive leftover.");
+  preDebate(a, "A exclusive leftover.");
+  preDebate(b, "B exclusive leftover.");
   m = converge(m, a, b, "debate", "Exclusive leftover under lock. Not battle.");
   const out = m.legs.find((l) => l.emit?.kind === "debate");
   assert.ok(out);
