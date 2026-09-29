@@ -203,8 +203,19 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(debateGate.decision, "CONSTRICTION_POINT");
   assert.equal(debateGate.constrictionMode, "debate");
 
-  // Test 3: Complementary evidence can synthesize without manufacturing a debate or tetrahedron
+  // Test 3: Even a synthesis outcome must pass through the tetrahedron first.
+  const synthWithoutCritique = evaluateTriStateExitGate({
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: true,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(synthWithoutCritique.decision, "CONTINUE_RESEARCH");
+  assert.match(synthWithoutCritique.reason, /mandatory tetrahedral self-critique/);
+
   const synthGate = evaluateTriStateExitGate({
+    critique: cleanCritique,
+    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -225,7 +236,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(anomalyBlockedGate.decision, "CONTINUE_RESEARCH");
   assert.match(anomalyBlockedGate.reason, /Unresolved evidence remains/);
 
-  // Test 5: Debate identified BUT pre-debate critique failed -> BLOCKS debate
+  // Test 5: Any comparison with failed tetrahedral critique is blocked
   const failingCritique = executeTetrahedralCritique({
     bareData: "Data",
     literatureFrame: "Frame",
@@ -242,7 +253,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     isMutuallyExclusive: true,
   });
   assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(critiqueBlockedGate.reason, /Pre-debate tetrahedral self-critique/);
+  assert.match(critiqueBlockedGate.reason, /pre-comparison tetrahedral self-critique/i);
 });
 
 
@@ -258,7 +269,7 @@ test("Ordinary research gathering does not require tetrahedral critique", () => 
   assert.match(gate.reason, /Keep gathering research/);
 });
 
-test("A proposed debate requires both outside integrity auditors after self-critique", () => {
+test("Every proposed comparison requires both outside integrity auditors after self-critique", () => {
   const cleanCritique = executeTetrahedralCritique({
     bareData: "Observed connectivity data",
     literatureFrame: "Interpretive frame",
@@ -273,5 +284,5 @@ test("A proposed debate requires both outside integrity auditors after self-crit
     isMutuallyExclusive: true,
   });
   assert.equal(noAudit.decision, "CONTINUE_RESEARCH");
-  assert.match(noAudit.reason, /Pre-debate integrity clearance incomplete/);
+  assert.match(noAudit.reason, /Pre-comparison integrity clearance incomplete/);
 });
