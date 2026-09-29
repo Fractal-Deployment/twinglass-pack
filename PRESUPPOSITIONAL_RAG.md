@@ -154,7 +154,7 @@ $\boxed{\text{CONVERGENCE\_ELIGIBLE}=S_{clear}\land D_{clear}}$
 
 ---
 
-## 8. Epistemic Status Taxonomy (15 States)
+## 8. Epistemic Status Taxonomy
 
 Every node in the Twin-Lattice memory space is explicitly tagged:
 - `PRESUPPOSITION`
@@ -265,7 +265,7 @@ flowchart TD
 3. **$T_2 \leftrightarrow T_3$ (Sycophancy & Echo Audit)**: Tests whether the model is independently evaluating the claim or merely echoing retrieved phrases. A high echo rate blocks verification.
 4. **$T_1 \leftrightarrow T_4$ (Trajectory Explanatory Fit)**: Evaluates which candidate dynamical phase space trajectories directly predict the raw inscription.
 5. **$T_2 \leftrightarrow T_4$ (Mechanism Parsimony Delta)**: Tests whether the literature's complex narrative mechanism survives comparison against more parsimonious dynamical trajectories (e.g. classical geometric packing vs exotic quantum coherence).
-6. **$T_3 \leftrightarrow T_4$ (Causal Friction Test)**: Measures whether empirical evidence exerted sufficient causal friction to deflect the model from its default parametric attractor basin ($DFR > 0.30$).
+6. **$T_3 \leftrightarrow T_4$ (Causal Friction Test)**: Measures whether empirical evidence exerted sufficient causal friction to deflect the model from its default parametric attractor basin (using its own causal-friction score, if instrumented).
 
 ---
 
