@@ -2,8 +2,8 @@
 name: collate-hourglass
 description: >
   Persistent paired research with repeated outward evidence gathering and inward
-  constriction. Each meet is debate or synthesis only after both agents run
-  pre-debate tetrahedral self-critique and pass semantic + data integrity.
+  constriction. The outside integrity pair clears every meet; the tetrahedron is
+  required only when the pair is preparing for a genuine debate.
 when-to-use: hourglass, repeated paired research, debate, synthesis, constriction
 user-invocable: true
 metadata:
@@ -27,16 +27,14 @@ The outside integrity pair watches both pads:
 
 1. **OUTWARD RESEARCH** — both agents independently gather evidence on their directions.
 2. **PAIR READY** — orchestrator/auditors determine that a real comparison is mature.
-3. **SELF-CRITIQUE** — each agent independently runs the 3D tetrahedron on its own pad before seeing the other's cleaned argument.
-4. **DUAL CLEARANCE** — Semantic Integrity + Data Integrity/LCD must clear both packets.
-5. **DEBATE or SYNTHESIS**:
-   - debate only when the gathered accounts are genuinely incompatible;
-   - synthesis when they are complementary;
-   - never manufacture opposition.
-6. **OUTWARD AGAIN**:
+3. **DUAL INTEGRITY CLASSIFICATION** — Semantic Integrity + Data Integrity/LCD clear both evidence packets and establish whether the relation is complementary, incompatible, or not yet comparable.
+4. **SYNTHESIS PATH** — if complementary, synthesize. Do not run a tetrahedron merely to manufacture symmetry.
+5. **DEBATE PATH** — if genuinely incompatible, each agent independently runs the 3D tetrahedron on its own pad before seeing the other's cleaned argument; then the outside integrity pair re-clears both cleaned packets and debate begins.
+6. Never manufacture opposition.
+7. **OUTWARD AGAIN**:
    - after debate, each agent strengthens/revises its own account against the discovered incompatibility;
    - after synthesis, both agents pursue new divergent implications.
-7. Repeat roughly 4–5 meet cycles by default, or stop earlier when sufficient information closes the paired charge.
+8. Roughly 4–5 meet cycles is a planning horizon, not a forced stop. End only when sufficient information closes the paired charge; continue if it does not.
 
 If one direction reaches sufficient closure for the paired question, end the pair rather than keeping the other agent alive as ritual opposition.
 
