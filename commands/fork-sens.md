@@ -1,7 +1,7 @@
 ---
 name: fork-sens
 description: >
-  Fork when a walker has evidence the evidence reveals a distinct route and
+  Fork when a walker has evidence for a distinct route and
   evidence for a different track — not only exclusive fight, not “find
   divergence.” Sensitivity starts at 0. Cap 10 clones. Bypass session-ACL.
 ---
@@ -17,8 +17,8 @@ Load `DISCOVERED.md`, `llmve-meaning`, `logic-ration-reason`, `lcd-lens`. Isolat
 You are collecting dumps/boards. **When does LRR clone?**
 Old rule: only exclusive accounts (A ∧ B = ⊥). Asking a clone to **find divergence** is not a legal goal.
 This run: clone when the walker has **both**:
-1. **Evidence that a distinct research route exists** (quoted — wrong plane, missing object, packing, lock break).
-2. **Evidence for a different track** (quoted — a named other function-set, not an antithesis, not a synonym).
+1. **`divergenceEvidence`** — quoted evidence that a distinct research route exists.
+2. **`otherTrackEvidence`** — quoted evidence naming the distinct route/function-set.
 Plus: `necessary_because` + a residue **marker** + not a live-lane synonym.
 An interesting tangent without evidence for a distinct route is not enough. Occupying the opposite account to force a split is not enough. Same conclusion as a sibling is allowed.
 That is a **nudge**, not a fight.
@@ -29,7 +29,7 @@ SENS = 0
 CAP = 10
 ```
 - `SENS` is clone count (scout is not a clone). Print `SENS=` after every spawn.
-- Start **low**: other-track fork requires **all** of: evidence-backed divergence, other-track evidence, marker, `necessary_because`, not a synonym.
+- Start **low**: a fork requires `divergenceEvidence`, `otherTrackEvidence`, `necessary_because`, and a non-synonym route. Parent need not be wrong.
 - Exclusive fight still forks (same gates) if it is discovered, not assigned.
 - If `SENS > 10`: **STOP**. Hibernate everything. HOLD. Too far — other processes are running. Do not spawn 11.
 Monitor (parent): after each clone, if SENS>10 abort. Do not let a clone ignore the cap.
