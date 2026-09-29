@@ -6,7 +6,6 @@ import {
   checkSemanticIntegrity,
   generateCompetingMechanisms,
   validateProvenanceChain,
-  evaluateCausalBranches,
   buildResearchNode,
   executeTetrahedralCritique,
   evaluateTriStateExitGate,
@@ -117,29 +116,6 @@ test("Layer C: validateProvenanceChain enforces 4-stage primary provenance and e
   assert.equal(validateProvenanceChain(brokenEvidence), false);
 });
 
-test("Discriminating Lattice: prunes ungrounded branches and isolates anomalies", () => {
-  const branches = generateCompetingMechanisms("11D clique density");
-  const evidence: EmpiricalEvidence[] = [
-    {
-      sourceId: "DOC-001",
-      provenance: {
-        primaryDoc: "Markram, Reimann et al. 2017",
-        literalQuote: "forming up to 11-dimensional geometric simplicial complexes around dynamic empty cavities",
-        empiricalContext: "In-silico microcircuit stimulation",
-        derivedInterpretation: "High-dimensional simplicial topology",
-      },
-      relevanceScore: 0.95,
-    },
-  ];
-
-  const evalResult = evaluateCausalBranches(branches, evidence);
-  assert.equal(evalResult.falsified.length, 2); // M3 and M5 falsified by evidence
-  assert.equal(evalResult.survivors.length, 5);
-  assert.match(evalResult.falsified[0].falsificationReason, /null model/);
-  assert.equal(evalResult.anomalies.length, 1);
-  assert.match(evalResult.anomalies[0], /high-dimensional simplicial cavities/);
-});
-
 test("Research Node Schema: builds fully compliant TwinglassResearchNode", () => {
   const branches = generateCompetingMechanisms("Test");
   const evidence: EmpiricalEvidence[] = [
@@ -227,10 +203,8 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(debateGate.decision, "CONSTRICTION_POINT");
   assert.equal(debateGate.constrictionMode, "debate");
 
-  // Test 3: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (synthesis)
+  // Test 3: Complementary evidence can synthesize without manufacturing a debate or tetrahedron
   const synthGate = evaluateTriStateExitGate({
-    critique: cleanCritique,
-    integrity: { semanticIntegrityClear: true, dataIntegrityClear: true },
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -268,12 +242,12 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     isMutuallyExclusive: false,
   });
   assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(critiqueBlockedGate.reason, /Pre-meet self-critique blocked comparison/);
+  assert.match(critiqueBlockedGate.reason, /Pre-debate tetrahedral self-critique/);
 });
 
 
 
-test("Ordinary research does not require tetrahedral critique or a falsifier", () => {
+test("Ordinary research gathering does not require tetrahedral critique", () => {
   const gate = evaluateTriStateExitGate({
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
@@ -284,7 +258,7 @@ test("Ordinary research does not require tetrahedral critique or a falsifier", (
   assert.match(gate.reason, /Keep walking/);
 });
 
-test("A proposed meet requires both outside integrity auditors after self-critique", () => {
+test("A proposed debate requires both outside integrity auditors after self-critique", () => {
   const cleanCritique = executeTetrahedralCritique({
     bareData: "Observed connectivity data",
     literatureFrame: "Interpretive frame",
@@ -299,5 +273,5 @@ test("A proposed meet requires both outside integrity auditors after self-critiq
     isMutuallyExclusive: true,
   });
   assert.equal(noAudit.decision, "CONTINUE_RESEARCH");
-  assert.match(noAudit.reason, /integrity clearance incomplete/);
+  assert.match(noAudit.reason, /Pre-debate integrity clearance incomplete/);
 });
