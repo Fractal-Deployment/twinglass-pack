@@ -3,7 +3,7 @@ name: presuppositional-rag
 description: >
   Multi-agent presuppositional research under TwinGlass geometry constraints.
   Generates entailments from P1-P5, gathers evidence along divergent non-dialectic routes,
-  enforces semantic/data integrity, and runs tetrahedral self-critique only when agents are preparing for an actual debate.
+  enforces semantic/data integrity, and runs tetrahedral self-critique on every participating agent before every convergence/comparison.
 when-to-use: presuppositional research, causal multi-branching, primary source provenance, active RAG, anomaly-driven research, epistemic status tracking
 user-invocable: true
 metadata:
@@ -26,7 +26,7 @@ Load `../../PRESUPPOSITIONAL_RAG.md`, `../logic-ration-reason`, `../lcd-glossary
 | **Primary Retriever** | Provenance Enforcer | Fetches Layer C primary sources; enforces 4-stage provenance chain. |
 | **Semantic Integrity Auditor** | Outside Meaning Gate | Watches referents, definitions, scope, and inference across pads; does not research the answer. |
 | **Data Integrity / LCD Auditor** | Outside Evidence Gate | Watches source identity, provenance, measurement context, duplication, and data/interpretation separation. |
-| **Tetrahedral Critic** | Pre-Debate Self-Critique | Each debating agent independently decomposes its own pad into Bare Data, Lit Frame, Bias Audit, and Current Causal Trajectory immediately before debate. |
+| **Tetrahedral Critic** | Mandatory Pre-Comparison Self-Critique | Every participating agent independently decomposes its own pad into Bare Data, Lit Frame, Bias Audit, and Current Causal Trajectory before any cross-pad comparison. Debate vs synthesis is determined afterward. |
 | **Anomaly Agent** | Residue Handler | Isolates unexplained evidence and formulates legitimate new research vectors. |
 | **Synthesis / Adjudication Agent** | Comparison | Compares gathered research for synthesis, replacement, debate, or unresolved continuation. |
 
@@ -44,13 +44,14 @@ $$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Propos
    - `CONTINUE_RESEARCH`: active evidence paths remain.
    - `SLEEP_DOOR`: needs an interdependent neighbor variable; write sleep packet.
    - `CONSTRICTION_POINT`: a legitimate comparison/pairing has been reached.
-8. **Compare**: Synthesize complementary/convergent research directly. If the gathered evidence exposes a real incompatibility and a debate is about to begin, each debating agent performs the 4-track Tetrahedral Critique on its own pad and the outside integrity pair checks the debate material.
-9. **Optional falsification campaign**: Only if explicitly commissioned by the operator, create a separate research team to gather evidence that could challenge an assembled claim. Do not build that mission into ordinary evidence gathering.
-10. **Export / Escalate**: Emit the resulting machine-readable node(s). Request human operator review for potential axiom promotions ($P_n \rightarrow P_{n+1}?$).
+8. **Pre-Comparison Self-Critique**: Every convergence/comparison requires each participating agent to execute the 4-track Tetrahedral Critique on its own pad. The outside integrity pair checks the cleaned material. Do not pre-classify the meet as synthesis or debate.
+9. **Compare**: Compare the cleaned research and only then determine synthesis, debate, replacement, or unresolved continuation.
+10. **Optional falsification campaign**: Only if explicitly commissioned by the operator, create a separate research team to gather evidence that could challenge an assembled claim. Do not build that mission into ordinary evidence gathering.
+11. **Export / Escalate**: Emit the resulting machine-readable node(s). Request human operator review for potential axiom promotions ($P_n \rightarrow P_{n+1}?$).
 
 ## Do not
 - Allow empirical context to silently rewrite Layer A presuppositions.
 - Collapse causal multi-branching into binary pro/con dialectic.
-- Run the tetrahedral critique continuously during ordinary evidence gathering; it is a pre-debate self-critique.
+- Run the tetrahedral critique continuously during ordinary evidence gathering; it is mandatory before every comparison/constriction.
 - Accept secondary-source paraphrases without primary source verification.
 - Omit definition precision proportional to inferential load.
