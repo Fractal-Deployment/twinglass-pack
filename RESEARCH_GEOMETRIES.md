@@ -177,11 +177,11 @@ CONVERGENCE_ELIGIBLE =
 
 ---
 
-## 6. 3D tetrahedral self-critique — pre-debate, per-agent
+## 6. 3D tetrahedral self-critique — mandatory before every comparison, per-agent
 
 The tetrahedron is **not** a research-spawn geometry and is **not** the Diamond.
 
-It is a self-critique run by each research agent on its own pad **when the agents are preparing to enter an actual debate**. It is not required merely because two evidence packets are being synthesized.
+It is a self-critique run by **each participating research agent every time two research paths are brought together for comparison**. The system does not decide "debate" versus "synthesis" beforehand; that determination is made only after both agents have completed the tetrahedral self-critique and the integrity pair has cleared the material.
 
 ### Four tracks
 
@@ -193,24 +193,24 @@ It is a self-critique run by each research agent on its own pad **when the agent
 The six cross-track relations test the agent **against itself**, not against its future debate partner.
 
 ```text
-debate identified
+comparison/constriction identified
       ↓
 Agent A tetrahedron     Agent B tetrahedron
       ↓                       ↓
 semantic + data audit of each cleaned pad
       ↓                       ↓
-        clean convergence / debate
+          clean comparison
 ```
 
 Invariant:
 
-> Debate is discovered, not assigned. The tetrahedron cleans each agent's own account immediately before debate.
+> Every convergence runs the tetrahedron first. Only after the cleaned evidence is compared does the system discover whether the result is synthesis, debate, replacement, or unresolved.
 
 ---
 
 ## 7. Comparison and optional falsification campaigns
 
-Normal TwinGlass research compares gathered evidence without requiring a falsifier. A comparison may synthesize complementary findings, prefer one account over another, expose a real contradiction, or remain unresolved.
+Normal TwinGlass research compares gathered evidence without requiring a falsifier. **Every comparison/constriction first runs the tetrahedral self-critique on every participating agent.** Only after that shared pre-comparison gate may the evidence resolve into synthesis, debate, replacement, or unresolved continuation.
 
 If the operator explicitly wants to test whether an assembled claim can be broken, that becomes a **separate falsification campaign**: another research team is commissioned to gather evidence relevant to that challenge. Do not smuggle that mission into ordinary research agents.
 
