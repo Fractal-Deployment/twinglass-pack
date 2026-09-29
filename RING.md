@@ -13,7 +13,7 @@ Load `CIRCULAR.md` with this file. RING is the schedule. CIRCULAR is the NS-boun
 ## Two rooms
 | Room | Job |
 |---|---|
-| TwinGlass turn | harvest → octahedron → spawn-gate → stagger/sleep/meet → rewrite |
+| TwinGlass turn | harvest → outside SI+data audit → spawn-gate → stagger/sleep → pre-debate tetrahedron only if meeting → meet → rewrite |
 | Ring | schedule `LIVE_NAME` around the interdependence object. Push-pull. Sleep packet. Wake on quotes. |
 
 ## Law
@@ -22,7 +22,7 @@ A live name walks until the construct **butts against** a neighbor it cannot car
 ```
 live Energy
   cannot carry Path
-  octahedron → Sleep Energy packet
+  outside SI+data audit → Sleep Energy packet
   wake quote: otherTrackEvidence = Path
   LIVE_NAME := Path
 live Path
@@ -55,7 +55,7 @@ Full cut lives in `CIRCULAR.md`. Bound table:
 Proof/disproof = “this expression covers the word problem” vs “this expression is the wrong object.” Not two camps. Everyday walk is thesis + negation-map on one pad, then the ring pushes the neighbor.
 
 ## Sleep / wake
-**Sleep group** = the live walker finished a layer, octahedron ran, referee passed Sleep or Meet-then-Sleep. Packet hits disk. Live walker count drops. The **name** is not owned by a standing team.
+**Sleep group** = the live walker finished a layer and the outside Semantic Integrity + Data Integrity/LCD pair cleared the packet for sleep. The tetrahedron does not run merely because a seat sleeps; it runs only when paired agents are preparing to meet. Packet hits disk. Live walker count drops. The **name** is not owned by a standing team.
 
 **Wake group** = observer sees `why_neighbor` + `otherTrackEvidence` on a finished packet, referee says units/axes comparable, width allows. New session = empty history. Packet fields load; transcript does not.
 
@@ -65,7 +65,7 @@ Wake refuses: no quotes, calendar, “enough pages,” `session/fork`, parent tr
 | Count | What |
 |---|---|
 | `CAP: 10` / engine `SENS_CAP` | Pack lock. Board string stays. Do not delete. STOP, not a fill ritual. |
-| Live walkers (`LEGS` / ring) | Walking + in-diamond. **Sleeping packets do not count.** This is what the ring uses. |
+| Live walkers (`LEGS` / ring) | Walking + in-pre-debate-critique. **Sleeping packets do not count.** This is what the ring uses. |
 | `SENS` on the engine today | Lifetime **clone tally**. It does not decrement on Sleep. HOLD a rewrite until a charge says `SENS := live`. |
 | CLI `ACTIVE` | Concurrent `workflow.agent()` sessions. Typical ≤25, hard STOP 30. |
 
@@ -83,7 +83,7 @@ thesis_expression
 negation_map[]
 empty_meets[]
 why_neighbor
-improperEvidence?
+divergenceEvidence?
 otherTrackEvidence?
 dump_backed
 layer_index
@@ -104,7 +104,7 @@ PACKETS: n=
 Keep `CAP: 10`. Keep `START_INTENT: A | B`.
 
 ## Occupants
-Observer *when* a wake or meet is due. Referee authorizes wake. Walker holds the SI ledger. Sentinel after close is monitor (SI+LCD only). Do not mash ledger with monitor.
+Observer/orchestrator acts when wake or meet is due. The outside integrity pair is Semantic Integrity + Data Integrity/LCD. They authorize clean packets without becoming researchers. Before a meet, each paired research agent independently runs the tetrahedron; then both auditors clear the cleaned packets.
 Rewriter after Meet = Codex consolidator: markers only, telos unmoved.
 
 This file **does not own meet**. Meet stays `collate-hourglass`.
