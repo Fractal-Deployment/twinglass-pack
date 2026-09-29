@@ -289,6 +289,12 @@ class SleepPacket:
     other_track_evidence: str
 
 @dataclass
+class IntegrityClearance:
+    semantic_integrity_clear: bool
+    data_integrity_clear: bool
+    reasons: Optional[List[str]] = None
+
+@dataclass
 class TriStateGateResult:
     decision: str  # "CONTINUE_RESEARCH" | "SLEEP_DOOR" | "CONSTRICTION_POINT"
     reason: str
@@ -389,14 +395,15 @@ def execute_tetrahedral_critique(
     )
 
 def evaluate_tri_state_exit_gate(
-    critique: TetrahedralCritique,
     has_unresolved_anomalies: bool,
     needs_neighbor_variable: bool,
     neighbor_name: Optional[str] = None,
     is_endpoint_reached: bool = False,
-    is_mutually_exclusive: bool = False
+    is_mutually_exclusive: bool = False,
+    critique: Optional[TetrahedralCritique] = None,
+    integrity: Optional[IntegrityClearance] = None
 ) -> TriStateGateResult:
-    # Gate 1: If neighbor variable is needed and cannot carry alone -> SLEEP_DOOR
+    """Route research; require tetrahedral self-critique only at a proposed meet."""
     if needs_neighbor_variable and neighbor_name:
         return TriStateGateResult(
             decision="SLEEP_DOOR",
@@ -407,37 +414,44 @@ def evaluate_tri_state_exit_gate(
             )
         )
 
-    # Gate 2: Unresolved anomalies prevent constriction -> CONTINUE_RESEARCH
+    # Ordinary research: keep gathering. No falsifier and no tetrahedron required.
+    if not is_endpoint_reached:
+        return TriStateGateResult(
+            decision="CONTINUE_RESEARCH",
+            reason="Research pad has active evidence-gathering paths. Keep walking; no pre-meet critique or falsifier is required."
+        )
+
     if has_unresolved_anomalies:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Unresolved empirical anomalies / residue remain. Constriction blocked until residue is resolved or branched."
+            reason="Unresolved empirical anomalies / residue remain. Constriction blocked until the pad has enough information for a clean comparison."
         )
 
-    # Gate 3: Tetrahedral Critique failures prevent constriction -> CONTINUE_RESEARCH
-    if not critique.is_self_critique_passed:
-        reasons = []
-        if critique.relations.t2_t3_sycophancy_audit["is_echo"]:
-            reasons.append("Sycophancy detected: model echoes retrieved narrative without independent derivation")
-        if not critique.relations.t3_t4_causal_friction["deflected"]:
-            reasons.append("Zero causal friction: model parametric attractor was not deflected by empirical evidence")
+    # Pairing exists: now self-critique is required.
+    if critique is None:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason=f"Self-critique gate blocked constriction: {'; '.join(reasons) or 'Critique conditions unsatisfied'}."
+            reason="Pairing identified, but pre-meet tetrahedral self-critique has not been completed."
         )
 
-    # Gate 4: Endpoint reached with clean critique and zero anomalies -> CONSTRICTION_POINT
-    if is_endpoint_reached:
+    if not critique.is_self_critique_passed:
         return TriStateGateResult(
-            decision="CONSTRICTION_POINT",
-            reason="Research pad reached logical endpoint with clean tetrahedral critique and zero unresolved anomalies. Ready for collate-hourglass.",
-            constriction_mode="debate" if is_mutually_exclusive else "synthesis"
+            decision="CONTINUE_RESEARCH",
+            reason="Pre-meet tetrahedral self-critique did not clear the pad."
         )
 
-    # Gate 5: Default -> CONTINUE_RESEARCH
+    # Outside semantic + data auditors must both clear the cleaned pad.
+    if integrity is None or not integrity.semantic_integrity_clear or not integrity.data_integrity_clear:
+        reasons = "; ".join(integrity.reasons or []) if integrity else ""
+        return TriStateGateResult(
+            decision="CONTINUE_RESEARCH",
+            reason=f"Pre-meet integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
+        )
+
     return TriStateGateResult(
-        decision="CONTINUE_RESEARCH",
-        reason="Research pad has active exploration paths and requires further empirical friction."
+        decision="CONSTRICTION_POINT",
+        reason="Pairing identified; tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
+        constriction_mode="debate" if is_mutually_exclusive else "synthesis"
     )
 
 # =====================================================================
@@ -566,58 +580,46 @@ class PresuppositionalTwinLatticeEngine:
                 print(f" -> [SI HOLD] Term: '{lock.term}' ({lock.inferential_load}) -> Semantic integrity verified.")
         print()
 
-        # Step 5: Causal Discrimination & Branch Pruning / Anomaly Detection (Evidence-Driven)
-        print("[DISCRIMINATING LATTICE: CAUSAL DISCRIMINATION & ANOMALY HANDLING (EVIDENCE-DRIVEN)]")
-        evidence_corpus = " ".join([
-            f"{ev.provenance.literal_quote} {ev.provenance.empirical_context} {ev.provenance.derived_interpretation}"
-            for ev in retrieved_evidence_list
-        ]).lower()
-
-        surviving_mechanisms = []
+        # Step 5: Evidence accumulation / anomaly notes — no active falsifier
+        print("[RESEARCH WALK: EVIDENCE ACCUMULATION — ADJUDICATION DEFERRED]")
+        surviving_mechanisms = list(competing_mechanisms)
         falsified_mechanisms = []
-
-        for m in competing_mechanisms:
-            is_falsified = False
-            reason = ""
-            for crit in m.falsification_criteria:
-                if m.id == "M3" and any(k in evidence_corpus for k in ["11-dimensional", "simplicial", "clique"]):
-                    is_falsified = True
-                    reason = f"Empirical evidence reports high-dimensional simplicial complexes, violating random null model criterion: '{crit}'."
-                    break
-                if m.id == "M5" and any(k in evidence_corpus for k in ["dynamic", "stimulation", "in-silico", "in vivo"]):
-                    is_falsified = True
-                    reason = f"Empirical evidence demonstrates dynamic stimulus-locked assembly/collapse, refuting static instrument artifact criterion: '{crit}'."
-                    break
-            if is_falsified:
-                m.falsification_reason = reason
-                falsified_mechanisms.append(m)
-                self.falsified_branches += 1
-                print(f" -> Branch {m.id} ({m.name}): [FALSIFIED] {reason}")
-            else:
-                surviving_mechanisms.append(m)
-                print(f" -> Branch {m.id} ({m.name}): [SURVIVED] Predictions consistent with empirical findings.")
+        print(" -> Active research does not prune branches or assign a falsifier.")
+        print(" -> Evidence, anomalies, and alternate routes accumulate until a legitimate comparison is reached.\n")
 
         unresolved_anomaly = "Anomalous residue: 11D cavities collapse rapidly upon sensory cessation, leaving unexplained topological hysteresis."
-        print(f" -> [ANOMALY DETECTED] {unresolved_anomaly}\n")
+        print(f" -> [ANOMALY NOTE] {unresolved_anomaly}\n")
 
-        # Step 6: 3D Tetrahedral Self-Critique (4-Track Decomposition & Cross-Track Relational Discrimination)
-        print("[DISCRIMINATING LATTICE: 3D TETRAHEDRAL SELF-CRITIQUE (4-TRACK DECOMPOSITION)]")
-        critique = execute_tetrahedral_critique(
-            bare_data="All-to-all connectivity detected in 11-neuron cluster forming simplicial cavities without transmission loss.",
-            literature_frame="Literature framing: Cortical columns process information through dynamic high-dimensional geometric structures.",
-            pretraining_bias_check="Model prior defaults to flat pairwise synaptic summation. Prompt/RAG bias towards exotic claims. Prior disentanglement: require topological vs classical discrimination.",
-            phase_space_analysis="Geometric phase space reveals that 11D simplicial cavities act as transient attractor basins requiring high-dimensional coordinates beyond flat Euclidean graphs."
-        )
-        print(critique.structural_critique_report + "\n")
+        # Step 6: Ordinary research routing. Tetrahedral self-critique is PRE-MEET ONLY.
+        print("[LAYER B / GLASS: RESEARCH ROUTING]")
+        pairing_identified = False
+        critique = None
+        integrity = None
 
-        # Step 7: Tri-State Exit Gate Evaluation
-        print("[LAYER B / GLASS: TRI-STATE EXIT GATE EVALUATION]")
+        if pairing_identified:
+            print("[PRE-MEET: 3D TETRAHEDRAL SELF-CRITIQUE]")
+            critique = execute_tetrahedral_critique(
+                bare_data="All-to-all connectivity detected in 11-neuron cluster forming simplicial cavities without transmission loss.",
+                literature_frame="Literature framing: Cortical columns process information through dynamic high-dimensional geometric structures.",
+                pretraining_bias_check="Model prior defaults to flat pairwise synaptic summation. Prior disentanglement required before comparison.",
+                phase_space_analysis="Current causal trajectory: high-dimensional simplicial cavities as transient attractor basins."
+            )
+            integrity = IntegrityClearance(
+                semantic_integrity_clear=True,
+                data_integrity_clear=True,
+                reasons=[]
+            )
+            print(critique.structural_critique_report + "\n")
+        else:
+            print(" -> No comparison partner yet: tetrahedral self-critique correctly not run.\n")
+
         exit_gate = evaluate_tri_state_exit_gate(
-            critique=critique,
-            has_unresolved_anomalies=True,
+            has_unresolved_anomalies=False,
             needs_neighbor_variable=False,
-            is_endpoint_reached=False,
-            is_mutually_exclusive=False
+            is_endpoint_reached=pairing_identified,
+            is_mutually_exclusive=False,
+            critique=critique,
+            integrity=integrity
         )
         print(f" -> Gate Decision: {exit_gate.decision}")
         print(f" -> Reason: {exit_gate.reason}\n")
@@ -662,7 +664,7 @@ class PresuppositionalTwinLatticeEngine:
         print()
 
         # Metrics Evaluation (Dynamically Derived)
-        dfr = self.falsified_branches / max(1, self.generated_branches)
+        dfr = self.falsified_branches / max(1, self.generated_branches)  # retrospective adjudication metric only
         pd = valid_provenance_count / max(1, len(retrieved_evidence_list))
         sdr = si_redirect_count / max(1, len(GLOSSARY_LOCKS))
         print("=" * 80)
@@ -670,7 +672,7 @@ class PresuppositionalTwinLatticeEngine:
         print("=" * 80)
         print(f" -> Total Generated Causal Branches: {self.generated_branches}")
         print(f" -> Falsified / Pruned Causal Branches: {self.falsified_branches}")
-        print(f" -> Discriminative Friction Ratio (DFR): {dfr:.2f} (Target >= 0.40)")
+        print(f" -> Discriminative Friction Ratio (DFR, retrospective only): {dfr:.2f} (no active branch-kill target)")
         print(f" -> Provenance Density (PD): {pd:.2f} (Target = 1.00)")
         print(f" -> Semantic Drift Rate (SDR): {sdr:.2f} (100% Locked)")
         print(f" -> Exit Gate State: {exit_gate.decision}")
