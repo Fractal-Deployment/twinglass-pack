@@ -171,7 +171,7 @@ Start:
 Spawn: legal note (`divergenceEvidence` AND `otherTrackEvidence` + `necessaryBecause`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking.
 SI: `twinglass-tracker` ledger. Gather. Meet occupant remains `collate-hourglass`.
 Collapse writes a working prompt. Project telos does not move. `llmve-factor-compute` HOLD. No Omega.
-## 9. Workflow host (1.4.4, additive)
+## 9. Workflow host (1.6.0, additive)
 Do not delete the nine. Also copy `twinglass-dispatch`, `twinglass-tracker`.
 Also copy `RING.md`, `CIRCULAR.md`, `commands/ring.md`, `commands/circular.md`.
 Google Drive LLMVE files are past. Do not install them. Meaning stays a pointer to `Fractal-Deployment/llmve-meaning`.
