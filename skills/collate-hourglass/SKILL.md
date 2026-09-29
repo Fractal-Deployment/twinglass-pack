@@ -1,35 +1,54 @@
 ---
 name: collate-hourglass
 description: >
-  Collation hourglass after isolated paths. Expand remaining gaps,
-  disconfirm the survivor, contract one research explanation. Not LRR.
-  Not the scout. Not competing agents. Former name: morph-shared-research.
-when-to-use: collation, hourglass after isolation, collate residue, research product
+  Persistent paired research with repeated outward evidence gathering and inward
+  constriction. Each meet is debate or synthesis only after both agents run
+  pre-debate tetrahedral self-critique and pass semantic + data integrity.
+when-to-use: hourglass, repeated paired research, debate, synthesis, constriction
 user-invocable: true
 metadata:
-  short-description: "Collate isolated residue into one explanation"
+  short-description: "Persistent pair: research -> critique -> meet -> research"
 ---
 # collate-hourglass
-**One job:** turn isolated pathway residue into one research explanation the operator can use.
-Load `../DISCOVERED.md`. After isolated pads. Not a clone. Not LCD convert.
-Former folder name `morph-shared-research`. That name is dead. This is collation, not a second copy of Logic Ration Reason.
-## When
-## Gait
-1. **EXPAND** — remaining gaps. Do not scout a new tree.
-2. **DEBATE or SYNTHESIS** — debate if tracks actually diverged; synthesis if they stayed complementary. **Not battle. Not antithesis.**
-3. **CONTRACT** — one explanation. Restate what is true. Do not refuse. If accounts remain exclusive leftover after this step, load `steelman-truth-tournament`. Do not start the tournament as the default meet.
-## Load
-- `logic-ration-reason` (consume, do not own)
-- Integrity monitor hits: **semantic integrity + LCD only**
-- Isolated pads / ingest packet
-The three laws of logic are the **method** of SI and of LCD (how those two objects are judged). They are not a third monitor object. Ration and Reason stay in LRR, off the monitor.
-## Do not
-- Own the three laws.
-- Watch LRR (ration + reason + laws-as-extra-object) on the integrity monitor — overload refuses.
-- Compete with the walker. You collate after isolation.
-- Compute F, T_tail, P_L from dumps (`llmve-factor-compute`).
-- Run always-two (`twinglass-twin`) or earned forks (`twinglass-lattice`). Those already happened.
-Grok.com: /sim and /twin contraction. CLI: this folder.
 
-## Workflow host
-Load `twinglass-tracker` before contracting. If required axes are unnamed: **stagger** — keep pads, keep walking, do not contract. Complementary named planes = protocol synthesis (still **DEBATE or SYNTHESIS** in this skill). Unnamed axes are not exclusive leftover. Exclusive leftover after this step still goes to `steelman-truth-tournament`.
+**One job:** operate the Hourglass: two persistent research directions repeatedly research outward, meet cleanly, then go outward again until the pair has sufficient information.
+
+Load `../../RESEARCH_GEOMETRIES.md`.
+
+## Preconditions
+
+The two directions are not assigned thesis/antithesis roles. Each has its own research point/direction and gathers the strongest evidence it can.
+
+The outside integrity pair watches both pads:
+- Semantic Integrity;
+- Data Integrity / LCD.
+
+## Cycle
+
+1. **OUTWARD RESEARCH** — both agents independently gather evidence on their directions.
+2. **PAIR READY** — orchestrator/auditors determine that a real comparison is mature.
+3. **SELF-CRITIQUE** — each agent independently runs the 3D tetrahedron on its own pad before seeing the other's cleaned argument.
+4. **DUAL CLEARANCE** — Semantic Integrity + Data Integrity/LCD must clear both packets.
+5. **DEBATE or SYNTHESIS**:
+   - debate only when the gathered accounts are genuinely incompatible;
+   - synthesis when they are complementary;
+   - never manufacture opposition.
+6. **OUTWARD AGAIN**:
+   - after debate, each agent strengthens/revises its own account against the discovered incompatibility;
+   - after synthesis, both agents pursue new divergent implications.
+7. Repeat roughly 4–5 meet cycles by default, or stop earlier when sufficient information closes the paired charge.
+
+If one direction reaches sufficient closure for the paired question, end the pair rather than keeping the other agent alive as ritual opposition.
+
+## Downstream adjudication
+
+Replacement or falsification may emerge from the gathered evidence at constriction. Neither is a research assignment.
+
+Exclusive unresolved residue may hand to `steelman-truth-tournament`; that tournament is not the default meet.
+
+## Do not
+
+- Start with proof/disproof teams.
+- Run a debate before each agent completes its own pre-debate tetrahedron.
+- Let either integrity auditor become a research competitor.
+- Contract merely because a fixed number of cycles elapsed.
