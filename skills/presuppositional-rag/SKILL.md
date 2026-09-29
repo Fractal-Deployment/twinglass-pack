@@ -26,7 +26,7 @@ Load `../../PRESUPPOSITIONAL_RAG.md`, `../logic-ration-reason`, `../lcd-glossary
 | **Primary Retriever** | Provenance Enforcer | Fetches Layer C primary sources; enforces 4-stage provenance chain. |
 | **Semantic Integrity Auditor** | Outside Meaning Gate | Watches referents, definitions, scope, and inference across pads; does not research the answer. |
 | **Data Integrity / LCD Auditor** | Outside Evidence Gate | Watches source identity, provenance, measurement context, duplication, and data/interpretation separation. |
-| **Tetrahedral Critic** | Pre-Meet Self-Critique | Each debating agent independently decomposes its own pad into Bare Data, Lit Frame, Bias Audit, and Current Causal Trajectory immediately before debate. |
+| **Tetrahedral Critic** | Pre-Debate Self-Critique | Each debating agent independently decomposes its own pad into Bare Data, Lit Frame, Bias Audit, and Current Causal Trajectory immediately before debate. |
 | **Anomaly Agent** | Residue Handler | Isolates unexplained evidence and formulates legitimate new research vectors. |
 | **Synthesis / Adjudication Agent** | Comparison | Compares gathered research for synthesis, replacement, debate, or unresolved continuation. |
 
