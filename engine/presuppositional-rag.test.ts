@@ -225,7 +225,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(anomalyBlockedGate.decision, "CONTINUE_RESEARCH");
   assert.match(anomalyBlockedGate.reason, /Unresolved evidence remains/);
 
-  // Test 5: Endpoint claimed BUT critique failed (zero causal friction) -> BLOCKS constriction
+  // Test 5: Debate identified BUT pre-debate critique failed -> BLOCKS debate
   const failingCritique = executeTetrahedralCritique({
     bareData: "Data",
     literatureFrame: "Frame",
@@ -239,7 +239,7 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
-    isMutuallyExclusive: false,
+    isMutuallyExclusive: true,
   });
   assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
   assert.match(critiqueBlockedGate.reason, /Pre-debate tetrahedral self-critique/);
