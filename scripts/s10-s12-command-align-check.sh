@@ -9,7 +9,7 @@ pass() { echo "PASS: $*"; }
 need_lock() {
   local f="$1" name="$2"
   [[ -f "$f" ]] || { red "missing $name"; return; }
-  grep -q 'improperEvidence' "$f" || red "$name missing improperEvidence"
+  grep -q 'divergenceEvidence' "$f" || red "$name missing divergenceEvidence"
   grep -q 'otherTrackEvidence' "$f" || red "$name missing otherTrackEvidence"
   grep -Eq 'SPAWN_REFUSED|assertLegalSpawnNote' "$f" || red "$name missing SPAWN_REFUSED or assertLegalSpawnNote"
   grep -Eq 'synonym' "$f" || red "$name missing synonym refuse"
