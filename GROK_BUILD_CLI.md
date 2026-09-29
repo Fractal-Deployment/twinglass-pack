@@ -1,7 +1,7 @@
 # Grok Build CLI — paste this as the session prompt
 You are installing **Twinglass pack** as the only cognition skill set on this machine.
 Repo: `https://github.com/Fractal-Deployment/twinglass-pack`
-Install from `main` (plugin **1.4.4**). If the clone is 1.3.0, 1.4.2, or 1.4.3, you have the old pack — fetch again.
+Install from `main` (plugin **1.6.0**). If the clone is 1.3.0, 1.4.2, or 1.4.3, you have the old pack — fetch again.
 Job: clean install. Remove aliases, leftover plugins that only wrap a skill, and duplicate config paths. Do not touch silicon, hooks, or security plugins except to stop copying their skills.
 **After install, the gait is** [`commands/run-apparatus.md`](./commands/run-apparatus.md) **plus** [`WORKFLOW_HOST.md`](./WORKFLOW_HOST.md) **plus** [`CIRCULAR.md`](./CIRCULAR.md) — one apparatus, two start intents, NS methods bound, not ten chairs, not twin as default, not battle.
 Spawn is a **CLI notification** (`workflow.agent()`, new-context). SI **gathers**. Meet **staggers**. Collapse writes a **prompt**, not Omega.
@@ -52,7 +52,7 @@ If `mojo-cuda` also exists under `~/.grok/skills/mojo-cuda`, **delete that skill
 ## 4. Install the pack (one source)
 ```bash
 git clone https://github.com/Fractal-Deployment/twinglass-pack.git /tmp/twinglass-pack
-# confirm plugin.json version is 1.4.4 or newer; if older, git -C /tmp/twinglass-pack pull
+# confirm plugin.json version is 1.6.0 or newer; if older, git -C /tmp/twinglass-pack pull
 mkdir -p ~/.grok/skills
 rm -rf ~/.grok/skills/logic-ration-reason \
   ~/.grok/skills/llmve-meaning \
@@ -128,7 +128,7 @@ Nine pack skills plus two workflow-host occupants:
 11. `twinglass-tracker`
 Also on disk: `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.md`, `commands/workflow-host.md`, `commands/ring.md`, `commands/circular.md`, `.grok/workflows/twinglass.rhai`.
 Slash commands that must exist: `/activate` (pack), `/twinglass-lattice`, `/twinglass-twin`, `/workflow-host`, `/ring`, `/circular`.
-Confirm `plugin.json` version ≥ 1.4.4.
+Confirm `plugin.json` version ≥ 1.6.0.
 Reload plugins (`r` on Plugins tab) or start a new session.
 ## 8. After install — run this gait
 Load: `WORKFLOW_HOST.md` + `CIRCULAR.md` + `RING.md` + `commands/run-apparatus.md` + `commands/workflow-host.md`.
@@ -148,7 +148,7 @@ ACTIVE:
 TYPICAL: 25
 HARD: 30
 STOP_OVER_CAP:
-DIAMOND_MUTEX:
+PRE_DEBATE_CRITIQUE_MUTEX:
 AWAITING_MEET:
 MEET: debate | synthesis | waiting
 SPAWNED_FROM_HARD_NOTES:
@@ -161,14 +161,14 @@ Width law:
 - Start harvest from **research priorities and the situation**. Do not fan to 25 as ritual. Do not fill 10 as ritual.
 - Engine `SENS_CAP` = 10 stays (do not delete that lock). Cap 10 = STOP, not a roster.
 - Concurrent CLI `workflow.agent()` sessions: typical ≤ 25; hard STOP 30 (crash observed). Sleeping / awaiting-meet pads are not active.
-- Occupants are not width. Octahedron and hourglasses add zero width.
+- Occupants are not width. Pre-debate tetrahedral self-critique and the outside integrity pair add zero research width.
 - Default live width 1. Width 2 only as Energy P vs R inside one packet.
 Start:
 - **A generate** — default when the partition is unknown.
 - **B converge** — only if court-named packets are already held. Then return to A.
 - **PAIR** — only if one pad would clutter a named gutter. Complementary, not exclusive.
 - **Twin** — XOR leftover. Separate charge. Never with lattice. Not the default gait.
-Spawn: legal note (`improperEvidence` AND `otherTrackEvidence`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking.
+Spawn: legal note (`divergenceEvidence` AND `otherTrackEvidence` + `necessaryBecause`) → `twinglass-dispatch` brief → `workflow.agent()` new-context. Parent keeps walking.
 SI: `twinglass-tracker` ledger. Gather. Meet occupant remains `collate-hourglass`.
 Collapse writes a working prompt. Project telos does not move. `llmve-factor-compute` HOLD. No Omega.
 ## 9. Workflow host (1.4.4, additive)
