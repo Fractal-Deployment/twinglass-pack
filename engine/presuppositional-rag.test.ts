@@ -58,24 +58,57 @@ test("Generative Lattice: expands exactly 7 non-dialectic causal mechanisms", ()
   assert.deepEqual(ids, ["M1", "M2", "M3", "M4", "M5", "M6", "M7"]);
 });
 
-test("Layer C: validateProvenanceChain enforces 4-stage primary provenance", () => {
+test("Layer C: validateProvenanceChain enforces 4-stage primary provenance and exact span binding", () => {
+  const sourceText = "Neuron groups assemble into all-to-all connected cliques forming up to 11-dimensional geometric simplicial complexes around dynamic empty cavities.";
+  
   const validEvidence: EmpiricalEvidence = {
     sourceId: "DOC-001",
     provenance: {
-      primaryDoc: "Blue Brain Project 2024",
-      literalQuote: "Up to 11-dimensional geometric simplicial complexes",
+      primaryDoc: "Markram, Reimann et al. 2017",
+      literalQuote: "forming up to 11-dimensional geometric simplicial complexes around dynamic empty cavities",
       empiricalContext: "Cortical column simulation",
-      derivedInterpretation: "High-dimensional cavities exist",
+      derivedInterpretation: "High-dimensional cavities exist in reconstructed microcircuits",
     },
     relevanceScore: 0.98,
   };
+  // Valid without source text
   assert.equal(validateProvenanceChain(validEvidence), true);
+  // Valid with matching source text (sets exactSpanMatch: true)
+  assert.equal(validateProvenanceChain(validEvidence, sourceText), true);
+  assert.equal(validEvidence.provenance.exactSpanMatch, true);
+
+  // Fails with mismatched source text
+  const fabricatedQuoteEvidence: EmpiricalEvidence = {
+    sourceId: "DOC-001",
+    provenance: {
+      primaryDoc: "Markram, Reimann et al. 2017",
+      literalQuote: "Neurons communicate via non-physical telepathic entanglement",
+      empiricalContext: "Cortical column simulation",
+      derivedInterpretation: "Telepathic networks",
+    },
+    relevanceScore: 0.98,
+  };
+  assert.equal(validateProvenanceChain(fabricatedQuoteEvidence, sourceText), false);
+  assert.equal(fabricatedQuoteEvidence.provenance.exactSpanMatch, false);
+
+  // Fails with tautological self-paraphrase
+  const tautologicalEvidence: EmpiricalEvidence = {
+    sourceId: "DOC-003",
+    provenance: {
+      primaryDoc: "Paper",
+      literalQuote: "Exact same text",
+      empiricalContext: "Context",
+      derivedInterpretation: "Exact same text",
+    },
+    relevanceScore: 0.5,
+  };
+  assert.equal(validateProvenanceChain(tautologicalEvidence), false);
 
   const brokenEvidence: EmpiricalEvidence = {
     sourceId: "DOC-002",
     provenance: {
       primaryDoc: "",
-      literalQuote: "Some secondary quote",
+      literalQuote: "Some quote",
       empiricalContext: "Context",
       derivedInterpretation: "Interpretation",
     },
@@ -90,9 +123,9 @@ test("Discriminating Lattice: prunes ungrounded branches and isolates anomalies"
     {
       sourceId: "DOC-001",
       provenance: {
-        primaryDoc: "Blue Brain Project 2024",
-        literalQuote: "forming up to 11-dimensional geometric simplicial complexes around empty cavities",
-        empiricalContext: "Microcircuit stimulation",
+        primaryDoc: "Markram, Reimann et al. 2017",
+        literalQuote: "forming up to 11-dimensional geometric simplicial complexes around dynamic empty cavities",
+        empiricalContext: "In-silico microcircuit stimulation",
         derivedInterpretation: "High-dimensional simplicial topology",
       },
       relevanceScore: 0.95,
@@ -100,8 +133,9 @@ test("Discriminating Lattice: prunes ungrounded branches and isolates anomalies"
   ];
 
   const evalResult = evaluateCausalBranches(branches, evidence);
-  assert.equal(evalResult.falsified.length, 2);
+  assert.equal(evalResult.falsified.length, 2); // M3 and M5 falsified by evidence
   assert.equal(evalResult.survivors.length, 5);
+  assert.match(evalResult.falsified[0].falsificationReason, /null model/);
   assert.equal(evalResult.anomalies.length, 1);
   assert.match(evalResult.anomalies[0], /high-dimensional simplicial cavities/);
 });
@@ -141,31 +175,37 @@ test("Research Node Schema: builds fully compliant TwinglassResearchNode", () =>
   assert.equal(node.unresolved_anomalies.length, 1);
 });
 
-test("3D Tetrahedral Critique: executes 4 tracks and generates structural critique report", () => {
+test("3D Tetrahedral Critique: executes 4 tracks and generates cross-track relational discriminations", () => {
   const critique = executeTetrahedralCritique({
     bareData: "All-to-all connectivity detected in 11-neuron cluster without transmission loss.",
     literatureFrame: "Author asserts this proves non-classical quantum coherence in cortical columns.",
-    pretrainingBiasCheck: "Parametric prior defaults to synaptic neurotransmission. RAG prompt biased towards quantum narrative.",
-    phaseSpaceAnalysis: "Phase space reveals that classical cable theory with ephaptic coupling accounts for synchrony without quantum states.",
+    pretrainingBiasCheck: "Parametric prior defaults to synaptic neurotransmission. Disentangled prior from prompt.",
+    phaseSpaceAnalysis: "Phase space reveals that classical cable theory with ephaptic coupling accounts for synchrony beyond flat networks.",
   });
 
   assert.match(critique.structural_critique_report, /Bare Data/);
   assert.match(critique.structural_critique_report, /Literature Frame/);
   assert.match(critique.structural_critique_report, /Bias Audit/);
   assert.match(critique.structural_critique_report, /Geometric Phase Space/);
+  
+  // Cross-track relational surfaces
+  assert.equal(critique.relations.t1_t2_inferential_gap.load, "unwarranted_leap");
+  assert.equal(critique.relations.t2_t3_sycophancy_audit.isEcho, false);
+  assert.equal(critique.relations.t3_t4_causal_friction.deflected, true);
+  assert.equal(critique.isSelfCritiquePassed, true);
 });
 
-test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE_RESEARCH", () => {
-  const critique = executeTetrahedralCritique({
-    bareData: "Data",
-    literatureFrame: "Frame",
-    pretrainingBiasCheck: "Bias",
-    phaseSpaceAnalysis: "Trajectory",
+test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE_RESEARCH with active critique/anomaly participation", () => {
+  const cleanCritique = executeTetrahedralCritique({
+    bareData: "All-to-all connectivity in 11-neuron cluster.",
+    literatureFrame: "High-dimensional simplicial topology.",
+    pretrainingBiasCheck: "Disentangled prior from prompt.",
+    phaseSpaceAnalysis: "Phase space reveals dynamic attractor beyond flat network.",
   });
 
   // Test 1: Needs neighbor variable -> SLEEP_DOOR
   const sleepGate = evaluateTriStateExitGate({
-    critique,
+    critique: cleanCritique,
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: true,
     neighborName: "Simplicial_Cliques",
@@ -175,9 +215,9 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(sleepGate.decision, "SLEEP_DOOR");
   assert.equal(sleepGate.sleepPacket?.otherTrackEvidence, "Simplicial_Cliques");
 
-  // Test 2: Endpoint reached with mutually exclusive accounts -> CONSTRICTION_POINT (debate)
+  // Test 2: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (debate)
   const debateGate = evaluateTriStateExitGate({
-    critique,
+    critique: cleanCritique,
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -186,9 +226,9 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(debateGate.decision, "CONSTRICTION_POINT");
   assert.equal(debateGate.constrictionMode, "debate");
 
-  // Test 3: Endpoint reached with complementary accounts -> CONSTRICTION_POINT (synthesis)
+  // Test 3: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (synthesis)
   const synthGate = evaluateTriStateExitGate({
-    critique,
+    critique: cleanCritique,
     hasUnresolvedAnomalies: false,
     needsNeighborVariable: false,
     isEndpointReached: true,
@@ -197,14 +237,33 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
   assert.equal(synthGate.decision, "CONSTRICTION_POINT");
   assert.equal(synthGate.constrictionMode, "synthesis");
 
-  // Test 4: Open research path -> CONTINUE_RESEARCH
-  const continueGate = evaluateTriStateExitGate({
-    critique,
+  // Test 4: Endpoint claimed BUT unresolved anomalies exist -> BLOCKS constriction, routes to CONTINUE_RESEARCH
+  const anomalyBlockedGate = evaluateTriStateExitGate({
+    critique: cleanCritique,
     hasUnresolvedAnomalies: true,
     needsNeighborVariable: false,
-    isEndpointReached: false,
+    isEndpointReached: true,
     isMutuallyExclusive: false,
   });
-  assert.equal(continueGate.decision, "CONTINUE_RESEARCH");
+  assert.equal(anomalyBlockedGate.decision, "CONTINUE_RESEARCH");
+  assert.match(anomalyBlockedGate.reason, /Unresolved empirical anomalies/);
+
+  // Test 5: Endpoint claimed BUT critique failed (zero causal friction) -> BLOCKS constriction
+  const failingCritique = executeTetrahedralCritique({
+    bareData: "Data",
+    literatureFrame: "Frame",
+    pretrainingBiasCheck: "Bias",
+    phaseSpaceAnalysis: "Trajectory without deflection",
+  });
+  assert.equal(failingCritique.isSelfCritiquePassed, false);
+  const critiqueBlockedGate = evaluateTriStateExitGate({
+    critique: failingCritique,
+    hasUnresolvedAnomalies: false,
+    needsNeighborVariable: false,
+    isEndpointReached: true,
+    isMutuallyExclusive: false,
+  });
+  assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
+  assert.match(critiqueBlockedGate.reason, /Self-critique gate blocked constriction/);
 });
 

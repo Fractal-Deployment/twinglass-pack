@@ -98,31 +98,42 @@ flowchart LR
 
 ---
 
-## 4. Causal Multi-Branching (Non-Adversarial)
+## 4. Causal Multi-Branching (Evidence-Driven Discrimination)
 
-Research branches are **not** dialectic "pro vs. con" camps. For every observed phenomenon $O$, the engine generates $k$ competing causal explanations:
+Research branches are **not** dialectic "pro vs. con" camps. For every observed phenomenon $O$, the engine generates $k$ competing causal explanations, each instantiated with **mechanism-specific testable predictions** and **falsification criteria**:
 
 $$\text{Observation } O \implies \begin{cases}
-M_1: \text{Common generating constraint} \\
-M_2: \text{Independent mechanisms producing convergent outputs} \\
-M_3: \text{Generic mathematical attractor} \\
-M_4: \text{Selection effect / sampling bias} \\
-M_5: \text{Measurement artifact / noise} \\
-M_6: \text{Genuine cross-scale structural isomorphism} \\
-M_7: \text{Unidentified residual mechanism}
+M_1: \text{Common generating constraint} & [\text{Predictions: packing limits; Falsifier: zero density correlation}] \\
+M_2: \text{Independent convergent mechanisms} & [\text{Predictions: multi-lineage rules; Falsifier: strictly singular developmental pathway}] \\
+M_3: \text{Generic mathematical attractor} & [\text{Predictions: configuration model; Falsifier: high-D cavities impossible in random nulls}] \\
+M_4: \text{Selection effect / sampling bias} & [\text{Predictions: disappearing in global view; Falsifier: persistence across whole reconstructions}] \\
+M_5: \text{Measurement artifact / noise} & [\text{Predictions: destroyed by varying parameters; Falsifier: dynamic stimulus-locked cycles}] \\
+M_6: \text{Genuine cross-scale isomorphism} & [\text{Predictions: volume scales with }\Phi\text{; Falsifier: zero information-integration efficacy}] \\
+M_7: \text{Unidentified residual mechanism} & [\text{Predictions: residual variance unaccounted; Falsifier: variance fully closed by } M_{1..6}]
 \end{cases}$$
 
-Active retrieval in Layer C is formulated specifically to obtain evidence that **discriminates** among these branches.
+### Conformance Rule on Survival:
+$$\boxed{\text{Ontology generates candidate mechanisms; empirical evidence determines which survive.}}$$
+The engine does **not** hardcode which branches live or die by mechanism ID. Instead, empirical evidence propositions are matched directly against the falsification criteria and predictions of each candidate branch.
 
 ---
 
-## 5. Active RAG & Primary-Source Provenance Chain
+## 5. Active RAG & Primary-Source Provenance Chain (SSRL Identity Binding)
 
 ### Provenance Chain Invariant
 Every empirical claim must maintain an unbroken 4-stage link:
 $$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Proposition / Observation}} \rightarrow \boxed{\text{Empirical Implementation}} \rightarrow \boxed{\text{Derived Causal Interpretation}}$$
 
-Academic consensus alone, appeal to authority, or secondary-source paraphrases are prohibited from substituting for primary empirical evidence.
+### SSRL EvidenceAnchor Binding
+To move beyond loose string validation, the engine supports cryptographic/physical anchor binding:
+1. **`locator`**: Exact structural citation (e.g., `Section 2.1, p. 4`, line offset, or URI fragment).
+2. **`sourceDigest`**: SHA-256 digest of the primary source artifact.
+3. **`exactSpanMatch`**: Verbatim substring verification asserting that `literalQuote` exists inside the primary source text. Tautological self-paraphrase (`derivedInterpretation == literalQuote`) is explicitly rejected.
+
+### Retrieval Architecture: Fixture vs. Live Active RAG
+The engine implements an abstract `EvidenceRetriever` interface:
+- **`FixtureEvidenceRetriever`**: Deterministic test harness providing primary literature evidence shapes (e.g., Markram, Reimann et al., *Frontiers in Computational Neuroscience 2017* in-silico neocortical microcircuit reconstruction) for offline verification.
+- **`LiveEvidenceRetriever`**: Pluggable backend attaching to external search, hybrid embeddings, SSRL registries, or interactive tool friction.
 
 ---
 
@@ -211,9 +222,9 @@ $$\boxed{\text{Parametric Generation}} < \boxed{\text{Retrieval-Grounded Generat
 
 ---
 
-## 11. 3D Tetrahedral Self-Critique Modeling Function
+## 11. 3D Tetrahedral Self-Critique Modeling Function (Cross-Track Relational Discrimination)
 
-To eliminate sycophancy, confirmation bias, and RAG echo chambers, every research pad evaluated in the Discriminating Lattice ($L_D$) must undergo a **4-Track Tetrahedral Critique**. Rather than adopting the author's narrative or default model priors, the agent decomposes the research into four independent geometric facets:
+To eliminate sycophancy, confirmation bias, and RAG echo chambers, every research pad evaluated in the Discriminating Lattice ($L_D$) must undergo a **4-Track Tetrahedral Critique**. Inside the design, the tetrahedron is not decorative geometry; it defines **four mutually discriminating surfaces** and the **six relational edges** connecting them:
 
 ```mermaid
 flowchart TD
@@ -223,36 +234,33 @@ flowchart TD
         T3["Track 3: Prior Bias & Pre-Training Disentanglement\n(Parametric Weights Prior Audit vs RAG Sycophancy)"]
         T4["Track 4: Geometric Phase Space & Trajectory Neutrality\n(Phase Space Attractor Basins / Causal Friction Test)"]
     end
-    T1 --- T2
-    T2 --- T3
-    T3 --- T4
-    T4 --- T1
-    T1 --- T3
-    T2 --- T4
+    T1 ---|"T1 <-> T2: Inferential Load Added"| T2
+    T2 ---|"T2 <-> T3: Sycophancy & Echo Audit"| T3
+    T3 ---|"T3 <-> T4: Causal Friction Test"| T4
+    T4 ---|"T1 <-> T4: Causal Explanatory Fit"| T1
+    T1 ---|"T1 <-> T3: Parametric Prior Divergence"| T3
+    T2 ---|"T2 <-> T4: Mechanism Parsimony Delta"| T4
 ```
 
-### The 4 Tracks:
-1. **Track 1 (Bare Data Inscription)**:
-   - Pure, uninterpreted empirical inscriptions.
-   - Raw measurements, exact counts, coordinate data, literal quotes, instrument readings.
-   - Strictly stripped of causal vocabulary, adjectives, or theoretical claims.
-2. **Track 2 (Literature / Narrative Frame)**:
-   - The theoretical framing, narrative, or interpretation imposed upon the data by the original authors or academic consensus.
-   - Highlights the inductive leaps and unstated assumptions linking Track 1 data to Track 2 conclusions.
-3. **Track 3 (Prior Bias & Pre-Training Disentanglement)**:
-   - Explicit audit of the LLM's own internal parametric priors (training distribution attractors).
-   - Separates pre-training bias from external RAG sycophancy (the urge to agree with retrieved texts).
-   - Questions: *"What would the model naturally assert in the absence of evidence? Is the output merely echoing the prompt or RAG chunk?"*
-4. **Track 4 (Geometric Phase Space & Trajectory Neutrality)**:
-   - Maps competing causal explanations onto dynamical phase space trajectories and attractor basins.
-   - Evaluates whether the empirical evidence possesses sufficient **causal friction** to alter the trajectory away from the default parametric attractor basin.
-   - Verifies whether an alternative trajectory (e.g., classical coupling vs quantum coherence) explains the data with fewer ungrounded assumptions.
+### The 4 Vertices:
+1. **Track 1 (Bare Data Inscription)**: Pure, uninterpreted empirical inscriptions (measurements, counts, coordinates, literal quotes, instrument traces). Strictly stripped of causal vocabulary or theoretical adjectives.
+2. **Track 2 (Literature / Narrative Frame)**: The theoretical framing, narrative, or interpretation imposed upon the data by the original authors or academic consensus.
+3. **Track 3 (Prior Bias & Pre-Training Disentanglement)**: Explicit audit of the LLM's own internal parametric priors (training distribution attractors). Isolates what the model would assert in the absence of retrieved text.
+4. **Track 4 (Geometric Phase Space & Trajectory Neutrality)**: Maps competing causal explanations onto dynamical phase space trajectories and attractor basins. Evaluates whether empirical evidence possesses sufficient causal friction to alter the trajectory away from the parametric default.
+
+### The 6 Cross-Track Relational Discriminations:
+1. **$T_1 \leftrightarrow T_2$ (Inferential Load Gap)**: Quantifies the inferential distance added between bare data and author narrative. Detects unwarranted speculative leaps.
+2. **$T_1 \leftrightarrow T_3$ (Parametric Prior Divergence)**: Disentangles what the model's pre-training weights would assert from what the empirical observation literally recorded.
+3. **$T_2 \leftrightarrow T_3$ (Sycophancy & Echo Audit)**: Tests whether the model is independently evaluating the claim or merely echoing retrieved phrases. A high echo rate blocks verification.
+4. **$T_1 \leftrightarrow T_4$ (Trajectory Explanatory Fit)**: Evaluates which candidate dynamical phase space trajectories directly predict the raw inscription.
+5. **$T_2 \leftrightarrow T_4$ (Mechanism Parsimony Delta)**: Tests whether the literature's complex narrative mechanism survives comparison against more parsimonious dynamical trajectories (e.g. classical geometric packing vs exotic quantum coherence).
+6. **$T_3 \leftrightarrow T_4$ (Causal Friction Test)**: Measures whether empirical evidence exerted sufficient causal friction to deflect the model from its default parametric attractor basin ($DFR > 0.30$).
 
 ---
 
-## 12. Tri-State Exit Gate Mechanics
+## 12. Tri-State Exit Gate Mechanics (Active Routing Precedence)
 
-When an active research walker completes an empirical cycle or reaches a structural boundary, it passes through the **Tri-State Exit Gate**:
+When an active research walker completes an empirical cycle or reaches a structural boundary, it passes through the **Tri-State Exit Gate**. The gate enforces strict epistemic precedence where anomalies and failed critiques actively block premature constriction:
 
 ```mermaid
 stateDiagram-v2
@@ -262,28 +270,37 @@ stateDiagram-v2
     state TriStateGate {
         direction TB
         c1: Needs Neighbor Variable?
-        c2: Reached Logical Endpoint?
-        c3: Active Paths / Residue?
+        c2: Unresolved Anomalies Present?
+        c3: Self-Critique Passed?
+        c4: Logical Endpoint Reached?
     }
     
-    TriStateGate --> SLEEP_DOOR: Yes (Needs Interdependent Variable)
-    TriStateGate --> CONSTRICTION_POINT: Yes (Endpoint Reached)
-    TriStateGate --> CONTINUE_RESEARCH: Yes (Active Exploration Needed)
+    TriStateGate --> SLEEP_DOOR: Gate 1: Yes (Needs Interdependent Variable)
+    TriStateGate --> CONTINUE_RESEARCH: Gate 2: Yes (Anomalous Residue Blocks Constriction)
+    TriStateGate --> CONTINUE_RESEARCH: Gate 3: No (Sycophancy / Zero Friction Blocks Constriction)
+    TriStateGate --> CONSTRICTION_POINT: Gate 4: Yes (Clean Critique + Zero Anomalies + Endpoint)
+    TriStateGate --> CONTINUE_RESEARCH: Gate 5: Default (Active Exploration Paths)
     
     SLEEP_DOOR --> HibernationLedger: Write Sleep Packet (why_neighbor, otherTrackEvidence)
     CONSTRICTION_POINT --> CollateHourglass: Handoff (debate if exclusive, synthesis if complementary)
-    CONTINUE_RESEARCH --> ActiveRAGFriction: Next research cycle
+    CONTINUE_RESEARCH --> ActiveRAGFriction: Next targeted research cycle
 ```
 
-1. **`CONTINUE_RESEARCH`**:
-   - **Trigger**: Research pad contains unresolved anomalies, pending empirical queries, or alternative branches requiring deeper friction.
-   - **Action**: Generates next targeted active RAG query or execution pilot; stays in active walk.
-2. **`SLEEP_DOOR`**:
-   - **Trigger**: Research pad reaches a structural boundary where progress is blocked until a co-dependent variable is investigated (cannot carry alone).
-   - **Action**: Writes a structured **Sleep Packet** (`why_neighbor`, `otherTrackEvidence`), parks in the hibernation ledger, and frees execution capacity.
-3. **`CONSTRICTION_POINT`**:
-   - **Trigger**: Research pad completes its causal trajectory and reaches a logical endpoint.
-   - **Action**: Hands off to `collate-hourglass`:
+### Precedence Hierarchy:
+1. **Gate 1 (`SLEEP_DOOR`)**:
+   - **Condition**: `needsNeighborVariable == true` and `neighborName` is set.
+   - **Action**: Research pad cannot proceed alone. Emits structured **Sleep Packet** (`why_neighbor`, `otherTrackEvidence`), parks in the hibernation ledger, and frees execution capacity.
+2. **Gate 2 (`CONTINUE_RESEARCH` via Anomaly Guard)**:
+   - **Condition**: `hasUnresolvedAnomalies == true`.
+   - **Action**: Constriction is **strictly blocked**. Unexplained anomalous residue cannot be swept into a clean consensus. The gate routes to further targeted empirical friction or explicit anomaly branching.
+3. **Gate 3 (`CONTINUE_RESEARCH` via Self-Critique Guard)**:
+   - **Condition**: `critique.isSelfCritiquePassed == false` (e.g., $T_2 \leftrightarrow T_3$ detected sycophancy echo or $T_3 \leftrightarrow T_4$ measured zero causal deflection).
+   - **Action**: Constriction is **strictly blocked**. Requires independent prior disentanglement or targeted disconfirming tests.
+4. **Gate 4 (`CONSTRICTION_POINT`)**:
+   - **Condition**: `isEndpointReached == true` AND `hasUnresolvedAnomalies == false` AND `critique.isSelfCritiquePassed == true`.
+   - **Action**: Hands off clean survivors to `collate-hourglass`:
      - **Mode `debate`**: If surviving accounts are mutually exclusive.
      - **Mode `synthesis`**: If surviving accounts represent complementary facets across scales.
+5. **Gate 5 (`CONTINUE_RESEARCH` Default)**:
+   - **Condition**: Open research pad with pending empirical queries.
 
