@@ -1,88 +1,81 @@
 ---
 name: run-apparatus
-description: What Grok Build CLI is supposed to do. Two lattices. Load from GitHub main.
+description: Canonical TwinGlass research orchestration. Load RESEARCH_GEOMETRIES.md first.
 ---
-# Run Twinglass (Grok Build CLI)
-Paste this as the **session charge** after the pack is installed (or load files from GitHub `Fractal-Deployment/twinglass-pack` **main** if the plugin SHA is old).
-Repo: https://github.com/Fractal-Deployment/twinglass-pack 
-Engine: `engine/main-lattice.ts` + `engine/diamond-engine.ts` 
-Spec: `APPARATUS.md` `ASYNC_TIMING.md` `engine/RAM_PAD.md`
-## Load
-- `logic-ration-reason` on the **research** agent
-- Monitor: `lcd-glossary-integrity` + `lcd-lens` only. A third watch object (including `logic-ration-reason` on the sentinel) is **overload refuse**.
-- `honest-prompt-rewrite` for the working prompt
-- `twinglass-lattice` (this gait)
-- After isolated endpoints: `collate-hourglass` as **debate or synthesis**
-- Exclusive leftover only: `steelman-truth-tournament`
-**Do not load `twinglass-twin`.** Do not load morph-shared / deep-think / deep-research. Do not copy `mojo-cuda` into skills. Do not mint a dump meter. Do not hunt `~/.grok/sessions`.
-Path: **Find → Maintain (pathing structure) → Let-fail.** Not hold a token. Not Price’s Law as master.
-## Two lattices (do not mash)
-**Main lattice** — many **legs**, many models, async.
-1. Walk your leg. LRR. Self-coherent. Open pad = hard notes.
-2. Data you **cannot follow** without cluttering: write `cannotFollow` `functionSet` `necessary_because`. **Keep walking.**
-3. Those notes **spawn clones onto new legs** only with **improper-track evidence** AND **other-track evidence** (quoted; not a live-lane synonym; not an assigned antithesis). `spawnLegsBurst` / `diverge()` refuse otherwise. Parent does not backtrack. Five legal notes → five **research** agents, not five diamonds. `SENS` +N; stop > 10 (CLI ~8). Same conclusion / synthesis stays legal.
-4. Walking legs are parallel (H0). Isolation in the prompt = no sibling pad/URL list.
-**3D diamond** — **one** agent’s **internal critique**, not a spawn.
-6. Diamond done → this leg `awaiting-meet`; others resume walking.
-7. **Wait** until ≥1 other diamond-complete leg exists. Then **debate** (diverged) or **synthesis** (complementary). Never battle. Never antithesis.
-8. One comes out (synthesis or correction). It may diamond **again**, then keep researching (more hard notes → more legs).
-Meet is a join of **2+** `awaiting-meet`, not “all five finished.”
-## Pads
-TypeScript `ScratchPad` is **RAM**. After ingest, delete leftovers.
-- Mojo **memref tiling** = tensor layout for kernels. **Not a pad.**
-- Mojo GPU scratch = **not a pad.**
-- Named pipes / FIFOs = possible later IPC so notes never hit `chat_history.jsonl`. **Not implemented.** Do not invent them this run.
-- Session-log read = **contamination** (engine throws if you write that path).
-## Board
+# Run TwinGlass
+
+Repo: https://github.com/Fractal-Deployment/twinglass-pack
+
+Load:
+- `RESEARCH_GEOMETRIES.md`
+- `APPARATUS.md`
+- `logic-ration-reason` on research agents
+- outside monitor pair: `lcd-glossary-integrity` + `lcd-lens` only
+- `twinglass-lattice` for Spectral research
+- `collate-hourglass` for persistent paired meet cycles
+
+A third monitor object is **overload refuse**.
+
+## Canonical separation
+
+- Research Diamond = one bounded divergent evidence round + one convergence.
+- Hourglass = two persistent directions + repeated research/meet cycles.
+- Spectral lattice = evidence-backed recursive spawning.
+- Local lattice = branching research path inside a leg.
+- 3D tetrahedron = **pre-debate self-critique only**, one per paired agent.
+
+Legacy `engine/diamond-engine.ts` / `diamondId` names do not redefine the Research Diamond.
+
+## Spectral spawn lock
+
+`assertLegalSpawnNote` requires quoted:
+- `divergenceEvidence`
+- `otherTrackEvidence`
+- `necessaryBecause`
+
+Refuse a live-lane synonym or an assigned antithesis. `cannotFollow` alone is not a spawn.
+
+The current route need not be wrong. Older `improperEvidence` wording is legacy compatibility only.
+
+## Meet order
+
+```text
+research
+-> pair candidate
+-> agent A tetrahedron + agent B tetrahedron
+-> Semantic Integrity clearance + Data Integrity/LCD clearance
+-> debate or synthesis
+-> downstream adjudication
 ```
-LEGS: n=
-SENS: n=
+
+Falsification/replacement may result after comparison; they are never assigned search goals.
+
+## Pads
+
+Research pads are append-only working state. Outside monitors observe; they do not occupy research width. The older critique substrate keeps per-path `pendingProjection`.
+
+## Board
+
+```text
+GEOMETRY: diamond | hourglass | spectral
+LEGS:
+SENS:
 CAP: 10
-STOP_OVER_CAP: yes/no
-DIAMOND_MUTEX: (which leg or none)
-AWAITING_MEET: [ids]
-MEET: debate | synthesis | (waiting)
-SPAWNED_FROM_HARD_NOTES: n=
-SPAWN_REFUSED: n=
+ACTIVE:
+TYPICAL: 25
+HARD: 30
+STOP_OVER_CAP:
+PAIR_CANDIDATES:
+PRE_DEBATE_CRITIQUE:
+SEMANTIC_AUDIT:
+DATA_AUDIT:
+AWAITING_MEET:
+MEET: debate | synthesis | waiting
+SPAWNED_FROM_HARD_NOTES:
+SPAWN_REFUSED:
 SIBLING_SESSION_HUNT: false
 MINTED_DUMP_METER: false
 RESTATE:
 ```
-If `SENS > 10`: STOP. Hibernate. Do not spawn 11.
 
-## Workflow host (additive)
-After pack install, the CLI gait may also load `WORKFLOW_HOST.md`, `twinglass-dispatch`, `twinglass-tracker`.
-- Start A (generate) or Start B (converge seated pile) — not both on one charge. PAIR is clutter-two, not Start B. Twin is XOR, separate charge.
-- Each walker is a `workflow.agent()` brief (persona, priors, vector map, isolated charge). New-context. Not a transcript fork.
-- Harvest (2D) is the walk. Octahedron (3D) is critique of one pad. Mutex unchanged. Occupants are not width.
-- SI debts gather. Stagger meet until axes named. Do not wipe pads.
-- Collapse writes one working prompt. Project telos held. Intention may move.
-Prefab Rhai: `.grok/workflows/twinglass.rhai`. Command: `commands/workflow-host.md`.
-Do not ingest Google Drive LLMVE copies. Live meaning: GitHub `llmve-meaning` `VERSION`.
-
-### Width (additive — do not delete CAP: 10 above)
-```
-START_INTENT: A | B
-ACTIVE: n=
-TYPICAL: 25
-HARD: 30
-```
-Start size = research priorities + situation. Not a fill-to-cap ritual.
-`ACTIVE` = concurrent CLI sessions (walking / in-diamond). Sleeping and awaiting-meet do not count.
-If `ACTIVE > 25`: warn. If `ACTIVE` would exceed 30: STOP fan (crash observed). Walk the survivor.
-Engine `SENS_CAP` remains 10 (board `CAP: 10`). That lock is not deleted.
-
-### Ring (additive — circular schedule)
-Load `RING.md` and `CIRCULAR.md`. TwinGlass is the gait of a turn. The ring is which locked name is live around V.
-Board also prints:
-```
-V:
-LANG: llmve | general | both
-SEATS: name:status ...
-LIVE_NAME:
-DOOR: stagger | sleep | meet | waiting
-PACKETS: n=
-```
-Sleep writes a packet; live walker count drops. Wake only on quotes + referee + width. No calendar wake. No fill-ten. No second ten-pod roster.
-First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only. General charges do not mint mythos tags.
-This command still **does not own meet**.
+If `SENS > 10`: STOP. Do not spawn 11.
