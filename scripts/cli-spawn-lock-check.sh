@@ -16,7 +16,7 @@ else
   red "missing commands/cli-spawn-lock.md"
 fi
 if [[ -f "$CLI" ]]; then
-  grep -q 'improperEvidence' "$CLI" || red "cli-spawn-lock missing improperEvidence"
+  grep -q 'divergenceEvidence' "$CLI" || red "cli-spawn-lock missing divergenceEvidence"
   grep -q 'otherTrackEvidence' "$CLI" || red "cli-spawn-lock missing otherTrackEvidence"
   grep -q 'SPAWN_REFUSED' "$CLI" || red "cli-spawn-lock missing SPAWN_REFUSED"
   grep -Eq 'cannotFollow.{0,3} alone is' "$CLI" || red "cli-spawn-lock missing cannotFollow-alone is not a spawn"
@@ -26,14 +26,14 @@ if [[ -f "$CLI" ]]; then
     red "cli-spawn-lock missing assertLegalSpawnNote"
   fi
 fi
-grep -q 'improper-track evidence' "$APP" || red "run-apparatus missing improper-track evidence"
+grep -q 'evidence-backed divergence' "$APP" || red "run-apparatus missing evidence-backed divergence"
 grep -q 'other-track evidence' "$APP" || red "run-apparatus missing other-track evidence"
 if grep -q 'SPAWN_REFUSED' "$APP"; then
   pass "run-apparatus board has SPAWN_REFUSED"
 else
   red "run-apparatus board missing SPAWN_REFUSED"
 fi
-grep -q 'spawn refuses: improper-track evidence required' "$ENG" || red "engine lock string drifted"
+grep -q 'spawn refuses: evidence-backed divergence required' "$ENG" || red "engine lock string drifted"
 grep -q 'spawn refuses: other-track evidence required' "$ENG" || red "engine other-track string drifted"
 if [[ "$fail" -ne 0 ]]; then
   echo "CLI_SPAWN_LOCK_RED fail=$fail"
