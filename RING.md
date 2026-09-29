@@ -13,7 +13,7 @@ Load `CIRCULAR.md` with this file. RING is the schedule. CIRCULAR is the NS-boun
 ## Two rooms
 | Room | Job |
 |---|---|
-| TwinGlass turn | harvest → outside SI+data audit → spawn-gate → stagger/sleep → pre-debate tetrahedron only if meeting → meet → rewrite |
+| TwinGlass turn | harvest → outside SI+data audit → spawn-gate → stagger/sleep → if incompatible meet: pre-debate tetrahedron → debate; if complementary: synthesis → rewrite |
 | Ring | schedule `LIVE_NAME` around the interdependence object. Push-pull. Sleep packet. Wake on quotes. |
 
 ## Law
@@ -104,7 +104,7 @@ PACKETS: n=
 Keep `CAP: 10`. Keep `START_INTENT: A | B`.
 
 ## Occupants
-Observer/orchestrator acts when wake or meet is due. The outside integrity pair is Semantic Integrity + Data Integrity/LCD. They authorize clean packets without becoming researchers. Before a meet, each paired research agent independently runs the tetrahedron; then both auditors clear the cleaned packets.
+Observer/orchestrator acts when wake or meet is due. The outside integrity pair is Semantic Integrity + Data Integrity/LCD. They authorize clean packets without becoming researchers. Before a genuine debate, each paired research agent independently runs the tetrahedron; then both auditors re-clear the cleaned packets. Complementary synthesis does not require tetrahedral self-critique.
 Rewriter after Meet = Codex consolidator: markers only, telos unmoved.
 
 This file **does not own meet**. Meet stays `collate-hourglass`.
