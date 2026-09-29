@@ -1,27 +1,30 @@
 ---
 name: cli-spawn-lock
-description: CLI spawn must quote improperEvidence and otherTrackEvidence. Same lock as engine assertLegalSpawnNote.
+description: CLI spawn requires divergenceEvidence and otherTrackEvidence. Same lock as engine assertLegalSpawnNote.
 ---
 # CLI spawn-lock
-Engine: `assertLegalSpawnNote` in `engine/main-lattice.ts` (`spawnLegsBurst`). 
-CLI gait: this file + `run-apparatus.md` step 3.
-## Lock (same as engine)
-A hard note may spawn a new **leg** only when **both** are quoted:
-1. `improperEvidence` — this track is not the proper object (quoted, not a vibe).
-2. `otherTrackEvidence` — a different function-set is evidenced (quoted).
-Refuse (count `SPAWN_REFUSED`, do not clone):
-- missing `improperEvidence`
+
+Engine: `assertLegalSpawnNote` in `engine/main-lattice.ts`.
+
+A hard note may spawn a new **spectral research leg** only when:
+1. `divergenceEvidence` — quoted evidence that a distinct route exists.
+2. `otherTrackEvidence` — quoted evidence naming that distinct route/function-set.
+3. `necessaryBecause` — why separating it preserves the research telos.
+
+Refuse (`SPAWN_REFUSED`, do not clone):
+- missing `divergenceEvidence`
 - missing `otherTrackEvidence`
-- other-track is a synonym of a live lane
-- other-track is an assigned antithesis (`antithesis` / `assigned opposite` / `opposite account`)
-`cannotFollow` alone is **not** a spawn. Keep walking. Write the note. Do not clone.
+- route is a synonym of a live lane
+- route is an assigned antithesis
+
+`cannotFollow` alone is **not** a spawn. Parent keeps walking.
+
+The parent route does **not** have to be wrong. `improperEvidence` is retired vocabulary retained only for old serialized notes.
+
 ## Board
-```
+```text
 SPAWNED_FROM_HARD_NOTES: n=
 SPAWN_REFUSED: n=
 ```
-## Do not
-Change passing engine tests. Twin. Mint Ω.
 
-## Workflow host
-A legal note does not clone the parent transcript. It writes a dispatch brief (persona, priors, vector map, isolated charge) for Grok Build CLI `workflow.agent()`. Isolation: new-context. Parent keeps walking.
+A legal note dispatches an isolated `workflow.agent()` brief; it does not clone the parent transcript.
