@@ -100,7 +100,7 @@ flowchart LR
 
 ## 4. Causal Multi-Branching (Evidence-Driven Discrimination)
 
-Research branches are **not** dialectic "pro vs. con" camps. For every observed phenomenon $O$, the engine generates $k$ competing causal explanations, each instantiated with **mechanism-specific testable predictions** and **falsification criteria**:
+Research branches are **not** dialectic "pro vs. con" camps. For every observed phenomenon $O$, the engine may carry multiple causal explanations and expected observations. These are research paths, not opponent roles. Agents gather real evidence along their route; they are not assigned a falsifier. Any eventual falsification/replacement is a downstream adjudication result after independently gathered evidence packets are cleaned and compared:
 
 $$\text{Observation } O \implies \begin{cases}
 M_1: \text{Common generating constraint} & [\text{Predictions: packing limits; Falsifier: zero density correlation}] \\
@@ -112,9 +112,12 @@ M_6: \text{Genuine cross-scale isomorphism} & [\text{Predictions: volume scales 
 M_7: \text{Unidentified residual mechanism} & [\text{Predictions: residual variance unaccounted; Falsifier: variance fully closed by } M_{1..6}]
 \end{cases}$$
 
-### Conformance Rule on Survival:
-$$\boxed{\text{Ontology generates candidate mechanisms; empirical evidence determines which survive.}}$$
-The engine does **not** hardcode which branches live or die by mechanism ID. Instead, empirical evidence propositions are matched directly against the falsification criteria and predictions of each candidate branch.
+### Conformance Rule on Research vs. Adjudication
+$\boxed{\text{Ontology generates candidate routes; research gathers evidence; comparison determines what survives.}}$
+
+During active research, a path is not driven by a falsifier quota and is not tasked to attack another path. It gathers evidence, records anomalies, and may spawn a new route when the evidence genuinely opens one.
+
+At convergence, cleaned evidence packets may produce synthesis, replacement/refinement, contradiction, falsification, or continued uncertainty. Falsification belongs to adjudication, not to the research walk.
 
 ---
 
@@ -137,7 +140,20 @@ The engine implements an abstract `EvidenceRetriever` interface:
 
 ---
 
-## 6. Semantic Integrity & Definition Precision
+## 6. Outside Integrity Envelope
+
+Every active research geometry is continuously watched by an outside pair:
+
+- **Semantic Integrity Auditor** — referents, definitions, scope, equivocation, category errors, and inference drift.
+- **Data Integrity / LCD Auditor** — source identity, provenance, measurement context, source dependence/duplication, omitted contradictory measurements, and observation-vs-interpretation separation.
+
+These auditors do not research the answer and do not assign opponents. They expose integrity failures and pairing opportunities to the orchestrator.
+
+A clean comparison requires both planes:
+
+$\boxed{\text{CONVERGENCE\_ELIGIBLE}=S_{clear}\land D_{clear}}$
+
+## 7. Semantic Integrity & Definition Precision
 
 ### Core Definition Rules
 1. **Inferential Load Precision Rule**:
@@ -147,7 +163,7 @@ The engine implements an abstract `EvidenceRetriever` interface:
 
 ---
 
-## 7. Epistemic Status Taxonomy (15 States)
+## 8. Epistemic Status Taxonomy (15 States)
 
 Every node in the Twin-Lattice memory space is explicitly tagged:
 - `PRESUPPOSITION`
@@ -168,14 +184,14 @@ Every node in the Twin-Lattice memory space is explicitly tagged:
 
 ---
 
-## 8. Environmental Friction Hierarchy
+## 9. Environmental Friction Hierarchy
 
 Grounding strength strictly follows:
 $$\boxed{\text{Parametric Generation}} < \boxed{\text{Retrieval-Grounded Generation (RAG)}} < \boxed{\text{Interactive Causal Grounding (Code / Tool Friction)}}$$
 
 ---
 
-## 9. Machine-Readable Research Node Schema
+## 10. Machine-Readable Research Node Schema
 
 ```json
 {
@@ -212,19 +228,24 @@ $$\boxed{\text{Parametric Generation}} < \boxed{\text{Retrieval-Grounded Generat
 
 ---
 
-## 10. Evaluation Metrics
+## 11. Evaluation Metrics
 
-1. **Discriminative Friction Ratio ($DFR$)**:
-   $$DFR = \frac{\text{Count of Falsified / Pruned Branches}}{\text{Total Generated Causal Branches}} \ge 0.40$$
+1. **Discriminative Friction Ratio ($DFR$)** — retrospective only:
+   $DFR = \frac{\text{Branches ultimately falsified/replaced at adjudication}}{\text{Branches examined}}$
+   DFR describes how discriminating the completed evidence corpus turned out to be. It does **not** steer research and carries no branch-kill quota during evidence gathering.
 2. **Provenance Density ($PD$)**:
    $$PD = \frac{\text{Primary Source Quotes with Full 4-Stage Provenance}}{\text{Total Empirical Claims}} = 1.00$$
 3. **Zero Semantic Drift Rate ($SDR$)**: 100% detection and redirection of term inversions.
 
 ---
 
-## 11. 3D Tetrahedral Self-Critique Modeling Function (Cross-Track Relational Discrimination)
+## 12. 3D Tetrahedral Self-Critique — Pre-Meet Per-Agent Gate
 
-To eliminate sycophancy, confirmation bias, and RAG echo chambers, every research pad evaluated in the Discriminating Lattice ($L_D$) must undergo a **4-Track Tetrahedral Critique**. Inside the design, the tetrahedron is not decorative geometry; it defines **four mutually discriminating surfaces** and the **six relational edges** connecting them:
+The tetrahedron is a **pre-meet self-critique**, not a research-spawn geometry and not the Diamond. It runs only after a legitimate pairing/constriction has been identified and immediately before debate or synthesis.
+
+Each participating agent independently critiques **its own pad before seeing the partner's completed comparative argument**. The purpose is to separate what was observed, what was interpreted, what the model brought with it, and what causal account it is about to carry into comparison.
+
+The four vertices and six edges therefore test the agent against itself:
 
 ```mermaid
 flowchart TD
@@ -258,9 +279,15 @@ flowchart TD
 
 ---
 
-## 12. Tri-State Exit Gate Mechanics (Active Routing Precedence)
+## 13. Routing and Pre-Meet Constriction Mechanics
 
-When an active research walker completes an empirical cycle or reaches a structural boundary, it passes through the **Tri-State Exit Gate**. The gate enforces strict epistemic precedence where anomalies and failed critiques actively block premature constriction:
+During ordinary research, the walker keeps gathering evidence or sleeps on a genuine dependency. The tetrahedral critique is **not** a continuous research gate.
+
+When a legitimate comparison/pairing has been identified, each participating agent first runs the tetrahedral self-critique, then the Semantic + Data auditors clear the cleaned pad. Only after that can a clean debate/synthesis occur.
+
+$\boxed{\text{Research}\rightarrow\text{Pairing}\rightarrow\text{Self-Critique}\rightarrow\text{Integrity Clearance}\rightarrow\text{Comparison}}$
+
+The routing states remain:
 
 ```mermaid
 stateDiagram-v2
@@ -290,17 +317,17 @@ stateDiagram-v2
 1. **Gate 1 (`SLEEP_DOOR`)**:
    - **Condition**: `needsNeighborVariable == true` and `neighborName` is set.
    - **Action**: Research pad cannot proceed alone. Emits structured **Sleep Packet** (`why_neighbor`, `otherTrackEvidence`), parks in the hibernation ledger, and frees execution capacity.
-2. **Gate 2 (`CONTINUE_RESEARCH` via Anomaly Guard)**:
-   - **Condition**: `hasUnresolvedAnomalies == true`.
-   - **Action**: Constriction is **strictly blocked**. Unexplained anomalous residue cannot be swept into a clean consensus. The gate routes to further targeted empirical friction or explicit anomaly branching.
-3. **Gate 3 (`CONTINUE_RESEARCH` via Self-Critique Guard)**:
-   - **Condition**: `critique.isSelfCritiquePassed == false` (e.g., $T_2 \leftrightarrow T_3$ detected sycophancy echo or $T_3 \leftrightarrow T_4$ measured zero causal deflection).
-   - **Action**: Constriction is **strictly blocked**. Requires independent prior disentanglement or targeted disconfirming tests.
-4. **Gate 4 (`CONSTRICTION_POINT`)**:
-   - **Condition**: `isEndpointReached == true` AND `hasUnresolvedAnomalies == false` AND `critique.isSelfCritiquePassed == true`.
-   - **Action**: Hands off clean survivors to `collate-hourglass`:
-     - **Mode `debate`**: If surviving accounts are mutually exclusive.
-     - **Mode `synthesis`**: If surviving accounts represent complementary facets across scales.
-5. **Gate 5 (`CONTINUE_RESEARCH` Default)**:
-   - **Condition**: Open research pad with pending empirical queries.
+2. **Gate 2 (`CONTINUE_RESEARCH`)**:
+   - **Condition**: the pad still has live evidence routes or unresolved anomalies that require more research.
+   - **Action**: keep gathering; do not manufacture an opponent or a falsifier.
+3. **Gate 3 (`CONSTRICTION_POINT`)**:
+   - **Condition**: the orchestrator/auditors identify a legitimate comparison partner or paired endpoint.
+   - **Action**: each participant independently runs the tetrahedral self-critique on its own pad.
+4. **Gate 4 (Integrity Clearance)**:
+   - **Condition**: both `semantic_integrity_clear == true` and `data_integrity_clear == true` for each cleaned pad.
+   - **Action**: permit comparison.
+5. **Comparison**:
+   - **Mode `debate`**: only if the independently developed accounts are genuinely incompatible under the same referents.
+   - **Mode `synthesis`**: if the accounts are complementary or convergent.
+   - **Possible adjudication outcomes**: synthesis, replacement/refinement, contradiction, falsification, or unresolved continuation.
 

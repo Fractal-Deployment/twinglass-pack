@@ -1,9 +1,9 @@
 ---
 name: diamond-mutex
-description: One agent critique diamond. Others hibernate. Mutex is diamondId.
+description: Legacy critique mutex API. `diamondId` is historical naming and is NOT the canonical Diamond research round.
 ---
-# Diamond mutex (CLI)
-Engine: `enterCritiqueDiamond` / `completeDiamond` in `engine/main-lattice.ts`. 
+# Legacy critique mutex (CLI)
+Engine compatibility API: `enterCritiqueDiamond` / `completeCritiqueDiamond` in `engine/main-lattice.ts`. Canonical research geometry is defined in `RESEARCH_GEOMETRIES.md`. 
 `diamondId` is the mutex. A second diamond throws `another leg is already in diamond`.
 ## Lock
 - Diamond is **one agent’s internal critique**, not a spawn burst, not five children.

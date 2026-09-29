@@ -18,6 +18,8 @@ jobs:
           node-version: "22"
       - name: diamond + lattice + diverge
         run: node --experimental-strip-types --test engine/*.test.ts
+      - name: presuppositional python runner smoke
+        run: python3 scripts/presuppositional_twin_lattice_rag.py > /tmp/presuppositional-rag.log
   occupant:
     name: occupant bleed
     runs-on: ubuntu-latest

@@ -439,6 +439,12 @@ export type TetrahedralCritique = {
 
 export type TriStateExitDecision = "CONTINUE_RESEARCH" | "SLEEP_DOOR" | "CONSTRICTION_POINT";
 
+export type IntegrityClearance = {
+  semanticIntegrityClear: boolean;
+  dataIntegrityClear: boolean;
+  reasons?: string[];
+};
+
 export type TriStateGateResult = {
   decision: TriStateExitDecision;
   reason: string;
@@ -556,15 +562,24 @@ export function executeTetrahedralCritique(opts: {
   };
 }
 
+/**
+ * Research routing boundary.
+ *
+ * Ordinary evidence gathering does NOT require a tetrahedral critique and is not
+ * driven by a falsifier. The tetrahedron is consulted only after a legitimate
+ * pairing/constriction has been identified. A clean meet then requires both
+ * outside integrity planes to clear the agent's cleaned pad.
+ */
 export function evaluateTriStateExitGate(opts: {
-  critique: TetrahedralCritique;
+  critique?: TetrahedralCritique;
+  integrity?: IntegrityClearance;
   hasUnresolvedAnomalies: boolean;
   needsNeighborVariable: boolean;
   neighborName?: string;
   isEndpointReached: boolean;
   isMutuallyExclusive: boolean;
 }): TriStateGateResult {
-  // Gate 1: If neighbor variable is needed and cannot carry alone -> SLEEP_DOOR
+  // Gate 1: genuine dependency -> sleep without manufacturing an opponent.
   if (opts.needsNeighborVariable && opts.neighborName) {
     return {
       decision: "SLEEP_DOOR",
@@ -576,46 +591,66 @@ export function evaluateTriStateExitGate(opts: {
     };
   }
 
-  // Gate 2: Unresolved anomalies prevent constriction -> CONTINUE_RESEARCH
-  if (opts.hasUnresolvedAnomalies) {
+  // Ordinary research keeps walking. No pre-meet self-critique is required yet.
+  if (!opts.isEndpointReached) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Unresolved empirical anomalies / residue remain. Constriction blocked until residue is resolved or branched.",
+      reason: "Research pad has active evidence-gathering paths. Keep walking; no pre-meet critique or falsifier is required.",
     };
   }
 
-  // Gate 3: Tetrahedral Critique failures prevent constriction -> CONTINUE_RESEARCH
+  // A proposed meet cannot sweep unresolved residue under the comparison.
+  if (opts.hasUnresolvedAnomalies) {
+    return {
+      decision: "CONTINUE_RESEARCH",
+      reason: "Unresolved empirical anomalies / residue remain. Constriction blocked until the pad has enough information for a clean comparison.",
+    };
+  }
+
+  // Pairing exists: now each agent must self-critique its own pad.
+  if (!opts.critique) {
+    return {
+      decision: "CONTINUE_RESEARCH",
+      reason: "Pairing identified, but pre-meet tetrahedral self-critique has not been completed.",
+    };
+  }
+
   if (!opts.critique.isSelfCritiquePassed) {
     const reasons: string[] = [];
     if (opts.critique.relations.t2_t3_sycophancy_audit.isEcho) {
       reasons.push("Sycophancy detected: model echoes retrieved narrative without independent derivation");
     }
     if (!opts.critique.relations.t3_t4_causal_friction.deflected) {
-      reasons.push("Zero causal friction: model parametric attractor was not deflected by empirical evidence");
+      reasons.push("Insufficient causal friction: the current account was not materially tested against the gathered evidence");
     }
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: `Self-critique gate blocked constriction: ${reasons.join("; ") || "Critique conditions unsatisfied"}.`,
+      reason: `Pre-meet self-critique blocked comparison: ${reasons.join("; ") || "Critique conditions unsatisfied"}.`,
     };
   }
 
-  // Gate 4: Endpoint reached with clean critique and zero anomalies -> CONSTRICTION_POINT
-  if (opts.isEndpointReached) {
+  // Outside integrity pair clears the cleaned pad; auditors do not pick the winner.
+  if (!opts.integrity?.semanticIntegrityClear || !opts.integrity?.dataIntegrityClear) {
+    const reasons = opts.integrity?.reasons?.filter(Boolean) ?? [];
     return {
-      decision: "CONSTRICTION_POINT",
-      reason: "Research pad reached logical endpoint with clean tetrahedral critique and zero unresolved anomalies. Ready for collate-hourglass.",
-      constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
+      decision: "CONTINUE_RESEARCH",
+      reason: `Pre-meet integrity clearance incomplete: semantic=${opts.integrity?.semanticIntegrityClear ?? false}, data=${opts.integrity?.dataIntegrityClear ?? false}${reasons.length ? `; ${reasons.join("; ")}` : ""}.`,
     };
   }
 
-  // Gate 5: Default -> CONTINUE_RESEARCH
   return {
-    decision: "CONTINUE_RESEARCH",
-    reason: "Research pad has active exploration paths and requires further empirical friction.",
+    decision: "CONSTRICTION_POINT",
+    reason: "Pairing identified; each pad completed tetrahedral self-critique and cleared both outside integrity auditors. Ready for clean comparison.",
+    constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
   };
 }
 
-export function evaluateCausalBranches(
+/**
+ * POST-GATHERING ADJUDICATION ONLY.
+ * This function must not steer active research or assign a falsifier to a walker.
+ * It is used after evidence collection, self-critique, and integrity clearance.
+ */
+export function adjudicateCausalBranches(
   branches: CausalMechanism[],
   evidence: EmpiricalEvidence[]
 ): {
@@ -687,6 +722,14 @@ export function evaluateCausalBranches(
   }
 
   return { survivors, falsified, anomalies };
+}
+
+/** @deprecated Use adjudicateCausalBranches at convergence. */
+export function evaluateCausalBranches(
+  branches: CausalMechanism[],
+  evidence: EmpiricalEvidence[]
+) {
+  return adjudicateCausalBranches(branches, evidence);
 }
 
 export function buildResearchNode(opts: {

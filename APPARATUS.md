@@ -1,21 +1,38 @@
-# Twinglass apparatus — two lattices
+# Twinglass apparatus — research geometries under one integrity envelope
 Path: **Find → Maintain (pathing) → Let-fail.** Not hold a token. Not battle. Not Price’s Law as master.
-There are **two** lattices. Mixing them was the bug.
-## 1. Main lattice (where clones come from)
+
+**Canonical geometry map:** `RESEARCH_GEOMETRIES.md`.
+
+There are three orchestration geometries — **Diamond, Hourglass, Spectral lattice** — plus local evidence-driven lattice branching inside a research route. They share primitives but are not the same state machine. Every geometry runs under the same outside **Semantic Integrity + Data Integrity/LCD** audit pair.
+
+## 1. Spectral lattice (where evidence-driven clones come from)
 Many agents. Many **legs**. Async. Under LRR. Not “find a fight.” Not “ask for divergence.” Not “spawn an enemy.”
 A walker on a leg finds **differential** data it cannot follow without cluttering its own argument — **evidence this track is not the proper track** and **evidence for a different track**. It writes a **hard note** and **keeps walking**. The note **spawns a clone onto a new leg** only via `assertLegalSpawnNote` (`improperEvidence` AND `otherTrackEvidence`). `cannotFollow` alone is not a spawn. Parent does not backtrack. Do not assign an opposite account to force a split. Same conclusion is allowed. Five notes can flush **five new legs at once** (SENS cap 10; STOP over cap).
 Walking legs may run in parallel (H0).
 Gates for a **new** track: evidence the current track is improper evidence for a different track marker `necessary_because` not a synonym of a live lane. Exclusive fight is **optional discovery**, not the goal.
 Logic-fail means the three laws broke on this track’s argument. Reaching a correct conclusion, agreeing with a sibling, or synthesizing is not a Logic fail. A false assigned persona is improper-track evidence.
-## 2. 3D diamond (internal critique of ONE agent)
-Not a spawn. Not a child research track.
-Inside diamond, equator paths are **per-path** `pendingProjection` — not a global freeze.
-Then that agent **continues its own main-lattice leg**, or **pauses (`awaiting-meet`)** until another diamond-complete leg is ready.
+## 2. Diamond — one bounded divergent evidence round
+The Diamond is a bounded research round. It sends agents down distinct legitimate evidence routes for coverage, **not** thesis/antithesis. Each route may contain its own local lattice of evidence-driven subpaths. The evidence packets meet once for comparison; synthesis, replacement, falsification, or unresolved continuation are downstream results of that comparison.
+
+## 3. Hourglass — repeated paired research and constriction
+The Hourglass starts with two persistent research directions. Each side researches outward, then the pair constricts to compare evidence. Debate occurs only when the accumulated evidence reveals a real incompatibility; synthesis occurs when the accounts are complementary. The pair then researches outward again. Several research→constriction cycles may occur before closure.
+
+## 4. Pre-meet 3D tetrahedral self-critique
+The tetrahedron is **not** the Diamond and is not a spawn structure. It is a per-agent self-critique performed **after a pairing/constriction has been identified and immediately before debate or synthesis**.
+
+Each agent independently separates:
+- T1 bare evidence,
+- T2 literature/narrative interpretation,
+- T3 model prior / RAG echo risk,
+- T4 current causal trajectory.
+
+The outside Semantic Integrity and Data Integrity/LCD auditors inspect the cleaned pads. Only pads that clear both integrity planes are eligible for a clean meet.
+
 ## Converge (active)
-Two (or more) legs that have finished diamond: **debate** if they formed an exclusive empty meet under the lock, **synthesis** if complementary or they reached the same true conclusion. Synthesis is a good meet, not a miss. One comes out (synthesis or **correction**). That survivor may **enter diamond again** (critique the meet), then keep researching — including more clone-spawns.
-If after debate the accounts are still exclusive: `steelman-truth-tournament` (long form). Not the default meet. Never antithesis/battle as the gait.
+Two (or more) research paths with sufficient information may be paired by the orchestrator/auditors. Before comparison, each participant runs the tetrahedral self-critique on its own pad. **Debate is discovered, not assigned.** Debate if the cleaned accounts are genuinely incompatible under the same referents; synthesis if complementary or convergent. Falsification/replacement can occur here as an adjudication result, never as the research gait.
 ## Do not
-- Treat diamond as “spawn five critique children.”
+- Treat the Diamond as an internal critique object or as “spawn five critique children.”
+- Treat the tetrahedron as a research-spawn geometry; it is pre-meet self-critique.
 - Hunt `~/.grok/sessions`.
 - Load twin for discovery.
 - Mint path capacity.
@@ -42,3 +59,6 @@ Does not replace the ring schedule. Same process. `CIRCULAR.md`.
 Variable groups seated around the interdependence object. Seats are names, not owner folders. LLMVE: Energy, Path, Mythos. General charges do not mint those tags.
 Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, octahedron before Sleep, Path on quotes only.
 After the last named neighbor sleeps, the first name re-enters only on new quotes.
+
+## Legacy compatibility note
+The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or pre-meet tetrahedral geometry.

@@ -1,4 +1,8 @@
 # Five-ahead lattices
+
+**Canonical geometry map:** `RESEARCH_GEOMETRIES.md`. Historical `diamond`/`diamondId` API names below must not be read as the canonical Diamond research round.
+
+**Canonical geometry map:** `RESEARCH_GEOMETRIES.md`. Historical `diamond`/`diamondId` API names below must not be read as the canonical Diamond research round.
 Agent Five = this session (login Jadon-Fox). Pack only. 
 Not Ω. Not Mythos recrawl. Not orch/sensors.
 Telos of the **pack**: a methodology so an agent stays locked on **telos** under Logic Ration Reason, by **branching** when a track is improper *and* another track is evidenced, and **converging** by debate or synthesis.
@@ -8,11 +12,11 @@ These are not open fights. Do not spawn synonym legs.
 flowchart TD
   T[Telos lock under LRR] --> LRR[LRR on research agent]
   T --> MON[Monitor: SI terms + LCD functions only]
-  T --> TWO[Two lattices: legs ≠ 3D diamond]
+  T --> TWO[Research geometries stay distinct]
   LRR --> PATH[Find → Maintain pathing → Let-fail]
   PATH --> JUDGE["Judgment is f(dT/dR) not dR/dT"]
   TWO --> SPAWN[Spawn: improper evidence AND other-track evidence]
-  TWO --> DIA[Diamond: one agent, mutex, others hibernate]
+  TWO --> DIA[Legacy critique mutex: not canonical Diamond]
   TWO --> MEET[Meet: debate or synthesis — never battle]
   MEET --> COL[collate-hourglass]
   MEET --> STL[steelman only if exclusive leftover]
@@ -40,7 +44,7 @@ flowchart LR
 ```mermaid
 flowchart TD
   U[Understand] --> U1[Dedicated track + hard note ≠ sibling-pad death]
-  U --> U2[Diamond is critique not five children]
+  U --> U2[Canonical Diamond = bounded divergent evidence round; critique is separate]
   U --> U3[Taxes do not issue telos verdict]
   W[Want] --> W1[How telos survives a legal spawn]
   W --> W2[When collate must refuse and call steelman]
@@ -75,5 +79,5 @@ Do **not** run all five at once. Each is a spawn only if the current track is im
 | 5 | LCD look-elsewhere live | Monitor converts empty meet into help/translate | A page with collection ∩ demand empty | **landed** — redirect, not convert |
 **HOLD behind these:** `llmve-factor-compute`, Mythos=Conley, Ω, twin-on-same-charge, orch/sensors.
 ## How to use this file
-Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Diamond one restatement at a time. Collate. Do not mint.
+Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Pre-meet self-critique one pad at a time where required. Collate. Do not mint.
 If you only run one: **step 1** (occupant bleed) — FINISH_BOARD already marked Morph, not Keep.
