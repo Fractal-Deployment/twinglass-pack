@@ -17,8 +17,8 @@ A Diamond is one split-and-return research action: send **two agents** down dist
 ## 3. Hourglass — repeated paired research and constriction
 The Hourglass starts with two persistent research directions. Each side researches outward, then the pair constricts to compare evidence. Debate occurs only when the accumulated evidence reveals a real incompatibility; synthesis occurs when the accounts are complementary. The pair then researches outward again. Several research→constriction cycles may occur before closure.
 
-## 4. Pre-debate 3D tetrahedral self-critique
-The tetrahedron is **not** the Diamond and is not a spawn structure. It is a per-agent self-critique performed when two agents are actually preparing to enter a **debate**. Ordinary synthesis does not automatically invoke it.
+## 4. Mandatory pre-comparison 3D tetrahedral self-critique
+The tetrahedron is **not** the Diamond and is not a spawn structure. It is a per-agent self-critique performed **every time agents are brought together for comparison/constriction**. Whether the result becomes debate or synthesis is not known yet; that classification happens only after both agents have run the tetrahedron and the integrity pair has cleared the material.
 
 Each agent independently separates:
 - T1 bare evidence,
@@ -29,10 +29,10 @@ Each agent independently separates:
 The outside Semantic Integrity and Data Integrity/LCD auditors inspect the cleaned pads. Only pads that clear both integrity planes are eligible for a clean meet.
 
 ## Converge (active)
-Research paths with sufficient information may be paired by the orchestrator/auditors. **Debate is discovered, not assigned.** If the gathered evidence reveals a genuine incompatibility, each debating agent runs the tetrahedral self-critique on its own pad before debate. If the evidence is complementary or convergent, synthesize without inventing a debate. Normal research contains no falsifier. An explicit falsification campaign, if the operator wants one, is a separate commissioned research team.
+Research paths with sufficient information may be paired by the orchestrator/auditors. **Every pairing runs the tetrahedral self-critique on each participating pad before any cross-pad comparison.** The outside Semantic Integrity + Data Integrity/LCD pair then checks the cleaned material. Only after that comparison does the system determine whether the result is synthesis, debate, replacement, or unresolved. Debate is discovered, not assigned. Normal research contains no falsifier. An explicit falsification campaign, if the operator wants one, is a separate commissioned research team.
 ## Do not
 - Treat the Diamond as an internal critique object or as “spawn five critique children.”
-- Treat the tetrahedron as a research-spawn geometry; it is pre-debate self-critique.
+- Treat the tetrahedron as a research-spawn geometry; it is mandatory pre-comparison self-critique.
 - Hunt `~/.grok/sessions`.
 - Load twin for discovery.
 - Mint path capacity.
@@ -61,4 +61,4 @@ Push-pull rotates the live name. First LLMVE walk: Start A, Energy, width 1, oct
 After the last named neighbor sleeps, the first name re-enters only on new quotes.
 
 ## Legacy compatibility note
-The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or pre-debate tetrahedral geometry.
+The historical octahedral critique engine still uses per-path `pendingProjection` internally. This is retained for compatibility only and is not the canonical Diamond or mandatory pre-comparison tetrahedral geometry.

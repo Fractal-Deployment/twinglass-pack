@@ -229,11 +229,11 @@ No branch-kill or falsification quota belongs in the default research-gathering 
 
 ---
 
-## 12. 3D Tetrahedral Self-Critique — Pre-Debate Per-Agent Gate
+## 12. 3D Tetrahedral Self-Critique — Mandatory Pre-Comparison Per-Agent Gate
 
-The tetrahedron is a **pre-debate self-critique**, not a research-spawn geometry and not the Diamond. It runs when two agents are preparing to enter an actual debate. It is not a required step merely because two research packets can be synthesized.
+The tetrahedron is a **mandatory pre-comparison self-critique**, not a research-spawn geometry and not the Diamond. It runs **every time research paths are brought together for comparison/constriction**.
 
-Each debating agent critiques its own pad. The purpose is to separate what was observed, what was interpreted, what the model brought with it, and what causal account it is about to defend.
+The system does not know ahead of time whether the result will be synthesis, debate, replacement, or unresolved continuation. Each participating agent therefore critiques its own pad first. Only after all participating pads complete the tetrahedron and the outside integrity pair clears them does cross-pad comparison begin.
 
 The four vertices and six edges therefore test the agent against itself:
 
@@ -269,18 +269,17 @@ flowchart TD
 
 ---
 
-## 13. Routing, Synthesis, and Pre-Debate Mechanics
+## 13. Routing and Mandatory Pre-Comparison Mechanics
 
-During ordinary research, the walker gathers evidence or sleeps on a genuine dependency. The tetrahedral critique is **not** part of the ordinary research loop.
+During ordinary research, the walker gathers evidence or sleeps on a genuine dependency. The tetrahedral critique is **not** part of the ordinary gathering loop.
 
-When accumulated research is complementary or convergent, the system may synthesize it directly.
+When two or more research paths are selected for convergence/comparison, **every participating agent first runs the tetrahedral self-critique on its own pad**. The outside Semantic Integrity + Data Integrity/LCD pair then checks the cleaned material.
 
-When accumulated research reveals a real incompatibility and agents are preparing to debate, each debating agent runs the tetrahedral self-critique. The outside Semantic + Data integrity agents inspect the debate material so the debate is clean.
+Only after that pre-comparison stage does the system compare the pads and discover the relationship:
 
-$$\boxed{\text{Research Gathering}\rightarrow\text{Relationship Discovery}\rightarrow
-\begin{cases}
-\text{Synthesis} \\
-\text{Debate} \rightarrow \text{Tetrahedral Self-Critique} \rightarrow \text{Clean Debate}
-\end{cases}}$$
+$$\boxed{\text{Research Gathering}\rightarrow\text{Pairing/Constriction}\rightarrow\text{Per-Agent Tetrahedral Self-Critique}\rightarrow\text{Integrity Clearance}\rightarrow\text{Comparison}\rightarrow
+\{\text{Synthesis, Debate, Replacement, Unresolved}\}}$$
 
-An explicit falsification campaign is outside this default route and only exists when the operator commissions it.
+Do not decide debate versus synthesis before the tetrahedral stage; that would require knowing the comparison result before performing the comparison.
+
+An explicit falsification campaign remains outside this default route and exists only when the operator commissions it.

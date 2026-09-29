@@ -544,9 +544,9 @@ export function executeTetrahedralCritique(opts: {
  * Ordinary evidence gathering is research only: gather sources, follow real
  * routes, and let the outside integrity agents watch the pad.
  *
- * The tetrahedral self-critique is specifically a pre-DEBATE operation. It is
- * not required for ordinary research and is not automatically required for a
- * synthesis meet.
+ * Every convergence/comparison requires each participating agent to run the
+ * tetrahedral self-critique before the system decides whether the relationship
+ * is synthesis, debate, replacement, or unresolved.
  */
 export function evaluateTriStateExitGate(opts: {
   critique?: TetrahedralCritique;
@@ -582,27 +582,19 @@ export function evaluateTriStateExitGate(opts: {
     };
   }
 
-  // Complementary/convergent evidence can synthesize directly.
-  if (!opts.isMutuallyExclusive) {
-    return {
-      decision: "CONSTRICTION_POINT",
-      reason: "Evidence packets are complementary/convergent. Ready for synthesis.",
-      constrictionMode: "synthesis",
-    };
-  }
-
-  // A real incompatibility has emerged. Now, and only now, run the tetrahedron.
+  // A comparison has been identified. Every participating agent must first
+  // clean its own pad through the tetrahedral self-critique.
   if (!opts.critique) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Debate identified, but the debating agent has not completed its pre-debate tetrahedral self-critique.",
+      reason: "Comparison identified, but the participating agent has not completed the mandatory tetrahedral self-critique.",
     };
   }
 
   if (!opts.critique.isSelfCritiquePassed) {
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: "Pre-debate tetrahedral self-critique did not clear the pad.",
+      reason: "Mandatory pre-comparison tetrahedral self-critique did not clear the pad.",
     };
   }
 
@@ -610,14 +602,15 @@ export function evaluateTriStateExitGate(opts: {
     const reasons = opts.integrity?.reasons?.filter(Boolean) ?? [];
     return {
       decision: "CONTINUE_RESEARCH",
-      reason: `Pre-debate integrity clearance incomplete: semantic=${opts.integrity?.semanticIntegrityClear ?? false}, data=${opts.integrity?.dataIntegrityClear ?? false}${reasons.length ? `; ${reasons.join("; ")}` : ""}.`,
+      reason: `Pre-comparison integrity clearance incomplete: semantic=${opts.integrity?.semanticIntegrityClear ?? false}, data=${opts.integrity?.dataIntegrityClear ?? false}${reasons.length ? `; ${reasons.join("; ")}` : ""}.`,
     };
   }
 
+  // Only now classify the relationship between the cleaned research packets.
   return {
     decision: "CONSTRICTION_POINT",
-    reason: "Debate identified; pre-debate tetrahedral self-critique is complete and both outside integrity auditors cleared the pad.",
-    constrictionMode: "debate",
+    reason: "Mandatory tetrahedral self-critique and both outside integrity checks are complete. Ready to compare the cleaned research packets.",
+    constrictionMode: opts.isMutuallyExclusive ? "debate" : "synthesis",
   };
 }
 

@@ -1,6 +1,6 @@
 ---
 name: presuppositional-rag
-description: Execute Presuppositional Twin-Lattice research gathering. Follow divergent evidence routes under semantic/data integrity; use tetrahedral self-critique only when agents are preparing for an actual debate.
+description: Execute Presuppositional Twin-Lattice research gathering. Follow divergent evidence routes under semantic/data integrity; every convergence/comparison requires per-agent tetrahedral self-critique before the outcome is classified.
 ---
 # /presuppositional-rag
 Load `PRESUPPOSITIONAL_RAG.md`, `skills/presuppositional-rag`, `logic-ration-reason`, `lcd-glossary-integrity`.
@@ -15,10 +15,10 @@ BRANCHES_M: M_1 .. M_7 (causal, not dialectic)
 ACTIVE_RAG_PROVENANCE: primary-doc -> quote -> context -> derived
 SI_GATE: HOLD | REDIRECT (precision proportional to inferential load)
 INTEGRITY_ENVELOPE: semantic auditor | data/LCD auditor
-TETRAHEDRAL_CRITIQUE: PRE-DEBATE ONLY | bare data | literature frame | bias audit | phase space trajectory
+TETRAHEDRAL_CRITIQUE: MANDATORY BEFORE EVERY COMPARISON | bare data | literature frame | bias audit | phase space trajectory
 ANOMALIES: unexplained residue
 COMPARISON: synthesis | replacement | debate | unresolved; falsification campaign only if explicitly commissioned
-EXIT_GATE: CONTINUE_RESEARCH | SLEEP_DOOR | CONSTRICTION_POINT; tetrahedron only when CONSTRICTION_POINT is debate
+EXIT_GATE: CONTINUE_RESEARCH | SLEEP_DOOR | CONSTRICTION_POINT; every CONSTRICTION_POINT requires per-agent tetrahedral critique before outcome classification
 SURVIVOR_NODE: TwinglassResearchNode ID
 HUMAN_ESCALATION: true | false (P_n -> P_{n+1}?)
 ```
@@ -33,6 +33,7 @@ HUMAN_ESCALATION: true | false (P_n -> P_{n+1}?)
    - `CONTINUE_RESEARCH`: keep walking and gathering.
    - `SLEEP_DOOR`: needs interdependent neighbor variable; write sleep packet (`why_neighbor`, `otherTrackEvidence`).
    - `CONSTRICTION_POINT`: a pairing/comparison is now warranted.
-7. **Compare**: If the gathered research is complementary/convergent, synthesize it. If a real incompatibility has emerged and the agents are preparing to debate, each debating agent first runs the 4-track tetrahedral self-critique on its own pad and the outside integrity pair verifies the debate material.
-8. **Optional falsification campaign**: Only when explicitly commissioned by the operator, send a separate team to gather research that could challenge an assembled claim. This is not part of the default research gait. Export the resulting `TwinglassResearchNode` or unresolved research set.
-9. **Escalate**: If residual anomaly challenges foundational axioms, halt for human escalation before modifying presuppositions.
+7. **Pre-Comparison Tetrahedral Self-Critique**: Every time research paths are brought together, each participating agent independently runs the 4-track tetrahedral self-critique on its own pad. The outside Semantic Integrity + Data Integrity/LCD pair then checks the cleaned material. Do **not** classify the meet as debate or synthesis before this step.
+8. **Compare**: Only after the self-critiques and integrity checks, compare the evidence and determine whether the result is synthesis, debate, replacement, or unresolved continuation.
+9. **Optional falsification campaign**: Only when explicitly commissioned by the operator, send a separate team to gather research that could challenge an assembled claim. This is not part of the default research gait. Export the resulting `TwinglassResearchNode` or unresolved research set.
+10. **Escalate**: If residual anomaly challenges foundational axioms, halt for human escalation before modifying presuppositions.
