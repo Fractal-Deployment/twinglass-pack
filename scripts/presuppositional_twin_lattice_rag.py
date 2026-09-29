@@ -401,55 +401,61 @@ def evaluate_tri_state_exit_gate(
     critique: Optional[TetrahedralCritique] = None,
     integrity: Optional[IntegrityClearance] = None
 ) -> TriStateGateResult:
-    """Route research; require tetrahedral self-critique only at a proposed meet."""
+    """Route research; require tetrahedral self-critique only for an actual debate."""
     if needs_neighbor_variable and neighbor_name:
         return TriStateGateResult(
             decision="SLEEP_DOOR",
             reason=f"Pad reached structural boundary requiring interdependent variable: {neighbor_name}",
             sleep_packet=SleepPacket(
-                why_neighbor=f"Cannot evaluate phase space without {neighbor_name}",
+                why_neighbor=f"Cannot continue this route cleanly without {neighbor_name}",
                 other_track_evidence=neighbor_name
             )
         )
 
-    # Ordinary research: keep gathering. No falsifier and no tetrahedron required.
     if not is_endpoint_reached:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Research pad has active evidence-gathering paths. Keep walking; no pre-meet critique or falsifier is required."
+            reason="Research pad has active evidence-gathering paths. Keep gathering research."
         )
 
     if has_unresolved_anomalies:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Unresolved empirical anomalies / residue remain. Constriction blocked until the pad has enough information for a clean comparison."
+            reason="Unresolved evidence remains that warrants more research before this meet."
         )
 
-    # Pairing exists: now self-critique is required.
+    # Complementary/convergent evidence can synthesize directly.
+    if not is_mutually_exclusive:
+        return TriStateGateResult(
+            decision="CONSTRICTION_POINT",
+            reason="Evidence packets are complementary/convergent. Ready for synthesis.",
+            constriction_mode="synthesis"
+        )
+
+    # A real incompatibility has emerged: now run the pre-debate tetrahedron.
     if critique is None:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Pairing identified, but pre-meet tetrahedral self-critique has not been completed."
+            reason="Debate identified, but the debating agent has not completed its pre-debate tetrahedral self-critique."
         )
 
     if not critique.is_self_critique_passed:
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason="Pre-meet tetrahedral self-critique did not clear the pad."
+            reason="Pre-debate tetrahedral self-critique did not clear the pad."
         )
 
-    # Outside semantic + data auditors must both clear the cleaned pad.
     if integrity is None or not integrity.semantic_integrity_clear or not integrity.data_integrity_clear:
         reasons = "; ".join(integrity.reasons or []) if integrity else ""
         return TriStateGateResult(
             decision="CONTINUE_RESEARCH",
-            reason=f"Pre-meet integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
+            reason=f"Pre-debate integrity clearance incomplete.{(' ' + reasons) if reasons else ''}"
         )
 
     return TriStateGateResult(
         decision="CONSTRICTION_POINT",
-        reason="Pairing identified; tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
-        constriction_mode="debate" if is_mutually_exclusive else "synthesis"
+        reason="Debate identified; pre-debate tetrahedral self-critique complete and both outside integrity auditors cleared the pad.",
+        constriction_mode="debate"
     )
 
 # =====================================================================
