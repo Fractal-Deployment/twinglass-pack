@@ -44,7 +44,7 @@ flowchart LR
 ```mermaid
 flowchart TD
   U[Understand] --> U1[Dedicated track + hard note ≠ sibling-pad death]
-  U --> U2[Canonical Diamond = bounded divergent evidence round; critique is separate]
+  U --> U2[Canonical Diamond = repeatable two-agent split-and-return action space; critique is separate]
   U --> U3[Taxes do not issue telos verdict]
   W[Want] --> W1[How telos survives a legal spawn]
   W --> W2[When collate must refuse and call steelman]
@@ -79,5 +79,5 @@ Do **not** run all five at once. Each is a spawn only if the current track is im
 | 5 | LCD look-elsewhere live | Monitor converts empty meet into help/translate | A page with collection ∩ demand empty | **landed** — redirect, not convert |
 **HOLD behind these:** `llmve-factor-compute`, Mythos=Conley, Ω, twin-on-same-charge, orch/sensors.
 ## How to use this file
-Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Pre-meet self-critique one pad at a time where required. Collate. Do not mint.
+Scout stays on **telos lock**. When a step’s improper+other both exist, `diverge()`. Pre-debate self-critique one pad at a time where required. Collate. Do not mint.
 If you only run one: **step 1** (occupant bleed) — FINISH_BOARD already marked Morph, not Keep.
