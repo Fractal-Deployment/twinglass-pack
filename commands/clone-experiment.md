@@ -6,9 +6,9 @@ description: Grok Build CLI experiment. Isolated parallel clones. Methodology, n
 Not grok.com. Not a GPU. This CLI.
 ## Spawn lock (engine)
 Same as `assertLegalSpawnNote` / `commands/cli-spawn-lock.md`.
-A clone/fork requires quoted **improperEvidence** AND **otherTrackEvidence**.
+A clone/fork requires quoted **divergenceEvidence** AND **otherTrackEvidence**. The parent route does not have to be wrong.
 Refuse (`SPAWN_REFUSED`, do not clone): missing either; other-track is a **synonym** of a live lane; assigned **antithesis** (`antithesis` / `assigned opposite` / `opposite account`).
-`cannotFollow` alone is not a spawn. Exclusive accounts still need the same two quotes if they fork.
+`cannotFollow` alone is not a spawn. Exclusive accounts may fork only if independently discovered; never assign an opposite to manufacture the split.
 Load `pack/DISCOVERED.md`, then `logic-ration-reason` on each **research** clone. Monitor = SI + `lcd-lens` only. Do not put LRR on the monitor.
 ## Charge (methodology, not measurement)
 Can isolated clones run the **methodology**: maintain layer-to-layer operational sets so leftover tokens enter on merit — vs greedy/top-p — **without** minting \(P_L\)?
