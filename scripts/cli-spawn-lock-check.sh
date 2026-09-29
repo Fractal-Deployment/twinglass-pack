@@ -26,7 +26,7 @@ if [[ -f "$CLI" ]]; then
     red "cli-spawn-lock missing assertLegalSpawnNote"
   fi
 fi
-grep -q 'evidence-backed divergence' "$APP" || red "run-apparatus missing evidence-backed divergence"
+grep -q 'divergenceEvidence' "$APP" || red "run-apparatus missing divergenceEvidence"
 grep -q 'other-track evidence' "$APP" || red "run-apparatus missing other-track evidence"
 if grep -q 'SPAWN_REFUSED' "$APP"; then
   pass "run-apparatus board has SPAWN_REFUSED"
