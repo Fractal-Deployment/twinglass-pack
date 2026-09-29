@@ -44,18 +44,23 @@ phase("gather") {
 
 phase("pair") {
     // Orchestrator pairs only when evidence makes the relation mature.
+    // Outside SI + Data Integrity/LCD classify the relation as complementary,
+    // incompatible, or not-yet-comparable.
 }
 
 phase("pre-debate-critique") {
-    // Each paired agent independently runs the 3D tetrahedron on its own pad.
+    // Only on a genuine DEBATE path: each agent independently runs the
+    // 3D tetrahedron on its own pad. Complementary synthesis skips this phase.
 }
 
 phase("audit-clearance") {
-    // Semantic Integrity AND Data Integrity must clear both cleaned packets.
+    // SI + Data Integrity clear every meet; after a debate-path tetrahedron,
+    // they re-clear both cleaned packets.
 }
 
 phase("meet") {
-    // collate-hourglass: DEBATE if genuinely incompatible, SYNTHESIS if complementary.
+    // SYNTHESIS if complementary. DEBATE only after both own-pad tetrahedra
+    // and dual re-clearance when genuinely incompatible.
     // Falsification/replacement are downstream outcomes, never assigned research roles.
 }
 
