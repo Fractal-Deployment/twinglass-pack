@@ -6,10 +6,11 @@ import {
   checkSemanticIntegrity,
   generateCompetingMechanisms,
   validateProvenanceChain,
-  evaluateCausalBranches,
+  adjudicateCausalBranches,
   buildResearchNode,
   executeTetrahedralCritique,
   evaluateTriStateExitGate,
+  evaluatePreDebateClearance,
   type EmpiricalEvidence,
 } from "./presuppositional-rag.ts";
 
@@ -117,7 +118,7 @@ test("Layer C: validateProvenanceChain enforces 4-stage primary provenance and e
   assert.equal(validateProvenanceChain(brokenEvidence), false);
 });
 
-test("Discriminating Lattice: prunes ungrounded branches and isolates anomalies", () => {
+test("Post-gather adjudication: evidence comparison may falsify or preserve branches", () => {
   const branches = generateCompetingMechanisms("11D clique density");
   const evidence: EmpiricalEvidence[] = [
     {
@@ -132,7 +133,7 @@ test("Discriminating Lattice: prunes ungrounded branches and isolates anomalies"
     },
   ];
 
-  const evalResult = evaluateCausalBranches(branches, evidence);
+  const evalResult = adjudicateCausalBranches(branches, evidence);
   assert.equal(evalResult.falsified.length, 2); // M3 and M5 falsified by evidence
   assert.equal(evalResult.survivors.length, 5);
   assert.match(evalResult.falsified[0].falsificationReason, /null model/);
@@ -195,60 +196,7 @@ test("3D Tetrahedral Critique: executes 4 tracks and generates cross-track relat
   assert.equal(critique.isSelfCritiquePassed, true);
 });
 
-test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE_RESEARCH with active critique/anomaly participation", () => {
-  const cleanCritique = executeTetrahedralCritique({
-    bareData: "All-to-all connectivity in 11-neuron cluster.",
-    literatureFrame: "High-dimensional simplicial topology.",
-    pretrainingBiasCheck: "Disentangled prior from prompt.",
-    phaseSpaceAnalysis: "Phase space reveals dynamic attractor beyond flat network.",
-  });
-
-  // Test 1: Needs neighbor variable -> SLEEP_DOOR
-  const sleepGate = evaluateTriStateExitGate({
-    critique: cleanCritique,
-    hasUnresolvedAnomalies: false,
-    needsNeighborVariable: true,
-    neighborName: "Simplicial_Cliques",
-    isEndpointReached: false,
-    isMutuallyExclusive: false,
-  });
-  assert.equal(sleepGate.decision, "SLEEP_DOOR");
-  assert.equal(sleepGate.sleepPacket?.otherTrackEvidence, "Simplicial_Cliques");
-
-  // Test 2: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (debate)
-  const debateGate = evaluateTriStateExitGate({
-    critique: cleanCritique,
-    hasUnresolvedAnomalies: false,
-    needsNeighborVariable: false,
-    isEndpointReached: true,
-    isMutuallyExclusive: true,
-  });
-  assert.equal(debateGate.decision, "CONSTRICTION_POINT");
-  assert.equal(debateGate.constrictionMode, "debate");
-
-  // Test 3: Endpoint reached + clean critique + no anomalies -> CONSTRICTION_POINT (synthesis)
-  const synthGate = evaluateTriStateExitGate({
-    critique: cleanCritique,
-    hasUnresolvedAnomalies: false,
-    needsNeighborVariable: false,
-    isEndpointReached: true,
-    isMutuallyExclusive: false,
-  });
-  assert.equal(synthGate.decision, "CONSTRICTION_POINT");
-  assert.equal(synthGate.constrictionMode, "synthesis");
-
-  // Test 4: Endpoint claimed BUT unresolved anomalies exist -> BLOCKS constriction, routes to CONTINUE_RESEARCH
-  const anomalyBlockedGate = evaluateTriStateExitGate({
-    critique: cleanCritique,
-    hasUnresolvedAnomalies: true,
-    needsNeighborVariable: false,
-    isEndpointReached: true,
-    isMutuallyExclusive: false,
-  });
-  assert.equal(anomalyBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(anomalyBlockedGate.reason, /Unresolved empirical anomalies/);
-
-  // Test 5: Endpoint claimed BUT critique failed (zero causal friction) -> BLOCKS constriction
+test("Research routing is independent of tetrahedral critique and unresolved anomalies", () => {
   const failingCritique = executeTetrahedralCritique({
     bareData: "Data",
     literatureFrame: "Frame",
@@ -256,14 +204,73 @@ test("Tri-State Exit Gate: routes to SLEEP_DOOR, CONSTRICTION_POINT, or CONTINUE
     phaseSpaceAnalysis: "Trajectory without deflection",
   });
   assert.equal(failingCritique.isSelfCritiquePassed, false);
-  const critiqueBlockedGate = evaluateTriStateExitGate({
+
+  const sleepGate = evaluateTriStateExitGate({
+    needsNeighborVariable: true,
+    neighborName: "Simplicial_Cliques",
+    isEndpointReached: false,
     critique: failingCritique,
-    hasUnresolvedAnomalies: false,
+    hasUnresolvedAnomalies: true,
+  });
+  assert.equal(sleepGate.decision, "SLEEP_DOOR");
+
+  const matureGate = evaluateTriStateExitGate({
     needsNeighborVariable: false,
     isEndpointReached: true,
-    isMutuallyExclusive: false,
+    critique: failingCritique,
+    hasUnresolvedAnomalies: true,
   });
-  assert.equal(critiqueBlockedGate.decision, "CONTINUE_RESEARCH");
-  assert.match(critiqueBlockedGate.reason, /Self-critique gate blocked constriction/);
+  assert.equal(matureGate.decision, "CONSTRICTION_POINT");
+  assert.match(matureGate.reason, /pairing\/comparison/);
+
+  const continueGate = evaluateTriStateExitGate({
+    needsNeighborVariable: false,
+    isEndpointReached: false,
+    hasSufficientInformation: false,
+  });
+  assert.equal(continueGate.decision, "CONTINUE_RESEARCH");
 });
 
+test("Pre-debate clearance requires own tetrahedron plus semantic and data integrity", () => {
+  const cleanCritique = executeTetrahedralCritique({
+    bareData: "All-to-all connectivity in 11-neuron cluster.",
+    literatureFrame: "High-dimensional simplicial topology.",
+    pretrainingBiasCheck: "Disentangled prior from prompt.",
+    phaseSpaceAnalysis: "Phase space reveals dynamic attractor beyond flat network.",
+  });
+  assert.equal(cleanCritique.isSelfCritiquePassed, true);
+
+  const clean = evaluatePreDebateClearance(cleanCritique, {
+    semanticIntegrityClean: true,
+    dataIntegrityClean: true,
+    reasons: [],
+  });
+  assert.equal(clean.ready, true);
+
+  const semanticHold = evaluatePreDebateClearance(cleanCritique, {
+    semanticIntegrityClean: false,
+    dataIntegrityClean: true,
+    reasons: ["referent drift"],
+  });
+  assert.equal(semanticHold.ready, false);
+
+  const dataHold = evaluatePreDebateClearance(cleanCritique, {
+    semanticIntegrityClean: true,
+    dataIntegrityClean: false,
+    reasons: ["source span not anchored"],
+  });
+  assert.equal(dataHold.ready, false);
+
+  const failedCritique = executeTetrahedralCritique({
+    bareData: "Data",
+    literatureFrame: "Frame",
+    pretrainingBiasCheck: "Bias",
+    phaseSpaceAnalysis: "Trajectory without deflection",
+  });
+  const critiqueHold = evaluatePreDebateClearance(failedCritique, {
+    semanticIntegrityClean: true,
+    dataIntegrityClean: true,
+    reasons: [],
+  });
+  assert.equal(critiqueHold.ready, false);
+});
