@@ -1,32 +1,46 @@
 ---
 name: twinglass-dispatch
 description: >
-  Turn a legal spawn note into a Grok Build CLI workflow.agent() notification.
-  Persona, priors, vector map, isolated charge. New context. Not a walker.
-  Not the meet. Not a transcript fork.
-when-to-use: spawn note, CLI dispatch, workflow.agent, subagent brief, vector map
+  Turn an evidence-backed spectral divergence note into an isolated Grok Build
+  CLI workflow.agent() notification. Not a walker, meet, or transcript fork.
+when-to-use: spectral spawn note, CLI dispatch, workflow.agent, isolated research route
 user-invocable: true
 metadata:
-  short-description: "Legal spawn note → CLI agent() brief"
+  short-description: "Evidence-backed route -> isolated CLI research agent"
 ---
 # twinglass-dispatch
-**One job:** write the CLI notification. Consume `assertLegalSpawnNote`. Do not walk. Do not collate.
 
-Load `../../CLONE_MECH.md` and `../../WORKFLOW_HOST.md`. Spawn = parent notes + new pad + empty history. Fork (transcript) is not this job.
+**One job:** write the CLI notification. Consume `assertLegalSpawnNote`. Do not research and do not collate.
 
-## Brief (required fields)
-1. **persona** — `lattice-walker` unless the charge is a known gutter (`twin-walker`). Referee and rewriter are not walkers.
-2. **priors** — LRR lock (consume). Parent term locks. Track tags. Do not rewrite the laws.
-3. **vector / coordinate map** — event-plane, G-definition, energy form, path form, units, tags. Born with the parent chart unless the other-track quote names a different plane.
-4. **charge** — isolated. No sibling pad. No scout-list dump.
-5. **CLI** — `workflow.agent()` · `subagent_type: explore` · `capability_mode: read-only` · isolation `new-context`.
+Load `../../RESEARCH_GEOMETRIES.md` and `../../WORKFLOW_HOST.md`.
 
-## Gates (same as engine)
-Spawn only when **both** are quoted: `improperEvidence` AND `otherTrackEvidence`.
-Refuse: missing either; live-lane synonym; assigned antithesis. `cannotFollow` alone is not a spawn. `SENS` +1; stop > 10. Parent keeps walking.
+## Required brief
+
+1. **persona** — normally `lattice-walker`.
+2. **priors** — LRR lock and parent term locks; do not rewrite the laws.
+3. **vector / coordinate map** — enough context to identify the route without copying a sibling pad.
+4. **charge** — isolated route-specific research charge.
+5. **CLI** — `workflow.agent()`, `subagent_type: explore`, `capability_mode: read-only`, isolation `new-context`.
+
+## Spawn gate
+
+Spawn only when the note contains:
+- `divergenceEvidence` — quoted evidence that a distinct research route exists;
+- `otherTrackEvidence` — quoted evidence naming the distinct route/function-set;
+- `necessaryBecause` — why separating it preserves the telos.
+
+Refuse:
+- missing evidence;
+- live-lane synonym;
+- assigned antithesis;
+- manufactured proof/disproof split.
+
+The parent route does **not** have to be wrong. `cannotFollow` alone is not a spawn. Parent keeps walking.
 
 ## Do not
+
 - Clone the parent transcript.
-- Own debate or synthesis (`collate-hourglass`).
-- Hunt sessions. Mint Ω. Load twin on a lattice charge.
-Grok.com: n/a (CLI notification). CLI: this folder.
+- Include sibling pads in the child prompt.
+- Assign an opposite account.
+- Own debate or synthesis (`collate-hourglass` owns meet).
+- Hunt sessions or mint Ω.
