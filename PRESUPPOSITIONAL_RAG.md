@@ -130,7 +130,12 @@ The engine implements an abstract `EvidenceRetriever` interface with an explicit
 - **`LiveEvidenceRetriever`**: fail-closed injection boundary for a real external provider such as SSRL retrieval, connector-backed search, hybrid embeddings, or another provenance-bearing retrieval service. The package does not silently manufacture that provider.
 - `assertLiveRetriever(...)` is the promotion gate when a caller intends to claim live Active RAG.
 
-Current repository state: the TypeScript/Python engines now distinguish fixture from live retrieval, but the repo still needs a concrete live backend plus a benchmark against direct grep/search before issue #39 can be closed.
+Current repository state:
+- TypeScript/Python engines distinguish fixture from live retrieval.
+- `engine/local-corpus-retriever.ts` provides a real local-corpus lexical retrieval path with SHA-256 source identity, exact line locators, compound-token handling, and no authority side effect.
+- `scripts/search_project_corpus.ts` exposes that path as a CLI over caller-selected roots.
+- Retrieval and interpretation remain separate: the raw corpus search returns source hits; adapting hits into `EmpiricalEvidence` requires an explicit interpretation function.
+- Issue #39 remains open until the TASK-0280 LoRA step-speed benchmark is run against the real project corpus and compared with direct grep/search.
 
 ---
 
