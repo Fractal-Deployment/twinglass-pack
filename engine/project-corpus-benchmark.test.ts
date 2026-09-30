@@ -10,7 +10,7 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-test("project corpus benchmark compares retriever with rg on the same fixture", () => {
+test("project corpus benchmark compares retriever with grep baseline on the same fixture", () => {
   const root = mkdtempSync(join(tmpdir(), "twinglass-benchmark-"));
   try {
     mkdirSync(join(root, "docs"), { recursive: true });
@@ -47,7 +47,7 @@ test("project corpus benchmark compares retriever with rg on the same fixture", 
 
     assert.equal(proc.status, 0, proc.stderr);
     const report = JSON.parse(proc.stdout);
-    assert.equal(report.benchmark_id, "twinglass_project_corpus_vs_rg_v1");
+    assert.equal(report.benchmark_id, "twinglass_project_corpus_vs_grep_v1");
     assert.equal(report.authority_effect, "none");
     assert.equal(report.metrics.retriever_expected_recall, 1);
     assert.equal(report.metrics.grep_expected_recall, 1);
