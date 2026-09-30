@@ -4,7 +4,7 @@ Presuppositional Twin-Lattice RAG Research Engine
 Operationalizing the ARCH-SPEC-20260919-TWINLATTICE-RAG Specification:
 - Layer A: Presuppositional Orienting Horizon (P1-P5 Immutable)
 - Layer B: Mediating Logic / Glass (Glossary Locks, 3 Laws of Logic, Rationalization -> Logic -> Reason)
-- Layer C: Empirical Retrieval Domain (Active RAG, 4-Stage Primary Source Provenance Chain)
+- Layer C: Empirical Retrieval Domain (fixture by default; explicit live provider required, 4-Stage Primary Source Provenance Chain)
 - Generative Lattice (Search Expansion: E -> Q -> M_1..7)
 - Discriminating Lattice (Constraint: SI Checks, Causal Discrimination, Anomaly Handling, Pruning)
 """
@@ -14,7 +14,7 @@ import re
 import sys
 import uuid
 from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Optional, Set, Tuple
+from typing import Callable, List, Dict, Optional, Set, Tuple
 
 # =====================================================================
 # 1. LAYER A: PRESUPPOSITIONAL ORIENTING HORIZON (IMMUTABLE)
@@ -184,11 +184,36 @@ def validate_provenance_chain(evidence: EmpiricalEvidence, source_artifact_text:
     return True
 
 class EvidenceRetriever:
-    """Abstract interface for active RAG evidence retrieval."""
+    """Abstract evidence-retrieval interface. Implementations must declare fixture vs live."""
+    mode = "unknown"
+
     def fetch_primary_evidence(self, query_charge: str) -> List[EmpiricalEvidence]:
         raise NotImplementedError
 
+class LiveEvidenceRetriever(EvidenceRetriever):
+    """Explicit live boundary backed by a caller-supplied real retrieval provider."""
+
+    mode = "live"
+
+    def __init__(self, fetcher: Callable[[str], List[EmpiricalEvidence]]):
+        if not callable(fetcher):
+            raise TypeError("LiveEvidenceRetriever requires an explicit live evidence provider")
+        self._fetcher = fetcher
+
+    def fetch_primary_evidence(self, query_charge: str) -> List[EmpiricalEvidence]:
+        evidence = self._fetcher(query_charge)
+        if not isinstance(evidence, list):
+            raise TypeError("Live evidence provider must return a list")
+        return [item for item in evidence if validate_provenance_chain(item)]
+
+def assert_live_retriever(retriever: EvidenceRetriever) -> None:
+    if getattr(retriever, "mode", "unknown") != "live":
+        raise RuntimeError(
+            "Active RAG requires a live EvidenceRetriever; FixtureEvidenceRetriever is test-only"
+        )
+
 class FixtureEvidenceRetriever(EvidenceRetriever):
+    mode = "fixture"
     """
     FIXTURE: Local test harness providing evidence-shaped objects from primary literature
     to test the Discriminating Lattice without external network dependencies.
@@ -454,8 +479,8 @@ def evaluate_tri_state_exit_gate(
 # =====================================================================
 
 class PresuppositionalTwinLatticeEngine:
-    def __init__(self):
-        self.retriever = FixtureEvidenceRetriever()
+    def __init__(self, retriever: Optional[EvidenceRetriever] = None):
+        self.retriever = retriever or FixtureEvidenceRetriever()
         self.nodes: Dict[str, TwinglassResearchNode] = {}
         self.generated_branches: int = 0
 
@@ -539,8 +564,11 @@ class PresuppositionalTwinLatticeEngine:
             branch_node_ids.append(m.id)
         print()
 
-        # Step 3: Active research retrieval with provenance
-        print("[RESEARCH GATHERING: ACTIVE RAG RETRIEVAL & PROVENANCE CHAIN VALIDATION]")
+        # Step 3: Retrieval with provenance. Fixture mode must never be reported as live Active RAG.
+        if getattr(self.retriever, "mode", "unknown") == "live":
+            print("[RESEARCH GATHERING: LIVE ACTIVE RAG & PROVENANCE CHAIN VALIDATION]")
+        else:
+            print("[RESEARCH GATHERING: FIXTURE RETRIEVAL (NOT LIVE RAG) & PROVENANCE CHAIN VALIDATION]")
         retrieved_evidence_list = self.retriever.fetch_primary_evidence(question)
         valid_provenance_count = 0
 
