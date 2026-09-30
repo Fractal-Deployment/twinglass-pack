@@ -102,8 +102,19 @@ function precisionAtK(paths: string[], expected: string[], k: number): number {
   return relevant / top.length;
 }
 
-function runGrep(regex: string, roots: string[]): string[] {
-  const proc = spawnSync(
+function normalizeBaselineOutput(stdout: string, roots: string[]): string[] {
+  return stdout
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((path) => relativeToAnyRoot(path, roots));
+}
+
+function runGrep(
+  regex: string,
+  roots: string[]
+): { implementation: "rg" | "grep"; hits: string[] } {
+  const rg = spawnSync(
     "rg",
     [
       "-i",
@@ -126,22 +137,56 @@ function runGrep(regex: string, roots: string[]): string[] {
     { encoding: "utf8" }
   );
 
-  if (proc.error) {
-    throw new Error(`grep baseline failed to start: ${proc.error.message}`);
+  if (!rg.error) {
+    // ripgrep exits 1 when it finds no matches.
+    if (rg.status !== 0 && rg.status !== 1) {
+      throw new Error(
+        `rg baseline failed with rc=${rg.status}: ${rg.stderr.trim()}`
+      );
+    }
+    return {
+      implementation: "rg",
+      hits: normalizeBaselineOutput(rg.stdout, roots),
+    };
   }
 
-  // ripgrep exits 1 when it finds no matches.
-  if (proc.status !== 0 && proc.status !== 1) {
+  // GitHub-hosted runners do not guarantee ripgrep. Keep a plain GNU grep
+  // fallback because the historical hard baseline in #39 was "plain grep".
+  const grep = spawnSync(
+    "grep",
+    [
+      "-R",
+      "-I",
+      "-i",
+      "-l",
+      "-E",
+      "--exclude-dir=.git",
+      "--exclude-dir=node_modules",
+      "--exclude-dir=.venv",
+      "--exclude-dir=venv",
+      "--exclude-dir=__pycache__",
+      regex,
+      ...roots,
+    ],
+    { encoding: "utf8" }
+  );
+
+  if (grep.error) {
     throw new Error(
-      `grep baseline failed with rc=${proc.status}: ${proc.stderr.trim()}`
+      `grep baseline failed to start: rg=${rg.error.message}; grep=${grep.error.message}`
+    );
+  }
+  // GNU grep exits 1 when it finds no matches.
+  if (grep.status !== 0 && grep.status !== 1) {
+    throw new Error(
+      `grep baseline failed with rc=${grep.status}: ${grep.stderr.trim()}`
     );
   }
 
-  return proc.stdout
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .map((path) => relativeToAnyRoot(path, roots));
+  return {
+    implementation: "grep",
+    hits: normalizeBaselineOutput(grep.stdout, roots),
+  };
 }
 
 try {
@@ -152,7 +197,8 @@ try {
     maxResults: args.k,
   }).map((hit) => hit.sourcePath);
 
-  const grepHits = runGrep(args.grepRegex, args.roots);
+  const grepBaseline = runGrep(args.grepRegex, args.roots);
+  const grepHits = grepBaseline.hits;
 
   const retrievalRecall = recall(retrieverHits, args.expected);
   const grepRecall = recall(grepHits, args.expected);
@@ -173,8 +219,9 @@ try {
   process.stdout.write(
     JSON.stringify(
       {
-        benchmark_id: "twinglass_project_corpus_vs_rg_v1",
+        benchmark_id: "twinglass_project_corpus_vs_grep_v1",
         authority_effect: "none",
+        grep_implementation: grepBaseline.implementation,
         query: args.query,
         grep_regex: args.grepRegex,
         roots: args.roots,
