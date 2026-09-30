@@ -125,9 +125,12 @@ To move beyond loose string validation, the engine supports cryptographic/physic
 3. **`exactSpanMatch`**: Verbatim substring verification asserting that `literalQuote` exists inside the primary source text. Tautological self-paraphrase (`derivedInterpretation == literalQuote`) is explicitly rejected.
 
 ### Retrieval Architecture: Fixture vs. Live Active RAG
-The engine implements an abstract `EvidenceRetriever` interface:
-- **`FixtureEvidenceRetriever`**: Deterministic test harness providing primary literature evidence shapes (e.g., Markram, Reimann et al., *Frontiers in Computational Neuroscience 2017* in-silico neocortical microcircuit reconstruction) for offline verification.
-- **`LiveEvidenceRetriever`**: Pluggable backend attaching to external search, hybrid embeddings, SSRL registries, or interactive tool friction.
+The engine implements an abstract `EvidenceRetriever` interface with an explicit retrieval mode:
+- **`FixtureEvidenceRetriever`**: deterministic test harness only. It may exercise provenance and routing mechanics, but its results are **not live research evidence** and must never be reported as Active RAG.
+- **`LiveEvidenceRetriever`**: fail-closed injection boundary for a real external provider such as SSRL retrieval, connector-backed search, hybrid embeddings, or another provenance-bearing retrieval service. The package does not silently manufacture that provider.
+- `assertLiveRetriever(...)` is the promotion gate when a caller intends to claim live Active RAG.
+
+Current repository state: the TypeScript/Python engines now distinguish fixture from live retrieval, but the repo still needs a concrete live backend plus a benchmark against direct grep/search before issue #39 can be closed.
 
 ---
 
