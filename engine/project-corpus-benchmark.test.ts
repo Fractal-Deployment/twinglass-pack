@@ -23,7 +23,7 @@ test("project corpus benchmark compares retriever with grep baseline on the same
     );
     writeFileSync(
       join(root, "docs", "other.md"),
-      "Generic phi topology paper with no Phi-4 runtime evidence.\n"
+      "Generic phi topology paper with no model-runtime evidence.\n"
     );
 
     const proc = spawnSync(
