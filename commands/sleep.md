@@ -76,7 +76,7 @@ No calendar wake. No fill-ten.
 
 ## Do not
 
-- write `packets/<name>.md` (stale PR #37 path);
+- write the legacy top-level packet path from stale PR #37;
 - create owner folders per seat;
 - spawn the neighbor merely because Sleep occurred;
 - mint authority/canon or SemVer from Sleep;
