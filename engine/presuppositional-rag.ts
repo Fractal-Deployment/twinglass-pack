@@ -311,11 +311,13 @@ export type LiveEvidenceFetch = (
  */
 export class LiveEvidenceRetriever implements EvidenceRetriever {
   readonly mode: RetrievalMode = "live";
+  private readonly fetcher: LiveEvidenceFetch;
 
-  constructor(private readonly fetcher: LiveEvidenceFetch) {
+  constructor(fetcher: LiveEvidenceFetch) {
     if (typeof fetcher !== "function") {
       throw new TypeError("LiveEvidenceRetriever requires an explicit live evidence provider");
     }
+    this.fetcher = fetcher;
   }
 
   async fetchPrimaryEvidence(queryCharge: string): Promise<EmpiricalEvidence[]> {
