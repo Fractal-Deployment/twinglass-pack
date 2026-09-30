@@ -39,3 +39,25 @@ HUMAN_ESCALATION: true | false (P_n -> P_{n+1}?)
 8. **Compare**: Only after the self-critiques and integrity checks, compare the evidence and determine whether the result is synthesis, debate, replacement, or unresolved continuation.
 9. **Optional falsification campaign**: Only when explicitly commissioned by the operator, send a separate team to gather research that could challenge an assembled claim. This is not part of the default research gait. Export the resulting `TwinglassResearchNode` or unresolved research set.
 10. **Escalate**: If residual anomaly challenges foundational axioms, halt for human escalation before modifying presuppositions.
+
+
+## Local project-corpus retrieval
+
+A real local lexical retrieval path is available for project research files:
+
+```bash
+node --experimental-strip-types scripts/search_project_corpus.ts \
+  --root /home/workspace/training_orchestrator/docs/designs \
+  --root /home/workspace/reports \
+  --query "LoRA step speed history"
+```
+
+The command returns provenance-bearing **source hits**, including line locator and SHA-256 digest. It does not mutate authority/canon and does not invent a derived interpretation.
+
+For Active RAG:
+1. retrieve real source hits;
+2. verify the literal source span;
+3. derive interpretation separately;
+4. pass the resulting evidence through the existing provenance gate.
+
+Fixture evidence remains test-only.
