@@ -120,9 +120,21 @@ function bestMatchingLine(
     const line = lines[index].trim();
     if (!line) continue;
     const matched = matchingTerms(queryTerms, line);
+    const specificity = matched.reduce(
+      (sum, term) => sum + (term.includes("-") || term.includes("_") ? 2 : 1),
+      0
+    );
+    const bestSpecificity =
+      best?.matchedTerms.reduce(
+        (sum, term) => sum + (term.includes("-") || term.includes("_") ? 2 : 1),
+        0
+      ) ?? -1;
     if (
       matched.length > 0 &&
-      (!best || matched.length > best.matchedTerms.length)
+      (!best ||
+        matched.length > best.matchedTerms.length ||
+        (matched.length === best.matchedTerms.length &&
+          specificity > bestSpecificity))
     ) {
       best = { line, lineNumber: index + 1, matchedTerms: matched };
     }
