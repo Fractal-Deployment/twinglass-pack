@@ -4,7 +4,9 @@ description: Execute Presuppositional Twin-Lattice research gathering. Follow di
 ---
 # /presuppositional-rag
 Load `PRESUPPOSITIONAL_RAG.md`, `skills/presuppositional-rag`, `logic-ration-reason`, `lcd-glossary-integrity`.
-Then execute the active research cycle from `charges/S30-presuppositional-rag.md`.
+Then execute the research cycle from `charges/S30-presuppositional-rag.md`.
+
+**Retrieval gate:** before describing the run as Active RAG, verify the selected `EvidenceRetriever` is in `live` mode and backed by a real provenance-bearing provider. The default Python fixture is a smoke/test path only.
 
 ## Board fields to print
 ```text
