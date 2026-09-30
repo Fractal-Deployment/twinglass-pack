@@ -37,7 +37,7 @@ $$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Propos
 1. **Lock**: Ingest presupposition $P_n \in \{P_1..P_5\}$ and term locks.
 2. **Entail**: Generate entailments ($E$) and discriminating research questions ($Q$).
 3. **Branch**: Expand 7 competing causal mechanisms ($M_{1..7}$).
-4. **Retrieve / Walk**: Gather primary evidence along the live route. Follow the evidence and gather the relevant research.
+4. **Retrieve / Walk**: Gather primary evidence along the live route. **Require a live retrieval provider before calling this Active RAG.** Fixture retrieval is test-only and must be labeled as such. Follow the evidence and gather the relevant research.
 5. **Outside Audit**: Semantic Integrity and Data Integrity/LCD auditors continuously inspect the pad. They may flag or hold integrity failures but do not steer the research conclusion.
 6. **Diverge When Earned**: Spawn another researcher only when evidence exposes a sufficiently independent route. Never assign an antithesis. Parent keeps walking.
 7. **Route**: Extract residual anomalies ($A$). Evaluate the routing boundary:
@@ -53,5 +53,6 @@ $$\boxed{\text{Primary Source Document}} \rightarrow \boxed{\text{Literal Propos
 - Allow empirical context to silently rewrite Layer A presuppositions.
 - Collapse causal multi-branching into binary pro/con dialectic.
 - Run the tetrahedral critique continuously during ordinary evidence gathering; it is mandatory before every comparison/constriction.
+- Call fixture-generated evidence "live", "retrieved", or "Active RAG" evidence.
 - Accept secondary-source paraphrases without primary source verification.
 - Omit definition precision proportional to inferential load.
