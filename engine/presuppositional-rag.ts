@@ -290,8 +290,49 @@ export function validateProvenanceChain(
   return true;
 }
 
+export type RetrievalMode = "fixture" | "live";
+
 export interface EvidenceRetriever {
+  readonly mode: RetrievalMode;
   fetchPrimaryEvidence(queryCharge: string): Promise<EmpiricalEvidence[]> | EmpiricalEvidence[];
+}
+
+export type LiveEvidenceFetch = (
+  queryCharge: string
+) => Promise<EmpiricalEvidence[]> | EmpiricalEvidence[];
+
+/**
+ * LIVE boundary: delegates retrieval to an explicitly supplied external backend.
+ *
+ * The TwinGlass package does not silently manufacture a network/search backend.
+ * Callers must inject a real provider (SSRL, connector-backed search, hybrid
+ * retrieval service, etc.). Returned evidence still has to satisfy the same
+ * provenance contract as fixture evidence.
+ */
+export class LiveEvidenceRetriever implements EvidenceRetriever {
+  readonly mode: RetrievalMode = "live";
+
+  constructor(private readonly fetcher: LiveEvidenceFetch) {
+    if (typeof fetcher !== "function") {
+      throw new TypeError("LiveEvidenceRetriever requires an explicit live evidence provider");
+    }
+  }
+
+  async fetchPrimaryEvidence(queryCharge: string): Promise<EmpiricalEvidence[]> {
+    const evidence = await this.fetcher(queryCharge);
+    if (!Array.isArray(evidence)) {
+      throw new TypeError("Live evidence provider must return an array");
+    }
+    return evidence.filter((item) => validateProvenanceChain(item));
+  }
+}
+
+export function assertLiveRetriever(retriever: EvidenceRetriever): void {
+  if (retriever.mode !== "live") {
+    throw new Error(
+      "Active RAG requires a live EvidenceRetriever; FixtureEvidenceRetriever is test-only"
+    );
+  }
 }
 
 /**
@@ -299,6 +340,7 @@ export interface EvidenceRetriever {
  * to test the Discriminating Lattice without external network dependencies.
  */
 export class FixtureEvidenceRetriever implements EvidenceRetriever {
+  readonly mode: RetrievalMode = "fixture";
   private corpus = [
     {
       sourceId: "DOC-NEURO-2017-BLUEBRAIN",
