@@ -38,6 +38,7 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 - `/twin` → twinglass-twin (leftover exclusive accounts only)
 - `/workflow-host` → WORKFLOW_HOST.md (dispatch + tracker; does not own meet)
 - `/ring` → RING.md (LIVE_NAME schedule; does not own meet)
+- `/sleep` → write `reports/circular_packets/<seat>.pad.md` using the current RING packet contract
 - `/circular` → CIRCULAR.md (NS methods bound; not ten chairs)
 - `/presuppositional-rag` → PRESUPPOSITIONAL_RAG.md (P1-P5 active causal RAG)
 Do not load lattice and twin on the same charge.
