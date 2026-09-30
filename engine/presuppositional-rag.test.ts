@@ -6,6 +6,9 @@ import {
   checkSemanticIntegrity,
   generateCompetingMechanisms,
   validateProvenanceChain,
+  FixtureEvidenceRetriever,
+  LiveEvidenceRetriever,
+  assertLiveRetriever,
   buildResearchNode,
   executeTetrahedralCritique,
   evaluateTriStateExitGate,
@@ -114,6 +117,50 @@ test("Layer C: validateProvenanceChain enforces 4-stage primary provenance and e
     relevanceScore: 0.5,
   };
   assert.equal(validateProvenanceChain(brokenEvidence), false);
+});
+
+
+test("Retrieval boundary: fixture cannot be promoted to Active RAG", async () => {
+  const fixture = new FixtureEvidenceRetriever();
+  assert.equal(fixture.mode, "fixture");
+  assert.throws(
+    () => assertLiveRetriever(fixture),
+    /Active RAG requires a live EvidenceRetriever/
+  );
+});
+
+test("Retrieval boundary: live provider is explicit and provenance-filtered", async () => {
+  const valid: EmpiricalEvidence = {
+    sourceId: "LIVE-001",
+    provenance: {
+      primaryDoc: "Primary source",
+      literalQuote: "Observed effect increased under intervention.",
+      empiricalContext: "Registered controlled experiment.",
+      derivedInterpretation: "The intervention changed the measured effect.",
+      locator: "Table 2",
+    },
+    relevanceScore: 0.9,
+  };
+  const invalid: EmpiricalEvidence = {
+    sourceId: "LIVE-INVALID",
+    provenance: {
+      primaryDoc: "",
+      literalQuote: "Missing source identity",
+      empiricalContext: "Context",
+      derivedInterpretation: "Interpretation",
+    },
+    relevanceScore: 0.8,
+  };
+
+  const live = new LiveEvidenceRetriever(async (query) => {
+    assert.match(query, /trajectory/i);
+    return [valid, invalid];
+  });
+
+  assert.equal(live.mode, "live");
+  assert.doesNotThrow(() => assertLiveRetriever(live));
+  const evidence = await live.fetchPrimaryEvidence("trajectory geometry");
+  assert.deepEqual(evidence.map((x) => x.sourceId), ["LIVE-001"]);
 });
 
 test("Research Node Schema: builds fully compliant TwinglassResearchNode", () => {
