@@ -41,3 +41,14 @@ Research basis:
 - bubblewrap mount namespace: https://manpages.ubuntu.com/manpages/focal/man1/bwrap.1.html
 
 HOLD on declaring the isolation residual closed here. Lattice default not rewritten. No factor-compute.
+
+## Executable fixture
+`scripts/landlock-isolation-check.sh` compiles and runs a two-process same-UID fixture.
+
+The fixture starts both children behind one barrier, then applies one Landlock filesystem ruleset per child. Each child must:
+- read, append, create, and list inside its own hierarchy;
+- fail to read, append, or list the sibling hierarchy.
+
+The emitted JSON records kernel release, Landlock ABI, UID/EUID, policy revision, per-agent checks, and the claim boundary. A passing fixture is **DEMO**, not **MEASURED**. It does not prove the real Grok CLI has the required runtime/library/workspace allowlist.
+
+Known boundary: Landlock does not turn every metadata syscall into a path-content boundary; the fixture records sibling `stat(2)` visibility rather than pretending it is blocked. Files opened before sandboxing are also outside this fixture's claim.
