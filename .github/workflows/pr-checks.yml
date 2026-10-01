@@ -132,3 +132,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: required evidence without type lie
         run: bash scripts/hardnote-type-check.sh
+
+  landlock-isolation:
+    name: Landlock same-UID fixture
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: compile + run DEMO isolation fixture
+        run: bash scripts/landlock-isolation-check.sh

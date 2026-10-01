@@ -24,12 +24,31 @@ Demand: sibling **cannot** open sibling log.
 | Git worktree isolation | **Empty.** Isolates repo writes, not `~/.grok/sessions`. |
 | “Don’t pass the URL list” | **Empty.** Attack board. |
 | Restricted tools (no `list_dir` / no shell on clones) | **Maybe.** Only if the CLI capability mode actually strips FS. |
-| Per-clone `GROK_HOME` (or `XDG` data dir) so A’s tree has no B | **Named meet.** Sibling path does not exist in that home. |
+| Per-clone `GROK_HOME` / `XDG` relocation only | **Partial only.** Reduces default discovery, but same-UID ambient filesystem authority can still reach a sibling path if it is otherwise visible. |
+| Per-clone Landlock filesystem ruleset | **Named first probe.** Process-scoped restrictions can reduce filesystem authority below ordinary same-UID DAC; validate own-path access and cross-agent isolation on the real CLI runtime. |
 | bubblewrap/firejail: hide `~/.grok/sessions` except own uuid | **Named meet.** Mount namespace, still one UID. |
 | Different OS user / container per clone | **Named meet.** Heavy. |
 LCD: chmod/ACL-same-user **look elsewhere**. Convert-as-LCD would be “chmod and call it isolated.”
 ## Later ops (not this unit)
-2. Else **sandbox hide sessions** except own.
+1. **First probe: Landlock per clone.** Preserve the clone's required runtime/workspace paths while constraining session persistence to the clone's own allowed hierarchy. Record the kernel version, Landlock ABI, policy revision, and validation result. This is not MEASURED isolation until the boundary is exercised on the real CLI runtime.
+2. Else **sandbox hide sessions** except own with a mount-namespace tool such as bubblewrap.
 3. Else **strip FS tools** on research clones (if the CLI has a real restricted mode — verify, don’t assume).
-4. Do not treat worktree or hibernate as this fix.
-HOLD on implementing ACL/sandbox here. Lattice default not rewritten. No factor-compute.
+4. Treat per-clone `GROK_HOME` / `XDG` as organization only unless a kernel-enforced or namespace boundary also prevents sibling-path access. Do not treat worktree or hibernate as this fix.
+
+Research basis:
+- Linux Landlock userspace API: https://www.kernel.org/doc/html/latest/userspace-api/landlock.html
+- Ubuntu Noble Landlock manpage: https://manpages.ubuntu.com/manpages/noble/man7/landlock.7.html
+- bubblewrap mount namespace: https://manpages.ubuntu.com/manpages/focal/man1/bwrap.1.html
+
+HOLD on declaring the isolation residual closed here. Lattice default not rewritten. No factor-compute.
+
+## Executable fixture
+`scripts/landlock-isolation-check.sh` compiles and runs a two-process same-UID fixture.
+
+The fixture starts both children behind one barrier, then applies one Landlock filesystem ruleset per child. Each child must:
+- read, append, create, and list inside its own hierarchy;
+- fail to read, append, or list the sibling hierarchy.
+
+The emitted JSON records kernel release, Landlock ABI, UID/EUID, policy revision, per-agent checks, and the claim boundary. A passing fixture is **DEMO**, not **MEASURED**. It does not prove the real Grok CLI has the required runtime/library/workspace allowlist.
+
+Known boundary: Landlock does not turn every metadata syscall into a path-content boundary; the fixture records sibling `stat(2)` visibility rather than pretending it is blocked. Files opened before sandboxing are also outside this fixture's claim.
