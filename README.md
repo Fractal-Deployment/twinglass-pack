@@ -44,3 +44,14 @@ One source of truth. Plugin *or* `~/.grok/skills`. Not both.
 Do not load lattice and twin on the same charge.
 ## License
 MIT
+
+
+## LLMVE Agent Research Kernel
+
+TwinGlass supplies the epistemic protocol for the variable-centered research bus: isolated research pads, SI + Data Integrity/LCD admission, tetrahedral self-critique before comparison, and gated synthesis/debate/replacement/unresolved outcomes.
+
+- Technical blueprint: https://docs.google.com/document/d/1cBlBFB3h2-Gs5rngfIW--iKDae57TaNzZrBPtFnPomI/edit
+- Local contract: [LLMVE_RESEARCH_BUS.md](./LLMVE_RESEARCH_BUS.md)
+- Engine contract/tests: `engine/research-bus.ts`, `engine/research-bus.test.ts`
+
+The live LLMVE variable surface remains owned by `Jadon-Fox/llmve-meaning`; this pack must not hard-code a stale seat list as meaning authority.
