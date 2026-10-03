@@ -5,7 +5,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.m
 | Skill | Occupant | Job |
 |---|---|
 | `logic-ration-reason` | laws | Standing Logic Ration Reason lock |
-| `llmve-meaning` | meaning | What meters may answer (pointer to Fractal-Deployment/llmve-meaning live VERSION; Drive copies are past) |
+| `llmve-meaning` | meaning | What meters may answer (pointer to Jadon-Fox/llmve-meaning live VERSION; Drive copies are past) |
 | `lcd-glossary-integrity` | SI | Lock a term, then judge |
 | `lcd-lens` | LCD look | Look: their functions vs our demand |
 | `llmve-translate` | translate | Collected math onto Mythos/friction. Not LCD. |
@@ -27,7 +27,7 @@ Load `DISCOVERED.md`, `APPARATUS.md`, `WORKFLOW_HOST.md`, `RING.md`, `CIRCULAR.m
 **Flawless path:** paste [GROK_BUILD_CLI.md](./GROK_BUILD_CLI.md) into a Grok Build session and let it inventory, delete aliases, uninstall wrapper plugins, then install this repo once.
 Manual:
 ```bash
-git clone https://github.com/Fractal-Deployment/twinglass-pack.git
+git clone https://github.com/Jadon-Fox/twinglass-pack.git
 grok plugin install ./twinglass-pack --trust
 ```
 One source of truth. Plugin *or* `~/.grok/skills`. Not both.
